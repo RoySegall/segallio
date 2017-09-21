@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visiting_period
+    - node.type.places
+  module:
+    - datetime_range
+id: node.places.field_visiting_period
+field_name: field_visiting_period
+entity_type: node
+bundle: places
+label: 'Visiting period'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

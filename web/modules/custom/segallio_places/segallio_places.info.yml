@@ -1,0 +1,13 @@
+name: 'Segall IO places'
+type: module
+core: 8.x
+package: Segall IO
+dependencies:
+  - datetime_range
+  - field
+  - geolocation
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
