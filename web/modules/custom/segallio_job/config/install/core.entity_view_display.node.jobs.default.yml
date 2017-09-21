@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.jobs.body
+    - field.field.node.jobs.field_logo
+    - field.field.node.jobs.field_starting_date
+    - image.style.logo
+    - node.type.jobs
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.jobs.default
+targetEntityType: node
+bundle: jobs
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_logo:
+    weight: 3
+    label: above
+    settings:
+      image_style: logo
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_starting_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

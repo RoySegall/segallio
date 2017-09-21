@@ -1,0 +1,14 @@
+{
+  "name": "drupal/segall_io_migrate",
+  "type": "drupal-module",
+  "description": "Migrate content and stuff",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/segall_io_migrate",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/segall_io_migrate",
+    "source": "http://cgit.drupalcode.org/segall_io_migrate"
+  },
+  "require": { }
+}

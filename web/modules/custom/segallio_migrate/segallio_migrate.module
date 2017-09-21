@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function segallio_migrate_migration_plugins_alter(&$definitions) {
+  $definitions['migrate_jobs']['source']['path'] = drupal_get_path('module', 'segallio_migrate') . $definitions['migrate_jobs']['source']['path'];
+}

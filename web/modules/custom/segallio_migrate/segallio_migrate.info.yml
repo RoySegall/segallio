@@ -1,0 +1,10 @@
+name: Segall IO migrate
+type: module
+description: Migrate content and stuff
+core: 8.x
+package: Segall IO
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_source_csv
+  - migrate_tools

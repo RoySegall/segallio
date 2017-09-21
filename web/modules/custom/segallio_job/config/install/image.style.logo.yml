@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: logo
+label: logo
+effects:
+  fbadbadc-fa13-493b-8cf2-9f818df846d5:
+    uuid: fbadbadc-fa13-493b-8cf2-9f818df846d5
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: false
