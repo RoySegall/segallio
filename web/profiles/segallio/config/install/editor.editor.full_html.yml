@@ -1,3 +1,4 @@
+uuid: 9f79bebe-097b-4871-9875-be2595e55812
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - filter.format.full_html
   module:
     - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
 format: full_html
 editor: ckeditor
 settings:
@@ -15,12 +18,20 @@ settings:
           name: Formatting
           items:
             - Bold
+            - Underline
             - Italic
             - Strike
             - Superscript
             - Subscript
             - '-'
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyBlock
+            - JustifyRight
             - RemoveFormat
+            - '-'
+            - Indent
+            - Outdent
         -
           name: Linking
           items:
@@ -41,13 +52,19 @@ settings:
         -
           name: 'Block Formatting'
           items:
+            - Styles
             - Format
         -
           name: Tools
           items:
+            - Undo
+            - Redo
             - ShowBlocks
+            - Maximize
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
 image_upload:
@@ -56,5 +73,5 @@ image_upload:
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null
