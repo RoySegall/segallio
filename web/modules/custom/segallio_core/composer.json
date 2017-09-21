@@ -1,0 +1,14 @@
+{
+  "name": "drupal/segallio_core",
+  "type": "drupal-module",
+  "description": "Segall IO core",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/segallio_core",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/segallio_core",
+    "source": "http://cgit.drupalcode.org/segallio_core"
+  },
+  "require": { }
+}

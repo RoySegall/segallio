@@ -1,0 +1,5 @@
+name: segallio_core
+type: module
+description: Segall IO core
+core: 8.x
+package: Segall IO

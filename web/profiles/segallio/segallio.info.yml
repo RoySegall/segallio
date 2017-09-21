@@ -43,6 +43,9 @@ dependencies:
   - devel
   - kint
 
+  # Segall IO modules
+  - segallio_core
+
 themes:
   - bartik
   - seven

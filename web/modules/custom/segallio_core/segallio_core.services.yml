@@ -1,0 +1,7 @@
+services:
+  segallio_core.event_sbuscriber:
+    class: Drupal\segallio_core\EventSubscriber\SegallIoCoreEventSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+
