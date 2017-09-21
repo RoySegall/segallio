@@ -23,6 +23,8 @@
         "drupal/core": "~8.0",
         "drupal/devel": "^1.0",
         "drupal/features": "^3.5",
+        "drupal/migrate_source_csv": "^2.0",
+        "drupal/migrate_tools": "^4.0-beta1",
         "drush/drush": "^8.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
@@ -72,6 +74,11 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/migrate_tools": {
+                "2878169": "https://www.drupal.org/files/issues/migrate_tools-config_entity_migration_changed_to_migration-2878169-7_drupal_core_8-3-5.patch"
+            }
         }
     }
 }

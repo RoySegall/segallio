@@ -49,6 +49,7 @@ dependencies:
   # Segall IO modules
   - segallio_core
   - segallio_job
+  - segallio_migrate
 
 themes:
   - bartik

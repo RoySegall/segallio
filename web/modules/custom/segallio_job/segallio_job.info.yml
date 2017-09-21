@@ -6,6 +6,7 @@ package: 'Segall IO'
 dependencies:
   - datetime
   - field
+  - file
   - image
   - menu_ui
   - node
