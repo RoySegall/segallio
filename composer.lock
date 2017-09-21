@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ba1b79b340e7605f8d1b5d8639952fd",
+    "content-hash": "e57f2885f6a4cbb98a35dd0801879d47",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1091,6 +1091,57 @@
             "time": "2017-05-05T21:26:28+00:00"
         },
         {
+            "name": "drupal/config_update",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/config_update",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_update-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "0de82ba4aa7caf054711ab16ad038765215a489d"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1505755744",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "jhodgdon",
+                    "homepage": "https://www.drupal.org/user/155601"
+                },
+                {
+                    "name": "nedjo",
+                    "homepage": "https://www.drupal.org/user/4481"
+                }
+            ],
+            "description": "Provides basic revert and update functionality for other modules",
+            "homepage": "https://www.drupal.org/project/config_update",
+            "support": {
+                "source": "http://cgit.drupalcode.org/config_update"
+            }
+        },
+        {
             "name": "drupal/console",
             "version": "1.0.2",
             "source": {
@@ -1649,6 +1700,78 @@
                 "source": "http://cgit.drupalcode.org/devel",
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/features",
+            "version": "3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/features",
+                "reference": "8.x-3.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/features-8.x-3.5.zip",
+                "reference": "8.x-3.5",
+                "shasum": "546b34387018f9adbe742b6992c4d473f9447c41"
+            },
+            "require": {
+                "drupal/config_update": "*",
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.5",
+                    "datestamp": "1488908583",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "e2thex",
+                    "homepage": "https://www.drupal.org/user/189123"
+                },
+                {
+                    "name": "febbraro",
+                    "homepage": "https://www.drupal.org/user/43670"
+                },
+                {
+                    "name": "jmiccolis",
+                    "homepage": "https://www.drupal.org/user/31731"
+                },
+                {
+                    "name": "mpotter",
+                    "homepage": "https://www.drupal.org/user/616192"
+                },
+                {
+                    "name": "nedjo",
+                    "homepage": "https://www.drupal.org/user/4481"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                }
+            ],
+            "description": "Enables administrators to package configuration into modules.",
+            "homepage": "https://www.drupal.org/project/features",
+            "support": {
+                "source": "http://cgit.drupalcode.org/features"
             }
         },
         {
@@ -5131,52 +5254,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14T21:17:01+00:00"
-        },
-        {
-            "name": "drupal/drush",
-            "version": "6.0.0-rc4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/drush",
-                "reference": "8.x-6.0-rc4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/drush-8.x-6.0-rc4.zip",
-                "reference": "8.x-6.0-rc4",
-                "shasum": "b937035f9de947190cc2438decb56483ff7cc1cd"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-6.x": "6.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-6.0-rc4",
-                    "datestamp": "1376806255",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/drush",
-            "support": {
-                "source": "http://cgit.drupalcode.org/drush"
-            }
         },
         {
             "name": "fabpot/goutte",

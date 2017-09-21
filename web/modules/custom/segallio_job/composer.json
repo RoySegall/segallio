@@ -1,0 +1,14 @@
+{
+  "name": "drupal/segallio_job",
+  "type": "drupal-module",
+  "description": "Contains a track of the jobs",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/segallio_job",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/segallio_job",
+    "source": "http://cgit.drupalcode.org/segallio_job"
+  },
+  "require": { }
+}
