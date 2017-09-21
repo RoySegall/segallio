@@ -1,7 +1,7 @@
 id: migrate_jobs
 migration_tags:
   - CSV
-migration_group: null
+migration_group: default
 label: 'CSV file migration'
 source:
   plugin: csv
@@ -26,6 +26,12 @@ process:
     from_format: 'd/m/Y'
     to_format: 'Y-m-d'
     source: date
+  field_logo:
+    source: logo
+    plugin: file_import
+  uid:
+    plugin: default_value
+    default_value: 1
 destination:
   plugin: 'entity:node'
 migration_dependencies:

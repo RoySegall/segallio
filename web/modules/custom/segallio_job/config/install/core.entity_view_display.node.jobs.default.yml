@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.jobs.body
     - field.field.node.jobs.field_logo
     - field.field.node.jobs.field_starting_date
+    - image.style.logo
     - node.type.jobs
   module:
     - datetime
@@ -27,7 +28,7 @@ content:
     weight: 3
     label: above
     settings:
-      image_style: ''
+      image_style: logo
       image_link: ''
     third_party_settings: {  }
     type: image
