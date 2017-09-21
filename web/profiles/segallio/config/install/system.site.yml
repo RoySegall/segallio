@@ -1,0 +1,14 @@
+uuid: 05edfaa8-8736-4583-bc64-35a42a4abcdc
+name: 'Roy Segall'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
