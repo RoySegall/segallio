@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_starting_date
+    - node.type.jobs
+  module:
+    - datetime
+id: node.jobs.field_starting_date
+field_name: field_starting_date
+entity_type: node
+bundle: jobs
+label: 'Starting date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
