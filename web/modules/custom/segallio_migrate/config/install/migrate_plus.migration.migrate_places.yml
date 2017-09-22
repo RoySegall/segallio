@@ -37,16 +37,19 @@ process:
     default_value: 1
   title: title
   body: body
-  field_arrival_date/value:
+  field_visiting_period/value:
     plugin: format_date
     from_format: d/m/Y
     to_format: Y-m-d
     source: arrival_date
-  field_arrival_date/end_value:
+  field_visiting_period/end_value:
     plugin: format_date
     from_format: d/m/Y
     to_format: Y-m-d
     source: departure_date
+  field_location:
+    plugin: location_import
+    source: location
 destination:
   plugin: 'entity:node'
 migration_dependencies:
