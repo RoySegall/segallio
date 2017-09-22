@@ -9,7 +9,7 @@ field_name: field_visiting_period
 entity_type: node
 type: daterange
 settings:
-  datetime_type: allday
+  datetime_type: date
 module: datetime_range
 locked: false
 cardinality: 1

@@ -1,8 +1,8 @@
-name: Segall IO migrate
+name: 'Segall IO migrate'
 type: module
-description: Migrate content and stuff
+description: 'Migrate content and stuff'
 core: 8.x
-package: Segall IO
+package: 'Segall IO'
 dependencies:
   - migrate
   - migrate_plus
