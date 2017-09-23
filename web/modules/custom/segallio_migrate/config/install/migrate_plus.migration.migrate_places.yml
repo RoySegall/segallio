@@ -1,17 +1,17 @@
 langcode: en
 status: true
 dependencies: {  }
-id: migrate_jobs
+id: migrate_places
 class: null
 field_plugin_method: null
 cck_plugin_method: null
 migration_tags:
   - CSV
 migration_group: default
-label: 'Migrate all the jobs'
+label: 'Migrate places I have been to'
 source:
   plugin: csv
-  path: /assets/csv/jobs.csv
+  path: /assets/csv/places.csv
   header_row_count: 1
   keys:
     - id
@@ -23,26 +23,33 @@ source:
     -
       body: Body
     -
-      date: Date
+      arrival_date: 'Arrival date'
     -
-      logo: Logo
+      departure_date: 'Departure date'
+    -
+      location: Location
 process:
   type:
     plugin: default_value
-    default_value: jobs
-  title: title
-  body: body
-  field_starting_date:
-    plugin: format_date
-    from_format: d/m/Y
-    to_format: Y-m-d
-    source: date
-  field_logo:
-    source: logo
-    plugin: file_import
+    default_value: places
   uid:
     plugin: default_value
     default_value: 1
+  title: title
+  body: body
+  field_visiting_period/value:
+    plugin: format_date
+    from_format: d/m/Y
+    to_format: Y-m-d
+    source: arrival_date
+  field_visiting_period/end_value:
+    plugin: format_date
+    from_format: d/m/Y
+    to_format: Y-m-d
+    source: departure_date
+  field_location:
+    plugin: location_import
+    source: location
 destination:
   plugin: 'entity:node'
 migration_dependencies:

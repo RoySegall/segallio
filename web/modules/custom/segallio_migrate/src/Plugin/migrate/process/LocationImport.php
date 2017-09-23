@@ -12,27 +12,24 @@ use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\Row;
 
 /**
- * Importing a file.
+ * Converting an address to geo location values.
  *
  * @MigrateProcessPlugin(
- *   id = "file_import"
+ *   id = "location_import"
  * )
  */
-class FileImport extends ProcessPluginBase {
+class LocationImport extends ProcessPluginBase {
 
   /**
    * {@inheritdoc}
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-    $source = drupal_get_path('module', 'segallio_migrate') . '/assets/images/' . $value;
+    list($lat, $lng) = explode(',', $value);
+    return [
+      'lat' => $lat,
+      'lng' => $lng,
+    ];
 
-    if (!$uri = file_unmanaged_copy($source)) {
-      return [];
-    }
-
-    $file = \Drupal::entityTypeManager()->getStorage('file')->create(['uri' => $uri]);
-    $file->save();
-
-    return $file->id();
   }
+
 }

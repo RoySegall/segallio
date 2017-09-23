@@ -50,6 +50,7 @@ dependencies:
   - segallio_core
   - segallio_job
   - segallio_migrate
+  - segallio_place
 
 themes:
   - bartik

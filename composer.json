@@ -23,6 +23,7 @@
         "drupal/core": "~8.0",
         "drupal/devel": "^1.0",
         "drupal/features": "^3.5",
+        "drupal/geolocation": "^1.11",
         "drupal/migrate_source_csv": "^2.0",
         "drupal/migrate_tools": "^4.0-beta1",
         "drush/drush": "^8.1",
