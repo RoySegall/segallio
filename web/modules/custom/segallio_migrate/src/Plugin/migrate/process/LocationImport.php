@@ -24,9 +24,10 @@ class LocationImport extends ProcessPluginBase {
    * {@inheritdoc}
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+    list($lat, $lng) = explode(',', $value);
     return [
-      'lat' => 30.39483848,
-      'lng' => 30.334434,
+      'lat' => $lat,
+      'lng' => $lng,
     ];
 
   }
