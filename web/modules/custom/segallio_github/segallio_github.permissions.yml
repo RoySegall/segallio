@@ -1,0 +1,22 @@
+add repository entities:
+  title: 'Create new Repository entities'
+
+administer repository entities:
+  title: 'Administer Repository entities'
+  description: 'Allow to access the administration form to configure Repository entities.'
+  restrict access: true
+
+delete repository entities:
+  title: 'Delete Repository entities'
+
+edit repository entities:
+  title: 'Edit Repository entities'
+
+access repository overview:
+  title: 'Access the Repository overview page'
+
+view published repository entities:
+  title: 'View published Repository entities'
+
+view unpublished repository entities:
+  title: 'View unpublished Repository entities'

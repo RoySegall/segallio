@@ -1,0 +1,5 @@
+entity.repository.add_form:
+  route_name: entity.repository.add_form
+  title: 'Add Repository'
+  appears_on:
+    - entity.repository.collection

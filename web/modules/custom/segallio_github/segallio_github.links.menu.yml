@@ -1,0 +1,7 @@
+
+# Repository menu items definition
+repository.admin.structure.settings:
+  title: Repository settings
+  description: 'Configure Repository entities'
+  route_name: repository.settings
+  parent: system.admin_structure

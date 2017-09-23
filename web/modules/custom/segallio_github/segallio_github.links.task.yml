@@ -1,0 +1,26 @@
+# Repository routing definition
+repository.settings_tab:
+  route_name: repository.settings
+  title: 'Settings'
+  base_route: repository.settings
+
+entity.repository.canonical:
+  route_name: entity.repository.canonical
+  base_route: entity.repository.canonical
+  title: 'View'
+
+entity.repository.edit_form:
+  route_name: entity.repository.edit_form
+  base_route: entity.repository.canonical
+  title: 'Edit'
+
+entity.repository.delete_form:
+  route_name:  entity.repository.delete_form
+  base_route:  entity.repository.canonical
+  title: Delete
+  weight: 10
+
+entity.repository.collection:
+  title: 'Repository list'
+  route_name: entity.repository.collection
+  base_route: system.admin_content
