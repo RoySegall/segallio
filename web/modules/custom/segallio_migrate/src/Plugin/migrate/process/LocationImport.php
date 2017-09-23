@@ -12,7 +12,7 @@ use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\Row;
 
 /**
- * Converting an address to geo location values.
+ * Split the lat and lng to different indexes.
  *
  * @MigrateProcessPlugin(
  *   id = "location_import"
