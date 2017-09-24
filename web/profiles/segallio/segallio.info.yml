@@ -34,6 +34,7 @@ dependencies:
   - quickedit
   - rdf
   - search
+  - serialization
   - shortcut
   - taxonomy
   - toolbar
@@ -52,7 +53,7 @@ dependencies:
   - segallio_job
   - segallio_migrate
   - segallio_place
-#  - segallio_github
+  - segallio_github
 
 themes:
   - bartik
