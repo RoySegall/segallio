@@ -42,3 +42,25 @@ view published gist entities:
 
 view unpublished gist entities:
   title: 'View unpublished Gist entities'
+add pull request entities:
+  title: 'Create new Pull request entities'
+
+administer pull request entities:
+  title: 'Administer Pull request entities'
+  description: 'Allow to access the administration form to configure Pull request entities.'
+  restrict access: true
+
+delete pull request entities:
+  title: 'Delete Pull request entities'
+
+edit pull request entities:
+  title: 'Edit Pull request entities'
+
+access pull request overview:
+  title: 'Access the Pull request overview page'
+
+view published pull request entities:
+  title: 'View published Pull request entities'
+
+view unpublished pull request entities:
+  title: 'View unpublished Pull request entities'

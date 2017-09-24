@@ -10,31 +10,31 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Repository entity.
+ * Defines the Pull request entity.
  *
  * @ingroup segallio_github
  *
  * @ContentEntityType(
- *   id = "repository",
- *   label = @Translation("Repository"),
+ *   id = "pull_request",
+ *   label = @Translation("Pull request"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\segallio_github\RepositoryListBuilder",
- *     "views_data" = "Drupal\segallio_github\Entity\RepositoryViewsData",
+ *     "list_builder" = "Drupal\segallio_github\PullRequestListBuilder",
+ *     "views_data" = "Drupal\segallio_github\Entity\PullRequestViewsData",
  *
  *     "form" = {
- *       "default" = "Drupal\segallio_github\Form\RepositoryForm",
- *       "add" = "Drupal\segallio_github\Form\RepositoryForm",
- *       "edit" = "Drupal\segallio_github\Form\RepositoryForm",
- *       "delete" = "Drupal\segallio_github\Form\RepositoryDeleteForm",
+ *       "default" = "Drupal\segallio_github\Form\PullRequestForm",
+ *       "add" = "Drupal\segallio_github\Form\PullRequestForm",
+ *       "edit" = "Drupal\segallio_github\Form\PullRequestForm",
+ *       "delete" = "Drupal\segallio_github\Form\PullRequestDeleteForm",
  *     },
- *     "access" = "Drupal\segallio_github\RepositoryAccessControlHandler",
+ *     "access" = "Drupal\segallio_github\PullRequestAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\segallio_github\RepositoryHtmlRouteProvider",
+ *       "html" = "Drupal\segallio_github\PullRequestHtmlRouteProvider",
  *     },
  *   },
- *   base_table = "repository",
- *   admin_permission = "administer repository entities",
+ *   base_table = "pull_request",
+ *   admin_permission = "administer pull request entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -44,16 +44,16 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/content/repository/{repository}",
- *     "add-form" = "/admin/content/repository/add",
- *     "edit-form" = "/admin/content/repository/{repository}/edit",
- *     "delete-form" = "/admin/content/repository/{repository}/delete",
- *     "collection" = "/admin/content/repository",
+ *     "canonical" = "/admin/content/pull_request/{pull_request}",
+ *     "add-form" = "/admin/content/pull_request/add",
+ *     "edit-form" = "/admin/content/pull_request/{pull_request}/edit",
+ *     "delete-form" = "/admin/content/pull_request/{pull_request}/delete",
+ *     "collection" = "/admin/content/pull_request",
  *   },
- *   field_ui_base_route = "repository.settings"
+ *   field_ui_base_route = "pull_request.settings"
  * )
  */
-class Repository extends ContentEntityBase implements RepositoryInterface {
+class PullRequest extends ContentEntityBase implements PullRequestInterface {
 
   use EntityChangedTrait;
 
@@ -150,7 +150,7 @@ class Repository extends ContentEntityBase implements RepositoryInterface {
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Repository entity.'))
+      ->setDescription(t('The user ID of author of the Pull request entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -175,7 +175,7 @@ class Repository extends ContentEntityBase implements RepositoryInterface {
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Repository entity.'))
+      ->setDescription(t('The name of the Pull request entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -193,9 +193,9 @@ class Repository extends ContentEntityBase implements RepositoryInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['body'] = BaseFieldDefinition::create('string_long')
-      ->setLabel(t('Description'))
-      ->setDescription(t('Info about the repo.'))
+    $fields['url'] = BaseFieldDefinition::create('link')
+      ->setLabel(t('URL'))
+      ->setDescription(t('The link to the pull request.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -203,71 +203,19 @@ class Repository extends ContentEntityBase implements RepositoryInterface {
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'string',
-        'weight' => -1,
+        'type' => 'link',
+        'weight' => -4,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
+        'type' => 'link_default',
         'weight' => -4,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['updated_at'] = BaseFieldDefinition::create('datetime')
-      ->setLabel(t('Updated at'))
-      ->setDescription(t('When was the repo last updated.'))
-      ->setDefaultValue('')
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'string',
-        'weight' => -4,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'datetime_default',
-        'weight' => 2,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    $fields['stars'] = BaseFieldDefinition::create('integer')
-      ->setLabel(t('Stars'))
-      ->setDescription(t('How many stars the repo owns.'))
-      ->setDefaultValue('')
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'string',
-        'weight' => -4,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'number_integer',
-        'weight' => -2,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    $fields['topics'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Topics'))
-      ->setDescription(t('List of topics.'))
-      ->setSettings([
-        'max_length' => 50,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'string',
-        'weight' => -4,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => -4,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    $fields['repo_id'] = BaseFieldDefinition::create('integer')
+    $fields['pr_id'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('ID'))
-      ->setDescription(t('The ID of the repo.'))
+      ->setDescription(t('The ID of the PR.'))
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
@@ -281,9 +229,49 @@ class Repository extends ContentEntityBase implements RepositoryInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
+    $fields['repo_name'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Repository name'))
+      ->setDescription(t('The name of the repository.'))
+      ->setSettings([
+        'max_length' => 50,
+        'text_processing' => 0,
+      ])
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['repo_url'] = BaseFieldDefinition::create('link')
+      ->setLabel(t('Repository URL'))
+      ->setDescription(t('The link to the repository.'))
+      ->setSettings([
+        'max_length' => 50,
+        'text_processing' => 0,
+      ])
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'link',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'link_default',
+        'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Repository is published.'))
+      ->setDescription(t('A boolean indicating whether the Pull request is published.'))
       ->setDisplayOptions('form', [
         'type' => 'boolean',
         'weight' => 1,

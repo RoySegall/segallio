@@ -51,3 +51,30 @@ entity.gist.collection:
   title: 'Gist list'
   route_name: entity.gist.collection
   base_route: system.admin_content
+
+# Pull request routing definition
+pull_request.settings_tab:
+  route_name: pull_request.settings
+  title: 'Settings'
+  base_route: pull_request.settings
+
+entity.pull_request.canonical:
+  route_name: entity.pull_request.canonical
+  base_route: entity.pull_request.canonical
+  title: 'View'
+
+entity.pull_request.edit_form:
+  route_name: entity.pull_request.edit_form
+  base_route: entity.pull_request.canonical
+  title: 'Edit'
+
+entity.pull_request.delete_form:
+  route_name:  entity.pull_request.delete_form
+  base_route:  entity.pull_request.canonical
+  title: Delete
+  weight: 10
+
+entity.pull_request.collection:
+  title: 'Pull request list'
+  route_name: entity.pull_request.collection
+  base_route: system.admin_content
