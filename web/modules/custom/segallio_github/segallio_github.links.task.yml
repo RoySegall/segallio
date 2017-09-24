@@ -24,3 +24,30 @@ entity.repository.collection:
   title: 'Repository list'
   route_name: entity.repository.collection
   base_route: system.admin_content
+
+# Gist routing definition
+gist.settings_tab:
+  route_name: gist.settings
+  title: 'Settings'
+  base_route: gist.settings
+
+entity.gist.canonical:
+  route_name: entity.gist.canonical
+  base_route: entity.gist.canonical
+  title: 'View'
+
+entity.gist.edit_form:
+  route_name: entity.gist.edit_form
+  base_route: entity.gist.canonical
+  title: 'Edit'
+
+entity.gist.delete_form:
+  route_name:  entity.gist.delete_form
+  base_route:  entity.gist.canonical
+  title: Delete
+  weight: 10
+
+entity.gist.collection:
+  title: 'Gist list'
+  route_name: entity.gist.collection
+  base_route: system.admin_content

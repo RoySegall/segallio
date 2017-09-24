@@ -3,3 +3,5 @@ type: module
 description: Integration with GitHub
 core: 8.x
 package: Segall IO
+dependencies:
+  - json_field

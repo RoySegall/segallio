@@ -5,3 +5,10 @@ repository.admin.structure.settings:
   description: 'Configure Repository entities'
   route_name: repository.settings
   parent: system.admin_structure
+
+# Gist menu items definition
+gist.admin.structure.settings:
+  title: Gist settings
+  description: 'Configure Gist entities'
+  route_name: gist.settings
+  parent: system.admin_structure

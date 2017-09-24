@@ -20,3 +20,25 @@ view published repository entities:
 
 view unpublished repository entities:
   title: 'View unpublished Repository entities'
+add gist entities:
+  title: 'Create new Gist entities'
+
+administer gist entities:
+  title: 'Administer Gist entities'
+  description: 'Allow to access the administration form to configure Gist entities.'
+  restrict access: true
+
+delete gist entities:
+  title: 'Delete Gist entities'
+
+edit gist entities:
+  title: 'Edit Gist entities'
+
+access gist overview:
+  title: 'Access the Gist overview page'
+
+view published gist entities:
+  title: 'View published Gist entities'
+
+view unpublished gist entities:
+  title: 'View unpublished Gist entities'
