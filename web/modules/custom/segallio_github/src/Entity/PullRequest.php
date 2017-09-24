@@ -193,26 +193,6 @@ class PullRequest extends ContentEntityBase implements PullRequestInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['url'] = BaseFieldDefinition::create('link')
-      ->setLabel(t('URL'))
-      ->setDescription(t('The link to the pull request.'))
-      ->setSettings([
-        'max_length' => 50,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'link',
-        'weight' => -4,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'link_default',
-        'weight' => -4,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
     $fields['pr_id'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('ID'))
       ->setDescription(t('The ID of the PR.'))
@@ -249,22 +229,18 @@ class PullRequest extends ContentEntityBase implements PullRequestInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['repo_url'] = BaseFieldDefinition::create('link')
-      ->setLabel(t('Repository URL'))
-      ->setDescription(t('The link to the repository.'))
-      ->setSettings([
-        'max_length' => 50,
-        'text_processing' => 0,
-      ])
+    $fields['created_at'] = BaseFieldDefinition::create('datetime')
+      ->setLabel(t('Created at'))
+      ->setDescription(t('When was the PR submitted.'))
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'link',
+        'type' => 'string',
         'weight' => -4,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'link_default',
-        'weight' => -4,
+        'type' => 'datetime_default',
+        'weight' => 2,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
