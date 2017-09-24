@@ -4,41 +4,43 @@ description: Roy Segall site
 core: 8.x
 dependencies:
 
-  - node
-  - history
+  - automated_cron
   - block
+  - block_content
   - breakpoint
   - ckeditor
   - color
-  - config
   - comment
-  - contextual
+  - config
   - contact
-  - menu_link_content
+  - contextual
   - datetime
-  - block_content
-  - quickedit
-  - editor
-  - help
-  - image
-  - migrate
-  - menu_ui
-  - options
-  - path
-  - page_cache
-  - dynamic_page_cache
-  - taxonomy
   - dblog
-  - search
-  - shortcut
-  - toolbar
+  - dynamic_page_cache
+  - editor
   - field_ui
   - file
+  - help
+  - history
+  - image
+  - json_field
+  - menu_link_content
+  - menu_ui
+  - migrate
+  - node
+  - options
+  - page_cache
+  - path
+  - quickedit
   - rdf
+  - search
+  - serialization
+  - shortcut
+  - taxonomy
+  - toolbar
+  - tour
   - views
   - views_ui
-  - tour
-  - automated_cron
 
   # Contrib.
   - features
@@ -51,6 +53,7 @@ dependencies:
   - segallio_job
   - segallio_migrate
   - segallio_place
+  - segallio_github
 
 themes:
   - bartik

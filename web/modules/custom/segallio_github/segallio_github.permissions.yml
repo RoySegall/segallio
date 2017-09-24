@@ -1,0 +1,66 @@
+add repository entities:
+  title: 'Create new Repository entities'
+
+administer repository entities:
+  title: 'Administer Repository entities'
+  description: 'Allow to access the administration form to configure Repository entities.'
+  restrict access: true
+
+delete repository entities:
+  title: 'Delete Repository entities'
+
+edit repository entities:
+  title: 'Edit Repository entities'
+
+access repository overview:
+  title: 'Access the Repository overview page'
+
+view published repository entities:
+  title: 'View published Repository entities'
+
+view unpublished repository entities:
+  title: 'View unpublished Repository entities'
+add gist entities:
+  title: 'Create new Gist entities'
+
+administer gist entities:
+  title: 'Administer Gist entities'
+  description: 'Allow to access the administration form to configure Gist entities.'
+  restrict access: true
+
+delete gist entities:
+  title: 'Delete Gist entities'
+
+edit gist entities:
+  title: 'Edit Gist entities'
+
+access gist overview:
+  title: 'Access the Gist overview page'
+
+view published gist entities:
+  title: 'View published Gist entities'
+
+view unpublished gist entities:
+  title: 'View unpublished Gist entities'
+add pull request entities:
+  title: 'Create new Pull request entities'
+
+administer pull request entities:
+  title: 'Administer Pull request entities'
+  description: 'Allow to access the administration form to configure Pull request entities.'
+  restrict access: true
+
+delete pull request entities:
+  title: 'Delete Pull request entities'
+
+edit pull request entities:
+  title: 'Edit Pull request entities'
+
+access pull request overview:
+  title: 'Access the Pull request overview page'
+
+view published pull request entities:
+  title: 'View published Pull request entities'
+
+view unpublished pull request entities:
+  title: 'View unpublished Pull request entities'

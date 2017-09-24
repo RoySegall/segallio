@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies: {  }
+id: migrate_reposotories
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - CSV
+migration_group: default
+label: 'Migrate my repos.'
+source:
+  plugin: csv
+  path: /assets/csv/reposotories.csv
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: Identifier
+    -
+      name: Name
+    -
+      body: Body
+    -
+      topics: Topics
+    -
+      stars: Stars
+    -
+      repo_id: ID
+    -
+      updated_at: 'Updated at'
+process:
+  user_id:
+    plugin: default_value
+    default_value: 1
+  name: name
+  body: body
+  topics: topics
+  stars: stars
+  repo_id: repo_id
+  updated_at: updated_at
+destination:
+  plugin: 'entity:repository'
+migration_dependencies:
+  required: {  }
+  optional: {  }

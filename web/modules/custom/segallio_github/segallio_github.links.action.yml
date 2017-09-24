@@ -1,0 +1,15 @@
+entity.repository.add_form:
+  route_name: entity.repository.add_form
+  title: 'Add Repository'
+  appears_on:
+    - entity.repository.collection
+entity.gist.add_form:
+  route_name: entity.gist.add_form
+  title: 'Add Gist'
+  appears_on:
+    - entity.gist.collection
+entity.pull_request.add_form:
+  route_name: entity.pull_request.add_form
+  title: 'Add Pull request'
+  appears_on:
+    - entity.pull_request.collection

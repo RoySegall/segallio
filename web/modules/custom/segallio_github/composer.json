@@ -1,0 +1,14 @@
+{
+  "name": "drupal/segallio_github",
+  "type": "drupal-module",
+  "description": "Integration with GitHub",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/segallio_github",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/segallio_github",
+    "source": "http://cgit.drupalcode.org/segallio_github"
+  },
+  "require": { }
+}

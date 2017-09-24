@@ -1,0 +1,21 @@
+
+# Repository menu items definition
+repository.admin.structure.settings:
+  title: Repository settings
+  description: 'Configure Repository entities'
+  route_name: repository.settings
+  parent: system.admin_structure
+
+# Gist menu items definition
+gist.admin.structure.settings:
+  title: Gist settings
+  description: 'Configure Gist entities'
+  route_name: gist.settings
+  parent: system.admin_structure
+
+# Pull request menu items definition
+pull_request.admin.structure.settings:
+  title: Pull request settings
+  description: 'Configure Pull request entities'
+  route_name: pull_request.settings
+  parent: system.admin_structure
