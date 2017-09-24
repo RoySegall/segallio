@@ -1,0 +1,27 @@
+# Status routing definition
+status.settings_tab:
+  route_name: status.settings
+  title: 'Settings'
+  base_route: status.settings
+
+entity.status.canonical:
+  route_name: entity.status.canonical
+  base_route: entity.status.canonical
+  title: 'View'
+
+entity.status.edit_form:
+  route_name: entity.status.edit_form
+  base_route: entity.status.canonical
+  title: 'Edit'
+
+entity.status.delete_form:
+  route_name:  entity.status.delete_form
+  base_route:  entity.status.canonical
+  title: Delete
+  weight: 10
+
+entity.status.collection:
+  title: 'Status list'
+  route_name: entity.status.collection
+  base_route: system.admin_content
+

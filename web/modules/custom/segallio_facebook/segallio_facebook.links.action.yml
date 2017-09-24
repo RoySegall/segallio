@@ -1,0 +1,5 @@
+entity.status.add_form:
+  route_name: entity.status.add_form
+  title: 'Add Status'
+  appears_on:
+    - entity.status.collection

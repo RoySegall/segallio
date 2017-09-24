@@ -1,0 +1,22 @@
+add status entities:
+  title: 'Create new Status entities'
+
+administer status entities:
+  title: 'Administer Status entities'
+  description: 'Allow to access the administration form to configure Status entities.'
+  restrict access: true
+
+delete status entities:
+  title: 'Delete Status entities'
+
+edit status entities:
+  title: 'Edit Status entities'
+
+access status overview:
+  title: 'Access the Status overview page'
+
+view published status entities:
+  title: 'View published Status entities'
+
+view unpublished status entities:
+  title: 'View unpublished Status entities'
