@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies: {  }
+id: migrate_gists
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - CSV
+migration_group: default
+label: 'Migrate my gists.'
+source:
+  plugin: csv
+  path: /assets/csv/gists.csv
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: Identifier
+    -
+      url: URL
+    -
+      files: Files
+    -
+      updated_at: 'Updated at'
+process:
+  user_id:
+    plugin: default_value
+    default_value: 1
+  url: url
+  files:
+    source: files
+    plugin: gist_import
+  updated_at: updated_at
+destination:
+  plugin: 'entity:gist'
+migration_dependencies:
+  required: {  }
+  optional: {  }

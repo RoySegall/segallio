@@ -179,10 +179,6 @@ class Gist extends ContentEntityBase implements GistInterface {
       ->setRequired(TRUE)
       ->setLabel(t('URL'))
       ->setDescription(t('The URL of the gist.'))
-      ->setSettings([
-        'max_length' => 50,
-        'text_processing' => 0,
-      ])
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
