@@ -65,7 +65,76 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
       ->setDescription(t('A boolean indicating whether the Status is published.'))
+      ->setDisplayOptions('form', [
+        'type' => 'boolean',
+        'weight' => 1,
+      ])
       ->setDefaultValue(TRUE);
+
+    $fields['url'] = BaseFieldDefinition::create('string')
+      ->setRequired(TRUE)
+      ->setLabel(t('Original URL'))
+      ->setDescription(t('Link to the original URL of the asset.'))
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['likes'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('Likes'))
+      ->setDescription(t('How much likes did the post received.'))
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -3,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['shares'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('Shares'))
+      ->setDescription(t('How much shares did the post received.'))
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -3,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['comments'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('Comments'))
+      ->setDescription(t('How much comments did the post received.'))
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -2,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
