@@ -3,38 +3,38 @@
 namespace Drupal\segallio_facebook\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
-use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Status entity.
+ * Defines the Picture entity.
  *
  * @ingroup segallio_facebook
  *
  * @ContentEntityType(
- *   id = "status",
- *   label = @Translation("Status"),
+ *   id = "picture",
+ *   label = @Translation("Picture"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\segallio_facebook\StatusListBuilder",
- *     "views_data" = "Drupal\segallio_facebook\Entity\StatusViewsData",
+ *     "list_builder" = "Drupal\segallio_facebook\PictureListBuilder",
+ *     "views_data" = "Drupal\segallio_facebook\Entity\PictureViewsData",
  *
  *     "form" = {
- *       "default" = "Drupal\segallio_facebook\Form\StatusForm",
- *       "add" = "Drupal\segallio_facebook\Form\StatusForm",
- *       "edit" = "Drupal\segallio_facebook\Form\StatusForm",
- *       "delete" = "Drupal\segallio_facebook\Form\StatusDeleteForm",
+ *       "default" = "Drupal\segallio_facebook\Form\PictureForm",
+ *       "add" = "Drupal\segallio_facebook\Form\PictureForm",
+ *       "edit" = "Drupal\segallio_facebook\Form\PictureForm",
+ *       "delete" = "Drupal\segallio_facebook\Form\PictureDeleteForm",
  *     },
- *     "access" = "Drupal\segallio_facebook\StatusAccessControlHandler",
+ *     "access" = "Drupal\segallio_facebook\PictureAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\segallio_facebook\StatusHtmlRouteProvider",
+ *       "html" = "Drupal\segallio_facebook\PictureHtmlRouteProvider",
  *     },
  *   },
- *   base_table = "status",
- *   admin_permission = "administer status entities",
+ *   base_table = "picture",
+ *   admin_permission = "administer picture entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -44,16 +44,16 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/content/status/{status}",
- *     "add-form" = "/admin/content/status/add",
- *     "edit-form" = "/admin/content/status/{status}/edit",
- *     "delete-form" = "/admin/content/status/{status}/delete",
- *     "collection" = "/admin/content/status",
+ *     "canonical" = "/admin/picture/{picture}",
+ *     "add-form" = "/admin/picture/add",
+ *     "edit-form" = "/admin/picture/{picture}/edit",
+ *     "delete-form" = "/admin/picture/{picture}/delete",
+ *     "collection" = "/admin/picture",
  *   },
- *   field_ui_base_route = "status.settings"
+ *   field_ui_base_route = "picture.settings"
  * )
  */
-class Status extends SegallIOFacebookEntityBase implements StatusInterface {
+class Picture extends SegallIOFacebookEntityBase implements PictureInterface {
 
   use EntityChangedTrait;
 
@@ -148,9 +148,9 @@ class Status extends SegallIOFacebookEntityBase implements StatusInterface {
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
-    $fields['assets'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Assets'))
-      ->setDescription(t('Assets(picture, video) which attached to the status.'))
+    $fields['asset'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Asset'))
+      ->setDescription(t('The picture it self.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
@@ -162,7 +162,6 @@ class Status extends SegallIOFacebookEntityBase implements StatusInterface {
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
-      ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
       ->setSetting('target_type', 'file');
 
     return $fields;

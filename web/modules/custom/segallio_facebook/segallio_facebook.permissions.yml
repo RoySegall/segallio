@@ -20,3 +20,25 @@ view published status entities:
 
 view unpublished status entities:
   title: 'View unpublished Status entities'
+add picture entities:
+  title: 'Create new Picture entities'
+
+administer picture entities:
+  title: 'Administer Picture entities'
+  description: 'Allow to access the administration form to configure Picture entities.'
+  restrict access: true
+
+delete picture entities:
+  title: 'Delete Picture entities'
+
+edit picture entities:
+  title: 'Edit Picture entities'
+
+access picture overview:
+  title: 'Access the Picture overview page'
+
+view published picture entities:
+  title: 'View published Picture entities'
+
+view unpublished picture entities:
+  title: 'View unpublished Picture entities'

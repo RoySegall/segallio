@@ -25,3 +25,30 @@ entity.status.collection:
   route_name: entity.status.collection
   base_route: system.admin_content
 
+# Picture routing definition
+picture.settings_tab:
+  route_name: picture.settings
+  title: 'Settings'
+  base_route: picture.settings
+
+entity.picture.canonical:
+  route_name: entity.picture.canonical
+  base_route: entity.picture.canonical
+  title: 'View'
+
+entity.picture.edit_form:
+  route_name: entity.picture.edit_form
+  base_route: entity.picture.canonical
+  title: 'Edit'
+
+entity.picture.delete_form:
+  route_name:  entity.picture.delete_form
+  base_route:  entity.picture.canonical
+  title: Delete
+  weight: 10
+
+entity.picture.collection:
+  title: 'Picture list'
+  route_name: entity.picture.collection
+  base_route: system.admin_content
+

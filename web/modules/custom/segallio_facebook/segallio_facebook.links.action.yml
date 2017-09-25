@@ -3,3 +3,8 @@ entity.status.add_form:
   title: 'Add Status'
   appears_on:
     - entity.status.collection
+entity.picture.add_form:
+  route_name: entity.picture.add_form
+  title: 'Add Picture'
+  appears_on:
+    - entity.picture.collection
