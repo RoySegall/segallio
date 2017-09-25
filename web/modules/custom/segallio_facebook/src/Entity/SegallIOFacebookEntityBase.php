@@ -42,7 +42,7 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['name'] = BaseFieldDefinition::create('string')
+    $fields['name'] = BaseFieldDefinition::create('string_long')
       ->setLabel(t('Name'))
       ->setDescription(t('The name of the Status entity.'))
       ->setSettings([
