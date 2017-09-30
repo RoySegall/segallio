@@ -1,0 +1,21 @@
+
+# Status menu items definition
+status.admin.structure.settings:
+  title: Status settings
+  description: 'Configure Status entities'
+  route_name: status.settings
+  parent: system.admin_structure
+
+# Picture menu items definition
+picture.admin.structure.settings:
+  title: Picture settings
+  description: 'Configure Picture entities'
+  route_name: picture.settings
+  parent: system.admin_structure
+
+# Album menu items definition
+album.admin.structure.settings:
+  title: Album settings
+  description: 'Configure Album entities'
+  route_name: album.settings
+  parent: system.admin_structure

@@ -54,6 +54,7 @@ dependencies:
   - segallio_migrate
   - segallio_place
   - segallio_github
+  - segallio_facebook
 
 themes:
   - bartik

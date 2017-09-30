@@ -1,0 +1,14 @@
+{
+  "name": "drupal/segallio_facebook",
+  "type": "drupal-module",
+  "description": "Contains intgeration with Facebook",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/segallio_facebook",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/segallio_facebook",
+    "source": "http://cgit.drupalcode.org/segallio_facebook"
+  },
+  "require": { }
+}

@@ -1,0 +1,80 @@
+# Status routing definition
+status.settings_tab:
+  route_name: status.settings
+  title: 'Settings'
+  base_route: status.settings
+
+entity.status.canonical:
+  route_name: entity.status.canonical
+  base_route: entity.status.canonical
+  title: 'View'
+
+entity.status.edit_form:
+  route_name: entity.status.edit_form
+  base_route: entity.status.canonical
+  title: 'Edit'
+
+entity.status.delete_form:
+  route_name:  entity.status.delete_form
+  base_route:  entity.status.canonical
+  title: Delete
+  weight: 10
+
+entity.status.collection:
+  title: 'Status list'
+  route_name: entity.status.collection
+  base_route: system.admin_content
+
+# Picture routing definition
+picture.settings_tab:
+  route_name: picture.settings
+  title: 'Settings'
+  base_route: picture.settings
+
+entity.picture.canonical:
+  route_name: entity.picture.canonical
+  base_route: entity.picture.canonical
+  title: 'View'
+
+entity.picture.edit_form:
+  route_name: entity.picture.edit_form
+  base_route: entity.picture.canonical
+  title: 'Edit'
+
+entity.picture.delete_form:
+  route_name:  entity.picture.delete_form
+  base_route:  entity.picture.canonical
+  title: Delete
+  weight: 10
+
+entity.picture.collection:
+  title: 'Picture list'
+  route_name: entity.picture.collection
+  base_route: system.admin_content
+
+# Album routing definition
+album.settings_tab:
+  route_name: album.settings
+  title: 'Settings'
+  base_route: album.settings
+
+entity.album.canonical:
+  route_name: entity.album.canonical
+  base_route: entity.album.canonical
+  title: 'View'
+
+entity.album.edit_form:
+  route_name: entity.album.edit_form
+  base_route: entity.album.canonical
+  title: 'Edit'
+
+entity.album.delete_form:
+  route_name:  entity.album.delete_form
+  base_route:  entity.album.canonical
+  title: Delete
+  weight: 10
+
+entity.album.collection:
+  title: 'Album list'
+  route_name: entity.album.collection
+  base_route: system.admin_content

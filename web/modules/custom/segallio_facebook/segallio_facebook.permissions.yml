@@ -1,0 +1,66 @@
+add status entities:
+  title: 'Create new Status entities'
+
+administer status entities:
+  title: 'Administer Status entities'
+  description: 'Allow to access the administration form to configure Status entities.'
+  restrict access: true
+
+delete status entities:
+  title: 'Delete Status entities'
+
+edit status entities:
+  title: 'Edit Status entities'
+
+access status overview:
+  title: 'Access the Status overview page'
+
+view published status entities:
+  title: 'View published Status entities'
+
+view unpublished status entities:
+  title: 'View unpublished Status entities'
+add picture entities:
+  title: 'Create new Picture entities'
+
+administer picture entities:
+  title: 'Administer Picture entities'
+  description: 'Allow to access the administration form to configure Picture entities.'
+  restrict access: true
+
+delete picture entities:
+  title: 'Delete Picture entities'
+
+edit picture entities:
+  title: 'Edit Picture entities'
+
+access picture overview:
+  title: 'Access the Picture overview page'
+
+view published picture entities:
+  title: 'View published Picture entities'
+
+view unpublished picture entities:
+  title: 'View unpublished Picture entities'
+add album entities:
+  title: 'Create new Album entities'
+
+administer album entities:
+  title: 'Administer Album entities'
+  description: 'Allow to access the administration form to configure Album entities.'
+  restrict access: true
+
+delete album entities:
+  title: 'Delete Album entities'
+
+edit album entities:
+  title: 'Edit Album entities'
+
+access album overview:
+  title: 'Access the Album overview page'
+
+view published album entities:
+  title: 'View published Album entities'
+
+view unpublished album entities:
+  title: 'View unpublished Album entities'
