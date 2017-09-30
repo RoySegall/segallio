@@ -8,3 +8,8 @@ entity.picture.add_form:
   title: 'Add Picture'
   appears_on:
     - entity.picture.collection
+entity.album.add_form:
+  route_name: entity.album.add_form
+  title: 'Add Album'
+  appears_on:
+    - entity.album.collection

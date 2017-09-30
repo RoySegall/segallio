@@ -42,3 +42,25 @@ view published picture entities:
 
 view unpublished picture entities:
   title: 'View unpublished Picture entities'
+add album entities:
+  title: 'Create new Album entities'
+
+administer album entities:
+  title: 'Administer Album entities'
+  description: 'Allow to access the administration form to configure Album entities.'
+  restrict access: true
+
+delete album entities:
+  title: 'Delete Album entities'
+
+edit album entities:
+  title: 'Edit Album entities'
+
+access album overview:
+  title: 'Access the Album overview page'
+
+view published album entities:
+  title: 'View published Album entities'
+
+view unpublished album entities:
+  title: 'View unpublished Album entities'

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file album.html.twig
+ * Default theme implementation to present Album data.
+ *
+ * This template is used when viewing Album pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_album()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('album') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

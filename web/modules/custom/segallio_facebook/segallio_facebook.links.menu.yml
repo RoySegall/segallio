@@ -12,3 +12,10 @@ picture.admin.structure.settings:
   description: 'Configure Picture entities'
   route_name: picture.settings
   parent: system.admin_structure
+
+# Album menu items definition
+album.admin.structure.settings:
+  title: Album settings
+  description: 'Configure Album entities'
+  route_name: album.settings
+  parent: system.admin_structure
