@@ -50,11 +50,12 @@ dependencies:
 
   # Segall IO modules
   - segallio_core
+  - segallio_facebook
+  - segallio_github
   - segallio_job
   - segallio_migrate
   - segallio_place
-  - segallio_github
-  - segallio_facebook
+  - segallio_twitter
 
 themes:
   - bartik
