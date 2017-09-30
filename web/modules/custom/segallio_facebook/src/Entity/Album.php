@@ -164,7 +164,7 @@ class Album extends SegallIOFacebookEntityBase implements AlbumInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
-      ->setSetting('target_type', 'node');
+      ->setSetting('target_type', 'picture');
 
     return $fields;
   }
