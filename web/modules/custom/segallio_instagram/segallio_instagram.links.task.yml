@@ -1,0 +1,27 @@
+# Instagram routing definition
+instagram.settings_tab:
+  route_name: instagram.settings
+  title: 'Settings'
+  base_route: instagram.settings
+
+entity.instagram.canonical:
+  route_name: entity.instagram.canonical
+  base_route: entity.instagram.canonical
+  title: 'View'
+
+entity.instagram.edit_form:
+  route_name: entity.instagram.edit_form
+  base_route: entity.instagram.canonical
+  title: 'Edit'
+
+entity.instagram.delete_form:
+  route_name:  entity.instagram.delete_form
+  base_route:  entity.instagram.canonical
+  title: Delete
+  weight: 10
+
+entity.instagram.collection:
+  title: 'Instagram list'
+  route_name: entity.instagram.collection
+  base_route: system.admin_content
+  weight: 100

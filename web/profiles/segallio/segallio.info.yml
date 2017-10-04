@@ -52,6 +52,7 @@ dependencies:
   # Segall IO modules
   - segallio_core
   - segallio_facebook
+  - segallio_instagram
   - segallio_github
   - segallio_job
   - segallio_migrate

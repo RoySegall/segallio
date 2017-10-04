@@ -1,0 +1,7 @@
+
+# Instagram menu items definition
+instagram.admin.structure.settings:
+  title: Instagram settings
+  description: 'Configure Instagram entities'
+  route_name: instagram.settings
+  parent: system.admin_structure

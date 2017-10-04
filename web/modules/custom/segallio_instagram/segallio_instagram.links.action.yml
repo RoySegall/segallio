@@ -1,0 +1,5 @@
+entity.instagram.add_form:
+  route_name: entity.instagram.add_form
+  title: 'Add Instagram'
+  appears_on:
+    - entity.instagram.collection
