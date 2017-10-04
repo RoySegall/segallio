@@ -1,0 +1,22 @@
+add instagram entities:
+  title: 'Create new Instagram entities'
+
+administer instagram entities:
+  title: 'Administer Instagram entities'
+  description: 'Allow to access the administration form to configure Instagram entities.'
+  restrict access: true
+
+delete instagram entities:
+  title: 'Delete Instagram entities'
+
+edit instagram entities:
+  title: 'Edit Instagram entities'
+
+access instagram overview:
+  title: 'Access the Instagram overview page'
+
+view published instagram entities:
+  title: 'View published Instagram entities'
+
+view unpublished instagram entities:
+  title: 'View unpublished Instagram entities'
