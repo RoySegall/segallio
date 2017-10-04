@@ -251,22 +251,6 @@ class Instagram extends ContentEntityBase implements InstagramInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['views'] = BaseFieldDefinition::create('integer')
-      ->setLabel(t('Views'))
-      ->setDescription(t('How much views did the post received.'))
-      ->setDefaultValue('')
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'string',
-        'weight' => -4,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => -2,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
     $fields['asset'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Asset'))
       ->setDescription(t('Any kind of photo/video.'))
