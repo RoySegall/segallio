@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies: {  }
+id: migrate_tweets
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - CSV
+migration_group: default
+label: 'Migrate my tweets.'
+source:
+  plugin: csv
+  path: /assets/csv/tweets.csv
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: Identifier
+    -
+      name: Tweet
+    -
+      url: URL
+    -
+      hearts: hearts
+    -
+      rts: RTs
+    -
+      comments: Comments
+    -
+      asset: Asset
+process:
+  user_id:
+    plugin: default_value
+    default_value: 1
+  name: name
+  url: url
+  hearts: hearts
+  comments: comments
+  rts: rts
+  asset:
+    source: asset
+    plugin: file_import
+destination:
+  plugin: 'entity:tweet'
+migration_dependencies:
+  required: {  }
+  optional: {  }

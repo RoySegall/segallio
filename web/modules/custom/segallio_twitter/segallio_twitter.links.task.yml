@@ -1,0 +1,26 @@
+# Tweet routing definition
+tweet.settings_tab:
+  route_name: tweet.settings
+  title: 'Settings'
+  base_route: tweet.settings
+
+entity.tweet.canonical:
+  route_name: entity.tweet.canonical
+  base_route: entity.tweet.canonical
+  title: 'View'
+
+entity.tweet.edit_form:
+  route_name: entity.tweet.edit_form
+  base_route: entity.tweet.canonical
+  title: 'Edit'
+
+entity.tweet.delete_form:
+  route_name:  entity.tweet.delete_form
+  base_route:  entity.tweet.canonical
+  title: Delete
+  weight: 10
+
+entity.tweet.collection:
+  title: 'Tweet list'
+  route_name: entity.tweet.collection
+  base_route: system.admin_content

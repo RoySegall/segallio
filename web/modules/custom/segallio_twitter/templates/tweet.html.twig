@@ -1,0 +1,22 @@
+{#
+/**
+ * @file tweet.html.twig
+ * Default theme implementation to present Tweet data.
+ *
+ * This template is used when viewing Tweet pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_tweet()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('tweet') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>
