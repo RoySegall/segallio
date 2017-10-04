@@ -1,0 +1,22 @@
+add tweet entities:
+  title: 'Create new Tweet entities'
+
+administer tweet entities:
+  title: 'Administer Tweet entities'
+  description: 'Allow to access the administration form to configure Tweet entities.'
+  restrict access: true
+
+delete tweet entities:
+  title: 'Delete Tweet entities'
+
+edit tweet entities:
+  title: 'Edit Tweet entities'
+
+access tweet overview:
+  title: 'Access the Tweet overview page'
+
+view published tweet entities:
+  title: 'View published Tweet entities'
+
+view unpublished tweet entities:
+  title: 'View unpublished Tweet entities'

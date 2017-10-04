@@ -23,7 +23,6 @@ dependencies:
   - help
   - history
   - image
-  - json_field
   - menu_link_content
   - menu_ui
   - migrate
@@ -43,18 +42,21 @@ dependencies:
   - views_ui
 
   # Contrib.
+  - config_inspector
   - features
   - features_ui
   - devel
   - kint
+  - json_field
 
   # Segall IO modules
   - segallio_core
+  - segallio_facebook
+  - segallio_github
   - segallio_job
   - segallio_migrate
   - segallio_place
-  - segallio_github
-  - segallio_facebook
+  - segallio_twitter
 
 themes:
   - bartik

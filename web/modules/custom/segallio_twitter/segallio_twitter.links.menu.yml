@@ -1,0 +1,7 @@
+
+# Tweet menu items definition
+tweet.admin.structure.settings:
+  title: Tweet settings
+  description: 'Configure Tweet entities'
+  route_name: tweet.settings
+  parent: system.admin_structure
