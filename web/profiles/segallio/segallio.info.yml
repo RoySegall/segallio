@@ -43,11 +43,12 @@ dependencies:
 
   # Contrib.
   - config_inspector
+  - devel
   - features
   - features_ui
-  - devel
-  - kint
+  - google_analytics
   - json_field
+  - kint
 
   # Segall IO modules
   - segallio_core

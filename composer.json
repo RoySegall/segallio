@@ -25,6 +25,7 @@
         "drupal/devel": "^1.0",
         "drupal/features": "^3.5",
         "drupal/geolocation": "^1.11",
+        "drupal/google_analytics": "^2.2",
         "drupal/json_field": "^1.0@beta",
         "drupal/migrate_source_csv": "^2.0",
         "drupal/migrate_tools": "^4.0-beta1",
