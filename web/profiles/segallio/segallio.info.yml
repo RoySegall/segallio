@@ -51,6 +51,7 @@ dependencies:
   - json_field
   - kint
   - token
+  - soacial_auth_facebook
 
   # Segall IO modules
   - segallio_core
