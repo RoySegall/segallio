@@ -46,15 +46,17 @@ dependencies:
   - devel
   - features
   - features_ui
+  - file_entity
   - google_analytics
   - json_field
   - kint
+  - token
 
   # Segall IO modules
   - segallio_core
   - segallio_facebook
-  - segallio_instagram
   - segallio_github
+  - segallio_instagram
   - segallio_job
   - segallio_migrate
   - segallio_place
