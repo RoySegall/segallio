@@ -5,3 +5,7 @@ services:
     tags:
       - { name: event_subscriber }
 
+  facebook_grpah:
+    class: Drupal\segallio_facebook\SegallIOFacebookGraph
+    arguments: ['@social_auth_facebook.persistent_data_handler', '@plugin.network.manager']
+
