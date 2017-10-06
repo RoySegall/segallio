@@ -61,11 +61,15 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    * {@inheritdoc}
    */
   public function getPosts() {
-    return $this->getFields('me/posts?fields=permalink_url,comments,reactions,full_picture,message,shares')['data'];
+    return $this->getFields('me/posts?fields=permalink_url,comments,reactions,full_picture,message,sharedposts')['data'];
   }
 
   public function getAlbums() {
-    return $this->getFields('me/albums?fields=description,comments,reactions,name')['data'];
+    return $this->getFields('me/albums?fields=description,comments,reactions,name,sharedposts')['data'];
+  }
+
+  public function getPhotos() {
+    return $this->getFields('me/photos?fields=album,comments,reactions,link,name,sharedposts')['data'];
   }
 
 }
