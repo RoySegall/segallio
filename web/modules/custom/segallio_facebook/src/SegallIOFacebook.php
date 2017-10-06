@@ -8,7 +8,7 @@ namespace Drupal\segallio_facebook;
 class SegallIOFacebook {
 
   /**
-   * @return SegallIOFacebookGraph
+   * @return SegallIOFaecebookGraphInterface
    */
   static public function getFacebookGraph() {
     return \Drupal::service('facebook_grpah');
