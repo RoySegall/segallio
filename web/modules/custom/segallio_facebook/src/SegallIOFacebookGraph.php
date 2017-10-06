@@ -54,19 +54,18 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    */
   public function getFields($fields) {
     $response = $this->facebook->get($fields, $this->accessToken);
-    return $response->getGraphNode();
+    return $response->getDecodedBody();
   }
 
   /**
    * {@inheritdoc}
    */
   public function getPosts() {
-    return $this->getFields('me?fields=posts{permalink_url,comments,reactions,full_picture,message,shares}')->getField('posts')->asArray();
+    return $this->getFields('me/posts?fields=permalink_url,comments,reactions,full_picture,message,shares')['data'];
   }
 
   public function getAlbums() {
-    return $this->getFields('me/albums?fields=name,reactions')->asArray();
-
+    return $this->getFields('me/albums?fields=description,comments,reactions,name')['data'];
   }
 
 }
