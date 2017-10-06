@@ -24,4 +24,11 @@ interface SegallIOFaecebookGraphInterface {
    */
   public function getPosts();
 
+  /**
+   * Array of albums.
+   *
+   * @return mixed
+   */
+  public function getAlbums();
+
 }

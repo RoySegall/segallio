@@ -53,7 +53,7 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    * {@inheritdoc}
    */
   public function getFields($fields) {
-    $response = $this->facebook->get('me?fields=' . $fields, $this->accessToken);
+    $response = $this->facebook->get($fields, $this->accessToken);
     return $response->getGraphNode();
   }
 
@@ -61,7 +61,12 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    * {@inheritdoc}
    */
   public function getPosts() {
-    return $this->getFields('posts{permalink_url,comments,reactions,full_picture,message,shares}')->getField('posts')->asArray();
+    return $this->getFields('me?fields=posts{permalink_url,comments,reactions,full_picture,message,shares}')->getField('posts')->asArray();
+  }
+
+  public function getAlbums() {
+    return $this->getFields('me/albums?fields=name,reactions')->asArray();
+
   }
 
 }

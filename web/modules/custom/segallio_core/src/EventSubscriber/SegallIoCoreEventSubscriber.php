@@ -25,8 +25,8 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
-    $posts = SegallIOFacebook::getFacebookGraph()->getPosts();
-    dpm($posts);
+    $albums = SegallIOFacebook::getFacebookGraph()->getAlbums();
+    dpm($albums);
   }
 
 }
