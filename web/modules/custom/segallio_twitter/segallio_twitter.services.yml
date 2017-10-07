@@ -1,0 +1,4 @@
+services:
+  segallio_twitter_grpah:
+    class: Drupal\segallio_twitter\SegallIoTwitterGraph
+    arguments: ['@config.factory', '@session']
