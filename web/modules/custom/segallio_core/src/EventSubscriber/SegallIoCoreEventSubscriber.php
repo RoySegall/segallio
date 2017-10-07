@@ -3,6 +3,7 @@
 namespace Drupal\segallio_core\EventSubscriber;
 
 use Drupal\segallio_facebook\SegallIOFacebook;
+use Drupal\segallio_twitter\SegallIoTwitter;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -25,7 +26,9 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
-    dpm(SegallIOFacebook::getFacebookGraph()->getAlbums());
+    $graph = SegallIoTwitter::getTwitterGraph();
+
+    dpm($graph->getTweets());
   }
 
 }

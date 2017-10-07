@@ -32,6 +32,7 @@
         "drupal/migrate_tools": "^4.0-beta1",
         "drupal/social_auth": "^1.0",
         "drupal/social_auth_facebook": "^1.0",
+        "drupal/social_auth_twitter": "^1.0@beta",
         "drush/drush": "^8.1",
         "facebook/graph-sdk": "^5.6",
         "webflo/drupal-finder": "^1.0.0",
