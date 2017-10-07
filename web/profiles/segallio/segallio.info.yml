@@ -52,6 +52,8 @@ dependencies:
   - kint
   - token
   - soacial_auth_facebook
+  - soacial_auth_twitter
+  - soacial_auth_instagram
 
   # Segall IO modules
   - segallio_core
