@@ -190,7 +190,7 @@ class SegallIoInstagramAuthController extends ControllerBase {
       return $this->redirect('user.login');
     }
 
-    $this->dataHandler->set('instagram', $this->instagramManager->getAccessToken());
+    $this->dataHandler->set('instagram_access_token', $this->instagramManager->getAccessToken());
 
     $account = $this->userManager->loadUserByProperty('uid', 1);
     user_login_finalize($account);
