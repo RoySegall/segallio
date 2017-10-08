@@ -8,4 +8,3 @@ services:
   segallio_instagram.posts:
     class: Drupal\segallio_instagram\SegallIoInstagramPosts
     arguments: ['@session', '@http_client']
-
