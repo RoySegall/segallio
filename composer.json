@@ -30,7 +30,7 @@
         "drupal/json_field": "^1.0@beta",
         "drupal/migrate_source_csv": "^2.0",
         "drupal/migrate_tools": "^4.0-beta1",
-        "drupal/social_auth": "^2.0",
+        "drupal/social_auth": "^1.0",
         "drupal/social_auth_facebook": "^1.0",
         "drupal/social_auth_instagram": "1.x-dev",
         "drupal/social_auth_twitter": "^1.0@beta",

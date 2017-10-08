@@ -1,0 +1,5 @@
+services:
+  segallio_instagram.route_subscriber:
+    class: Drupal\segallio_instagram\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
