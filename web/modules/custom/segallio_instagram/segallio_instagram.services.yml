@@ -1,0 +1,10 @@
+services:
+
+  segallio_instagram.route_subscriber:
+    class: Drupal\segallio_instagram\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  segallio_instagram.posts:
+    class: Drupal\segallio_instagram\SegallIoInstagramPosts
+    arguments: ['@session', '@http_client']
