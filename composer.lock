@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4459bf509c1133d44e8f3e1de0ccedf8",
+    "content-hash": "24a1e7086de27628b93209b9dcb009e9",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -2515,6 +2515,59 @@
             }
         },
         {
+            "name": "drupal/social_auth_github",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/social_auth_github",
+                "reference": "4afe00724289e6f127ee6c0db3d215a7518bbdd6"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/social_auth": "*",
+                "league/oauth2-github": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1503644645",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Getulio Valentin Sánchez (gvso)",
+                    "homepage": "https://www.drupal.org/user/3513954",
+                    "email": "valentin2507@gmail.com"
+                },
+                {
+                    "name": "Himanshu Dixit (himanshu-dixit)",
+                    "email": "hudixt@gmail.com"
+                }
+            ],
+            "description": "Social Auth integration for Github.",
+            "homepage": "https://www.drupal.org/project/social_auth_github",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/social_auth_github",
+                "issues": "https://www.drupal.org/project/issues/social_auth_github"
+            },
+            "time": "2017-08-24T07:18:36+00:00"
+        },
+        {
             "name": "drupal/social_auth_instagram",
             "version": "dev-1.x",
             "source": {
@@ -3433,6 +3486,61 @@
                 "single sign on"
             ],
             "time": "2017-04-25T14:43:14+00:00"
+        },
+        {
+            "name": "league/oauth2-github",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth2-github.git",
+                "reference": "e63d64f3ec167c09232d189c6b0c397458a99357"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-github/zipball/e63d64f3ec167c09232d189c6b0c397458a99357",
+                "reference": "e63d64f3ec167c09232d189c6b0c397458a99357",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Maguire",
+                    "email": "stevenmaguire@gmail.com",
+                    "homepage": "https://github.com/stevenmaguire"
+                }
+            ],
+            "description": "Github OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "github",
+                "oauth",
+                "oauth2"
+            ],
+            "time": "2017-01-26T01:14:51+00:00"
         },
         {
             "name": "league/oauth2-instagram",
@@ -7537,6 +7645,7 @@
         "drupal/config_inspector": 10,
         "drupal/file_entity": 10,
         "drupal/json_field": 10,
+        "drupal/social_auth_github": 20,
         "drupal/social_auth_instagram": 20,
         "drupal/social_auth_twitter": 10
     },

@@ -2,9 +2,7 @@
 
 namespace Drupal\segallio_core\EventSubscriber;
 
-use Drupal\segallio_facebook\SegallIOFacebook;
-use Drupal\segallio_instagram\SegallIoInstagram;
-use Drupal\segallio_twitter\SegallIoTwitter;
+use Drupal\segallio_github\SegallIoGithub;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -27,9 +25,9 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
-    $posts = SegallIoInstagram::getApi();
+    $posts = SegallIoGithub::getApi();
 
-    dpm($posts->getPosts());
+    dpm($posts->getGists());
   }
 
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Drupal\segallio_instagram\Routing;
+namespace Drupal\segallio_core\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
 
 /**
- * Listens to the dynamic route events.
+ * Overrides some routes.
  */
 class RouteSubscriber extends RouteSubscriberBase {
 
@@ -20,6 +20,14 @@ class RouteSubscriber extends RouteSubscriberBase {
 
     if ($route = $collection->get('social_auth_instagram.callback')) {
       $route->setDefault('_controller', '\Drupal\segallio_instagram\Controller\SegallIoInstagramAuthController::callback');
+    }
+
+    if ($route = $collection->get('social_auth_github.redirect_to_github')) {
+      $route->setDefault('_controller', '\Drupal\segallio_github\Controller\SegallIOGithubAuthController::redirectToGithub');
+    }
+
+    if ($route = $collection->get('social_auth_github.callback')) {
+      $route->setDefault('_controller', '\Drupal\segallio_github\Controller\SegallIOGithubAuthController::callback');
     }
   }
 
