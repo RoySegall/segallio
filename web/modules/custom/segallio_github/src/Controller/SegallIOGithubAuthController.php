@@ -51,7 +51,7 @@ class SegallIOGithubAuthController extends ControllerBase {
    *
    * @var \Symfony\Component\HttpFoundation\Session\SessionInterface
    */
-  private $dataHandler;
+  protected $dataHandler;
 
 
   /**

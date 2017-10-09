@@ -16,19 +16,11 @@ interface SegallIoGithubApiInterface {
   public function getGists();
 
   /**
-   * Get list of projects.
-   *
-   * @return array
-   *   Get projects.
-   */
-  public function getProjects();
-
-  /**
-   * Get list of commits.
+   * Get list of events.
    *
    * @return array
    *   Array of commits.
    */
-  public function getCommits();
+  public function getEvents();
 
 }

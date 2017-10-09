@@ -1,3 +1,4 @@
 services:
   segallio_github.api:
     class: \Drupal\segallio_github\SegallIoGithubApi
+    arguments: ['@http_client']

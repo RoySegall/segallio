@@ -27,7 +27,7 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
   public function onRequest(GetResponseEvent $event) {
     $posts = SegallIoGithub::getApi();
 
-    dpm($posts->getCommits());
+    dpm($posts->getGists());
   }
 
 }
