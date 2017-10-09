@@ -1,12 +1,12 @@
 <?php
 
-namespace Drupal\segallio_instagram\Routing;
+namespace Drupal\segallio_core\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
 
 /**
- * Listens to the dynamic route events.
+ * Overrides some routes.
  */
 class RouteSubscriber extends RouteSubscriberBase {
 

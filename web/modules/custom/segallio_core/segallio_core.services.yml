@@ -5,3 +5,7 @@ services:
     tags:
       - { name: event_subscriber }
 
+  segallio_instagram.route_subscriber:
+    class: Drupal\segallio_core\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
