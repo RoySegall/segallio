@@ -152,7 +152,7 @@ class SegallIOGithubAuthController extends ControllerBase {
     }
 
     /* @var \League\OAuth2\Client\Provider\Github false $github */
-    $github = $this->networkManager->createInstance('social_auth_github')->getSdk();
+    $github = $this->networkManager->createInstance('segallio_github_social_auth_github')->getSdk();
 
     // If Github client could not be obtained.
     if (!$github) {
