@@ -1,0 +1,22 @@
+{#
+/**
+ * @file social_access_tokens.html.twig
+ * Default theme implementation to present Social access tokens data.
+ *
+ * This template is used when viewing Social access tokens pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_social_access_tokens()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('social_access_tokens') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>
