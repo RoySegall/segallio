@@ -25,9 +25,9 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
-    $posts = SegallIoGithub::getApi();
-
-    dpm($posts->getGists());
+//    $posts = SegallIoGithub::getApi();
+//
+//    dpm($posts->getGists());
   }
 
 }
