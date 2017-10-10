@@ -10,7 +10,7 @@ services:
     tags:
       - { name: event_subscriber }
 
-  persistant_access_token_storage:
+  persistent_access_token_storage:
     class: Drupal\segallio_core\PersistantAccessTokenStorage
     arguments: []
 
