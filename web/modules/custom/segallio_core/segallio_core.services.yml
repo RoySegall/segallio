@@ -11,6 +11,9 @@ services:
       - { name: event_subscriber }
 
   persistent_access_token_storage:
-    class: Drupal\segallio_core\PersistantAccessTokenStorage
-    arguments: []
+    class: Drupal\segallio_core\PersistentAccessTokenStorage
+    arguments: ['@plugin.manager.persistent_access_token_manager']
 
+  plugin.manager.persistent_access_token_manager:
+    class: Drupal\segallio_core\Plugin\PersistentAccessTokenManagerManager
+    parent: default_plugin_manager
