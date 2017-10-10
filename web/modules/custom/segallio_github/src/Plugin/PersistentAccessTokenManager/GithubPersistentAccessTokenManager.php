@@ -9,7 +9,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 /**
  * @PersistentAccessTokenManager(
  *  id = "github",
- *  label = @Translation("The plugin ID."),
+ *  label = @Translation("GitHub."),
  * )
  */
 class GithubPersistentAccessTokenManager extends PersistentAccessTokenManagerBase implements PersistentAccessTokenManagerInterface, ContainerFactoryPluginInterface {
