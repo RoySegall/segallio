@@ -49,4 +49,23 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
     );
   }
 
+  /**
+   * Get the access token from the DB.
+   *
+   * @return string
+   *  The access token form the DB.
+   */
+  protected function loadAccessTokenFromDb() {
+    return [];
+  }
+
+  /**
+   * Set the access in the DB.
+   *
+   * @return \Drupal\segallio_core\Plugin\PersistentAccessTokenManagerInterface
+   */
+  protected function setAccessTokenInDb() {
+
+  }
+
 }

@@ -18,7 +18,9 @@ class GithubPersistentAccessTokenManager extends PersistentAccessTokenManagerBas
    * {@inheritdoc}
    */
   public function getAccessToken() {
-    return 'a';
+    $at = $this->loadAccessTokenFromDb();
+
+    return $at->getValues();
   }
 
   /**
