@@ -19,6 +19,13 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
   protected $entityTypeManager;
 
   /**
+   * The entity query manager.
+   *
+   * @var \Drupal\Core\Entity\Query\QueryInterface
+   */
+  protected $entityQuery;
+
+  /**
    * Constructs a new GithubPersistentAccessTokenManager object.
    *
    * @param array $configuration
@@ -28,14 +35,11 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
    * @param string $plugin_definition
    *   The plugin implementation definition.
    */
-  public function __construct(
-    array $configuration,
-    $plugin_id,
-    $plugin_definition,
-    EntityTypeManager $entity_type_manager
-  ) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManager $entity_type_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
+
     $this->entityTypeManager = $entity_type_manager;
+    $this->entityQuery = $this->entityTypeManager->getStorage('social_access_tokens')->getQuery();
   }
   /**
    * {@inheritdoc}
@@ -56,6 +60,14 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
    *  The access token form the DB.
    */
   protected function loadAccessTokenFromDb() {
+    $result = $this->entityQuery
+      ->condition('name', $this->getPluginId())
+      ->execute();
+
+    if (!$result) {
+      return;
+    }
+
     return [];
   }
 

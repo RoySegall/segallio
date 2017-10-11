@@ -18,7 +18,9 @@ class GithubPersistentAccessTokenManager extends PersistentAccessTokenManagerBas
    * {@inheritdoc}
    */
   public function getAccessToken() {
-    $at = $this->loadAccessTokenFromDb();
+    if (!$at = $this->loadAccessTokenFromDb()) {
+      return;
+    }
 
     return $at;
   }
@@ -26,7 +28,14 @@ class GithubPersistentAccessTokenManager extends PersistentAccessTokenManagerBas
   /**
    * {@inheritdoc}
    */
-  public function setAccessToken() {
+  public function setAccessToken($object) {
+    // Check if the token exists in the DB.
+
+    if (1) {
+      // update the token and return the object.
+    }
+
+    // create a new one and return the object.
   }
 
   /**

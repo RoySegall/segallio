@@ -27,7 +27,15 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
   public function onRequest(GetResponseEvent $event) {
     $persistant = SegallIoCore::getPersistentAccessTokenStorage();
 
-    dpm($persistant->get('github'));
+    if (!$github = $persistant->get('github')) {
+      dpm('nothing. creating');
+      $foo = new \stdClass();
+      $foo->bar = 'a';
+      $persistant->set('github', $foo);
+
+      return;
+    }
+    dpm($github);
   }
 
 }

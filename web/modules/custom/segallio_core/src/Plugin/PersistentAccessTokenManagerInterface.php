@@ -11,7 +11,7 @@ interface PersistentAccessTokenManagerInterface extends PluginInspectionInterfac
 
   public function getAccessToken();
 
-  public function setAccessToken();
+  public function setAccessToken($object);
 
   public function isExpired();
 
