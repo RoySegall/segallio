@@ -1,0 +1,5 @@
+services:
+
+  segallio_instagram.api:
+    class: Drupal\segallio_instagram\SegallIoInstagramPosts
+    arguments: ['@persistent_access_token_storage', '@http_client']

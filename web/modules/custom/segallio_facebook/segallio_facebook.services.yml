@@ -1,0 +1,10 @@
+services:
+  segallio_facebook.default:
+    class: Drupal\segallio_facebook\EventSubscriber\DefaultSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+
+  facebook_grpah:
+    class: Drupal\segallio_facebook\SegallIOFacebookGraph
+    arguments: ['@social_auth_facebook.persistent_data_handler', '@plugin.network.manager', '@persistent_access_token_storage']

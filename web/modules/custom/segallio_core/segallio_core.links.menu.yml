@@ -1,0 +1,7 @@
+
+# Social access tokens menu items definition
+social_access_tokens.admin.structure.settings:
+  title: Social access tokens settings
+  description: 'Configure Social access tokens entities'
+  route_name: social_access_tokens.settings
+  parent: system.admin_structure

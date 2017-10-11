@@ -5,3 +5,15 @@ services:
     tags:
       - { name: event_subscriber }
 
+  segallio_instagram.route_subscriber:
+    class: Drupal\segallio_core\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  persistent_access_token_storage:
+    class: Drupal\segallio_core\PersistentAccessTokenStorage
+    arguments: ['@plugin.manager.persistent_access_token_manager']
+
+  plugin.manager.persistent_access_token_manager:
+    class: Drupal\segallio_core\Plugin\PersistentAccessTokenManagerManager
+    parent: default_plugin_manager

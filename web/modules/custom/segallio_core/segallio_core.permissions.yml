@@ -1,0 +1,22 @@
+add social access tokens entities:
+  title: 'Create new Social access tokens entities'
+
+administer social access tokens entities:
+  title: 'Administer Social access tokens entities'
+  description: 'Allow to access the administration form to configure Social access tokens entities.'
+  restrict access: true
+
+delete social access tokens entities:
+  title: 'Delete Social access tokens entities'
+
+edit social access tokens entities:
+  title: 'Edit Social access tokens entities'
+
+access social access tokens overview:
+  title: 'Access the Social access tokens overview page'
+
+view published social access tokens entities:
+  title: 'View published Social access tokens entities'
+
+view unpublished social access tokens entities:
+  title: 'View unpublished Social access tokens entities'
