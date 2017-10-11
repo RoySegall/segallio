@@ -102,6 +102,7 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
       // update the token and return the object.
       $entity->set('access_token', $object);
       $entity->save();
+      return;
     }
 
     $this->setAccessTokenInDb($object);

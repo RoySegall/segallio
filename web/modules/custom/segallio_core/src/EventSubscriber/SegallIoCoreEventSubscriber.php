@@ -26,11 +26,12 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
-//    $persistant = SegallIoCore::getPersistentAccessTokenStorage();
-//    dpm($persistant->get('facebook'));
+    $persistant = SegallIoCore::getPersistentAccessTokenStorage();
+    dpm($persistant->get('twitter'));
+//    $persistant->set('twitter', 'foo');
 
 //    dpm(SegallIOFacebook::getFacebookGraph()->getPosts());
-
+//
 //    $entities = \Drupal::entityTypeManager()->getStorage('social_access_tokens')->loadMultiple();
 //    \Drupal::entityTypeManager()->getStorage('social_access_tokens')->delete($entities);
   }

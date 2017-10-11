@@ -24,10 +24,7 @@ class TwitterPersistentAccessToken extends PersistentAccessTokenManagerBase impl
       return;
     }
 
-    /** @var \League\OAuth2\Client\Token\AccessToken $serialize */
-    $serialize = unserialize($at->get('access_token')->value);
-
-    return $serialize->getToken();
+    return unserialize($at->get('access_token')->value);
   }
 
 }
