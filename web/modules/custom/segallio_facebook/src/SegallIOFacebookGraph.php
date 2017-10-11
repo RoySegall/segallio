@@ -37,7 +37,6 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    * @param \Drupal\social_auth_facebook\FacebookAuthPersistentDataHandler $social_auth_facebook_persistent_data_handler
    * @param \Drupal\social_api\Plugin\NetworkManager $plugin_network_manager
    * @param PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager
-   * @internal param SegallIOFacebookRefreshToken $refresh_token
    */
   public function __construct(FacebookAuthPersistentDataHandler $social_auth_facebook_persistent_data_handler, NetworkManager $plugin_network_manager, PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager) {
     $this->socialAuthFacebookPersistentDataHandler = $social_auth_facebook_persistent_data_handler;

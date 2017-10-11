@@ -11,9 +11,7 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup segallio_core
  */
-interface SocialAccessTokensInterface extends  ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
-
-  // Add get/set methods for your configuration properties here.
+interface SocialAccessTokensInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
   /**
    * Gets the Social access tokens name.

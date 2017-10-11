@@ -38,7 +38,6 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
 //    $instagram = SegallIoInstagram::getApi();
 //    dpm($instagram->getPosts(), 'instagram');
 //
-//
 //    $instagram = SegallIoGithub::getApi();
 //    dpm($instagram->getGists(), 'gh');
 
