@@ -42,6 +42,7 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
     $this->entityTypeManager = $entity_type_manager;
     $this->entityQuery = $this->entityTypeManager->getStorage('social_access_tokens')->getQuery();
   }
+
   /**
    * {@inheritdoc}
    */

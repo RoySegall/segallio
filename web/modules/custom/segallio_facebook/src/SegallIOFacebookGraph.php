@@ -39,6 +39,7 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
   public function __construct(FacebookAuthPersistentDataHandler $social_auth_facebook_persistent_data_handler, NetworkManager $plugin_network_manager, SegallIOFacebookRefreshToken $refresh_token) {
     $this->socialAuthFacebookPersistentDataHandler = $social_auth_facebook_persistent_data_handler;
     $this->facebook = $plugin_network_manager->createInstance('social_auth_facebook')->getSdk();
+    // todo: use the facebook plugin.
     $this->accessToken = $refresh_token->ensureToken()->getValue();
   }
 
