@@ -2,6 +2,8 @@
 
 namespace Drupal\segallio_facebook;
 
+use Drupal\segallio_core\PersistentAccessTokenStorageInterface;
+use Drupal\segallio_core\Plugin\PersistentAccessTokenManagerManager;
 use Drupal\social_auth_facebook\FacebookAuthPersistentDataHandler;
 use Drupal\social_api\Plugin\NetworkManager;
 
@@ -34,13 +36,13 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    *
    * @param \Drupal\social_auth_facebook\FacebookAuthPersistentDataHandler $social_auth_facebook_persistent_data_handler
    * @param \Drupal\social_api\Plugin\NetworkManager $plugin_network_manager
-   * @param \Drupal\segallio_facebook\SegallIOFacebookRefreshToken $refresh_token
+   * @param PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager
+   * @internal param SegallIOFacebookRefreshToken $refresh_token
    */
-  public function __construct(FacebookAuthPersistentDataHandler $social_auth_facebook_persistent_data_handler, NetworkManager $plugin_network_manager, SegallIOFacebookRefreshToken $refresh_token) {
+  public function __construct(FacebookAuthPersistentDataHandler $social_auth_facebook_persistent_data_handler, NetworkManager $plugin_network_manager, PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager) {
     $this->socialAuthFacebookPersistentDataHandler = $social_auth_facebook_persistent_data_handler;
     $this->facebook = $plugin_network_manager->createInstance('social_auth_facebook')->getSdk();
-    // todo: use the facebook plugin.
-    $this->accessToken = $refresh_token->ensureToken()->getValue();
+    $this->accessToken = $persistentAccessTokenManagerManager->get('facebook');
   }
 
   /**
