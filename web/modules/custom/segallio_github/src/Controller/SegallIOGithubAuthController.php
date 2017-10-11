@@ -3,6 +3,7 @@
 namespace Drupal\segallio_github\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\segallio_core\PersistentAccessTokenStorageInterface;
 use Drupal\social_api\Plugin\NetworkManager;
 use Drupal\social_auth\SocialAuthDataHandler;
 use Drupal\social_auth\SocialAuthUserManager;
@@ -53,13 +54,17 @@ class SegallIOGithubAuthController extends ControllerBase {
    */
   protected $dataHandler;
 
-
   /**
    * The logger channel.
    *
    * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
    */
   protected $loggerFactory;
+
+  /**
+   * @var PersistentAccessTokenStorageInterface
+   */
+  protected $persistentAccessToken;
 
   /**
    * GithubAuthController constructor.
@@ -76,8 +81,17 @@ class SegallIOGithubAuthController extends ControllerBase {
    *   SocialAuthDataHandler object.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_factory
    *   Used for logging errors.
+   * @param PersistentAccessTokenStorageInterface $persistent_access_token
    */
-  public function __construct(NetworkManager $network_manager, SocialAuthUserManager $user_manager, GithubAuthManager $github_manager, RequestStack $request, SessionInterface $social_auth_data_handler, LoggerChannelFactoryInterface $logger_factory) {
+  public function __construct(
+    NetworkManager $network_manager,
+    SocialAuthUserManager $user_manager,
+    GithubAuthManager $github_manager,
+    RequestStack $request,
+    SessionInterface $social_auth_data_handler,
+    LoggerChannelFactoryInterface $logger_factory,
+    PersistentAccessTokenStorageInterface $persistent_access_token
+  ) {
 
     $this->networkManager = $network_manager;
     $this->userManager = $user_manager;
@@ -92,6 +106,7 @@ class SegallIOGithubAuthController extends ControllerBase {
     // Sets the session keys to nullify if user could not logged in.
     $this->userManager->setSessionKeysToNullify(['access_token', 'oauth2state']);
     $this->setting = $this->config('social_auth_github.settings');
+    $this->persistentAccessToken = $persistent_access_token;
   }
 
   /**
@@ -104,7 +119,8 @@ class SegallIOGithubAuthController extends ControllerBase {
       $container->get('social_auth_github.manager'),
       $container->get('request_stack'),
       $container->get('session'),
-      $container->get('logger.factory')
+      $container->get('logger.factory'),
+      $container->get('persistent_access_token_storage')
     );
   }
 
@@ -189,7 +205,7 @@ class SegallIOGithubAuthController extends ControllerBase {
       return $this->redirect('user.login');
     }
 
-    $this->dataHandler->set('github_access_token', $this->githubManager->getAccessToken());
+    $this->persistentAccessToken->set('github', $this->githubManager->getAccessToken());
 
     $account = $this->userManager->loadUserByProperty('uid', 1);
     user_login_finalize($account);

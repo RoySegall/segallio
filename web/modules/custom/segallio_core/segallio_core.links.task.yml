@@ -1,0 +1,27 @@
+# Social access tokens routing definition
+social_access_tokens.settings_tab:
+  route_name: social_access_tokens.settings
+  title: 'Settings'
+  base_route: social_access_tokens.settings
+
+entity.social_access_tokens.canonical:
+  route_name: entity.social_access_tokens.canonical
+  base_route: entity.social_access_tokens.canonical
+  title: 'View'
+
+entity.social_access_tokens.edit_form:
+  route_name: entity.social_access_tokens.edit_form
+  base_route: entity.social_access_tokens.canonical
+  title: 'Edit'
+
+entity.social_access_tokens.delete_form:
+  route_name:  entity.social_access_tokens.delete_form
+  base_route:  entity.social_access_tokens.canonical
+  title: Delete
+  weight: 10
+
+entity.social_access_tokens.collection:
+  title: 'Social access tokens list'
+  route_name: entity.social_access_tokens.collection
+  base_route: system.admin_content
+  weight: 100

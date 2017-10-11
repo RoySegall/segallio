@@ -1,0 +1,5 @@
+entity.social_access_tokens.add_form:
+  route_name: entity.social_access_tokens.add_form
+  title: 'Add Social access tokens'
+  appears_on:
+    - entity.social_access_tokens.collection

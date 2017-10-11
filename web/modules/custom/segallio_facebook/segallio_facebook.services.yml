@@ -7,8 +7,4 @@ services:
 
   facebook_grpah:
     class: Drupal\segallio_facebook\SegallIOFacebookGraph
-    arguments: ['@social_auth_facebook.persistent_data_handler', '@plugin.network.manager', '@facebook_refresh_token']
-
-  facebook_refresh_token:
-    class: Drupal\segallio_facebook\SegallIOFacebookRefreshToken
-    arguments: ['@social_auth_facebook.persistent_data_handler', '@plugin.network.manager']
+    arguments: ['@social_auth_facebook.persistent_data_handler', '@plugin.network.manager', '@persistent_access_token_storage']
