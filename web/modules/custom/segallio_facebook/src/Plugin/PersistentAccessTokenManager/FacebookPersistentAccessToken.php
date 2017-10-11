@@ -6,6 +6,7 @@ use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\segallio_core\Plugin\PersistentAccessTokenManagerBase;
 use Drupal\segallio_core\Plugin\PersistentAccessTokenManagerInterface;
+use Drupal\social_api\Plugin\NetworkManager;
 use Facebook\Authentication\AccessToken;
 use Facebook\Authentication\OAuth2Client;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -18,9 +19,23 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class FacebookPersistentAccessToken extends PersistentAccessTokenManagerBase implements PersistentAccessTokenManagerInterface, ContainerFactoryPluginInterface {
 
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManager $entity_type_manager) {
+  /**
+   * @var \Facebook\Facebook
+   */
+  protected $facebook;
+
+  /**
+   * FacebookPersistentAccessToken constructor.
+   *
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param string $plugin_definition
+   * @param EntityTypeManager $entity_type_manager
+   * @param NetworkManager $plugin_network_manager
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManager $entity_type_manager, NetworkManager $plugin_network_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_type_manager);
-//    $this->facebook = $plugin_network_manager->createInstance('social_auth_facebook')->getSdk();
+    $this->facebook = $plugin_network_manager->createInstance('social_auth_facebook')->getSdk();
   }
 
   /**
@@ -31,7 +46,8 @@ class FacebookPersistentAccessToken extends PersistentAccessTokenManagerBase imp
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('plugin.network.manager')
     );
   }
 
@@ -44,16 +60,16 @@ class FacebookPersistentAccessToken extends PersistentAccessTokenManagerBase imp
       return;
     }
 
-    /** @var AccessToken $seralize */
-    $seralize = unserialize($at->get('access_token')->value);
+    /** @var AccessToken $serialize */
+    $serialize = unserialize($at->get('access_token')->value);
 
-    if ($seralize->isExpired()) {
-//      $oauth = new OAuth2Client($this->facebook->getApp(), $this->facebook->getClient());
-//      $access_token = $oauth->getLongLivedAccessToken($this->accessToken);
-//      $this->socialAuthFacebookPersistentDataHandler->set('access_token', $access_token);
+    if ($serialize->isExpired()) {
+      $oauth = new OAuth2Client($this->facebook->getApp(), $this->facebook->getClient());
+      $access_token = $oauth->getLongLivedAccessToken($serialize->getValue());
+      $this->setAccessToken($access_token);
     }
 
-    return $seralize->getValue();
+    return $serialize->getValue();
   }
 
 
