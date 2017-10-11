@@ -38,7 +38,7 @@ class SegallIoInstagramPosts implements SegallIoInstagramPostsInterface {
   /**
    * {@inheritdoc}
    */
-  public function getPosts() {
+  public function getMedia() {
     $response = $this->httpClient->get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' . $this->accessToken);
     return json_decode($response->getBody()->getContents());
   }

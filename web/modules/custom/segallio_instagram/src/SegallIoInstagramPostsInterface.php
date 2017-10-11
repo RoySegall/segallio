@@ -12,6 +12,6 @@ interface SegallIoInstagramPostsInterface {
    *
    * @return array
    */
-  public function getPosts();
+  public function getMedia();
 
 }
