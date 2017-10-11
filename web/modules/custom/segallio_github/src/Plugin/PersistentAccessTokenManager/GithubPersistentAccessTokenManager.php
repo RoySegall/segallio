@@ -18,24 +18,29 @@ class GithubPersistentAccessTokenManager extends PersistentAccessTokenManagerBas
    * {@inheritdoc}
    */
   public function getAccessToken() {
+
     if (!$at = $this->loadAccessTokenFromDb()) {
       return;
     }
 
-    return $at;
+    $serialize = unserialize($at->get('access_token')->value);
+
+    // todo: handle a real object.
+    return $serialize;
   }
 
   /**
    * {@inheritdoc}
    */
   public function setAccessToken($object) {
-    // Check if the token exists in the DB.
 
-    if (1) {
+    if ($entity = $this->loadAccessTokenFromDb()) {
       // update the token and return the object.
+      $entity->set('access_token', $object);
+      $entity->save();
     }
 
-    // create a new one and return the object.
+    return $this->setAccessTokenInDb($object);
   }
 
   /**

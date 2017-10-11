@@ -21,6 +21,7 @@ use Drupal\user\UserInterface;
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\segallio_core\SocialAccessTokensListBuilder",
  *     "views_data" = "Drupal\segallio_core\Entity\SocialAccessTokensViewsData",
+ *     "storage" = "\Drupal\segallio_core\Entity\SocialAccessTokensStorage",
  *
  *     "form" = {
  *       "default" = "Drupal\segallio_core\Form\SocialAccessTokensForm",
@@ -193,20 +194,30 @@ class SocialAccessTokens extends ContentEntityBase implements SocialAccessTokens
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['access_token'] = BaseFieldDefinition::create('json')
-      ->setLabel(t('Access token'))
-      ->setDescription(t('Tje access token object.'))
+    $fields['access_token'] = BaseFieldDefinition::create('string_long')
+      ->setLabel(t('Text'))
+      ->setDescription(t('The text of the FB entry.'))
+      ->setSettings([
+        'max_length' => 50,
+        'text_processing' => 0,
+      ])
+      ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'json',
+        'type' => 'string',
         'weight' => -4,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'json_textarea',
-        'weight' => 1,
+        'type' => 'string_textfield',
+        'weight' => -4,
       ])
-      ->setRequired(TRUE)
-      ->setCardinality(1);
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['status'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Publishing status'))
+      ->setDescription(t('A boolean indicating whether the Gist is published.'))
+      ->setDefaultValue(TRUE);
 
     return $fields;
   }

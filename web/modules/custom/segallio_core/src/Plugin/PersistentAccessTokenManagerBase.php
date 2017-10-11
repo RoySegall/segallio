@@ -4,6 +4,7 @@ namespace Drupal\segallio_core\Plugin;
 
 use Drupal\Component\Plugin\PluginBase;
 use Drupal\Core\Entity\EntityTypeManager;
+use Drupal\segallio_core\Entity\SocialAccessTokens;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -58,25 +59,41 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
    *
    * @return string
    *  The access token form the DB.
+   *
+   * @return SocialAccessTokens
    */
   protected function loadAccessTokenFromDb() {
-    $result = $this->entityQuery
+    $results = $this->entityQuery
       ->condition('name', $this->getPluginId())
       ->execute();
 
-    if (!$result) {
+    if (!$results) {
       return;
     }
 
-    return [];
+    return $this->entityTypeManager->getStorage('social_access_tokens')->load(reset($results));
   }
 
   /**
    * Set the access in the DB.
    *
-   * @return \Drupal\segallio_core\Plugin\PersistentAccessTokenManagerInterface
+   * @param $object
+   *   The object of the access token.
+   *
+   * @return \Drupal\segallio_core\Entity\SocialAccessTokens
    */
-  protected function setAccessTokenInDb() {
+  protected function setAccessTokenInDb($object) {
+
+    $entity = $this->entityTypeManager
+      ->getStorage('social_access_tokens')
+      ->create([
+        'name' => $this->getPluginId(),
+        'access_token' => $object,
+      ]);
+
+    $entity->save();
+
+    return $entity;
 
   }
 

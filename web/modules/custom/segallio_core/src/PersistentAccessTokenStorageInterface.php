@@ -25,7 +25,7 @@ interface PersistentAccessTokenStorageInterface {
    * @param $value
    *   The value.
    *
-   * @return \Drupal\segallio_core\PersistentAccessTokenStorageInterface
+   * @return \Drupal\segallio_core\Entity\SocialAccessTokens
    */
   public function set($name, $value);
 

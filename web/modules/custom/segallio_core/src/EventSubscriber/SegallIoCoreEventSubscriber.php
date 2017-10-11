@@ -27,15 +27,10 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
   public function onRequest(GetResponseEvent $event) {
     $persistant = SegallIoCore::getPersistentAccessTokenStorage();
 
-    if (!$github = $persistant->get('github')) {
-      dpm('nothing. creating');
-      $foo = new \stdClass();
-      $foo->bar = 'a';
-      $persistant->set('github', $foo);
+    dpm($persistant->get('github'));
 
-      return;
-    }
-    dpm($github);
+//    $entities = \Drupal::entityTypeManager()->getStorage('social_access_tokens')->loadMultiple();
+//    \Drupal::entityTypeManager()->getStorage('social_access_tokens')->delete($entities);
   }
 
 }
