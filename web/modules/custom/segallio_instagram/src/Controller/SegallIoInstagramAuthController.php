@@ -3,6 +3,7 @@
 namespace Drupal\segallio_instagram\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\segallio_core\PersistentAccessTokenStorageInterface;
 use Drupal\social_api\Plugin\NetworkManager;
 use Drupal\social_auth\SocialAuthUserManager;
 use Drupal\social_auth_instagram\InstagramAuthManager;
@@ -52,13 +53,17 @@ class SegallIoInstagramAuthController extends ControllerBase {
    */
   private $dataHandler;
 
-
   /**
    * The logger channel.
    *
    * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
    */
   protected $loggerFactory;
+
+  /**
+   * @var PersistentAccessTokenStorageInterface
+   */
+  protected $persistentAccessToken;
 
   /**
    * InstagramAuthController constructor.
@@ -75,8 +80,17 @@ class SegallIoInstagramAuthController extends ControllerBase {
    *   SocialAuthDataHandler object.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_factory
    *   Used for logging errors.
+   * @param PersistentAccessTokenStorageInterface $persistent_access_token
    */
-  public function __construct(NetworkManager $network_manager, SocialAuthUserManager $user_manager, InstagramAuthManager $instagram_manager, RequestStack $request, SessionInterface $social_auth_data_handler, LoggerChannelFactoryInterface $logger_factory) {
+  public function __construct(
+    NetworkManager $network_manager,
+    SocialAuthUserManager $user_manager,
+    InstagramAuthManager $instagram_manager,
+    RequestStack $request,
+    SessionInterface $social_auth_data_handler,
+    LoggerChannelFactoryInterface $logger_factory,
+    PersistentAccessTokenStorageInterface $persistent_access_token
+  ) {
 
     $this->networkManager = $network_manager;
     $this->userManager = $user_manager;
@@ -91,6 +105,7 @@ class SegallIoInstagramAuthController extends ControllerBase {
     // Sets the session keys to nullify if user could not logged in.
     $this->userManager->setSessionKeysToNullify(['access_token', 'oauth2state']);
     $this->setting = $this->config('social_auth_instagram.settings');
+    $this->persistentAccessToken = $persistent_access_token;
   }
 
   /**
@@ -103,7 +118,8 @@ class SegallIoInstagramAuthController extends ControllerBase {
       $container->get('social_auth_instagram.manager'),
       $container->get('request_stack'),
       $container->get('session'),
-      $container->get('logger.factory')
+      $container->get('logger.factory'),
+      $container->get('persistent_access_token_storage')
     );
   }
 
@@ -189,7 +205,7 @@ class SegallIoInstagramAuthController extends ControllerBase {
       return $this->redirect('user.login');
     }
 
-    $this->dataHandler->set('instagram_access_token', $this->instagramManager->getAccessToken());
+    $this->persistentAccessToken->set('instagram', $this->instagramManager->getAccessToken());
 
     $account = $this->userManager->loadUserByProperty('uid', 1);
     user_login_finalize($account);
