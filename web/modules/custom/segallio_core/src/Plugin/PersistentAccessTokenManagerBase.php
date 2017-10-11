@@ -79,8 +79,6 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
    *
    * @param $object
    *   The object of the access token.
-   *
-   * @return \Drupal\segallio_core\Entity\SocialAccessTokens
    */
   protected function setAccessTokenInDb($object) {
 
@@ -92,9 +90,6 @@ abstract class PersistentAccessTokenManagerBase extends PluginBase implements Pe
       ]);
 
     $entity->save();
-
-    return $entity;
-
   }
 
 }

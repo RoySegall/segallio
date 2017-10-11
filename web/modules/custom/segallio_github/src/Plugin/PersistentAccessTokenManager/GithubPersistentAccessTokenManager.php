@@ -23,10 +23,10 @@ class GithubPersistentAccessTokenManager extends PersistentAccessTokenManagerBas
       return;
     }
 
+    /** @var \League\OAuth2\Client\Token\AccessToken $serialize */
     $serialize = unserialize($at->get('access_token')->value);
 
-    // todo: handle a real object.
-    return $serialize;
+    return $serialize->getToken();
   }
 
   /**
@@ -40,13 +40,9 @@ class GithubPersistentAccessTokenManager extends PersistentAccessTokenManagerBas
       $entity->save();
     }
 
-    return $this->setAccessTokenInDb($object);
-  }
+    $this->setAccessTokenInDb($object);
 
-  /**
-   * {@inheritdoc}
-   */
-  public function isExpired() {
+    return $this;
   }
 
 }

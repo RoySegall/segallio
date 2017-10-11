@@ -28,11 +28,4 @@ interface PersistentAccessTokenManagerInterface extends PluginInspectionInterfac
    */
   public function setAccessToken($object);
 
-  /**
-   * Check if the access token is expired or not.
-   *
-   * @return boolean
-   */
-  public function isExpired();
-
 }
