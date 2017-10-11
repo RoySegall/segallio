@@ -14,11 +14,4 @@ class SegallIOFacebook {
     return \Drupal::service('facebook_grpah');
   }
 
-  /**
-   * @return SegallIOFacebookRefreshToken
-   */
-  static public function getFacebookRefreshToken() {
-    return \Drupal::service('facebook_refresh_token');
-  }
-
 }
