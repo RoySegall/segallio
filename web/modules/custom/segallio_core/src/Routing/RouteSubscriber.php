@@ -29,6 +29,10 @@ class RouteSubscriber extends RouteSubscriberBase {
     if ($route = $collection->get('social_auth_github.callback')) {
       $route->setDefault('_controller', '\Drupal\segallio_github\Controller\SegallIOGithubAuthController::callback');
     }
+
+    if ($route = $collection->get('social_auth_facebook.return_from_fb')) {
+      $route->setDefault('_controller', '\Drupal\segallio_facebook\Controller\SegallIoFacebookAuthController::returnFromFb');
+    }
   }
 
 }

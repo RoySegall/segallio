@@ -25,11 +25,7 @@ class PersistentAccessTokenStorage implements PersistentAccessTokenStorageInterf
    * {@inheritdoc}
    */
   public function get($name) {
-
-    /** @var PersistentAccessTokenManagerInterface $instance */
-    $instance = $this->PersistentManager->createInstance($name);
-
-    return $instance->getAccessToken();
+    return $this->PersistentManager->createInstance($name)->getAccessToken();
   }
 
   /**
@@ -37,8 +33,7 @@ class PersistentAccessTokenStorage implements PersistentAccessTokenStorageInterf
    */
   public function set($name, $value) {
     /** @var PersistentAccessTokenManagerInterface $instance */
-    $instance = $this->PersistentManager->createInstance($name);
-    return $instance->setAccessToken($value);
+    return $this->PersistentManager->createInstance($name)->setAccessToken($value);
   }
 
 }

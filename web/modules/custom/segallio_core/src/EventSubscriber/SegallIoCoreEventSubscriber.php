@@ -26,7 +26,7 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    */
   public function onRequest(GetResponseEvent $event) {
     $persistant = SegallIoCore::getPersistentAccessTokenStorage();
-    dpm($persistant->get('twitter'));
+    dpm($persistant->get('facebook'));
 
 //    $entities = \Drupal::entityTypeManager()->getStorage('social_access_tokens')->loadMultiple();
 //    \Drupal::entityTypeManager()->getStorage('social_access_tokens')->delete($entities);
