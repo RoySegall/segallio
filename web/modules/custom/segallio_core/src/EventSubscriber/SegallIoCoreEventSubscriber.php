@@ -29,18 +29,18 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
-    $twitter = SegallIoTwitter::getTwitterGraph();
-    dpm($twitter->getTweets(), 'fb');
-
-    $facebook = SegallIOFacebook::getFacebookGraph();
-    dpm($facebook->getPosts(), 'twitter');
-
-    $instagram = SegallIoInstagram::getApi();
-    dpm($instagram->getPosts(), 'instagram');
-
-
-    $instagram = SegallIoGithub::getApi();
-    dpm($instagram->getGists(), 'gh');
+//    $twitter = SegallIoTwitter::getTwitterGraph();
+//    dpm($twitter->getTweets(), 'fb');
+//
+//    $facebook = SegallIOFacebook::getFacebookGraph();
+//    dpm($facebook->getPosts(), 'twitter');
+//
+//    $instagram = SegallIoInstagram::getApi();
+//    dpm($instagram->getPosts(), 'instagram');
+//
+//
+//    $instagram = SegallIoGithub::getApi();
+//    dpm($instagram->getGists(), 'gh');
 
 //    $entities = \Drupal::entityTypeManager()->getStorage('social_access_tokens')->loadMultiple();
 //    \Drupal::entityTypeManager()->getStorage('social_access_tokens')->delete($entities);
