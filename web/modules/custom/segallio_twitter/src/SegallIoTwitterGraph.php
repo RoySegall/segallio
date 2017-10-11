@@ -4,6 +4,7 @@ namespace Drupal\segallio_twitter;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Drupal\Core\Config\ConfigFactory;
+use Drupal\segallio_core\PersistentAccessTokenStorageInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class SegallIoTwitterGraph implements SegallIoTwitterGraphInterface {
@@ -13,7 +14,7 @@ class SegallIoTwitterGraph implements SegallIoTwitterGraphInterface {
    *
    * @var \Symfony\Component\HttpFoundation\Session\SessionInterface
    */
-  protected $session;
+  protected $accessToken;
 
   /**
    * Twitter configuration.
@@ -27,21 +28,24 @@ class SegallIoTwitterGraph implements SegallIoTwitterGraphInterface {
    *
    * @param \Drupal\Core\Config\ConfigFactory $config
    *   Used to get an instance of social_auth_twitter network plugin.
-   * @param \Symfony\Component\HttpFoundation\Session\SessionInterface $session
-   *   Used to store the access token into a session variable.
+   * @param PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager
    */
-  public function __construct(ConfigFactory $config, SessionInterface $session) {
+  public function __construct(ConfigFactory $config, PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager) {
     $this->config = $config->get('social_auth_twitter.settings');
-    $this->session = $session;
+    $this->accessToken = $persistentAccessTokenManagerManager->get('twitter');
   }
 
   /**
    * {@inheritdoc}
    */
   public function getTweets() {
-    $access_token = $this->session->get('social_auth_twitter_access_token');
-    $twitter = new TwitterOAuth($this->config->get('consumer_key'), $this->config->get('consumer_secret'), $access_token['oauth_token'], $access_token['oauth_token_secret']);
-    return $twitter->get('statuses/user_timeline', array('screen_name' => $access_token['screen_name']));
+    $twitter = new TwitterOAuth(
+      $this->config->get('consumer_key'),
+      $this->config->get('consumer_secret'),
+      $this->accessToken->oauth_token,
+      $this->accessToken->oauth_token_secret
+    );
+    return $twitter->get('statuses/user_timeline', array('screen_name' => $this->accessToken->screen_name));
   }
 
 }

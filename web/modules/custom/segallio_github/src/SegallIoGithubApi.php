@@ -1,6 +1,7 @@
 <?php
 
 namespace Drupal\segallio_github;
+use Drupal\segallio_core\PersistentAccessTokenStorageInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
@@ -22,15 +23,12 @@ class SegallIoGithubApi implements SegallIoGithubApiInterface {
    * SegallIoGithubApi constructor.
    *
    * @param \GuzzleHttp\Client $http_client
+   * @param PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager
    */
-  public function __construct(\GuzzleHttp\Client $http_client) {
-    // todo - move to service.
-    /** @var SessionInterface $session */
-    $session = \Drupal::service('session');
-    $this->accessToken = $session->get('github_access_token');
+  public function __construct(\GuzzleHttp\Client $http_client, PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager) {
+    $this->accessToken = $persistentAccessTokenManagerManager->get('github');
     $this->httpClient = $http_client;
   }
-
 
   /**
    * {@inheritdoc}
@@ -56,7 +54,7 @@ class SegallIoGithubApi implements SegallIoGithubApiInterface {
    *   List of events.
    */
   protected function beautify($endpoint) {
-    $response = $this->httpClient->get('https://api.github.com/' . $endpoint . '?access_token=' . $this->accessToken->getToken());
+    $response = $this->httpClient->get('https://api.github.com/' . $endpoint . '?access_token=' . $this->accessToken);
     return json_decode($response->getBody()->getContents());
   }
 

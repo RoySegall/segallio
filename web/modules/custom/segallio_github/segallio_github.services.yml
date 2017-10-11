@@ -1,4 +1,4 @@
 services:
   segallio_github.api:
     class: \Drupal\segallio_github\SegallIoGithubApi
-    arguments: ['@http_client']
+    arguments: ['@http_client', '@persistent_access_token_storage']
