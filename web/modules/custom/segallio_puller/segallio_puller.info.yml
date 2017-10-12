@@ -1,0 +1,5 @@
+name: Segall IO puller
+type: module
+description: Pull stuff via cron
+core: 8.x
+package: Segall IO
