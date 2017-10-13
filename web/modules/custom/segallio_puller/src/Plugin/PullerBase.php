@@ -78,6 +78,8 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
    */
   public function actionRouter($asset) {
     $id = $this->getAssetId($asset);
+
+    return $this->entityQuery->condition('post_id', $id)->execute() ? 'update' : 'insert';
   }
 
   /**

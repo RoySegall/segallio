@@ -26,6 +26,11 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
+    /** @var SocialAssetsServicesManager $foo */
+    $foo = \Drupal::service('plugin.manager.puller');
+
+    dpm($foo->createInstance('facebook_posts')->assets());
+
 //    dpm($foo->createInstance('facebook_posts')->assets());
 //    $twitter = SegallIoTwitter::getTwitterGraph();
 //    dpm($twitter->getTweets(), 'fb');
