@@ -40,7 +40,25 @@ class SegallIoPullerPullerControllers extends ControllerBase {
    * @return array
    */
   public function pullManually($pull_id) {
-    return ['#type' => 'markup','#markup' => 'Pulling from ' . $pull_id];
+    $batch = array(
+      'title' => t('Pulling'),
+      'operations' => array(
+        array('\Drupal\segallio_puller\Controller\SegallIoPullerPullerControllers::pulling', [$pull_id]),
+      ),
+    );
+
+    batch_set($batch);
+    return batch_process('admin/pullers');
+  }
+
+  /**
+   * Pulling manually the items.
+   *
+   * @param $puller_id
+   * @param $sandbox
+   */
+  public function pulling($puller_id, &$sandbox) {
+    dpm($puller_id);
   }
 
 }
