@@ -1,0 +1,4 @@
+services:
+  plugin.manager.puller:
+    class: Drupal\segallio_puller\Plugin\PullerManager
+    parent: default_plugin_manager
