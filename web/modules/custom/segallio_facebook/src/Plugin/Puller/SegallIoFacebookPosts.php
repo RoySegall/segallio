@@ -9,7 +9,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 /**
  * @Puller(
  *  id = "facebook_posts",
- *  label = @Translation("The plugin ID."),
+ *  label = @Translation("Facebook posts."),
  *  entity_type = "status",
  *  social = "facebook",
  *  fields = {
