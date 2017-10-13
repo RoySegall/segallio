@@ -2,6 +2,7 @@
 
 namespace Drupal\segallio_core\EventSubscriber;
 
+use Drupal\segallio_core\SocialAssetsServicesManager;
 use Drupal\segallio_puller\Plugin\PullerManager;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
@@ -25,10 +26,7 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    * Initializes bargain core module requirements.
    */
   public function onRequest(GetResponseEvent $event) {
-    /** @var PullerManager $foo */
-    $foo = \Drupal::service('plugin.manager.puller');
-
-    dpm($foo->createInstance('facebook_posts')->assets());
+//    dpm($foo->createInstance('facebook_posts')->assets());
 //    $twitter = SegallIoTwitter::getTwitterGraph();
 //    dpm($twitter->getTweets(), 'fb');
 //
