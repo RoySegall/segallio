@@ -13,13 +13,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 abstract class PullerBase extends PluginBase implements PullerInterface {
 
   /**
-   * Holds the name of the service which the plugin depends on.
-   *
-   * @var string
-   */
-  static $service;
-
-  /**
    * The entity storgate.
    *
    * @var \Drupal\Core\Entity\EntityStorageInterface
@@ -69,27 +62,40 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
   }
 
   /**
-   * Updating an item.
-   *
-   * @return mixed
+   * {@inheritdoc}
    */
-  public function update() {
+  public function update($asset) {
   }
 
   /**
-   * Inserting the item.
-   *
-   * @return mixed
+   * {@inheritdoc}
    */
-  public function insert() {
+  public function insert($asset) {
   }
 
   /**
-   * Determine if the asset need an update or delete.
-   *
-   * @return mixed
+   * {@inheritdoc}
    */
-  public function actionRouter() {
+  public function actionRouter($asset) {
+    $id = $this->getAssetId($asset);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function pull() {
+    $assets = $this->assets();
+
+    // Iterate over the posts.
+    foreach ($assets as $asset) {
+      // check if the assert already been ported.
+      if ($this->actionRouter($asset) == 'insert') {
+        $this->insert($asset);
+      }
+      else {
+        $this->update($asset);
+      }
+    }
   }
 
 }

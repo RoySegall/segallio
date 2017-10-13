@@ -25,8 +25,13 @@ class SegallIoFacebookPosts extends PullerBase implements PullerInterface, Conta
    * @return mixed
    */
   public function assets() {
-    dpm($this->social);
-    return $this->pluginDefinition['fields'];
+    return $this->social->getPosts();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getAssetId($asset) {
   }
 
 }

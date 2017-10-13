@@ -14,29 +14,6 @@ use Drupal\segallio_puller\Plugin\PullerManager;
 class SegallIoPullerPullerControllers extends ControllerBase {
 
   /**
-   * Drupal\segallio_puller\Plugin\PullerManager definition.
-   *
-   * @var \Drupal\segallio_puller\Plugin\PullerManager
-   */
-  protected $pluginManagerPuller;
-
-  /**
-   * Constructs a new SegallIoPullerPullersListControllers object.
-   */
-  public function __construct(PullerManager $plugin_manager_puller) {
-    $this->pluginManagerPuller = $plugin_manager_puller;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('plugin.manager.puller')
-    );
-  }
-
-  /**
    * @return array
    */
   public function pullManually($pull_id) {
@@ -55,10 +32,9 @@ class SegallIoPullerPullerControllers extends ControllerBase {
    * Pulling manually the items.
    *
    * @param $puller_id
-   * @param $sandbox
    */
-  public function pulling($puller_id, &$sandbox) {
-    dpm($puller_id);
+  public function pulling($puller_id) {
+    \Drupal::service('plugin.manager.puller')->createInstance($puller_id)->pull();
   }
 
 }
