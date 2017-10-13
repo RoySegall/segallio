@@ -5,8 +5,7 @@ segallio_puller.segall_io_puller_pullers_list_controllers_pullers:
     _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerPullersListControllers::pullers'
     _title: 'Pullers list'
   requirements:
-    #todo fina a better permission.
-    _permission: 'access content'
+    _permission: 'manage pullers'
 
 segallio_pull_items:
   path: 'admin/pullers/pull/{pull_id}'
@@ -14,5 +13,4 @@ segallio_pull_items:
     _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerPullerControllers::pullManually'
     _title: 'Pullers list'
   requirements:
-    #todo fina a better permission.
-    _permission: 'access content'
+    _permission: 'manage pullers'
