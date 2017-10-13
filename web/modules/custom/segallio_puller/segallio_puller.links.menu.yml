@@ -1,0 +1,6 @@
+segallio_puller.pullers:
+  route_name: segallio_puller.segall_io_puller_pullers_list_controllers_pullers
+  title: Pullers
+  description: 'Select and configure themes.'
+  parent: system.admin
+  weight: -6
