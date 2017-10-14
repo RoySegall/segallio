@@ -3,6 +3,7 @@
 namespace Drupal\segallio_puller\Plugin;
 
 use Drupal\Component\Plugin\PluginBase;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\segallio_core\SocialAssetsServicesManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -66,7 +67,19 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
   /**
    * {@inheritdoc}
    */
-  public function update($asset) {
+  public function update($asset, $entity_id) {
+    /** @var ContentEntityInterface $entity */
+    $entity = $this->entityStorage->load($entity_id);
+
+    if ($entity->id() == 101) {
+      dpm($asset);
+    }
+
+    foreach ($asset as $field => $value) {
+      $entity->set($field, $value);
+    }
+
+    $entity->save();
   }
 
   /**
@@ -83,10 +96,10 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     $results = $this->entityStorage->getQuery()->condition('post_id', $asset['post_id'])->execute();
 
     if ($results) {
-      return 'update';
+      return reset($results);
     }
     else {
-      return 'insert';
+      return FALSE;
     }
   }
 
@@ -98,14 +111,19 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
 
     foreach ($this->pluginDefinition['fields'] as $field => $mapper) {
 
+      $property_name = is_array($mapper) ? $mapper['field'] : $mapper;
+
       if (!empty($asset[$field])) {
 
         if (is_array($mapper)) {
-          $processed[$mapper['field']] = $this->{$mapper['callback']}($asset[$field]);
+          $processed[$property_name] = $this->{$mapper['callback']}($asset[$field]);
         }
         else {
-          $processed[$mapper] = $asset[$field];
+          $processed[$property_name] = $asset[$field];
         }
+      }
+      else {
+        $processed[$property_name] = "";
       }
     }
 
@@ -124,11 +142,11 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
       // check if the assert already been ported.
       $processed_asset = $this->processFields($asset);
 
-      if ($this->actionRouter($processed_asset) == 'insert') {
-        $this->insert($processed_asset);
+      if ($id = $this->actionRouter($processed_asset)) {
+        $this->update($processed_asset, $id);
       }
       else {
-        $this->update($processed_asset);
+        $this->insert($processed_asset);
       }
     }
   }

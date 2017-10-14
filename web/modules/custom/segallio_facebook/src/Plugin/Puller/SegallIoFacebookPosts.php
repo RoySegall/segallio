@@ -17,7 +17,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
  *   "message" = "name",
  *   "permalink_url" = "url",
  *   "full_picture" = {"field" = "assets", "callback" = "copyImage"},
- *   "reactions" = {"field" = "reactions", "callback" = "countReactions"},
+ *   "reactions" = {"field" = "likes", "callback" = "countReactions"},
  *   "shares" = {"field" = "shares", "callback" = "countShares"},
  *   "comments" = {"field" = "comments", "callback" = "countComments"},
  *  }
@@ -32,13 +32,6 @@ class SegallIoFacebookPosts extends PullerBase implements PullerInterface, Conta
    */
   public function assets() {
     return $this->social->getPosts();
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getAssetId($asset) {
-    return $asset['object_id'];
   }
 
 }

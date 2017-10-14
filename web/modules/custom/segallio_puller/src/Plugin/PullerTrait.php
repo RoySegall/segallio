@@ -12,15 +12,15 @@ trait PullerTrait {
   }
 
   public function countReactions($value) {
-    return count($value['data']);
+    return $value['summary']['total_count'];
   }
 
   public function countComments($value) {
-    return count($value['data']);
+    return $value['summary']['total_count'];
   }
 
   public function countShares($value) {
-    return count($value['count']);
+    return $value['count'];
   }
 
 }

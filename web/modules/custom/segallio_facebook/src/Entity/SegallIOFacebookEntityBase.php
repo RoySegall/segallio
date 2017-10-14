@@ -122,7 +122,8 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
         'weight' => -3,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDefaultValue(0);
 
     $fields['shares'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('Shares'))
@@ -138,7 +139,8 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
         'weight' => -3,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDefaultValue(0);
 
     $fields['comments'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('Comments'))
@@ -154,7 +156,8 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
         'weight' => -2,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDefaultValue(0);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
