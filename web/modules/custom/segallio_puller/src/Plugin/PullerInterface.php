@@ -47,6 +47,17 @@ interface PullerInterface extends PluginInspectionInterface {
   public function update($asset);
 
   /**
+   * Process a single item form the backend to a ready to go entity.
+   *
+   * @param $asset
+   *   The asset from the the backend.
+   *
+   * @return array
+   *   A ready to go array.
+   */
+  public function processFields($asset);
+
+  /**
    * Pulling the asset if from the asset.
    *
    * @param $asset

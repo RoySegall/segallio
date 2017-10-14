@@ -29,7 +29,7 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
     /** @var SocialAssetsServicesManager $foo */
     $foo = \Drupal::service('plugin.manager.puller');
 
-    dpm($foo->createInstance('facebook_posts')->assets());
+//    dpm($foo->createInstance('facebook_posts')->assets());
 
 //    dpm($foo->createInstance('facebook_posts')->assets());
 //    $twitter = SegallIoTwitter::getTwitterGraph();

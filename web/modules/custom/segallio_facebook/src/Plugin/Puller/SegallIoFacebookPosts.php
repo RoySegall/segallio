@@ -16,10 +16,10 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
  *   "id" = "post_id",
  *   "message" = "label",
  *   "permalink_url" = "url",
- *   "full_picture" = {"field" = "assets", "function" = "copyImage"},
- *   "reactions" = {"field" = "reactions", "function" = "count"},
- *   "shared_posts" = {"field" = "shares", "function" = "count"},
- *   "comments" = {"field" = "comments", "function" = "count"},
+ *   "full_picture" = {"field" = "assets", "callback" = "copyImage"},
+ *   "reactions" = {"field" = "reactions", "callback" = "count"},
+ *   "shared_posts" = {"field" = "shares", "callback" = "count"},
+ *   "comments" = {"field" = "comments", "callback" = "count"},
  *  }
  * )
  */

@@ -85,17 +85,31 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
   /**
    * {@inheritdoc}
    */
+  public function processFields($asset) {
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function pull() {
     $assets = $this->assets();
 
     // Iterate over the posts.
-    foreach ($assets as $asset) {
+    foreach ($assets as $i => $asset) {
+
       // check if the assert already been ported.
+      $processed_asset = $this->processFields($asset);
+
       if ($this->actionRouter($asset) == 'insert') {
-        $this->insert($asset);
+        $this->insert($processed_asset);
       }
       else {
-        $this->update($asset);
+        $this->update($processed_asset);
+      }
+
+      if ($i > 3) {
+        return;
       }
     }
   }
