@@ -12,6 +12,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 abstract class PullerBase extends PluginBase implements PullerInterface {
 
+  use PullerTrait;
+
   /**
    * The entity storgate.
    *
@@ -71,22 +73,43 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
    * {@inheritdoc}
    */
   public function insert($asset) {
+    $this->entityStorage->create($asset)->save();
   }
 
   /**
    * {@inheritdoc}
    */
   public function actionRouter($asset) {
-    $id = $this->getAssetId($asset);
+    $results = $this->entityStorage->getQuery()->condition('post_id', $asset['post_id'])->execute();
 
-    return $this->entityQuery->condition('post_id', $id)->execute() ? 'update' : 'insert';
+    if ($results) {
+      return 'update';
+    }
+    else {
+      return 'insert';
+    }
   }
 
   /**
    * {@inheritdoc}
    */
   public function processFields($asset) {
+    $processed = [];
 
+    foreach ($this->pluginDefinition['fields'] as $field => $mapper) {
+
+      if (!empty($asset[$field])) {
+
+        if (is_array($mapper)) {
+          $processed[$mapper['field']] = $this->{$mapper['callback']}($asset[$field]);
+        }
+        else {
+          $processed[$mapper] = $asset[$field];
+        }
+      }
+    }
+
+    return $processed;
   }
 
   /**
@@ -101,15 +124,11 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
       // check if the assert already been ported.
       $processed_asset = $this->processFields($asset);
 
-      if ($this->actionRouter($asset) == 'insert') {
+      if ($this->actionRouter($processed_asset) == 'insert') {
         $this->insert($processed_asset);
       }
       else {
         $this->update($processed_asset);
-      }
-
-      if ($i > 3) {
-        return;
       }
     }
   }

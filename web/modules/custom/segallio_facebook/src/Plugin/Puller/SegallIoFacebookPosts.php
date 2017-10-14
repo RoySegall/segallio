@@ -13,13 +13,13 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
  *  entity_type = "status",
  *  social = "facebook",
  *  fields = {
- *   "id" = "post_id",
- *   "message" = "label",
+ *   "object_id" = "post_id",
+ *   "message" = "name",
  *   "permalink_url" = "url",
  *   "full_picture" = {"field" = "assets", "callback" = "copyImage"},
- *   "reactions" = {"field" = "reactions", "callback" = "count"},
- *   "shared_posts" = {"field" = "shares", "callback" = "count"},
- *   "comments" = {"field" = "comments", "callback" = "count"},
+ *   "reactions" = {"field" = "reactions", "callback" = "countReactions"},
+ *   "shares" = {"field" = "shares", "callback" = "countShares"},
+ *   "comments" = {"field" = "comments", "callback" = "countComments"},
  *  }
  * )
  */
@@ -38,7 +38,7 @@ class SegallIoFacebookPosts extends PullerBase implements PullerInterface, Conta
    * {@inheritdoc}
    */
   public function getAssetId($asset) {
-    return $asset['id'];
+    return $asset['object_id'];
   }
 
 }

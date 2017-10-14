@@ -29,7 +29,7 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
     /** @var SocialAssetsServicesManager $foo */
     $foo = \Drupal::service('plugin.manager.puller');
 
-//    dpm($foo->createInstance('facebook_posts')->assets());
+//    dpm($foo->createInstance('facebook_posts')->pull());
 
 //    dpm($foo->createInstance('facebook_posts')->assets());
 //    $twitter = SegallIoTwitter::getTwitterGraph();
@@ -44,8 +44,9 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
 //    $instagram = SegallIoGithub::getApi();
 //    dpm($instagram->getGists(), 'gh');
 
-//    $entities = \Drupal::entityTypeManager()->getStorage('social_access_tokens')->loadMultiple();
-//    \Drupal::entityTypeManager()->getStorage('social_access_tokens')->delete($entities);
+    $et = 'status';
+//    $entities = \Drupal::entityTypeManager()->getStorage($et)->loadMultiple();
+//    \Drupal::entityTypeManager()->getStorage($et)->delete($entities);
   }
 
 }
