@@ -1,0 +1,5 @@
+name: 'Segall IO Twitter'
+description: 'Cotnains twitter integration code.'
+type: module
+core: 8.x
+package: 'Segall IO'
