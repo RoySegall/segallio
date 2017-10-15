@@ -89,7 +89,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
    * {@inheritdoc}
    */
   public function actionRouter($asset) {
-    $results = $this->entityStorage->getQuery()->condition('post_id', $asset['post_id'])->execute();
+    $results = $this->entityStorage->getQuery()->condition('url', $asset['url'])->execute();
 
     if ($results) {
       return reset($results);
