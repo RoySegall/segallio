@@ -71,10 +71,6 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     /** @var ContentEntityInterface $entity */
     $entity = $this->entityStorage->load($entity_id);
 
-    if ($entity->id() == 101) {
-      dpm($asset);
-    }
-
     foreach ($asset as $field => $value) {
       $entity->set($field, $value);
     }
@@ -112,6 +108,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     foreach ($this->pluginDefinition['fields'] as $field => $mapper) {
 
       $property_name = is_array($mapper) ? $mapper['field'] : $mapper;
+      $default_value = empty($mapper['default_value']) ? "" : $mapper['default_value'];
 
       if (!empty($asset[$field])) {
 
@@ -123,7 +120,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
         }
       }
       else {
-        $processed[$property_name] = "";
+        $processed[$property_name] = $default_value;
       }
     }
 
