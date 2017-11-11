@@ -12,14 +12,26 @@ trait PullerTrait {
   }
 
   public function countReactions($value) {
+    if (empty($value['summary'])) {
+      return 0;
+    }
+
     return $value['summary']['total_count'];
   }
 
   public function countComments($value) {
+    if (empty($value['summary'])) {
+      return 0;
+    }
+
     return $value['summary']['total_count'];
   }
 
   public function countShares($value) {
+    if (empty($value['count'])) {
+      return 0;
+    }
+
     return $value['count'];
   }
 

@@ -63,7 +63,7 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    * {@inheritdoc}
    */
   public function getAlbums() {
-    return $this->getFields('me/albums?fields=description,comments.summary(true).limit(1),reactions.summary(true).limit(1),name,shares,object_id')['data'];
+    return $this->getFields('me/albums?fields=description,comments.limit(1),reactions.limit(1),name,link,picture{url},object_id')['data'];
   }
 
   /**
