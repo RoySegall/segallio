@@ -97,7 +97,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
    * {@inheritdoc}
    */
   public function actionRouter($asset) {
-    $results = $this->entityStorage->getQuery()->condition('url', $asset['url'])->execute();
+    $results = $this->lookForDuplicates($asset);
 
     if ($results) {
       return reset($results);
@@ -108,6 +108,19 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
   }
 
   /**
+   * Look for duplicate posts based on the current asset from the API.
+   *
+   * @param $asset
+   *   The object from the API.
+   *
+   * @return int[]
+   *   Results from the query.
+   */
+  protected function lookForDuplicates($asset) {
+    return $this->entityStorage->getQuery()->condition('url', $asset['url'])->execute();
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function processFields($asset) {
@@ -115,6 +128,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
 
     foreach ($this->pluginDefinition['fields'] as $field => $mapper) {
 
+      // todo: Handle when array.
       $property_name = is_array($mapper) ? $mapper['field'] : $mapper;
       $default_value = empty($mapper['default_value']) ? "" : $mapper['default_value'];
 
@@ -143,7 +157,8 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
 
     // Iterate over the posts.
     foreach ($assets as $i => $asset) {
-
+      $asset = (array) $asset;
+      dpm($asset);
       // check if the assert already been ported.
       $processed_asset = $this->processFields($asset);
 

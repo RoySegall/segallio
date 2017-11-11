@@ -71,4 +71,17 @@ trait PullerTrait {
     return $value['count'];
   }
 
+  /**
+   * Take a string and convert it to unixtimesamp.
+   *
+   * @param $value
+   *   The value from the API.
+   *
+   * @return int
+   *   The unix timestamp of the string.
+   */
+  public function strToTime($value) {
+    return strtotime($value);
+  }
+
 }
