@@ -13,7 +13,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
  *  entity_type = "album",
  *  social = "facebook",
  *  fields = {
- *   "object_id" = "post_id",
+ *   "id" = "post_id",
  *   "name" = "name",
  *   "link" = "url",
  *   "reactions" = {"field" = "likes", "callback" = "countReactions", "default_value" = 0},

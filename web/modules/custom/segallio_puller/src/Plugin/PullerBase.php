@@ -30,6 +30,13 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
   protected $entityQuery;
 
   /**
+   * The entity type manager service.
+   *
+   * @var EntityTypeManager
+   */
+  protected $entityTypeManger;
+
+  /**
    * The social service handler.
    *
    * @var \Drupal\segallio_facebook\SegallIOFacebookGraph|\Drupal\segallio_github\SegallIoGithubApiInterface|\Drupal\segallio_instagram\SegallIoInstagramPostsInterface|\Drupal\segallio_twitter\SegallIoTwitterGraphInterface
@@ -46,6 +53,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManager $entity_type_manager, SocialAssetsServicesManager $social) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->entityTypeManger = $entity_type_manager;
     $this->entityStorage = $entity_type_manager->getStorage($this->pluginDefinition['entity_type']);
     $this->entityQuery = $this->entityStorage->getQuery();
     $this->social = $social->servicesRouter($this->pluginDefinition['social']);
