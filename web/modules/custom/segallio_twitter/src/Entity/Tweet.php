@@ -7,6 +7,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\user\UserInterface;
 
 /**
@@ -287,7 +288,7 @@ class Tweet extends ContentEntityBase implements TweetInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['asset'] = BaseFieldDefinition::create('entity_reference')
+    $fields['assets'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Asset'))
       ->setDescription(t('Any kind of photo/video.'))
       ->setDisplayOptions('view', [
@@ -299,6 +300,7 @@ class Tweet extends ContentEntityBase implements TweetInterface {
         'type' => 'string_textfield',
         'weight' => -2,
       ])
+      ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setSetting('target_type', 'file');

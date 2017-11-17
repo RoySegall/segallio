@@ -20,6 +20,7 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *   "favorite_count" = "hearts",
  *   "retweet_count" = "rts",
  *   "created_at" = {"field" = "created", "callback" = "strToTime"},
+ *   "extended_entities" = {"field" = "assets", "callback" = "getTwitterMedia"}
  *  }
  * )
  */
@@ -58,6 +59,23 @@ class SegallIoTwitterPuller extends PullerBase implements PullerInterface, Conta
     return "https://twitter.com/status/" . $value;
   }
 
-  // todo: handle media download.
+  /**
+   * Get media from a tweet.
+   *
+   * @param $value
+   *   The value of the field.
+   *
+   * @return mixed
+   *   The file object.
+   */
+  public function getTwitterMedia($value) {
+    $files = [];
+
+    foreach ($value->media as $media) {
+      $files[] = system_retrieve_file($media->media_url, NULL, TRUE, FILE_EXISTS_REPLACE);
+    }
+
+    return $files;
+  }
 
 }
