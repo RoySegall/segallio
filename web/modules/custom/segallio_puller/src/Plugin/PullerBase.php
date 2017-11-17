@@ -128,25 +128,47 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
 
     foreach ($this->pluginDefinition['fields'] as $field => $mapper) {
 
-      // todo: Handle when array.
-      $property_name = is_array($mapper) ? $mapper['field'] : $mapper;
-      $default_value = empty($mapper['default_value']) ? "" : $mapper['default_value'];
-
-      if (!empty($asset[$field])) {
-
-        if (is_array($mapper)) {
-          $processed[$property_name] = $this->{$mapper['callback']}($asset[$field]);
-        }
-        else {
-          $processed[$property_name] = $asset[$field];
+      if (!empty($this->pluginDefinition['multifield']) && in_array($field, $this->pluginDefinition['multifield'])) {
+        foreach ($mapper as $sub_mapper) {
+          $this->processHelper($processed, $field, $sub_mapper, $asset);
         }
       }
       else {
-        $processed[$property_name] = $default_value;
+        $this->processHelper($processed, $field, $mapper, $asset);
       }
     }
 
     return $processed;
+  }
+
+  /**
+   * Helper function for process multiple mappers.
+   *
+   * @param $processed
+   *   The process object. By ref object.
+   * @param $field
+   *   The source field.
+   * @param $mapper
+   *   Single mapper object,
+   * @param array $asset
+   *   The asset we pulled.
+   */
+  protected function processHelper(&$processed, $field, $mapper, $asset) {
+    $property_name = is_array($mapper) ? $mapper['field'] : $mapper;
+    $default_value = empty($mapper['default_value']) ? "" : $mapper['default_value'];
+
+    if (!empty($asset[$field])) {
+
+      if (is_array($mapper)) {
+        $processed[$property_name] = $this->{$mapper['callback']}($asset[$field]);
+      }
+      else {
+        $processed[$property_name] = $asset[$field];
+      }
+    }
+    else {
+      $processed[$property_name] = $default_value;
+    }
   }
 
   /**
@@ -158,7 +180,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     // Iterate over the posts.
     foreach ($assets as $i => $asset) {
       $asset = (array) $asset;
-      dpm($asset);
+
       // check if the assert already been ported.
       $processed_asset = $this->processFields($asset);
 

@@ -13,6 +13,7 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *  label = @Translation("Twitter tweets."),
  *  entity_type = "tweet",
  *  social = "twitter",
+ *  multifield = {"id"},
  *  fields = {
  *   "id" = {"post_id", {"field" = "url", "callback" = "tweetIdToUrl"}},
  *   "text" = "name",
