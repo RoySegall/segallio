@@ -20,7 +20,6 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *   "favorite_count" = "hearts",
  *   "retweet_count" = "rts",
  *   "created_at" = {"field" = "created", "callback" = "strToTime"},
- *   "
  *  }
  * )
  */
