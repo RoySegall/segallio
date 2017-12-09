@@ -14,11 +14,11 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *  social = "instagram",
  *  fields = {
  *   "id" = "id",
- *   "text" = "name",
+ *   "caption" = {"field" = "name", "callback" = "instagramText"},
  *   "likes" = {"field" = "likes", "callback" = "instagramLikes"},
  *   "comments" = {"field" = "likes", "callback" = "instagramComments"},
  *   "created_time" = {"field" = "created", "callback" = "strToTime"},
- *   "extended_entities" = {"field" = "assets", "callback" = "getTwitterMedia"}
+ *   "standard_resolution" = {"field" = "assets", "callback" = "getInstagramMedia"}
  *  }
  * )
  */
@@ -54,10 +54,36 @@ class SegallIoInstagramPuller extends PullerBase implements PullerInterface, Con
    *   The field value.
    *
    * @return int
-   *   The nubmer of comments.
+   *   The number of comments.
    */
   public function instagramComments($field) {
     return $field->count;
+  }
+
+  /**
+   * Get the image of the instagram post.
+   *
+   * @param $field
+   *   The field in the resource.
+   *
+   * @return mixed
+   *   The file object.
+   */
+  public function getInstagramMedia($field) {
+    return system_retrieve_file($field->standard_resolution->url, NULL, TRUE, FILE_EXISTS_REPLACE);
+  }
+
+  /**
+   * Get the text from the instagram post.
+   *
+   * @param $field
+   *   The value of the request.
+   *
+   * @return mixed
+   *   The text of the status.
+   */
+  public function instagramText($field) {
+    return $field->text;
   }
 
 }
