@@ -13,11 +13,11 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *  entity_type = "instagram",
  *  social = "instagram",
  *  fields = {
- *   "id" = "id",
+ *   "id" = {"field" = "id", "callback" = "processId"},
  *   "caption" = {"field" = "name", "callback" = "instagramText"},
  *   "likes" = {"field" = "likes", "callback" = "instagramLikes"},
  *   "comments" = {"field" = "likes", "callback" = "instagramComments"},
- *   "created_time" = {"field" = "created", "callback" = "strToTime"},
+ *   "created_time" = "created",
  *   "standard_resolution" = {"field" = "assets", "callback" = "getInstagramMedia"}
  *  }
  * )
@@ -32,6 +32,19 @@ class SegallIoInstagramPuller extends PullerBase implements PullerInterface, Con
 
     // The items are listed in the data property of results.
     return $results->data;
+  }
+
+  /**
+   * Process the ID from a string to an int.
+   *
+   * @param $field
+   *   The field value.
+   *
+   * @return int
+   *   The ID of the post.
+   */
+  public function processId($field) {
+    return intval(str_replace("_", "", $field));
   }
 
   /**
