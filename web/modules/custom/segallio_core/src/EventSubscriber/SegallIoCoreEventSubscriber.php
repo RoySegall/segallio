@@ -44,7 +44,7 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
 //    $instagram = SegallIoGithub::getApi();
 //    dpm($instagram->getGists(), 'gh');
 
-//    $et = 'tweet';
+//    $et = 'instagram';
 //    $entities = \Drupal::entityTypeManager()->getStorage($et)->loadMultiple();
 //    \Drupal::entityTypeManager()->getStorage($et)->delete($entities);
   }

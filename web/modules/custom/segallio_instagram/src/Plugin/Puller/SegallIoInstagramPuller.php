@@ -13,12 +13,12 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *  entity_type = "instagram",
  *  social = "instagram",
  *  fields = {
- *   "id" = {"field" = "id", "callback" = "processId"},
+ *   "id" = "post_id",
  *   "caption" = {"field" = "name", "callback" = "instagramText"},
- *   "likes" = {"field" = "likes", "callback" = "instagramLikes"},
- *   "comments" = {"field" = "likes", "callback" = "instagramComments"},
+ *   "likes" = {"field" = "hearts", "callback" = "instagramLikes"},
+ *   "comments" = {"field" = "comments", "callback" = "instagramComments"},
  *   "created_time" = "created",
- *   "standard_resolution" = {"field" = "assets", "callback" = "getInstagramMedia"}
+ *   "standard_resolution" = {"field" = "asset", "callback" = "getInstagramMedia"}
  *  }
  * )
  */
@@ -83,6 +83,7 @@ class SegallIoInstagramPuller extends PullerBase implements PullerInterface, Con
    *   The file object.
    */
   public function getInstagramMedia($field) {
+    dpm($field);
     return system_retrieve_file($field->standard_resolution->url, NULL, TRUE, FILE_EXISTS_REPLACE);
   }
 
@@ -97,6 +98,13 @@ class SegallIoInstagramPuller extends PullerBase implements PullerInterface, Con
    */
   public function instagramText($field) {
     return $field->text;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function lookForDuplicates($asset) {
+    return $this->entityStorage->getQuery()->condition('post_id', $asset['post_id'])->execute();
   }
 
 }
