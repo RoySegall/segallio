@@ -79,8 +79,6 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     /** @var ContentEntityInterface $entity */
     $entity = $this->entityStorage->load($entity_id);
 
-    $asset = $this->processFields($asset);
-
     foreach ($asset as $field => $value) {
       $entity->set($field, $value);
     }

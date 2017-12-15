@@ -5,6 +5,7 @@ namespace Drupal\segallio_puller\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Link;
 use Drupal\Core\Theme\ThemeManagerInterface;
+use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\segallio_puller\Plugin\PullerManager;
 
@@ -52,15 +53,41 @@ class SegallIoPullerPullersListControllers extends ControllerBase {
     ];
   }
 
+  /**
+   * Header of the table.
+   *
+   * @return array
+   */
   public function buildHeader() {
     return [$this->t('Puller ID'), $this->t('Puller social network'), $this->t('Actions')];
   }
 
+  /**
+   * Building the row.
+   *
+   * @return array
+   */
   public function buildRows() {
     $pullers = [];
+
     foreach ($this->pluginManagerPuller->getDefinitions() as $definition) {
-      $pull_link = Link::createFromRoute($this->t('Manually pull'), 'segallio_pull_items', ['pull_id' => $definition['id']], ['attributes' => ['class' => ['button']]]);
-      $pullers[] = [$definition['id'], ucfirst($definition['social']), $pull_link];
+      $actions = [
+        'data' => [
+          '#type' => 'operations',
+          '#links' => [
+            [
+              'title' => t('Manually pull'),
+              'url' => Url::fromRoute('segallio_pull_items', ['pull_id' => $definition['id']]),
+            ],
+            [
+              'title' => t('Truncate items'),
+              'url' => Url::fromRoute('segallio_truncate_items', ['entity_type' => $definition['entity_type']]),
+            ],
+          ],
+        ],
+      ];
+
+      $pullers[] = [$definition['id'], ucfirst($definition['social']), $actions];
     }
 
     return $pullers;

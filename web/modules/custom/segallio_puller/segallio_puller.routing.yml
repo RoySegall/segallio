@@ -14,3 +14,12 @@ segallio_pull_items:
     _title: 'Pullers list'
   requirements:
     _permission: 'manage pullers'
+
+segallio_truncate_items:
+  path: 'admin/pullers/truncate/{entity_type}'
+  defaults:
+    _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerTruncateControllers::truncateItems'
+    _title: 'Trucnate items'
+  requirements:
+    #todo change permission.
+    _permission: 'manage pullers'
