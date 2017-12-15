@@ -18,7 +18,7 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *   "likes" = {"field" = "hearts", "callback" = "instagramLikes"},
  *   "comments" = {"field" = "comments", "callback" = "instagramComments"},
  *   "created_time" = "created",
- *   "standard_resolution" = {"field" = "asset", "callback" = "getInstagramMedia"}
+ *   "images" = {"field" = "asset", "callback" = "getInstagramMedia"}
  *  }
  * )
  */
@@ -83,7 +83,6 @@ class SegallIoInstagramPuller extends PullerBase implements PullerInterface, Con
    *   The file object.
    */
   public function getInstagramMedia($field) {
-    dpm($field);
     return system_retrieve_file($field->standard_resolution->url, NULL, TRUE, FILE_EXISTS_REPLACE);
   }
 
