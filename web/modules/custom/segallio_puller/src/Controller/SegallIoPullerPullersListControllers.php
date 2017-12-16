@@ -76,11 +76,11 @@ class SegallIoPullerPullersListControllers extends ControllerBase {
           '#type' => 'operations',
           '#links' => [
             [
-              'title' => t('Manually pull'),
+              'title' => $this->t('Manually pull'),
               'url' => Url::fromRoute('segallio_pull_items', ['pull_id' => $definition['id']]),
             ],
             [
-              'title' => t('Truncate items'),
+              'title' => $this->t('Truncate items'),
               'url' => Url::fromRoute('segallio_truncate_items', ['entity_type' => $definition['entity_type']]),
             ],
           ],
