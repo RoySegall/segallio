@@ -32,10 +32,10 @@
         "drupal/migrate_tools": "^4.0-beta1",
         "drupal/social_api": "^1.1",
         "drupal/social_auth": "^1.0",
-        "drupal/social_auth_facebook": "1.x-dev",
-        "drupal/social_auth_github": "1.x-dev",
-        "drupal/social_auth_instagram": "1.x-dev",
-        "drupal/social_auth_twitter": "^1.0@beta",
+        "drupal/social_auth_facebook": "1.x-dev#7740c564",
+        "drupal/social_auth_github": "1.x-dev#4afe0072",
+        "drupal/social_auth_instagram": "1.x-dev#617c98d9",
+        "drupal/social_auth_twitter": "1.x-dev#a8bbce83",
         "drush/drush": "^8.1",
         "facebook/graph-sdk": "^5.6",
         "webflo/drupal-finder": "^1.0.0",
@@ -90,6 +90,15 @@
         "patches": {
             "drupal/social_auth_facebook": {
                 "2931554": "https://www.drupal.org/files/issues/facebook_social_auth_move_set_proper_dependency.patch"
+            },
+            "drupal/social_auth_twitter": {
+                "2931563": "https://www.drupal.org/files/issues/twitter_social_auth_move_set_proper_dependency.patch"
+            },
+            "drupal/social_auth_instagram": {
+                "2931565": "https://www.drupal.org/files/issues/instagram_social_auth_move_set_proper_dependency.patch"
+            },
+            "drupal/social_auth_github": {
+                "2931566": "https://www.drupal.org/files/issues/github_social_auth_move_set_proper_dependency.patch"
             }
         }
     }

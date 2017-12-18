@@ -17,7 +17,3 @@ services:
   plugin.manager.persistent_access_token_manager:
     class: Drupal\segallio_core\Plugin\PersistentAccessTokenManagerManager
     parent: default_plugin_manager
-
-  social_assets_services_manager:
-    class: Drupal\segallio_core\SocialAssetsServicesManager
-    arguments: ['@segallio_github.api', '@facebook_grpah', '@segallio_instagram.api', '@segallio_twitter_grpah']

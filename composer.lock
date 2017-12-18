@@ -4,30 +4,30 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6ab090e8d2a3ac0761abf7158a0e451",
+    "content-hash": "99fe97e6e97e81de59cc9ee0814f7f85",
     "packages": [
         {
             "name": "abraham/twitteroauth",
-            "version": "0.6.6",
+            "version": "0.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/abraham/twitteroauth.git",
-                "reference": "fc0766220c79087ac8178625d34e88ca29160d5b"
+                "reference": "c6f9e692552dd037b2324ed0dfa28a4e60875acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/fc0766220c79087ac8178625d34e88ca29160d5b",
-                "reference": "fc0766220c79087ac8178625d34e88ca29160d5b",
+                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/c6f9e692552dd037b2324ed0dfa28a4e60875acf",
+                "reference": "c6f9e692552dd037b2324ed0dfa28a4e60875acf",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "php": ">=5.5.0"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "phpmd/phpmd": "2.3.*",
-                "phpunit/phpunit": "4.8.*",
-                "squizlabs/php_codesniffer": "2.3.*"
+                "phpmd/phpmd": "~2.6",
+                "phpunit/phpunit": "~5.7",
+                "squizlabs/php_codesniffer": "~3.0"
             },
             "type": "library",
             "autoload": {
@@ -58,7 +58,7 @@
                 "social",
                 "twitter"
             ],
-            "time": "2016-10-10T14:20:30+00:00"
+            "time": "2017-06-30T22:02:01+00:00"
         },
         {
             "name": "alchemy/zippy",
@@ -2308,8 +2308,7 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": []
+                }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -2466,7 +2465,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/social_auth_facebook",
-                "reference": "7740c56410f15316c8859ee8b41d2cf50ced9333"
+                "reference": "7740c564"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -2527,7 +2526,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/social_auth_github",
-                "reference": "4afe00724289e6f127ee6c0db3d215a7518bbdd6"
+                "reference": "4afe0072"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -2546,6 +2545,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "2931566": "https://www.drupal.org/files/issues/github_social_auth_move_set_proper_dependency.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2580,7 +2582,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/social_auth_instagram",
-                "reference": "617c98d9869b55ee8069c8312d1becd42b86f0b0"
+                "reference": "617c98d9"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -2599,6 +2601,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "2931565": "https://www.drupal.org/files/issues/instagram_social_auth_move_set_proper_dependency.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2629,20 +2634,14 @@
         },
         {
             "name": "drupal/social_auth_twitter",
-            "version": "1.0.0-beta1",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/social_auth_twitter",
-                "reference": "8.x-1.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_auth_twitter-8.x-1.0-beta1.zip",
-                "reference": "8.x-1.0-beta1",
-                "shasum": "f4f5af9812bd1e29f5cfae6846e4ada8341045fe"
+                "reference": "a8bbce83"
             },
             "require": {
-                "abraham/twitteroauth": "0.6.*",
+                "abraham/twitteroauth": "0.*",
                 "drupal/core": "~8.0",
                 "drupal/social_auth": "*"
             },
@@ -2652,12 +2651,15 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta1",
-                    "datestamp": "1506655143",
+                    "version": "8.x-1.0-beta1+3-dev",
+                    "datestamp": "1507430045",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "2931563": "https://www.drupal.org/files/issues/twitter_social_auth_move_set_proper_dependency.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2693,7 +2695,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/sandbox-utkarsh-dixit-2841076",
                 "issues": "https://www.drupal.org/project/issues/2841076"
-            }
+            },
+            "time": "2017-10-08T02:33:42+00:00"
         },
         {
             "name": "drupal/token",
@@ -7531,7 +7534,7 @@
         "drupal/social_auth_facebook": 20,
         "drupal/social_auth_github": 20,
         "drupal/social_auth_instagram": 20,
-        "drupal/social_auth_twitter": 10
+        "drupal/social_auth_twitter": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

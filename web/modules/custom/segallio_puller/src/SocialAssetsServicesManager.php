@@ -1,6 +1,7 @@
 <?php
 
-namespace Drupal\segallio_core;
+namespace Drupal\segallio_puller;
+use Drupal\segallio_core\SocialAssetsServicesManagerInterface;
 use Drupal\segallio_facebook\SegallIOFacebookGraph;
 use Drupal\segallio_github\SegallIoGithubApiInterface;
 use Drupal\segallio_instagram\SegallIoInstagramPostsInterface;
