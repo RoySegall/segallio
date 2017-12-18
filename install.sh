@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-composer install
+#composer install
 
 cd web
 

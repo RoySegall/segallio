@@ -51,6 +51,7 @@ dependencies:
   - json_field
   - kint
   - token
+  - social_api
   - social_auth_facebook
   - social_auth_twitter
   - social_auth_instagram
