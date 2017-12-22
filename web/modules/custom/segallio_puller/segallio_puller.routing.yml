@@ -23,3 +23,12 @@ segallio_truncate_items:
   requirements:
     #todo change permission.
     _permission: 'manage pullers'
+
+segallio_truncate_logs:
+  path: 'admin/pullers/{puller}/logs'
+  defaults:
+    _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerPullersLogsControllers::logs'
+    _title: 'Puller logs'
+  requirements:
+    #todo change permission.
+    _permission: 'manage pullers'
