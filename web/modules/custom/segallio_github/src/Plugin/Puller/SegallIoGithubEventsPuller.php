@@ -49,7 +49,26 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
    * @param $repo
    */
   public function processRepo($repo) {
-    // todo: Create/update repo.
+    $results = $this->entityTypeManger
+      ->getStorage('repository')
+      ->getQuery()
+      ->condition('repo_id', $repo->id)
+      ->execute();
+
+    if ($results) {
+      dpm($repo, 'foo');
+      return;
+    }
+
+    dpm($repo, 'bar');
+
+    $this->entityTypeManger->getStorage('repository')
+      ->create([
+        'repo_id' => $repo->id,
+        'name' => $repo->name,
+        'url' => $repo->url,
+      ])
+      ->save();
   }
 
   /**
