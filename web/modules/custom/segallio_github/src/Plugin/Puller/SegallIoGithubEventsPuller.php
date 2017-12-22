@@ -2,8 +2,8 @@
 
 namespace Drupal\segallio_github\Plugin\Puller;
 
+use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\segallio_github\Entity\Repository;
 use Drupal\segallio_puller\Plugin\PullerBase;
 use Drupal\segallio_puller\Plugin\PullerInterface;
 
@@ -13,10 +13,9 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *  label = @Translation("Events"),
  *  entity_type = "repository",
  *  social = "github",
+ *  entity_types = {"repository", "pull_request"},
  *  fields = {}
  * )
- *
- * todo: make entity_type as multiple.
  */
 class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, ContainerFactoryPluginInterface {
 
@@ -38,7 +37,11 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
     // Iterate over the posts.
     foreach ($assets as $i => $asset) {
       $asset = (array) $asset;
+
+      // Setting up extra fields.
       $asset['repo']->public = $asset['public'];
+      $asset['payload']->public = $asset['public'];
+      $asset['payload']->name = $asset['repo']->name;
 
       // Github events are a different kind of data; They contains sub-assets:
       // repo, payload of the action, if the repo is public or not etc. etc. So
@@ -60,32 +63,7 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
       'status' => 'public',
     ];
 
-    $results = $this->entityTypeManger
-      ->getStorage('repository')
-      ->getQuery()
-      ->condition('repo_id', $repo->id)
-      ->execute();
-
-    if ($results) {
-      /** @var Repository $entity */
-      $entity = $this->entityTypeManger->getStorage('repository')->load(reset($results));
-
-      foreach ($map as $key => $key_object) {
-        $entity->set($key, $repo->{$key_object});
-      }
-
-      $entity->save();
-
-      return;
-    }
-
-    $item = [];
-
-    foreach ($map as $key => $key_object) {
-      $item[$key] = $repo->{$key_object};
-    }
-
-    $this->entityTypeManger->getStorage('repository')->create($item)->save();
+    $this->handleObject($repo, $map, 'repository', 'repo_id', $repo->id);
   }
 
   /**
@@ -98,50 +76,55 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
       return;
     }
 
-    dpm($payload);
-    // todo: act by the payload.
+    $payload->pull_request->name = $payload->name;
+    $payload->pull_request->public = $payload->public;
 
-    //public url -> string(68) "https://api.github.com/repos/Gizra/openscholar-huji-hebrew/pulls/790"
-    //→pubpublic html_url -> string(57) "https://github.com/Gizra/openscholar-huji-hebrew/pull/790"
-    //public diff_url -> string(62) "https://github.com/Gizra/openscholar-huji-hebrew/pull/790.diff"
-    //public patch_url -> string(63) "https://github.com/Gizra/openscholar-huji-hebrew/pull/790.patch"
-    //public issue_url -> string(69) "https://api.github.com/repos/Gizra/openscholar-huji-hebrew/issues/790"
-    //public number -> integer790
-    //public state -> string(6) "closed"
-    //public locked -> boolFALSE
-    //public title -> string(49) "Revert "Auto assign term for iCal importer items""
-    //→public user -> stdClass(17)
-    //public body -> string(41) "Reverts Gizra/openscholar-huji-hebrew#786"
-    //public created_at -> string(20) "2017-12-21T13:53:54Z"
-    //public updated_at -> string(20) "2017-12-21T13:54:00Z"
-    //public closed_at -> string(20) "2017-12-21T13:54:00Z"
-    //public merged_at -> string(20) "2017-12-21T13:54:00Z"
-    //public merge_commit_sha -> string(40) "02cd509419dac9a5b7b9723f3dbbbff2d405098e"
-    //public assignee -> NULL
-    //public assignees -> array(0)
-    //public requested_reviewers -> array(0)
-    //public milestone -> NULL
-    //public commits_url -> string(76) "https://api.github.com/repos/Gizra/openscholar-huji-hebrew/pulls/790/commits"
-    //public review_comments_url -> string(77) "https://api.github.com/repos/Gizra/openscholar-huji-hebrew/pulls/790/comments"
-    //→public review_comment_url -> string(82) "https://api.github.com/repos/Gizra/openscholar-huji-hebrew/pulls/comments{/numbe…"
-    //public comments_url -> string(78) "https://api.github.com/repos/Gizra/openscholar-huji-hebrew/issues/790/comments"
-    //→public statuses_url -> string(108) "https://api.github.com/repos/Gizra/openscholar-huji-hebrew/statuses/ad0c06e292bf…"
-    //→public head -> stdClass(5)
-    //→public base -> stdClass(5)
-    //→public _links -> stdClass(8)
-    //public author_association -> string(11) "CONTRIBUTOR"
-    //public merged -> boolTRUE
-    //public mergeable -> NULL
-    //public rebaseable -> NULL
-    //public mergeable_state -> string(7) "unknown"
-    //→public merged_by -> stdClass(17)
-    //public comments -> integer0
-    //public review_comments -> integer0
-    //public maintainer_can_modify -> boolFALSE
-    //public commits -> integer1
-    //public additions -> integer2
-    //public deletions -> integer377lic id -> integer159662584
-    //public changed_files -> integer10
+    $map = [
+      'url' => 'html_url',
+      'status' => 'public',
+      'repo_name' => 'name',
+      'pr_id' => 'number',
+      'name' => 'title',
+    ];
+
+    $this->handleObject($payload->pull_request, $map, 'pull_request', 'url', $payload->pull_request->html_url);
+  }
+
+  /**
+   * Convert the object to an entity.
+   *
+   * @param \stdClass $source_object
+   *   The asset to process.
+   * @param $map
+   *   The mapping.
+   * @param string $entity_type
+   *   The entity type.
+   * @param $key
+   *   The key to search as the GUID.
+   * @param $id
+   *   The value to in the GUID field.
+   */
+  protected function handleObject($source_object, $map, $entity_type, $key, $id) {
+    $results = $this->entityTypeManger
+      ->getStorage($entity_type)
+      ->getQuery()
+      ->condition($key, $id)
+      ->execute();
+
+    if ($results) {
+      /** @var ContentEntityBase $entity */
+      $entity = $this->entityTypeManger->getStorage($entity_type)->load(reset($results));
+    }
+    else {
+      $entity = $this->entityTypeManger->getStorage($entity_type)->create([]);
+    }
+
+
+    foreach ($map as $key => $key_object) {
+      $entity->set($key, $source_object->{$key_object});
+    }
+
+    $entity->save();
   }
 
 }

@@ -79,13 +79,24 @@ class SegallIoPullerPullersListControllers extends ControllerBase {
               'title' => $this->t('Manually pull'),
               'url' => Url::fromRoute('segallio_pull_items', ['pull_id' => $definition['id']]),
             ],
-            [
-              'title' => $this->t('Truncate items'),
-              'url' => Url::fromRoute('segallio_truncate_items', ['entity_type' => $definition['entity_type']]),
-            ],
           ],
         ],
       ];
+
+      if (!empty($definition['entity_types'])) {
+        foreach ($definition['entity_types'] as $entity_type) {
+          $actions['data']['#links'][] = [
+            'title' => $this->t('Truncate @entity_type', ['@entity_type' => $entity_type]),
+            'url' => Url::fromRoute('segallio_truncate_items', ['entity_type' => $entity_type]),
+          ];
+        }
+      }
+      else {
+        $actions['data']['#links'][] = [
+          'title' => $this->t('Truncate items'),
+          'url' => Url::fromRoute('segallio_truncate_items', ['entity_type' => $definition['entity_type']]),
+        ];
+      }
 
       $pullers[] = [$definition['id'], ucfirst($definition['social']), $actions];
     }
