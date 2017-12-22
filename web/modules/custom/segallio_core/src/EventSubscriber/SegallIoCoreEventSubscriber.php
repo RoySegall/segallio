@@ -2,7 +2,7 @@
 
 namespace Drupal\segallio_core\EventSubscriber;
 
-use Drupal\segallio_core\SocialAssetsServicesManager;
+use Drupal\segallio_puller\SocialAssetsServicesManager;
 use Drupal\segallio_puller\Plugin\PullerManager;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
@@ -27,7 +27,7 @@ class SegallIoCoreEventSubscriber implements EventSubscriberInterface {
    */
   public function onRequest(GetResponseEvent $event) {
     /** @var SocialAssetsServicesManager $foo */
-    $foo = \Drupal::service('social_assets_services_manager');
+//    $foo = \Drupal::service('social_assets_services_manager');
 
 //    dpm($foo->servicesRouter('github')->getEvents());
 

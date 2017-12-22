@@ -10,10 +10,12 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  * @Puller(
  *  id = "events",
  *  label = @Translation("Events"),
- *  entity_type = {"repository", "pull_request"},
+ *  entity_type = "repository",
  *  social = "github",
  *  fields = {}
  * )
+ *
+ * todo: make entity_type as multiple.
  */
 class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, ContainerFactoryPluginInterface {
 

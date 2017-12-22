@@ -5,7 +5,7 @@ namespace Drupal\segallio_puller\Plugin;
 use Drupal\Component\Plugin\PluginBase;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityTypeManager;
-use Drupal\segallio_core\SocialAssetsServicesManager;
+use Drupal\segallio_puller\SocialAssetsServicesManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
