@@ -25,7 +25,7 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
    * @return mixed
    */
   public function assets() {
-    return $this->social->getGists();
+    return $this->social->getEvents();
   }
 
   /**
@@ -37,7 +37,7 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
     // Iterate over the posts.
     foreach ($assets as $i => $asset) {
       $asset = (array) $asset;
-      $asset['repo']['public'] = $asset['public'];
+      $asset['repo']->public = $asset['public'];
 
       // Github events are a different kind of data; They contains sub-assets:
       // repo, payload of the action, if the repo is public or not etc. etc. So
@@ -62,13 +62,12 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
       return;
     }
 
-    dpm($repo, 'bar');
-
     $this->entityTypeManger->getStorage('repository')
       ->create([
         'repo_id' => $repo->id,
         'name' => $repo->name,
         'url' => $repo->url,
+        'status' => $repo->public,
       ])
       ->save();
   }
