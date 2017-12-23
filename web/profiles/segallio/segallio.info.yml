@@ -57,6 +57,7 @@ dependencies:
   - social_auth_instagram
   - social_auth_github
   - message
+  - message_ui
 
   # Segall IO modules
   - segallio_core

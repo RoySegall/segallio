@@ -3,6 +3,7 @@
 namespace Drupal\segallio_puller\Plugin;
 
 use Drupal\Component\Plugin\PluginBase;
+use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\segallio_puller\SocialAssetsServicesManager;
@@ -44,6 +45,13 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
   protected $social;
 
   /**
+   * @var array
+   *
+   * List of text.
+   */
+  protected $logs = [];
+
+  /**
    * PullerBase constructor.
    * @param array $configuration
    * @param string $plugin_id
@@ -76,7 +84,7 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
    * {@inheritdoc}
    */
   public function update($asset, $entity_id) {
-    /** @var ContentEntityInterface $entity */
+    /** @var ContentEntityBase $entity */
     $entity = $this->entityStorage->load($entity_id);
 
     foreach ($asset as $field => $value) {
@@ -84,13 +92,20 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     }
 
     $entity->save();
+
+    $this->addCreatedLog($entity);
   }
 
   /**
    * {@inheritdoc}
    */
   public function insert($asset) {
-    $this->entityStorage->create($asset)->save();
+    /** @var ContentEntityBase $entity */
+    $entity = $this->entityStorage->create($asset);
+
+    $entity->save();
+
+    $this->addUpdatedLog($entity);
   }
 
   /**
@@ -191,6 +206,66 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
         $this->insert($processed_asset);
       }
     }
+
+    // handle the logs.
+    /** @var \Drupal\message\Entity\Message $message */
+    $message = $this->entityTypeManger->getStorage('message')->create([
+      'template' => 'puller_log',
+      'field_puller_id' => $this->pluginDefinition['id'],
+      '',
+    ]);
+
+    $message
+      ->setArguments(['@body' => implode("\n", $this->logs)])
+      ->save();
+  }
+
+  /**
+   * Adding a log.
+   *
+   * @param string $log
+   *   Get the log.
+   */
+  protected function addLog($log) {
+    $this->logs[] = $log;
+  }
+
+  /**
+   * Return the logs.
+   *
+   * @return array
+   *   List of logs.
+   */
+  public function getLogs() {
+    return $this->logs;
+  }
+
+  /**
+   * Adding an updated event.
+   *
+   * @param ContentEntityBase $entity
+   *   The entity object.
+   */
+  protected function addUpdatedLog(ContentEntityBase $entity) {
+    $this->addLog(format_string('The entity @label(@type:@id) was created.', [
+      '@label' => $entity->label(),
+      '@type' => $entity->getEntityType()->getLabel(),
+      '@id' => $entity->id(),
+    ]));
+  }
+
+  /**
+   * Adding a created event.
+   *
+   * @param ContentEntityBase $entity
+   *   The entity object.
+   */
+  protected function addCreatedLog(ContentEntityBase $entity) {
+    $this->addLog(format_string('The entity @label(@type:@id) was updated.', [
+      '@label' => $entity->label(),
+      '@type' => $entity->getEntityType()->getLabel(),
+      '@id' => $entity->id(),
+    ]));
   }
 
 }

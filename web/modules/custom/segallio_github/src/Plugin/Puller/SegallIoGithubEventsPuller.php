@@ -114,9 +114,11 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
     if ($results) {
       /** @var ContentEntityBase $entity */
       $entity = $this->entityTypeManger->getStorage($entity_type)->load(reset($results));
+      $function = 'addCreatedLog';
     }
     else {
       $entity = $this->entityTypeManger->getStorage($entity_type)->create([]);
+      $function = 'addUpdatedLog';
     }
 
 
@@ -125,6 +127,8 @@ class SegallIoGithubEventsPuller extends PullerBase implements PullerInterface, 
     }
 
     $entity->save();
+
+    $this->{$function}($entity);
   }
 
 }
