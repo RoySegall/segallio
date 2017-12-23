@@ -17,9 +17,7 @@ class SegallIoPullerPullersLogsControllers extends ControllerBase {
    * @return array
    */
   public function logs($puller) {
-    return [
-      '#markup' => 'a',
-    ];
+    return views_embed_view('puller', 'default', $puller);
   }
 
 }

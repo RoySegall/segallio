@@ -212,7 +212,6 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     $message = $this->entityTypeManger->getStorage('message')->create([
       'template' => 'puller_log',
       'field_puller_id' => $this->pluginDefinition['id'],
-      '',
     ]);
 
     $message

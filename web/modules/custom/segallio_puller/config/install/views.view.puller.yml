@@ -61,12 +61,28 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: default
+        type: table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          uses_fields: false
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            get_text: get_text
+          info:
+            get_text:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
         options:
@@ -129,7 +145,20 @@ display:
       sorts: {  }
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<strong>Nothing to show</strong>'
+            format: basic_html
+          plugin_id: text
       relationships: {  }
       arguments:
         field_puller_id_value:
@@ -173,7 +202,7 @@ display:
           plugin_id: string
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_interface'
         - url
