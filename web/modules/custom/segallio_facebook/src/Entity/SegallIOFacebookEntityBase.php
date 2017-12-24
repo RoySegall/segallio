@@ -17,6 +17,26 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
+    $fields['post_id'] = BaseFieldDefinition::create('string_long')
+      ->setLabel(t('post_id'))
+      ->setDescription(t('The post ID of the post.'))
+      ->setSettings([
+        'max_length' => 50,
+        'text_processing' => 0,
+      ])
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
       ->setDescription(t('The user ID of author of the Status entity.'))
@@ -102,7 +122,8 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
         'weight' => -3,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDefaultValue(0);
 
     $fields['shares'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('Shares'))
@@ -118,7 +139,8 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
         'weight' => -3,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDefaultValue(0);
 
     $fields['comments'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('Comments'))
@@ -134,7 +156,8 @@ abstract class SegallIOFacebookEntityBase extends ContentEntityBase implements S
         'weight' => -2,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDefaultValue(0);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))

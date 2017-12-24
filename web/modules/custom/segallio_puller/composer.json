@@ -1,0 +1,14 @@
+{
+  "name": "drupal/segallio_puller",
+  "type": "drupal-module",
+  "description": "Pull stuff via cron",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/segallio_puller",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/segallio_puller",
+    "source": "http://cgit.drupalcode.org/segallio_puller"
+  },
+  "require": { }
+}

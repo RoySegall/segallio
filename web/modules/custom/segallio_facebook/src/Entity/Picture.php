@@ -164,6 +164,22 @@ class Picture extends SegallIOFacebookEntityBase implements PictureInterface {
       ->setDisplayConfigurable('view', TRUE)
       ->setSetting('target_type', 'file');
 
+    $fields['album'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Album'))
+      ->setDescription(t('The album which the picture belong to.'))
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -2,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setSetting('target_type', 'album');
+
     return $fields;
   }
 
