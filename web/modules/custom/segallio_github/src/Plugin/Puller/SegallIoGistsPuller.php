@@ -79,5 +79,4 @@ class SegallIoGistsPuller extends PullerBase implements PullerInterface, Contain
     return $this->entityStorage->getQuery()->condition('unique_id', $asset['unique_id'])->execute();
   }
 
-
 }
