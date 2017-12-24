@@ -10,7 +10,7 @@ use Drupal\segallio_puller\SegallIoPullerQueueWorkerBase;
  *  title = @Translation("Instagram pulling."),
  * )
  */
-class SegallIOGithubQueuePuller extends SegallIoPullerQueueWorkerBase {
+class SegallIoInstagramQueuePuller extends SegallIoPullerQueueWorkerBase {
 
   /**
    * {@inheritdoc}

@@ -2,6 +2,7 @@
 
 namespace Drupal\segallio_puller;
 
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\Core\Queue\QueueWorkerInterface;
 use Drupal\segallio_puller\Plugin\PullerManager;
@@ -10,7 +11,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Class SocialAssetsServicesManager.
  */
-abstract class SegallIoPullerQueueWorkerBase extends QueueWorkerBase implements QueueWorkerInterface {
+abstract class SegallIoPullerQueueWorkerBase extends QueueWorkerBase implements QueueWorkerInterface, ContainerFactoryPluginInterface {
 
   /**
    * @var \Drupal\segallio_puller\Plugin\PullerManager
@@ -57,7 +58,7 @@ abstract class SegallIoPullerQueueWorkerBase extends QueueWorkerBase implements 
    * {@inheritdoc}
    */
   public function processItem($data) {
-    foreach ($this->puller as $plugin) {
+    foreach ($this->plugins as $plugin) {
       $this->puller->createInstance($plugin)->pull();
     }
   }
