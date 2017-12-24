@@ -1,5 +1,5 @@
-name: Segall IO Facebook
+name: 'Segall IO Facebook'
 type: module
-description: Contains intgeration with Facebook
+description: 'Contains intgeration with Facebook'
 core: 8.x
-package: Segall IO
+package: 'Segall IO'

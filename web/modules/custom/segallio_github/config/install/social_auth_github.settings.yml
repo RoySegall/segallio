@@ -1,0 +1,4 @@
+client_id: 3124876396d973652c8c
+client_secret: fcf81c641c3750dcff11a38e49cd2b8057340e0d
+scopes: 'user public_repo repo gist read:org'
+api_calls: ''

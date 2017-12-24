@@ -5,7 +5,6 @@ namespace Drupal\segallio_twitter;
 use Abraham\TwitterOAuth\TwitterOAuth;
 use Drupal\Core\Config\ConfigFactory;
 use Drupal\segallio_core\PersistentAccessTokenStorageInterface;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class SegallIoTwitterGraph implements SegallIoTwitterGraphInterface {
 

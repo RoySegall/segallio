@@ -1,0 +1,34 @@
+
+segallio_puller.segall_io_puller_pullers_list_controllers_pullers:
+  path: 'admin/pullers'
+  defaults:
+    _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerPullersListControllers::pullers'
+    _title: 'Pullers list'
+  requirements:
+    _permission: 'manage pullers'
+
+segallio_pull_items:
+  path: 'admin/pullers/pull/{pull_id}'
+  defaults:
+    _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerPullerControllers::pullManually'
+    _title: 'Pullers list'
+  requirements:
+    _permission: 'manage pullers'
+
+segallio_truncate_items:
+  path: 'admin/pullers/truncate/{entity_type}'
+  defaults:
+    _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerTruncateControllers::truncateItems'
+    _title: 'Trucnate items'
+  requirements:
+    #todo change permission.
+    _permission: 'manage pullers'
+
+segallio_truncate_logs:
+  path: 'admin/pullers/{puller}/logs'
+  defaults:
+    _controller: '\Drupal\segallio_puller\Controller\SegallIoPullerPullersLogsControllers::logs'
+    _title: 'Puller logs'
+  requirements:
+    #todo change permission.
+    _permission: 'manage pullers'

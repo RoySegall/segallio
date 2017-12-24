@@ -1,0 +1,8 @@
+services:
+  plugin.manager.puller:
+    class: Drupal\segallio_puller\Plugin\PullerManager
+    parent: default_plugin_manager
+
+  social_assets_services_manager:
+    class: Drupal\segallio_puller\SocialAssetsServicesManager
+    arguments: ['@segallio_github.api', '@facebook_grpah', '@segallio_instagram.api', '@segallio_twitter_grpah']

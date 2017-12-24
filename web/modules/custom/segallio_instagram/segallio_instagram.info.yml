@@ -1,5 +1,5 @@
-name: Segall IO Instagram
+name: 'Segall IO Instagram'
 type: module
-description: Integration with Instagram
+description: 'Integration with Instagram'
 core: 8.x
-package: Segall IO
+package: 'Segall IO'

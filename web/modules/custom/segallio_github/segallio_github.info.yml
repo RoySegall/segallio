@@ -1,5 +1,5 @@
-name: Segall IO Github
+name: 'Segall IO Github'
 type: module
-description: Integration with GitHub
+description: 'Integration with GitHub'
 core: 8.x
-package: Segall IO
+package: 'Segall IO'

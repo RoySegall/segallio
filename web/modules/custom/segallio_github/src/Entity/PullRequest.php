@@ -262,6 +262,23 @@ class PullRequest extends ContentEntityBase implements PullRequestInterface {
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
 
+    $fields['url'] = BaseFieldDefinition::create('string')
+      ->setRequired(TRUE)
+      ->setLabel(t('URL'))
+      ->setDescription(t('The URL of the gist.'))
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
     return $fields;
   }
 
