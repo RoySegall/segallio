@@ -58,8 +58,8 @@ abstract class SegallIoPullerQueueWorkerBase extends QueueWorkerBase implements 
    * {@inheritdoc}
    */
   public function processItem($data) {
-    foreach ($this->plugins as $plugin) {
-      $this->puller->createInstance($plugin)->pull();
+    foreach ($this->pluginDefinition['pullers'] as $puller) {
+      $this->puller->createInstance($puller)->pull();
     }
   }
 

@@ -9,13 +9,8 @@ use Drupal\segallio_puller\SegallIoPullerQueueWorkerBase;
  * @QueueWorker(
  *  id = "segallio_twitter_pulling",
  *  title = @Translation("Pulling twitter data."),
+ *  cron = {"time" = 60},
+ *  pullers = {"twitter_puller"},
  * )
  */
-class SeegallIoTwitterQueuePuller extends SegallIoPullerQueueWorkerBase {
-
-  /**
-   * {@inheritdoc}
-   */
-  protected $plugins = ['twitter_puller'];
-
-}
+class SegallIoTwitterQueuePuller extends SegallIoPullerQueueWorkerBase {}
