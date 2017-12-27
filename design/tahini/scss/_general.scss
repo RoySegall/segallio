@@ -2,6 +2,54 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+$red: #ff6e6e;
+$green: #08821d;
+$blue: #2580e0;
+$orange: #ff9900;
+
+@mixin nav-bar-colors() {
+
+  &.activity {
+    border-bottom: 1px solid $orange;
+  }
+
+  &.map {
+    border-bottom: 1px solid $green;
+  }
+
+  &.media {
+    border-bottom: 1px solid $blue;
+  }
+
+  &.bio {
+    border-bottom: 1px solid $red;
+  }
+}
+
+nav {
+  box-shadow: none;
+
+  ul a:hover {
+    background: none;
+    @include nav-bar-colors();
+  }
+
+  ul a {
+
+    &.active {
+      @include nav-bar-colors();
+    }
+  }
+}
+
+.no-pad-bot {
+  background: #fafafa;
+  border: solid 1px black;
+  margin-top: 15px;
+  border-left: none;
+  border-right: none;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -20,9 +68,11 @@ p {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
-}
-.parallax-container .section {
-  width: 100%;
+
+  .section {
+    width: 100%;
+  }
+
 }
 
 @media only screen and (max-width : 992px) {
@@ -30,24 +80,24 @@ p {
     position: absolute;
     top: 40%;
   }
-  #index-banner .section {
-    top: 10%;
+
+  #index-banner {
+    .section {
+      top: 10%;
+    }
   }
 }
 
 @media only screen and (max-width : 600px) {
+
   #index-banner .section {
     top: 0;
   }
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
+footer {
 
-footer.page-footer {
-  margin: 0;
+  .page-footer {
+    margin: 0;
+  }
 }
