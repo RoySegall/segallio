@@ -1,4 +1,4 @@
-body {
+* {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -43,11 +43,15 @@ nav {
 }
 
 .no-pad-bot {
-  background: #fafafa;
+  background: #4db6ac;
   border: solid 1px black;
   margin-top: 15px;
   border-left: none;
   border-right: none;
+
+  h1 {
+    color: white;
+  }
 }
 
 nav ul a,
@@ -64,7 +68,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 250px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -72,7 +76,6 @@ p {
   .section {
     width: 100%;
   }
-
 }
 
 @media only screen and (max-width : 992px) {
