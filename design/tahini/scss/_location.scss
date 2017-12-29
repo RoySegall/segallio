@@ -1,0 +1,47 @@
+#location {
+
+  h1 {
+    border-bottom: solid 1px $green;
+    padding-bottom: 5px;
+  }
+
+  .body-text {
+    text-align: left;
+  }
+
+  .card {
+    margin: 1em 0em 0.5em 2em;
+    background: $blue;
+
+    .card-title {
+      border-bottom: white solid 1px;
+      padding-bottom: 0.5em;
+    }
+
+    .card-content {
+      padding-bottom: 10px;
+    }
+
+    .card-action {
+      text-align: center;
+
+      a {
+        color: white;
+      }
+    }
+
+    table {
+      tr {
+        border-bottom: white solid 1px;
+
+        td {
+          width: 45%;
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 35%;
+  }
+}
