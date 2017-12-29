@@ -5,62 +5,9 @@
 
   <body>
 
-  <div class="navbar-fixed">
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
-        <ul class="right nav-desktop hide-on-med-and-down">
-          <li><a href="#" class="activity active">Activity</a></li>
-          <li><a href="#" class="map">Map</a></li>
-          <li><a href="#" class="bio">Biography</a></li>
-          <li><a href="#" class="media">Media</a></li>
-        </ul>
+    {% include nav.html %}
 
-        <ul id="nav-mobile" class="nav-mobile side-nav">
-          <li><a href="#">Map</a></li>
-          <li><a href="#">Biograph</a></li>
-          <li><a href="#">Media</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-  </div>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center">Welcome to my website!</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">
-            Hello, I'm Roy Segall.
-            In this site you can see what I'm usually doing or look at my skill
-            and know when I'm ready for a hire.
-          </h5>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>See what i'm doing on the web</h4>
-        </div>
-      </div>
-
-    </div>
-
-    <i class="fab fa-facebook-square"></i>
-    <i class="fab fa-twitter-square"></i>
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-github"></i>
-
-    {% include timeline.html %}
-  </div>
+    {{ content }}
 
     <script async src="{{ '/scripts/main.min.js' | relative_url }}"></script>
     <script>
