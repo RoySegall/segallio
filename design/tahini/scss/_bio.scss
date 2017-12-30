@@ -1,0 +1,25 @@
+#bio {
+
+  h1 {
+    border-bottom: 1px solid $red;
+    padding-bottom: 10px;
+  }
+
+  .first {
+
+    .card {
+      background: $red;
+    }
+  }
+
+  .second {
+    margin-top: 0.5em;
+
+    .jobs {
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
