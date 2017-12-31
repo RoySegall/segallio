@@ -8,30 +8,26 @@ layout: default
     <div class="col m3 first">
       <img src="{{ "/images/profile.jpg" | relative_url }}" / class="responsive-img">
 
-      <div class="card">
+      <div class="card short-bio">
         <div class="card-content white-text">
           <span class="card-title"><i class="fal fa-info"></i> Short bio</span>
           <table class="info-items">
             <tr>
-              <td><i class="fal fa-calendar-alt"></i> Birth date:</td>
+              <td><i class="fal fa-birthday-cake"></i> Birth date:</td>
               <td>25/06/1989</td>
             </tr>
             <tr>
-              <td><i class="fal fa-calendar-alt"></i> Email:</td>
+              <td><i class="fal fa-at"></i> Email:</td>
               <td>roy@segall.io</td>
             </tr>
             <tr>
-              <td><i class="fal fa-calendar-alt"></i> Social networks:</td>
+              <td><i class="fal fa-share-alt"></i> Social networks:</td>
               <td>
-                <ul>
-                  <li>
-                    <a><i class="fab fa-facebook-square"></i></a>
-                    <a><i class="fab fa-twitter-square"></i></a>
-                    <a><i class="fab fa-instagram"></i></a>
-                    <a><i class="fab fa-github"></i></a>
-                    <a><i class="fab fa-flickr"></i></a>
-                  </li>
-                </ul>
+                <a><i class="fab fa-facebook-square"></i></a>
+                <a><i class="fab fa-twitter-square"></i></a>
+                <a><i class="fab fa-instagram"></i></a>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-flickr"></i></a>
               </td>
             </tr>
 
@@ -39,17 +35,59 @@ layout: default
         </div>
       </div>
 
-    <div class="card">
+    <div class="card skills">
       <div class="card-content white-text">
         <span class="card-title"><i class="fal fa-list-alt"></i> Skills</span>
         <table class="info-items">
           <tr>
             <td><i class="fal fa-calendar-alt"></i> PHP</td>
-            <td>High</td>
+            <td>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </td>
           </tr>
           <tr>
-            <td><i class="fal fa-calendar-alt"></i> PHP</td>
-            <td>High</td>
+            <td><i class="fal fa-calendar-alt"></i> CSS</td>
+            <td>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fal fa-star"></i>
+              <i class="fal fa-star"></i>
+              <i class="fal fa-star"></i>
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fal fa-calendar-alt"></i> Drupal</td>
+            <td>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fal fa-calendar-alt"></i> Js</td>
+            <td>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fal fa-star"></i>
+              <i class="fal fa-star"></i>
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fal fa-calendar-alt"></i> CSS</td>
+            <td>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fal fa-star"></i>
+              <i class="fal fa-star"></i>
+            </td>
           </tr>
         </table>
       </div>
@@ -58,12 +96,11 @@ layout: default
 
     <div class="col m9 second">
       <div class="jobs">
-        <h3>Jobs history</h3>
+        <h3><i class="fal fa-history"></i> Jobs history</h3>
 
-        <div class="row">
-          <div class="col m2">Gizra</div>
-          <div class="col m10">
-            <span>Snr. Developer — 2011-present</span>
+        <div class="row list">
+          <div class="col m12">
+            <span class="company">Gizra</span>; <span class="duration">Snr. Developer — 2011-present</span>
             <p>
               <b>Harvard University</b> - I consulted and worked with Harvard's
               website department. Developed complex features which needed by the faculty team.  The system which powered
@@ -80,9 +117,8 @@ layout: default
             </p>
           </div>
 
-          <div class="col m2">Pizza Hut</div>
-          <div class="col m10">
-            <span>Shift manager — 2010-2011</span>
+          <div class="col m12">
+            <span class="company">Pizza Hut</span>; <span class="duration">Shift manager — 2010-2011</span>
             <p>
               After my military service, I worked in Pizza Hut as a shift manager. I managed employees with various
               tasks and ordered products related to the daily work.
@@ -91,9 +127,8 @@ layout: default
             </p>
           </div>
 
-          <div class="col m2">IDF</div>
-          <div class="col m10">
-            <span>Fighter - 2007-2010</span>
+          <div class="col m12">
+            <span class="company">IDF</span>; <span class="duration">Fighter - 2007-2010</span>
             <p>
               Served as a fighter in the Artillery forces.
             </p>
@@ -102,16 +137,127 @@ layout: default
       </div>
     </div>
 
-    <div class="col m12 center-align">
+    <div class="col m12 center-align portfolio">
       <h3>Portfolio</h3>
-
       <div class="row">
-        <div class="col m4">OpenScholar</div>
-        <div class="col m4">OpenWorkShop</div>
-        <div class="col m4">OG</div>
-        <div class="col m4">Message UI</div>
-        <div class="col m4">Rethink DB</div>
-        <div class="col m4">Segall IO</div>
+        <div class="col m4 item">
+          <div class="row">
+            <div class="">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://via.placeholder.com/300X200">
+                  <span class="card-title">OpenScholar</span>
+                </div>
+                <div class="card-content">
+                  <p>Opens Scholar</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Go to site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col m4 item">
+
+          <div class="row">
+            <div class="">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://via.placeholder.com/300X200">
+                  <span class="card-title">Open Pension</span>
+                </div>
+                <div class="card-content">
+                  <p>Opens Scholar</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Go to site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col m4 item">
+
+          <div class="row">
+            <div class="">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://via.placeholder.com/300X200">
+                  <span class="card-title">OG</span>
+                </div>
+                <div class="card-content">
+                  <p>Opens Scholar</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Go to site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col m4 item">
+
+          <div class="row">
+            <div class="">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://via.placeholder.com/300X200">
+                  <span class="card-title">Message UI</span>
+                </div>
+                <div class="card-content">
+                  <p>Opens Scholar</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Go to site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col m4 item">
+
+          <div class="row">
+            <div class="">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://via.placeholder.com/300X200">
+                  <span class="card-title">Rethink DB</span>
+                </div>
+                <div class="card-content">
+                  <p>Opens Scholar</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Go to site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col m4 item">
+
+          <div class="row">
+            <div class="">
+              <div class="card">
+                <div class="card-image">
+                  <img src="http://via.placeholder.com/300X200">
+                  <span class="card-title">Segall IO</span>
+                </div>
+                <div class="card-content">
+                  <p>Opens Scholar</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Go to site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
