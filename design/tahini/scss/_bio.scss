@@ -7,8 +7,16 @@
 
   .first {
 
+    img {
+      border: solid 1px $red;
+    }
+
     .card {
       background: $red;
+
+      a {
+        color: white;
+      }
     }
   }
 
