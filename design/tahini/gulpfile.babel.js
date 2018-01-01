@@ -10,7 +10,7 @@ const $ = gulpLoadPlugins();
 // Delete the _site directory.
 gulp.task('cleanup-build', () => {
   return gulp.src('_site', {read: false})
-      .pipe($.clean());
+    .pipe($.clean());
 });
 
 // Minify the HTML.
@@ -77,12 +77,12 @@ gulp.task('css', () => {
 
 // Compile scss to css.
 gulp.task('scss', () => {
-    return gulp.src('scss/main.scss')
-        .pipe($.sass({
-            includePaths: ['css'],
-            onError: browserSync.notify
-        }))
-        .pipe(gulp.dest('css'));
+  return gulp.src('scss/main.scss')
+    .pipe($.sass({
+      includePaths: ['css'],
+      onError: browserSync.notify
+    }))
+    .pipe(gulp.dest('css'));
 });
 
 // Watch change in files.
@@ -114,7 +114,7 @@ gulp.task('serve', ['jekyll-build'], () => {
   gulp.watch('_scripts/**/*.js', ['scripts']);
 });
 
-gulp.task('generate-service-worker', (callback) => {
+gulp.task('generate-service-worker', callback => {
   var path = require('path');
   var rootDir = '_site';
 
@@ -125,19 +125,19 @@ gulp.task('generate-service-worker', (callback) => {
   }, callback);
 });
 
-  gulp.task('fix-config', () => {
-    gulp.src('_config.yml')
-      .pipe($.replace('baseurl: ""', 'baseurl: "tahini"'))
-      .pipe($.clean())
-      .pipe(gulp.dest('.'));
-  });
+gulp.task('fix-config', () => {
+  gulp.src('_config.yml')
+    .pipe($.replace('baseurl: ""', 'baseurl: "tahini"'))
+    .pipe($.clean())
+    .pipe(gulp.dest('.'));
+});
 
-  gulp.task('revert-config', () => {
-    gulp.src('_config.yml')
-        .pipe($.replace('baseurl: "tahini"', 'baseurl: ""'))
-        .pipe($.clean())
-        .pipe(gulp.dest('.'));
-  });
+gulp.task('revert-config', () => {
+  gulp.src('_config.yml')
+    .pipe($.replace('baseurl: "tahini"', 'baseurl: ""'))
+    .pipe($.clean())
+    .pipe(gulp.dest('.'));
+});
 
 gulp.task('jekyll-build', ['scripts', 'scss'], $.shell.task(['jekyll build']));
 
@@ -178,6 +178,6 @@ gulp.task('deploy', () => {
     'minify-images',
     'gh-pages',
     'revert-config'
-  )
+  );
 });
 
