@@ -1,6 +1,6 @@
 #bio {
 
-  h1 {
+  .section-title {
     border-bottom: 1px solid $red;
     padding-bottom: 10px;
   }
@@ -8,7 +8,7 @@
   .first {
 
     img {
-      border: solid 1px $red;
+      border: solid 1px $green;
     }
 
     .card {
@@ -44,6 +44,14 @@
       }
 
       .list {
+
+        .title {
+          font-weight: bold;
+          font-size: 1.5em;
+          color: gray;
+          border-bottom: $orange solid 1px;
+          padding-bottom: 5px;
+        }
 
         p {
           padding-left: 10px;
