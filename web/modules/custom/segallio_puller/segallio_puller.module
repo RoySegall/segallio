@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * segallio_puller.module
+ */
+
+/**
+ * Implements hook_entity_update().
+ */
+function segallio_puller_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  segallio_puller_entity_stack($entity);
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function segallio_puller_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  segallio_puller_entity_stack($entity);
+}
+
+/**
+ * Stack the entities into a single object.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   The entity object.
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function segallio_puller_entity_stack(Drupal\Core\Entity\EntityInterface $entity) {
+
+  $pullers_entities = [
+    'album',
+    'gist',
+    'instagram',
+    'picture',
+    'pull_request',
+    'repository',
+    'status',
+    'tweet',
+  ];
+
+  if (!in_array($entity->getEntityTypeId(), $pullers_entities)) {
+    return;
+  }
+
+  // Look for an entity.
+  $results = \Drupal::entityQuery('puller_stacker')
+    ->condition('entity_type', $entity->getEntityTypeId())
+    ->condition('entity_id', $entity->id())
+    ->execute();
+
+  if (!empty($results)) {
+    // The item already exists.
+    return;
+  }
+
+  \Drupal::entityTypeManager()
+    ->getStorage('puller_stacker')
+    ->create([
+      'entity' => $entity,
+    ])
+    ->save();
+}

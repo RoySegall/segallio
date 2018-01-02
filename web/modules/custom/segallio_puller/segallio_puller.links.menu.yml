@@ -4,3 +4,16 @@ segallio_puller.pullers:
   description: 'Select and configure themes.'
   parent: system.admin
   weight: -6
+# Puller stacker menu items definition
+entity.puller_stacker.collection:
+  title: 'Puller stacker list'
+  route_name: entity.puller_stacker.collection
+  description: 'List Puller stacker entities'
+  parent: system.admin_structure
+  weight: 100
+
+puller_stacker.admin.structure.settings:
+  title: Puller stacker settings
+  description: 'Configure Puller stacker entities'
+  route_name: puller_stacker.settings
+  parent: system.admin_structure

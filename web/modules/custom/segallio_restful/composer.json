@@ -1,0 +1,14 @@
+{
+  "name": "drupal/segallio_restful",
+  "type": "drupal-module",
+  "description": "My Awesome Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/segallio_restful",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/segallio_restful",
+    "source": "http://cgit.drupalcode.org/segallio_restful"
+  },
+  "require": { }
+}

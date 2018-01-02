@@ -1,0 +1,22 @@
+# Puller stacker routing definition
+puller_stacker.settings_tab:
+  route_name: puller_stacker.settings
+  title: 'Settings'
+  base_route: puller_stacker.settings
+
+entity.puller_stacker.canonical:
+  route_name: entity.puller_stacker.canonical
+  base_route: entity.puller_stacker.canonical
+  title: 'View'
+
+entity.puller_stacker.edit_form:
+  route_name: entity.puller_stacker.edit_form
+  base_route: entity.puller_stacker.canonical
+  title: 'Edit'
+
+entity.puller_stacker.delete_form:
+  route_name:  entity.puller_stacker.delete_form
+  base_route:  entity.puller_stacker.canonical
+  title: Delete
+  weight: 10
+
