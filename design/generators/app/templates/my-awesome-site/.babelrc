@@ -1,0 +1,7 @@
+{
+  "presets": ["es2015"],
+<% if (includeES) { -%>
+  "only": "gulpfile.babel.js",
+<% } -%>
+  "retainLines": true
+}

@@ -1,0 +1,61 @@
+{
+  "name": "generator-jekyll-starter-kit",
+  "version": "2.1.2",
+  "description": "Combine Jekyll and Google web-starter-kit to enjoy the best of both worlds",
+  "homepage": "https://github.com/nirgn975/generator-jekyll-starter-kit",
+  "author": {
+    "name": "Nir Galon",
+    "email": "nir@galon.io",
+    "url": "http://www.nirgn.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "Jekyll",
+    "Google Web Starter Kit",
+    "HTML5",
+    "Jade",
+    "CSS3",
+    "SASS",
+    "SCSS",
+    "JavaScript",
+    "ES6",
+    "ES2015",
+    "Gulp",
+    "Travis-CI",
+    "gh-pages",
+    "Firebase",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^1.2.1"
+  },
+  "devDependencies": {
+    "yeoman-test": "^1.6.0",
+    "yeoman-assert": "^2.2.1",
+    "eslint": "^3.1.1",
+    "eslint-config-xo-space": "^0.15.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-mocha": "^3.0.1",
+    "gulp-plumber": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "nirgn975/generator-jekyll-starter-kit",
+  "scripts": {
+    "test": "gulp"
+  },
+  "license": "ISC"
+}

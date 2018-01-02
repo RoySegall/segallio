@@ -1,0 +1,36 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  box-shadow: none;
+  .brand-logo {
+    color: #444;
+  }
+
+  ul a {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #444;
+
+    &.active {
+      @include nav-bar-colors();
+    }
+
+    &:hover {
+      background: none;
+      @include nav-bar-colors();
+    }
+  }
+}
+
+p {
+  line-height: 2rem;
+}
+
+footer {
+
+  .page-footer {
+    margin: 0;
+  }
+}
