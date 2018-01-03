@@ -43,6 +43,26 @@ class SegallIoRestfulController extends ControllerBase {
    *   Return Hello string.
    */
   public function allEntries() {
+
+    $storage = $this->entityTypeManager->getStorage('puller_stacker');
+
+    // todo: Handle pager.
+    $results = $storage
+      ->getQuery()
+      ->execute();
+
+    $stackers = $storage->loadMultiple($results);
+
+    // Get the entities to load and sort them by date.
+    $entities = [];
+    foreach ($stackers as $stacker) {
+      $entities[] = $stacker;
+    }
+
+    // serialize.
+
+    // print the serialize.
+
     // Get all the entries.
     return new JsonResponse(['foo' => 'bar']);
   }
