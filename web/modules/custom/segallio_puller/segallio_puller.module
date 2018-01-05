@@ -59,7 +59,8 @@ function segallio_puller_entity_stack(Drupal\Core\Entity\EntityInterface $entity
   \Drupal::entityTypeManager()
     ->getStorage('puller_stacker')
     ->create([
-      'entity' => $entity,
+      'entity_type' => $entity->getEntityTypeId(),
+      'entity_id' => $entity->id(),
     ])
     ->save();
 }

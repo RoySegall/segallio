@@ -17,3 +17,6 @@ services:
   plugin.manager.persistent_access_token_manager:
     class: Drupal\segallio_core\Plugin\PersistentAccessTokenManagerManager
     parent: default_plugin_manager
+
+  segallio_core.entity_fltter:
+    class: \Drupal\segallio_core\SegallIoCoreEntityFlatten

@@ -3,9 +3,11 @@
 namespace Drupal\segallio_restful\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\segallio_core\SegallIoCoreEntityFlatten;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManager;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use \Symfony\Component\Serializer\SerializerInterface;
 
 
 /**
@@ -21,10 +23,22 @@ class SegallIoRestfulController extends ControllerBase {
   protected $entityTypeManager;
 
   /**
+   * @var \Symfony\Component\Serializer\SerializerInterface
+   */
+  protected $serialize;
+
+  /**
+   * @var SegallIoCoreEntityFlatten
+   */
+  protected $flatter;
+
+  /**
    * Constructs a new SegallIoRestfulController object.
    */
-  public function __construct(EntityTypeManager $entity_type_manager) {
+  public function __construct(EntityTypeManager $entity_type_manager, SerializerInterface $serialize, SegallIoCoreEntityFlatten $flatter) {
     $this->entityTypeManager = $entity_type_manager;
+    $this->serialize = $serialize;
+    $this->flatter = $flatter;
   }
 
   /**
@@ -32,7 +46,9 @@ class SegallIoRestfulController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('serializer'),
+      $container->get('segallio_core.entity_fltter')
     );
   }
 
@@ -53,18 +69,40 @@ class SegallIoRestfulController extends ControllerBase {
 
     $stackers = $storage->loadMultiple($results);
 
-    // Get the entities to load and sort them by date.
+    // Sort the entities.
     $entities = [];
     foreach ($stackers as $stacker) {
-      $entities[] = $stacker;
+      $entities[$stacker->get('entity_type')->value][] = $stacker->get('entity_id')->value;
     }
 
-    // serialize.
+    // Load the entities.
+    $loaded = [];
+    foreach ($entities as $entity_type => $entity_ids) {
+      $loaded = array_merge($loaded, $this->entityTypeManager->getStorage($entity_type)->loadMultiple($entity_ids));
+    }
 
-    // print the serialize.
+    // Order the entities.
+    usort($loaded, function ($a, $b) {
+      $time = [
+        'a' => $a->getCreatedTime() == 0 ? $a->getChangedTime() : $a->getCreatedTime(),
+        'b' => $b->getCreatedTime() == 0 ? $b->getChangedTime() : $b->getCreatedTime(),
+      ];
+
+      if ($time['a'] == $time['b']) {
+        return 0;
+      }
+
+      return $time['a'] > $time['b'] ? 1 : -1;
+    });
+
+    // serialize.
+    $serialized = [];
+    foreach ($loaded as $entity) {
+      $serialized[] = $this->flatter->flatten($entity) + ['entity_type' => $entity->getEntityTypeId()];
+    }
 
     // Get all the entries.
-    return new JsonResponse(['foo' => 'bar']);
+    return new JsonResponse($serialized);
   }
 
 }
