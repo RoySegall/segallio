@@ -1,0 +1,5 @@
+segallio:
+  version: 1.x
+  css:
+    style:
+      css/segallio.css: {}

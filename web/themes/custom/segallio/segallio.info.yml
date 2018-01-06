@@ -1,0 +1,10 @@
+name: Segall IO
+type: theme
+description: My Awesome theme
+package: Segall IO
+core: 8.x
+libraries:
+  - segallio/segallio
+ 
+base theme: bartik
+
