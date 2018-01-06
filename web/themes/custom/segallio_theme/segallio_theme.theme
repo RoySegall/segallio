@@ -4,7 +4,3 @@
  * @file
  * Functions to support theming in the segallio theme.
  */
-
-function segallio_preprocess_page(&$variables) {
-  dpm($variables);
-}

@@ -1,0 +1,8 @@
+
+segallio_core.segall_io_home_page_controller_home page:
+  path: '/homepage'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\SegallIoHomePageController::homePage'
+    _title: 'homePage'
+  requirements:
+    _permission: 'access content'
