@@ -68,6 +68,7 @@ dependencies:
   - segallio_migrate
   - segallio_place
   - segallio_puller
+  - segallio_restful
   - segallio_twitter
 
 themes:

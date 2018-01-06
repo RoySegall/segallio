@@ -2,3 +2,22 @@
 manage pullers:
   title: 'Manaing pullers'
   description: 'Allow to manage the pullers'
+add puller stacker entities:
+  title: 'Create new Puller stacker entities'
+
+administer puller stacker entities:
+  title: 'Administer Puller stacker entities'
+  description: 'Allow to access the administration form to configure Puller stacker entities.'
+  restrict access: true
+
+delete puller stacker entities:
+  title: 'Delete Puller stacker entities'
+
+edit puller stacker entities:
+  title: 'Edit Puller stacker entities'
+
+view published puller stacker entities:
+  title: 'View published Puller stacker entities'
+
+view unpublished puller stacker entities:
+  title: 'View unpublished Puller stacker entities'

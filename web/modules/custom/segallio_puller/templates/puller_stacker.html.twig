@@ -1,0 +1,22 @@
+{#
+/**
+ * @file puller_stacker.html.twig
+ * Default theme implementation to present Puller stacker data.
+ *
+ * This template is used when viewing Puller stacker pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_puller_stacker()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('puller_stacker') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

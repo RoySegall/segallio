@@ -1,0 +1,5 @@
+entity.puller_stacker.add_form:
+  route_name: entity.puller_stacker.add_form
+  title: 'Add Puller stacker'
+  appears_on:
+    - entity.puller_stacker.collection

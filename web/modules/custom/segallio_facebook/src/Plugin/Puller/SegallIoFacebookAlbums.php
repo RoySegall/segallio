@@ -19,7 +19,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
  *   "reactions" = {"field" = "likes", "callback" = "countReactions", "default_value" = 0},
  *   "shares" = {"field" = "shares", "callback" = "countShares", "default_value" = 0},
  *   "comments" = {"field" = "comments", "callback" = "countComments", "default_value" = 0},
- *   "created_time" = {"field" = "created", "callback" = "strToTimestamp"}
+ *   "created_time" = {"field" = "created", "callback" = "strToTime"}
  *  }
  * )
  */
