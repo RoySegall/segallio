@@ -1,5 +1,5 @@
-segallio:
+main:
   version: 1.x
   css:
-    style:
+    theme:
       css/segallio.css: {}
