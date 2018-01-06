@@ -3,6 +3,12 @@ segallio_restful.segall_io_restful_controller_allEntries:
   path: '/api/entries'
   defaults:
     _controller: '\Drupal\segallio_restful\Controller\SegallIoRestfulController::allEntries'
-    _title: 'allEntries'
+  requirements:
+    _permission: 'access content'
+
+segallio_restful.spefic_entry:
+  path: 'api/{entity_type}'
+  defaults:
+    _controller: '\Drupal\segallio_restful\Controller\SegallIoRestfulController::getEntity'
   requirements:
     _permission: 'access content'

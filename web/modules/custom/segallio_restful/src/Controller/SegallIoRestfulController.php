@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManager;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use \Symfony\Component\Serializer\SerializerInterface;
-
+use \Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class SegallIoRestfulController.
@@ -33,12 +33,18 @@ class SegallIoRestfulController extends ControllerBase {
   protected $flatter;
 
   /**
+   * @var \Symfony\Component\HttpFoundation\RequestStack
+   */
+  protected $request;
+
+  /**
    * Constructs a new SegallIoRestfulController object.
    */
-  public function __construct(EntityTypeManager $entity_type_manager, SerializerInterface $serialize, SegallIoCoreEntityFlatten $flatter) {
+  public function __construct(EntityTypeManager $entity_type_manager, SerializerInterface $serialize, SegallIoCoreEntityFlatten $flatter, RequestStack $request) {
     $this->entityTypeManager = $entity_type_manager;
     $this->serialize = $serialize;
     $this->flatter = $flatter;
+    $this->request = $request->getCurrentRequest();
   }
 
   /**
@@ -48,7 +54,8 @@ class SegallIoRestfulController extends ControllerBase {
     return new static(
       $container->get('entity_type.manager'),
       $container->get('serializer'),
-      $container->get('segallio_core.entity_fltter')
+      $container->get('segallio_core.entity_fltter'),
+      $container->get('request_stack')
     );
   }
 
@@ -56,15 +63,17 @@ class SegallIoRestfulController extends ControllerBase {
    * Get all the entries.
    *
    * @return \Symfony\Component\HttpFoundation\JsonResponse
-   *   Return Hello string.
+   *   The restful representation of the entities.
    */
   public function allEntries() {
+    $page = $this->request->query->get('page', 0);
+    $perpage = 25;
 
     $storage = $this->entityTypeManager->getStorage('puller_stacker');
 
-    // todo: Handle pager.
     $results = $storage
       ->getQuery()
+      ->range($page * $perpage , $perpage)
       ->execute();
 
     $stackers = $storage->loadMultiple($results);
@@ -99,6 +108,38 @@ class SegallIoRestfulController extends ControllerBase {
     $serialized = [];
     foreach ($loaded as $entity) {
       $serialized[] = $this->flatter->flatten($entity) + ['entity_type' => $entity->getEntityTypeId()];
+    }
+
+    // Get all the entries.
+    return new JsonResponse($serialized);
+  }
+
+  /**
+   * Get a specific entity type in a restful request.
+   *
+   * @param string $entity_type
+   *   The entity type.
+   *
+   * @return JsonResponse
+   *   The request of the route.
+   */
+  public function getEntity($entity_type) {
+    $page = $this->request->query->get('page', 0);
+    $perpage = 25;
+
+    $storage = $this->entityTypeManager->getStorage($entity_type);
+
+    $results = $storage
+      ->getQuery()
+      ->range($page * $perpage , $perpage)
+      ->execute();
+
+    $loaded = $storage->loadMultiple($results);
+
+    // serialize.
+    $serialized = [];
+    foreach ($loaded as $entity) {
+      $serialized[] = $this->flatter->flatten($entity);
     }
 
     // Get all the entries.
