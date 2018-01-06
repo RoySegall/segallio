@@ -74,6 +74,7 @@ class SegallIoRestfulController extends ControllerBase {
     $results = $storage
       ->getQuery()
       ->range($page * $perpage , $perpage)
+      ->sort('created', 'DESC')
       ->execute();
 
     $stackers = $storage->loadMultiple($results);

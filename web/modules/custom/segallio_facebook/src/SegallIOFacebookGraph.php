@@ -56,21 +56,21 @@ class SegallIOFacebookGraph implements SegallIOFaecebookGraphInterface {
    * {@inheritdoc}
    */
   public function getPosts() {
-    return $this->getFields('me/posts?fields=permalink_url,comments.summary(true).limit(1),reactions.summary(true).limit(1),full_picture,message,shares,object_id')['data'];
+    return $this->getFields('me/posts?fields=permalink_url,comments.summary(true).limit(1),reactions.summary(true).limit(1),full_picture,message,shares,object_id,created_time')['data'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function getAlbums() {
-    return $this->getFields('me/albums?fields=description,comments.limit(1),reactions.limit(1),name,link,picture{url},id')['data'];
+    return $this->getFields('me/albums?fields=description,comments.limit(1),reactions.limit(1),name,link,picture{url},id,created_time')['data'];
   }
 
   /**
    * {@inheritdoc}
    */
   public function getPhotos() {
-    return $this->getFields('me/photos?fields=album{id},comments.summary(true).limit(1),reactions.summary(true).limit(1),link,name,shares,id,picture')['data'];
+    return $this->getFields('me/photos?fields=album{id},comments.summary(true).limit(1),reactions.summary(true).limit(1),link,name,shares,id,picture,created_time')['data'];
   }
 
 }

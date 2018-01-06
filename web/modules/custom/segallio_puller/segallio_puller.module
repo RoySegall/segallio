@@ -61,6 +61,7 @@ function segallio_puller_entity_stack(Drupal\Core\Entity\EntityInterface $entity
     ->create([
       'entity_type' => $entity->getEntityTypeId(),
       'entity_id' => $entity->id(),
+      'created' => $entity->get('created')->value,
     ])
     ->save();
 }
