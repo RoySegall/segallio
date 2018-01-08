@@ -6,3 +6,19 @@ segallio_core.segall_io_home_page_controller_home page:
     _title: 'homePage'
   requirements:
     _permission: 'access content'
+
+segallio_core.segall_io_map_controller_map:
+  path: '/map'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\SegallIoMapController::map'
+    _title: 'map'
+  requirements:
+    _permission: 'access content'
+
+segallio_core.segall_io_bio_controller_bio:
+  path: '/bio'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\SegallIoBioController::bio'
+    _title: 'bio'
+  requirements:
+    _permission: 'access content'
