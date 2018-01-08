@@ -17,7 +17,7 @@ class SegallIoHomePageController extends ControllerBase {
    */
   public function homePage() {
     return [
-      '#theme' => 'my_template',
+      '#theme' => 'homepage',
     ];
   }
 
