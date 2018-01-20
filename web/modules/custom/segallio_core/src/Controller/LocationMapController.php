@@ -5,19 +5,19 @@ namespace Drupal\segallio_core\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Class SegallIoBioController.
+ * Class LocationMapController.
  */
-class SegallIoBioController extends ControllerBase {
+class LocationMapController extends ControllerBase {
 
   /**
-   * Bio.
+   * Location controller.
    *
    * @return array
    *   Return Hello string.
    */
-  public function bio() {
+  public function locationDetail() {
     return [
-      '#theme' => 'biography',
+      '#theme' => 'location_detail',
     ];
   }
 

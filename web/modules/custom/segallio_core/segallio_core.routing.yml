@@ -22,3 +22,13 @@ segallio_core.segall_io_bio_controller_bio:
     _title: 'bio'
   requirements:
     _permission: 'access content'
+
+segallio_core.segall_io_location_controller:
+  path: '/map/location-detail'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\LocationMapController::locationDetail'
+    _title: 'location map'
+  requirements:
+    _permission: 'access content'
+
+
