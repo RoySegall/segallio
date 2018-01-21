@@ -1,0 +1,34 @@
+
+segallio_core.homepage:
+  path: '/homepage'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\SegallIoHomePageController::homePage'
+    _title: 'homePage'
+  requirements:
+    _permission: 'access content'
+
+segallio_core.map:
+  path: '/map'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\SegallIoMapController::map'
+    _title: 'map'
+  requirements:
+    _permission: 'access content'
+
+segallio_core.bio:
+  path: '/bio'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\SegallIoBioController::bio'
+    _title: 'bio'
+  requirements:
+    _permission: 'access content'
+
+segallio_core.location:
+  path: '/map/location-detail'
+  defaults:
+    _controller: '\Drupal\segallio_core\Controller\LocationMapController::locationDetail'
+    _title: 'location map'
+  requirements:
+    _permission: 'access content'
+
+

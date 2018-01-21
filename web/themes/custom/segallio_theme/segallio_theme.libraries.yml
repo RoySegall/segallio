@@ -1,0 +1,6 @@
+main:
+  version: 1.x
+  css:
+    theme:
+      css/fontawesome-all.css: {}
+      css/segallio.css: {}

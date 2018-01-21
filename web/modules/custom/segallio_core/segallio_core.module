@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function segallio_core_theme() {
+  return [
+    'homepage' => [
+      'template' => 'homepage',
+      'path' => drupal_get_path('module', 'segallio_core') . '/templates',
+    ],
+    'biography' => [
+      'template' => 'biography',
+      'path' => drupal_get_path('module', 'segallio_core') . '/templates',
+    ],
+    'map' => [
+      'template' => 'map',
+      'path' => drupal_get_path('module', 'segallio_core') . '/templates',
+    ],
+    'location_detail' => [
+      'template' => 'location-detail',
+      'path' => drupal_get_path('module', 'segallio_core') . '/templates',
+    ],
+  ];
+}
