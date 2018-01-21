@@ -7,7 +7,7 @@ segallio_core.homepage:
   requirements:
     _permission: 'access content'
 
-segallio_core.segall_io_map_controller_map:
+segallio_core.map:
   path: '/map'
   defaults:
     _controller: '\Drupal\segallio_core\Controller\SegallIoMapController::map'
@@ -15,7 +15,7 @@ segallio_core.segall_io_map_controller_map:
   requirements:
     _permission: 'access content'
 
-segallio_core.segall_io_bio_controller_bio:
+segallio_core.bio:
   path: '/bio'
   defaults:
     _controller: '\Drupal\segallio_core\Controller\SegallIoBioController::bio'
@@ -23,7 +23,7 @@ segallio_core.segall_io_bio_controller_bio:
   requirements:
     _permission: 'access content'
 
-segallio_core.segall_io_location_controller:
+segallio_core.location:
   path: '/map/location-detail'
   defaults:
     _controller: '\Drupal\segallio_core\Controller\LocationMapController::locationDetail'
