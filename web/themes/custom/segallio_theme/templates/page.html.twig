@@ -56,7 +56,7 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right nav-desktop hide-on-med-and-down">
-        <li><a href="/" class="activity {% if page.dir == '/' %}active{% endif %}">Activity</a></li>
+        <li>{{ link('Activity', 'route:segallio_core.homepage', { 'class':['activity']}) }}</li>
         <li><a href="/map" class="map {% if page.dir == '/map/' %}active{% endif %}">Map</a></li>
         <li><a href="/biography" class="bio {% if page.dir == '/biography/' %}active{% endif %}">Biography</a></li>
       </ul>

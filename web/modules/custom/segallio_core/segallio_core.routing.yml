@@ -1,5 +1,5 @@
 
-segallio_core.segall_io_home_page_controller_home page:
+segallio_core.homepage:
   path: '/homepage'
   defaults:
     _controller: '\Drupal\segallio_core\Controller\SegallIoHomePageController::homePage'
