@@ -18,6 +18,12 @@ class SegallIoHomePageController extends ControllerBase {
   public function homePage() {
     return [
       '#theme' => 'homepage',
+      '#attached' => [
+        'library' => [
+          'segallio_theme/vue',
+          'segallio_theme/timeline',
+        ],
+      ],
     ];
   }
 

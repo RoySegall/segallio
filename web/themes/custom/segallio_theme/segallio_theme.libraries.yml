@@ -4,3 +4,13 @@ main:
     theme:
       css/fontawesome-all.css: {}
       css/segallio.css: {}
+
+vue:
+  version: 1.x
+  js:
+    node_modules/vue/dist/vue.js: {}
+
+timeline:
+  version: 1.x
+  js:
+    js/timeline.js: {}
