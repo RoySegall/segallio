@@ -1,16 +1,19 @@
 
 app = new Vue({
   el: '#timeline',
-  data: {
-    posts: [
-      {type: 'facebook', 'title': 'Post', 'text': 'This is a facebook post'},
-      {type: 'github', 'title': 'Post', 'text': 'This is a github post'},
-      {type: 'instagram','title': 'Post',  'text': 'This is a instagram post'},
-      {type: 'twitter', 'text': 'This is a twitter post'},
-      {type: 'facebook', 'text': 'This is a facebook post'},
-    ],
-  },
+  data: function() {
 
+    axios.get(drupalSettings.entries_base).then(response => (console.log(response)));
+    return {
+      'posts': [
+        {type: 'facebook', 'title': 'Post', 'text': 'This is a facebook post'},
+        {type: 'github', 'title': 'Post', 'text': 'This is a github post'},
+        {type: 'instagram','title': 'Post',  'text': 'This is a instagram post'},
+        {type: 'twitter', 'text': 'This is a twitter post'},
+        {type: 'facebook', 'text': 'This is a facebook post'},
+      ],
+    };
+  },
   directives: {
     'social-icon': {
       // directive definition.

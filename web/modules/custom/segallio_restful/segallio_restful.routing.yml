@@ -1,5 +1,5 @@
 
-segallio_restful.segall_io_restful_controller_allEntries:
+segallio_restful.all_entries:
   path: '/api/entries'
   defaults:
     _controller: '\Drupal\segallio_restful\Controller\SegallIoRestfulController::allEntries'

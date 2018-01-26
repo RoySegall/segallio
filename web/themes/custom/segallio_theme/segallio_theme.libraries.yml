@@ -10,6 +10,11 @@ vue:
   js:
     node_modules/vue/dist/vue.js: {}
 
+axios:
+  version: 1.x
+  js:
+    node_modules/axios/dist/axios.js: {}
+
 timeline:
   version: 1.x
   js:
