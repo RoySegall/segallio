@@ -4,15 +4,10 @@ app = new Vue({
   data: {
     posts: [
       {type: 'facebook', 'text': 'This is a facebook post'},
-      {type: 'github', 'text': 'This is a facebook post'},
-      {type: 'instagram', 'text': 'This is a facebook post'},
-      {type: 'twitter', 'text': 'This is a facebook post'},
+      {type: 'github', 'text': 'This is a github post'},
+      {type: 'instagram', 'text': 'This is a instagram post'},
+      {type: 'twitter', 'text': 'This is a twitter post'},
+      {type: 'facebook', 'text': 'This is a facebook post'},
     ],
-  },
-  computed: {
-    classObject: function (index) {
-      debugger;
-      return "a";
-    }
   }
 });

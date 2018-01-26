@@ -10,84 +10,93 @@
 
   </div>
 
-  {#{% verbatim %}#}
-    {#<section id="timeline">#}
-      {#<div class="center social-buttons">#}
-        {#<i class="fab fa-facebook-square"></i>#}
-        {#<i class="fab fa-twitter-square"></i>#}
-        {#<i class="fab fa-instagram"></i>#}
-        {#<i class="fab fa-github"></i>#}
-      {#</div>#}
+  {% verbatim %}
+    <section id="timeline">
+      <div class="center social-buttons">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-github"></i>
+      </div>
 
-      {#<div class="demo-card-wrapper" v-for="(post, index) in posts">#}
-        {#<div class="demo-card demo-card--step1" v-bind:class="{ index }">#}
-          {#<div class="head">#}
-            {#<div class="number-box">#}
-              {#<span>01</span>#}
-            {#</div>#}
-            {#<h2><span class="small">Subtitle</span> {{index}}</h2>#}
+      <div class="demo-card-wrapper">
+        <div v-for="(post, index) in posts" class="demo-card" v-bind:class="
+          {
+            'demo-card--step1': (index + 1) % 1 == 0,
+            'demo-card--step2': (index + 1) % 2 == 0,
+            'demo-card--step3': (index + 1) % 3 == 0,
+            'demo-card--step4': (index + 1) % 4 == 0,
+            'demo-card--step4': (index + 1) % 4 == 0,
+            'demo-card--step5': (index + 1) % 5 == 0,
+          }
+          ">
+          <div class="head">
+            <div class="number-box">
+              <span>01</span>
+            </div>
+            <h2><span class="small">Subtitle</span> {{index}}</h2>
+          </div>
+          <div class="body">
+            {{ post.text }}
+          </div>
+        </div>
+
+    </section>
+  {% endverbatim %}
+
+  {#<section id=timeline>#}
+    {#<div class="demo-card-wrapper">#}
+      {#<div class="demo-card demo-card--step2">#}
+        {#<div class="head">#}
+          {#<div class="number-box">#}
+            {#<span>02</span>#}
           {#</div>#}
-          {#<div class="body">#}
-          {#</div>#}
+          {#<h2><span class="small">Subtitle</span> Confidence</h2>#}
+        {#</div>#}
+        {#<div class="body">#}
+          {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>#}
+          {#<img src="http://placehold.it/1000x500" alt="Graphic">#}
         {#</div>#}
       {#</div>#}
 
-    {#</section>#}
-  {#{% endverbatim %}#}
+      {#<div class="demo-card demo-card--step3">#}
+        {#<div class="head">#}
+          {#<div class="number-box">#}
+            {#<span>03</span>#}
+          {#</div>#}
+          {#<h2><span class="small">Subtitle</span> Adaptation</h2>#}
+        {#</div>#}
+        {#<div class="body">#}
+          {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>#}
+          {#<img src="http://placehold.it/1000x500" alt="Graphic">#}
+        {#</div>#}
+      {#</div>#}
 
-  <section id=timeline>
-    <div class="demo-card-wrapper">
-      <div class="demo-card demo-card--step2">
-        <div class="head">
-          <div class="number-box">
-            <span>02</span>
-          </div>
-          <h2><span class="small">Subtitle</span> Confidence</h2>
-        </div>
-        <div class="body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-          <img src="http://placehold.it/1000x500" alt="Graphic">
-        </div>
-      </div>
+      {#<div class="demo-card demo-card--step4">#}
+        {#<div class="head">#}
+          {#<div class="number-box">#}
+            {#<span>04</span>#}
+          {#</div>#}
+          {#<h2><span class="small">Subtitle</span> Consistency</h2>#}
+        {#</div>#}
+        {#<div class="body">#}
+          {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>#}
+          {#<img src="http://placehold.it/1000x500" alt="Graphic">#}
+        {#</div>#}
+      {#</div>#}
 
-      <div class="demo-card demo-card--step3">
-        <div class="head">
-          <div class="number-box">
-            <span>03</span>
-          </div>
-          <h2><span class="small">Subtitle</span> Adaptation</h2>
-        </div>
-        <div class="body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-          <img src="http://placehold.it/1000x500" alt="Graphic">
-        </div>
-      </div>
-
-      <div class="demo-card demo-card--step4">
-        <div class="head">
-          <div class="number-box">
-            <span>04</span>
-          </div>
-          <h2><span class="small">Subtitle</span> Consistency</h2>
-        </div>
-        <div class="body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-          <img src="http://placehold.it/1000x500" alt="Graphic">
-        </div>
-      </div>
-
-      <div class="demo-card demo-card--step5">
-        <div class="head">
-          <div class="number-box">
-            <span>05</span>
-          </div>
-          <h2><span class="small">Subtitle</span> Conversion</h2>
-        </div>
-        <div class="body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-          <img src="http://placehold.it/1000x500" alt="Graphic">
-        </div>
-      </div>
-    </div>
-  </section>
+      {#<div class="demo-card demo-card--step5">#}
+        {#<div class="head">#}
+          {#<div class="number-box">#}
+            {#<span>05</span>#}
+          {#</div>#}
+          {#<h2><span class="small">Subtitle</span> Conversion</h2>#}
+        {#</div>#}
+        {#<div class="body">#}
+          {#<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>#}
+          {#<img src="http://placehold.it/1000x500" alt="Graphic">#}
+        {#</div>#}
+      {#</div>#}
+    {#</div>#}
+  {#</section>#}
 </div>
