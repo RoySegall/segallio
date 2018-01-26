@@ -28,10 +28,12 @@
             'demo-card--step4': (index + 1) % 4 == 0,
             'demo-card--step5': (index + 1) % 5 == 0
           }">
-          <div class="head"><div class="number-box"><span><div v-social-icon></div></span></div>
-          <h2><span class="small">Subtitle</span></h2></div>
+          <div class="head"><div class="number-box"><span><div v-social-icon:icon="post.type"></div></span></div>
+          <h2><span class="small"><a href="" style="color: white;">Go to post</a></span></h2></div>
           <div class="body">
+
             {{ post.text }}
+
           </div>
         </div>
 
