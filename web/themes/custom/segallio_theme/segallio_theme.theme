@@ -20,3 +20,27 @@ function segallio_theme_preprocess_page(&$variables) {
   ];
 
 }
+
+/**
+ * Implements hook_theme().
+ */
+function segallio_theme_theme() {
+  return [
+    'homepage' => [
+      'template' => 'homepage',
+      'path' => drupal_get_path('theme', 'segallio_theme') . '/templates',
+    ],
+    'biography' => [
+      'template' => 'biography',
+      'path' => drupal_get_path('theme', 'segallio_theme') . '/templates',
+    ],
+    'map' => [
+      'template' => 'map',
+      'path' => drupal_get_path('theme', 'segallio_theme') . '/templates',
+    ],
+    'location_detail' => [
+      'template' => 'location-detail',
+      'path' => drupal_get_path('theme', 'segallio_theme') . '/templates',
+    ],
+  ];
+}

@@ -11,3 +11,10 @@ app = new Vue({
     ],
   }
 });
+
+Vue.directive('social-icon', {
+  bind: function (el, binding, vnode) {
+    var s = JSON.stringify;
+    el.innerHTML = "a";
+  }
+});
