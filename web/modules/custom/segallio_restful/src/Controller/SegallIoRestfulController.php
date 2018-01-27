@@ -3,6 +3,7 @@
 namespace Drupal\segallio_restful\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\file_entity\Entity\FileEntity;
 use Drupal\segallio_core\SegallIoCoreEntityFlatten;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManager;
@@ -109,7 +110,7 @@ class SegallIoRestfulController extends ControllerBase {
     // serialize.
     $serialized = [];
     foreach ($loaded as $entity) {
-      $serialized[] = $this->flatter->flatten($entity) + ['entity_type' => $entity->getEntityTypeId()];
+      $serialized[] = $this->flatter->flatten($entity, $this->getFlattenHandlers()) + ['entity_type' => $entity->getEntityTypeId()];
     }
 
     // Get all the entries.
@@ -141,11 +142,23 @@ class SegallIoRestfulController extends ControllerBase {
     // serialize.
     $serialized = [];
     foreach ($loaded as $entity) {
-      $serialized[] = $this->flatter->flatten($entity);
+      $serialized[] = $this->flatter->flatten($entity, $this->getFlattenHandlers());
     }
 
     // Get all the entries.
     return new JsonResponse($serialized);
+  }
+
+  protected function getFlattenHandlers() {
+    return [
+      'assets' => function($items) {
+        $results = [];
+        foreach ($items as $item) {
+
+        }
+        return $items;
+      },
+    ];
   }
 
 }
