@@ -1,25 +1,36 @@
 
 app = new Vue({
   el: '#timeline',
-  data: function() {
 
-    axios.get(drupalSettings.entries_base).then(response => (console.log(response)));
+  data: function() {
     return {
-      'posts': [
-        {type: 'facebook', 'title': 'Post', 'text': 'This is a facebook post'},
-        {type: 'github', 'title': 'Post', 'text': 'This is a github post'},
-        {type: 'instagram','title': 'Post',  'text': 'This is a instagram post'},
-        {type: 'twitter', 'text': 'This is a twitter post'},
-        {type: 'facebook', 'text': 'This is a facebook post'},
-      ],
+      posts: [],
     };
+  },
+  created: function() {
+    return this.$http.get(drupalSettings.entries_base).then((response) => {
+      let posts = response.data;
+
+      posts.forEach(function(element, key) {
+        class_name = function(key) {
+          let delta = (key % 5) + 1;
+          return 'demo-card demo-card--step' + delta;
+        };
+
+        posts[key]['className'] = class_name(key);
+      });
+
+      this.posts = posts;
+    });
   },
   directives: {
     'social-icon': {
       // directive definition.
       inserted: function (el, binding, vnode) {
         switch (binding.value) {
-          case 'facebook':
+          case 'album':
+          case 'picture':
+          case 'status':
             el.innerHTML = "<i class='fab fa-facebook-f'></i>";
             break;
 

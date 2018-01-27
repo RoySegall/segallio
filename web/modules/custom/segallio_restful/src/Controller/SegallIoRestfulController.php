@@ -73,6 +73,7 @@ class SegallIoRestfulController extends ControllerBase {
 
     $results = $storage
       ->getQuery()
+      ->condition('entity_type', 'album', '!=')
       ->range($page * $perpage , $perpage)
       ->sort('created', 'DESC')
       ->execute();

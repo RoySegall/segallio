@@ -10,12 +10,17 @@ vue:
   js:
     node_modules/vue/dist/vue.js: {}
 
-axios:
+vueHttp:
   version: 1.x
   js:
-    node_modules/axios/dist/axios.js: {}
+    node_modules/vue-resource/dist/vue-resource.js: {}
+  dependencies:
+    - segallio_theme/vue
 
 timeline:
   version: 1.x
   js:
     js/timeline.js: {}
+  dependencies:
+    - segallio_theme/vue
+    - segallio_theme/vueHttp

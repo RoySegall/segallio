@@ -17,15 +17,17 @@ class SegallIoHomePageController extends ControllerBase {
    *   Return Hello string.
    */
   public function homePage() {
+    $url = Url::fromRoute('segallio_restful.all_entries', [], ['absolute' => TRUE])->toString();
+
     return [
       '#theme' => 'homepage',
       '#attached' => [
         'library' => [
           'segallio_theme/vue',
-          'segallio_theme/axios',
+          'segallio_theme/vueHttp',
           'segallio_theme/timeline',
         ],
-        'drupalSettings' => ['entries_base' => Url::fromRoute('segallio_restful.all_entries', [], ['absolute' => TRUE])->toString()]
+        'drupalSettings' => ['entries_base' => $url],
       ],
     ];
   }
