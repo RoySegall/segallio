@@ -52,6 +52,13 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
   protected $logs = [];
 
   /**
+   * List of assets.
+   *
+   * @var array
+   */
+  protected $assets = [];
+
+  /**
    * PullerBase constructor.
    * @param array $configuration
    * @param string $plugin_id
@@ -78,6 +85,30 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
       $container->get('entity_type.manager'),
       $container->get('social_assets_services_manager')
     );
+  }
+
+  /**
+   * Set the assets.
+   *
+   * @param array $assets
+   *   List of assets.
+   *
+   * @return \Drupal\segallio_puller\Plugin\PullerBase
+   *   The current object.
+   */
+  public function setAssets(array $assets) {
+    $this->assets = $assets;
+
+    return $this;
+  }
+
+  /**
+   * Get the assets.
+   *
+   * @return array
+   */
+  public function getAssets() {
+    return $this->assets;
   }
 
   /**
@@ -190,7 +221,12 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
    * {@inheritdoc}
    */
   public function pull() {
-    $assets = $this->assets();
+
+    // Get the assets.
+    $assets = $this->assets;
+    if (empty($this->assets)) {
+      $assets = $this->assets();
+    }
 
     // Iterate over the posts.
     foreach ($assets as $i => $asset) {
