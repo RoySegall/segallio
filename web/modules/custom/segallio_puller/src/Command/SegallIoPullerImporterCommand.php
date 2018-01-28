@@ -8,6 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Drupal\Console\Core\Command\ContainerAwareCommand;
 use Drupal\Console\Core\Style\DrupalStyle;
 use Drupal\Console\Annotations\DrupalCommand;
+use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Finder\Finder;
 
 /**
@@ -48,9 +49,10 @@ class SegallIoPullerImporterCommand extends ContainerAwareCommand {
     foreach ($files as $file) {
       list($entity_type) = explode('_', $file->getFilename());
       $puller = $this->getPullerByEntityType($entity_type);
-      $content = json_encode($file->getContents());
 
-      var_dump($content);
+      /** @var \Symfony\Component\Serializer\Serializer $serialize */
+      $serialize = \Drupal::service('serializer');
+      $content = $serialize->decode($file->getContents(), 'json');
       $puller->setAssets($content)->pull();
     }
   }
@@ -66,7 +68,7 @@ class SegallIoPullerImporterCommand extends ContainerAwareCommand {
    */
   protected function getPullerByEntityType($entity_type) {
     // todo: search by entity type and not hard coded.
-    $puller_id = 'facebook_albums';
+    $puller_id = 'facebook_posts';
     return \Drupal::service('plugin.manager.puller')->createInstance($puller_id);
   }
 
