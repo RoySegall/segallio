@@ -125,7 +125,6 @@ body {
 
     @include mq-lg {
       max-width: $card-width;
-      height: $card-height;
       margin-top: $outer-margin/2;
       margin-bottom: $outer-margin/2;
     }
@@ -172,9 +171,6 @@ body {
       border: $border;
       border-top: 0;
       padding: $inner-margin;
-      @include mq-lg {
-        height: $body-height;
-      }
       p {
         font-size: 14px;
         line-height: 18px;
@@ -185,12 +181,51 @@ body {
         width: 100%;
       }
     }
+
+    .reactions {
+
+      ul {
+        padding: 0.5em;
+        background: white;
+        margin: 0.5em;
+
+        li {
+          display: inline;
+          font-size: 1.5em;
+        }
+      }
+    }
     @for $i from 1 through $items {
       &--step#{$i} {
+
         $color: nth($colors, ((($i - 1) % 4) + 1));
         background-color: $color;
+
         .head::after {
           border-color: $color;
+        }
+
+        .reactions {
+          text-align: center;
+
+          ul {
+            padding: 1.5em 0.5em 0 .5em;
+            background: white;
+            margin: 1em auto;
+
+            li {
+              border-right: solid 1px $color;
+              padding: 0 0.5em;
+
+              &.first  {
+                border-left: solid 1px $color;
+              }
+
+              &.last {
+                border-right: solid 1px $color;
+              }
+            }
+          }
         }
       }
     }

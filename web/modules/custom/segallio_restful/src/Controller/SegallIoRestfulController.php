@@ -159,7 +159,10 @@ class SegallIoRestfulController extends ControllerBase {
       $results = [];
 
       foreach ($items as $item) {
-        $results[] = file_create_url($item->getFileUri());
+        $results[] = [
+          'type' => $item->bundle(),
+          'url' => file_create_url($item->getFileUri())
+        ];
       }
 
       return $results;

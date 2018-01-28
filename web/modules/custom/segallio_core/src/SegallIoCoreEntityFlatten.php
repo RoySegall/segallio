@@ -50,9 +50,11 @@ class SegallIoCoreEntityFlatten {
         $value = array_map(function ($item) {
           return reset($item);
         }, $value);
+
+        $value = is_array($value) && count($value) == 1 ? reset($value) : $value;
       }
 
-      $return[$field] = is_array($value) && count($value) == 1 ? reset($value) : $value;
+      $return[$field] = $value;
     }
 
     return array_filter($return);

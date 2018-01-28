@@ -30,8 +30,26 @@
 			    <div class="body">
 			      {{post.name}}
 
-            <img v-if="post.assets" v-bind="{'src': post.assets}" class="img-responsive" />
+            <div v-if="post.assets" class="media">
+              <span v-media:entry="post.assets"></span>
+            </div>
+
+            <div class="reactions">
+			        <ul>
+			          <li class="first">
+			            <i class="fal fa-heart" alt="Likes"></i> <span class="data">{{ post.likes !== 0 ? post.likes : 0 }}</span>
+                </li>
+			          <li>
+			            <i class="fal fa-comment-alt" alt="comments"></i> <span class="data">{{ post.comments !== 0 ? post.comments : 0 }}</span>
+                </li>
+			          <li class="last">
+			            <i class="fal fa-share-square" alt="Shares"></i> <span class="data">{{ post.shares !== 0 ? post.shares : 0 }}</span>
+                </li>
+              </ul>
+			      </div>
+
 			    </div>
+
       </div>
     </section>
   {% endverbatim %}
