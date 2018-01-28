@@ -29,6 +29,8 @@
 			    </div>
 			    <div class="body">
 			      {{post.name}}
+
+            <img v-if="post.assets" v-bind="{'src': post.assets}" class="img-responsive" />
 			    </div>
       </div>
     </section>

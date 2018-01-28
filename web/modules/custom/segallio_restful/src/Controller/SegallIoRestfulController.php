@@ -149,15 +149,25 @@ class SegallIoRestfulController extends ControllerBase {
     return new JsonResponse($serialized);
   }
 
+  /**
+   * callbacks for entity flattening.
+   *
+   * @return array
+   */
   protected function getFlattenHandlers() {
-    return [
-      'assets' => function($items) {
-        $results = [];
-        foreach ($items as $item) {
+    $callback = function($items) {
+      $results = [];
 
-        }
-        return $items;
-      },
+      foreach ($items as $item) {
+        $results[] = file_create_url($item->getFileUri());
+      }
+
+      return $results;
+    };
+
+    return [
+      'assets' => $callback,
+      'asset' => $callback,
     ];
   }
 

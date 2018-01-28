@@ -18,6 +18,10 @@ app = new Vue({
         };
 
         posts[key]['className'] = class_name(key);
+
+        if (posts[key]['asset'] != undefined) {
+          posts[key]['assets'] = posts[key]['asset'];
+        }
       });
 
       this.posts = posts;
