@@ -7048,6 +7048,8 @@ body {
   min-width: 50%;
   max-width: 90%;
   z-index: 2; }
+#timeline .demo-card a {
+  color: white; }
 @media (min-width: 480px) {
   #timeline .demo-card {
     max-width: 60%;
@@ -7102,10 +7104,9 @@ body {
 #timeline .demo-card .body p {
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 15px; }
+  margin-bottom: 5px; }
 #timeline .demo-card .body img {
-  display: block;
-  width: 100%; }
+  display: block; }
 #timeline .demo-card .reactions ul {
   padding: 0.5em;
   background: white;
@@ -7117,6 +7118,10 @@ body {
   background-color: #46b8e9; }
 #timeline .demo-card--step1 .head::after {
   border-color: #46b8e9; }
+#timeline .demo-card--step1 .body .separator {
+  border-bottom: 1px solid #46b8e9;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em; }
 #timeline .demo-card--step1 .reactions {
   text-align: center; }
 #timeline .demo-card--step1 .reactions ul {
@@ -7134,6 +7139,10 @@ body {
   background-color: #3ee9d1; }
 #timeline .demo-card--step2 .head::after {
   border-color: #3ee9d1; }
+#timeline .demo-card--step2 .body .separator {
+  border-bottom: 1px solid #3ee9d1;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em; }
 #timeline .demo-card--step2 .reactions {
   text-align: center; }
 #timeline .demo-card--step2 .reactions ul {
@@ -7151,6 +7160,10 @@ body {
   background-color: #ce43eb; }
 #timeline .demo-card--step3 .head::after {
   border-color: #ce43eb; }
+#timeline .demo-card--step3 .body .separator {
+  border-bottom: 1px solid #ce43eb;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em; }
 #timeline .demo-card--step3 .reactions {
   text-align: center; }
 #timeline .demo-card--step3 .reactions ul {
@@ -7168,6 +7181,10 @@ body {
   background-color: #4d92eb; }
 #timeline .demo-card--step4 .head::after {
   border-color: #4d92eb; }
+#timeline .demo-card--step4 .body .separator {
+  border-bottom: 1px solid #4d92eb;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em; }
 #timeline .demo-card--step4 .reactions {
   text-align: center; }
 #timeline .demo-card--step4 .reactions ul {
@@ -7185,6 +7202,10 @@ body {
   background-color: #46b8e9; }
 #timeline .demo-card--step5 .head::after {
   border-color: #46b8e9; }
+#timeline .demo-card--step5 .body .separator {
+  border-bottom: 1px solid #46b8e9;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em; }
 #timeline .demo-card--step5 .reactions {
   text-align: center; }
 #timeline .demo-card--step5 .reactions ul {

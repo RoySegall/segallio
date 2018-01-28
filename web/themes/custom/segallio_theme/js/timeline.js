@@ -72,7 +72,7 @@ app = new Vue({
 
           switch (element.type) {
             case 'image':
-              media = '<img src="' + element.url + '" class="img-responsive" />';
+              media = '<img src="' + element.url + '" class="responsive-img" />';
           }
 
           text.push(media);

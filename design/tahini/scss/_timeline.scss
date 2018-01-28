@@ -114,6 +114,10 @@ body {
     max-width: 90%;
     z-index: 2;
 
+    a {
+      color: white;
+    }
+
     @include mq-sm {
       max-width: 60%;
       box-shadow: $box-shadow;
@@ -171,14 +175,15 @@ body {
       border: $border;
       border-top: 0;
       padding: $inner-margin;
+
       p {
         font-size: 14px;
         line-height: 18px;
-        margin-bottom: $inner-margin;
+        margin-bottom: 5px;
       }
+
       img {
         display: block;
-        width: 100%;
       }
     }
 
@@ -203,6 +208,15 @@ body {
 
         .head::after {
           border-color: $color;
+        }
+
+        .body {
+
+          .separator {
+            border-bottom: 1px solid $color;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+          }
         }
 
         .reactions {
