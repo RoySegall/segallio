@@ -54,6 +54,11 @@ class SegallIoPullerImporterCommand extends ContainerAwareCommand {
       $serialize = \Drupal::service('serializer');
       $content = $serialize->decode($file->getContents(), 'json');
       $puller->setAssets($content)->pull();
+      $params = [
+        '@entity' => $entity_type,
+        '@file' => $file->getFilename(),
+      ];
+      $io->success(t('Inserting a data to the entity @entity from the file @file', $params));
     }
   }
 
