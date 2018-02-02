@@ -17,6 +17,13 @@ vueHttp:
   dependencies:
     - segallio_theme/vue
 
+vueInfinityScroll:
+  version: 1.x
+  js:
+    node_modules/vue-infinite-scroll/vue-infinite-scroll.js: {}
+  dependencies:
+    - segallio_theme/vue
+
 timeline:
   version: 1.x
   js:
@@ -24,3 +31,4 @@ timeline:
   dependencies:
     - segallio_theme/vue
     - segallio_theme/vueHttp
+    - segallio_theme/vueInfinityScroll

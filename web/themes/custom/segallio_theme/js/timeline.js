@@ -1,4 +1,29 @@
 
+function postsMassage (element, key, posts) {
+  class_name = function(key) {
+    let delta = (key % 5) + 1;
+    return 'demo-card demo-card--step' + delta;
+  };
+
+  posts[key]['className'] = class_name(key);
+
+  if (posts[key]['asset'] != undefined) {
+    posts[key]['assets'] = posts[key]['asset'];
+  }
+
+  if (posts[key]['comments'] == undefined) {
+    posts[key]['comments'] = 0;
+  }
+
+  if (posts[key]['likes'] == undefined) {
+    posts[key]['likes'] = 0;
+  }
+
+  if (posts[key]['shares'] == undefined) {
+    posts[key]['shares'] = 0;
+  }
+}
+
 app = new Vue({
   el: '#timeline',
 
@@ -7,35 +32,28 @@ app = new Vue({
       posts: [],
     };
   },
+
+  methods: {
+    loadMore: function () {
+      console.log('a');
+
+      this.$http.get(drupalSettings.entries_base + '?page=' + this.page + 1).then((response) => {
+        let posts = response.data;
+        posts.forEach(function(element, key) {
+          postsMassage(element, key, posts);
+        });
+        debugger;
+        this.posts.push(posts);
+      });
+    }
+  },
   created: function() {
+    this.page = 0;
     return this.$http.get(drupalSettings.entries_base).then((response) => {
       let posts = response.data;
-
       posts.forEach(function(element, key) {
-        class_name = function(key) {
-          let delta = (key % 5) + 1;
-          return 'demo-card demo-card--step' + delta;
-        };
-
-        posts[key]['className'] = class_name(key);
-
-        if (posts[key]['asset'] != undefined) {
-          posts[key]['assets'] = posts[key]['asset'];
-        }
-
-        if (posts[key]['comments'] == undefined) {
-          posts[key]['comments'] = 0;
-        }
-
-        if (posts[key]['likes'] == undefined) {
-          posts[key]['likes'] = 0;
-        }
-
-        if (posts[key]['shares'] == undefined) {
-          posts[key]['shares'] = 0;
-        }
+        postsMassage(element, key, posts);
       });
-
       this.posts = posts;
     });
   },
