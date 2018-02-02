@@ -51,10 +51,10 @@
 			      </div>
 
 			    </div>
-
       </div>
 
-      <a class="waves-effect waves-light btn" v-on:click="loadMore"><i class="fal fa-cloud-download"></i> Load more</a>
+      <span v-if="showLoading" class="center-align"><i class="fal fa-spinner fa-spin fa-10x "></i></span>
+      <a class="waves-effect waves-light btn" v-on:click="loadMore" v-if="showLoadMore"><i class="fal fa-cloud-download"></i> Load more</a>
     </section>
   {% endverbatim %}
 

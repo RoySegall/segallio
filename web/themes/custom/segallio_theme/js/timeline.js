@@ -30,31 +30,50 @@ app = new Vue({
   data: function() {
     return {
       posts: [],
+      showLoadMore: false,
+      showLoading: false,
     };
   },
 
   methods: {
     loadMore: function () {
-      console.log('a');
+      let self = this;
+      self.showLoadMore = false;
+      self.showLoading = true;
 
       this.$http.get(drupalSettings.entries_base + '?page=' + this.page + 1).then((response) => {
         let posts = response.data;
+
+        if (posts.length === 0) {
+          // No posts. Skipping.
+          self.showLoading = false;
+          return;
+        }
+
         posts.forEach(function(element, key) {
           postsMassage(element, key, posts);
+          self.posts.push(element);
         });
-        debugger;
-        this.posts.push(posts);
+
+        self.page++;
+        self.showLoadMore = true;
+        self.showLoading = false;
       });
     }
   },
   created: function() {
     this.page = 0;
+    this.showLoading = true;
     return this.$http.get(drupalSettings.entries_base).then((response) => {
       let posts = response.data;
+
       posts.forEach(function(element, key) {
         postsMassage(element, key, posts);
       });
+
       this.posts = posts;
+      this.showLoadMore = true;
+      this.showLoading = false;
     });
   },
   directives: {
