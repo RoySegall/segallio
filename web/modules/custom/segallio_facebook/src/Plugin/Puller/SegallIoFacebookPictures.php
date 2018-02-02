@@ -17,7 +17,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
  *   "name" = "name",
  *   "link" = "url",
  *   "album" = {"field" = "album", "callback" = "albumReference"},
- *   "picture" = {"field" = "asset", "callback" = "copyImage"},
+ *   "images" = {"field" = "asset", "callback" = "facebookCopyImages"},
  *   "reactions" = {"field" = "likes", "callback" = "countReactions", "default_value" = 0},
  *   "shares" = {"field" = "shares", "callback" = "countShares", "default_value" = 0},
  *   "comments" = {"field" = "comments", "callback" = "countComments", "default_value" = 0},
@@ -53,6 +53,20 @@ class SegallIoFacebookPictures extends PullerBase implements PullerInterface, Co
       ->execute();
 
     return reset($results);
+  }
+
+  /**
+   * Copy the high resolution image.
+   *
+   * @param $value
+   *   The value of the field.
+   *
+   * @return mixed
+   *   The file object.
+   */
+  public function facebookCopyImages($value) {
+    $image = reset($value);
+    return $this->copyImage($image['source']);
   }
 
 }

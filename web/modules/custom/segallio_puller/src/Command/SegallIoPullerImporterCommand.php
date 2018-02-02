@@ -48,16 +48,23 @@ class SegallIoPullerImporterCommand extends ContainerAwareCommand {
 
     foreach ($files as $file) {
       list($entity_type) = explode('_', $file->getFilename());
-      $puller = $this->getPullerByEntityType($entity_type);
+
+      if (!$puller = $this->getPullerByEntityType($entity_type)) {
+        $io->error(t('There is no puller for the entity type @entity-type', ['@entity-type' => $entity_type]));
+        continue;
+      }
 
       /** @var \Symfony\Component\Serializer\Serializer $serialize */
       $serialize = \Drupal::service('serializer');
       $content = $serialize->decode($file->getContents(), 'json');
+
       $puller->setAssets($content)->pull();
+
       $params = [
         '@entity' => $entity_type,
         '@file' => $file->getFilename(),
       ];
+
       $io->success(t('Inserting a data to the entity @entity from the file @file', $params));
     }
   }
@@ -68,13 +75,19 @@ class SegallIoPullerImporterCommand extends ContainerAwareCommand {
    * @param string $entity_type
    *   The entity type.
    *
-   * @return \Drupal\segallio_puller\Plugin\PullerBase
+   * @return \Drupal\segallio_puller\Plugin\PullerBase|bool
    *   The puller plugin.
    */
   protected function getPullerByEntityType($entity_type) {
-    // todo: search by entity type and not hard coded.
-    $puller_id = 'facebook_posts';
-    return \Drupal::service('plugin.manager.puller')->createInstance($puller_id);
+    $puller = \Drupal::service('plugin.manager.puller');
+
+    foreach ($puller->getDefinitions() as $definition) {
+      if ($definition['entity_type'] == $entity_type) {
+        return $puller->createInstance($definition['id']);
+      }
+    }
+
+    return FALSE;
   }
 
 }
