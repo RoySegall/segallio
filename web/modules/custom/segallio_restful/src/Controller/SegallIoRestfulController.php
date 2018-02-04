@@ -5,6 +5,8 @@ namespace Drupal\segallio_restful\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\file_entity\Entity\FileEntity;
 use Drupal\segallio_core\SegallIoCoreEntityFlatten;
+use Drupal\views\Plugin\views\field\FieldPluginBase;
+use Drupal\views\Views;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManager;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -74,6 +76,7 @@ class SegallIoRestfulController extends ControllerBase {
 
     $results = $storage
       ->getQuery()
+      // Todo: remove wehn reinstalling the system.
       ->condition('entity_type', 'album', '!=')
       ->range($page * $perpage , $perpage)
       ->sort('created', 'DESC')
@@ -171,6 +174,12 @@ class SegallIoRestfulController extends ControllerBase {
     return [
       'assets' => $callback,
       'asset' => $callback,
+      'files' => function($item) {
+        $json = json_decode($item);
+        $json->file = highlight_string($json->file, TRUE);
+        $json->file = FieldPluginBase::trimText(['max_length' => 300, 'word_boundary' => TRUE, 'html' => TRUE], $json->file);
+        return $json;
+      }
     ];
   }
 

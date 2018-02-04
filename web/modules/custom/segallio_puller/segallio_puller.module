@@ -31,12 +31,10 @@ function segallio_puller_entity_insert(Drupal\Core\Entity\EntityInterface $entit
 function segallio_puller_entity_stack(Drupal\Core\Entity\EntityInterface $entity) {
 
   $pullers_entities = [
-    'album',
     'gist',
     'instagram',
     'picture',
     'pull_request',
-    'repository',
     'status',
     'tweet',
   ];

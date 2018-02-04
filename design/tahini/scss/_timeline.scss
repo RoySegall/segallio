@@ -176,6 +176,47 @@ body {
       border-top: 0;
       padding: $inner-margin;
 
+      .file_object {
+
+        .filename, .content, .url {
+          border: solid 1px #ff9900;
+          padding-left: 1em;
+          padding-top: 1em;
+          padding-bottom: 1em;
+        }
+
+        .filename {
+          border-bottom: none;
+          background: #fafafa;
+          font-weight: bold;
+        }
+
+        .content {
+          border-bottom: none;
+        }
+
+        .url {
+          text-align: center;
+
+          a {
+            color: black;
+            font-weight: bold;
+
+            &:hover {
+              color: #ff9900;
+            }
+          }
+        }
+
+        .content {
+          background: white;
+
+          code {
+            word-break: break-all;
+          }
+        }
+      }
+
       p {
         font-size: 14px;
         line-height: 18px;

@@ -91,7 +91,7 @@ app = new Vue({
             break;
 
           case 'gist':
-          case 'event':
+          case 'pull_request':
             el.innerHTML = "<i class='fab fa-github-alt'></i>";
             break;
 
@@ -113,15 +113,16 @@ app = new Vue({
 
         if (entity_type === 'gist') {
           console.log(assets);
+          text.push(
+            "<div class='file_object'>" +
+              "<div class='filename'>" + assets.filename  + "</div>" +
+              "<div class='content'>" +  assets.file + "</div>" +
+              "<div class='url'><a href='" + assets.raw_url + "'>Go to file</a></div>" +
+            "</div>"
+          );
         }
         else {
           assets.forEach(function (element, key) {
-
-            // assets.forEach(function(element) {
-            //   console.log(element);
-            // });
-
-            console.log(assets);
             let media = '';
 
             switch (element.type) {
