@@ -1,38 +1,37 @@
-
-function postsMassage (element, key, posts) {
-  class_name = function(key) {
+function postsMassage(element, key) {
+  let class_name = function (key) {
     let delta = (key % 5) + 1;
     return 'demo-card demo-card--step' + delta;
   };
 
-  posts[key]['className'] = class_name(key);
+  element['className'] = class_name(key);
 
-  if (posts[key]['asset'] !== undefined) {
-    posts[key]['assets'] = posts[key]['asset'];
+  if (element['asset'] !== undefined) {
+    element['assets'] = element['asset'];
   }
 
-  if (posts[key]['comments'] === undefined) {
-    posts[key]['comments'] = 0;
+  if (element['comments'] === undefined) {
+    element['comments'] = 0;
   }
 
-  if (posts[key]['likes'] === undefined) {
-    posts[key]['likes'] = 0;
+  if (element['likes'] === undefined) {
+    element['likes'] = 0;
   }
 
-  if (posts[key]['shares'] === undefined) {
-    posts[key]['shares'] = 0;
+  if (element['shares'] === undefined) {
+    element['shares'] = 0;
   }
 
   if (element.entity_type === 'gist') {
     element.url = 'https://gist.github.com/' + element.unique_id;
+    element.assets = element.files;
   }
-
 }
 
 app = new Vue({
   el: '#timeline',
 
-  data: function() {
+  data: function () {
     return {
       posts: [],
       showLoadMore: false,
@@ -55,8 +54,8 @@ app = new Vue({
           return;
         }
 
-        posts.forEach(function(element, key) {
-          postsMassage(element, key, posts);
+        posts.forEach(function (element, key) {
+          postsMassage(element, key);
           self.posts.push(element);
         });
 
@@ -66,14 +65,14 @@ app = new Vue({
       });
     }
   },
-  created: function() {
+  created: function () {
     this.page = 0;
     this.showLoading = true;
     return this.$http.get(drupalSettings.entries_base).then((response) => {
       let posts = response.data;
 
-      posts.forEach(function(element, key) {
-        postsMassage(element, key, posts);
+      posts.forEach(function (element, key) {
+        postsMassage(element, key);
       });
 
       this.posts = posts;
@@ -92,6 +91,7 @@ app = new Vue({
             break;
 
           case 'gist':
+          case 'event':
             el.innerHTML = "<i class='fab fa-github-alt'></i>";
             break;
 
@@ -105,20 +105,33 @@ app = new Vue({
         }
       }
     },
-
     'media': {
-      inserted: function(el, binding, vnode) {
+      inserted: function (el, binding, vnode) {
         let text = [];
-        binding.value.forEach(function(element, key) {
-          let media = '';
+        let assets = binding.value.assets;
+        let entity_type = binding.value.entity_type;
 
-          switch (element.type) {
-            case 'image':
-              media = '<img src="' + element.url + '" class="responsive-img" />';
-          }
+        if (entity_type === 'gist') {
+          console.log(assets);
+        }
+        else {
+          assets.forEach(function (element, key) {
 
-          text.push(media);
-        });
+            // assets.forEach(function(element) {
+            //   console.log(element);
+            // });
+
+            console.log(assets);
+            let media = '';
+
+            switch (element.type) {
+              case 'image':
+                media = '<img src="' + element.url + '" class="responsive-img" />';
+            }
+
+            text.push(media);
+          });
+        }
 
         el.innerHTML = text.join("<br />");
       },

@@ -33,7 +33,7 @@
 			      <div class="separator" v-if="post.name && post.assets"></div>
 
             <div v-if="post.assets" class="media">
-              <span v-media:entry="post.assets"></span>
+              <span v-media:entry="{'assets': post.assets, 'entity_type': post.entity_type}"></span>
             </div>
 
             <div class="reactions">
