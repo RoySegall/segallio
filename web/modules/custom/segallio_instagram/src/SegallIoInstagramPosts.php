@@ -32,7 +32,6 @@ class SegallIoInstagramPosts implements SegallIoInstagramPostsInterface {
   public function __construct(PersistentAccessTokenStorageInterface $persistentAccessTokenManagerManager, Client $http_client) {
     $this->accessToken = $persistentAccessTokenManagerManager->get('instagram');
     $this->httpClient = $http_client;
-
   }
 
   /**
