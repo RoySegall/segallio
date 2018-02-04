@@ -108,11 +108,11 @@ app = new Vue({
     'media': {
       inserted: function (el, binding, vnode) {
         let text = [];
-        let assets = binding.value.assets;
-        let entity_type = binding.value.entity_type;
+        let post = binding.value.post;
+        let assets = post.assets;
+        let entity_type = post.entity_type;
 
         if (entity_type === 'gist') {
-          console.log(assets);
           text.push(
             "<div class='file_object'>" +
               "<div class='filename'>" + assets.filename  + "</div>" +
@@ -120,6 +120,16 @@ app = new Vue({
               "<div class='url'><a href='" + assets.raw_url + "'>Go to file</a></div>" +
             "</div>"
           );
+        }
+        else if (entity_type === 'pull_request') {
+          text.push(
+            "<div class='link_to_pr'>" +
+              "<div class='first'><i class='fal fa-code-branch'></i></div>" +
+              "<div class='second'></div>" +
+                "<p class='title'>" + post.name + "</p>" +
+                "<p class='repo'>" + post.repo_name + "</p>" +
+              "</div>" +
+            "</div>");
         }
         else {
           assets.forEach(function (element, key) {

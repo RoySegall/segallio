@@ -28,12 +28,12 @@
 				    <h2><a v-bind:href="post.url">Go to post</a></h2>
 			    </div>
 			    <div class="body">
-			      <p class="text" v-if="post.name">{{ post.name }}</p>
+			      <p class="text" v-if="post.name && post.entity_type != 'pull_request'">{{ post.name }}</p>
 
 			      <div class="separator" v-if="post.name && post.assets"></div>
 
-            <div v-if="post.assets" class="media">
-              <span v-media:entry="{'assets': post.assets, 'entity_type': post.entity_type}"></span>
+            <div v-if="post.assets || post.entity_type == 'pull_request'" class="media">
+              <span v-media:entry="{'post': post}"></span>
             </div>
 
             <div class="reactions">
