@@ -59,6 +59,9 @@ class SegallIoGistsPuller extends PullerBase implements PullerInterface, Contain
     $files = [];
 
     foreach ($field as $files_data) {
+
+      $files_data = (object) $files_data;
+
       $file = [
         'filename' => $files_data->filename,
         'type' => $files_data->type,
@@ -69,7 +72,7 @@ class SegallIoGistsPuller extends PullerBase implements PullerInterface, Contain
       $files[] = json_encode($file);
     }
 
-    return ($files);
+    return $files;
   }
 
   /**

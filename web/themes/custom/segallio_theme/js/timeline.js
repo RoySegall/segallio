@@ -7,21 +7,26 @@ function postsMassage (element, key, posts) {
 
   posts[key]['className'] = class_name(key);
 
-  if (posts[key]['asset'] != undefined) {
+  if (posts[key]['asset'] !== undefined) {
     posts[key]['assets'] = posts[key]['asset'];
   }
 
-  if (posts[key]['comments'] == undefined) {
+  if (posts[key]['comments'] === undefined) {
     posts[key]['comments'] = 0;
   }
 
-  if (posts[key]['likes'] == undefined) {
+  if (posts[key]['likes'] === undefined) {
     posts[key]['likes'] = 0;
   }
 
-  if (posts[key]['shares'] == undefined) {
+  if (posts[key]['shares'] === undefined) {
     posts[key]['shares'] = 0;
   }
+
+  if (element.entity_type === 'gist') {
+    element.url = 'https://gist.github.com/' + element.unique_id;
+  }
+
 }
 
 app = new Vue({
@@ -86,7 +91,7 @@ app = new Vue({
             el.innerHTML = "<i class='fab fa-facebook-f'></i>";
             break;
 
-          case 'github':
+          case 'gist':
             el.innerHTML = "<i class='fab fa-github-alt'></i>";
             break;
 

@@ -173,7 +173,6 @@ abstract class PullerBase extends PluginBase implements PullerInterface {
     $processed = [];
 
     foreach ($this->pluginDefinition['fields'] as $field => $mapper) {
-
       if (!empty($this->pluginDefinition['multifield']) && in_array($field, $this->pluginDefinition['multifield'])) {
         foreach ($mapper as $sub_mapper) {
           $this->processHelper($processed, $field, $sub_mapper, $asset);
