@@ -176,6 +176,33 @@ body {
       border-top: 0;
       padding: $inner-margin;
 
+      .link_to_pr {
+        border: solid 1px #ff9900;
+        padding-left: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin: 1em;
+
+        .first {
+          font-size: 3em;
+          padding-top: 0.2em;
+        }
+
+        .second {
+          padding-left: 2em;
+
+          .title {
+            font-size: 2em;
+            margin-top: 0.5em;
+          }
+
+          .repo {
+            font-size: 1.5em;
+          }
+        }
+
+      }
+
       .file_object {
 
         .filename, .content, .url {
@@ -257,6 +284,23 @@ body {
             border-bottom: 1px solid $color;
             padding-bottom: 0.5em;
             margin-bottom: 1em;
+          }
+
+          .link_to_pr {
+
+            .first, .second {
+
+              a {
+                color: black;
+
+                &:hover {
+                  color: $color;
+                }
+              }
+            }
+
+            .second {
+            }
           }
         }
 

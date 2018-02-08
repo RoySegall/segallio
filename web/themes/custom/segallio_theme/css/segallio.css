@@ -7097,6 +7097,22 @@ body {
       border: 1px solid rgba(191, 191, 191, 0.4);
       border-top: 0;
       padding: 15px; }
+      #timeline .demo-card .body .link_to_pr {
+        border: solid 1px #ff9900;
+        padding-left: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin: 1em; }
+        #timeline .demo-card .body .link_to_pr .first {
+          font-size: 3em;
+          padding-top: 0.2em; }
+        #timeline .demo-card .body .link_to_pr .second {
+          padding-left: 2em; }
+          #timeline .demo-card .body .link_to_pr .second .title {
+            font-size: 2em;
+            margin-top: 0.5em; }
+          #timeline .demo-card .body .link_to_pr .second .repo {
+            font-size: 1.5em; }
       #timeline .demo-card .body .file_object .filename, #timeline .demo-card .body .file_object .content, #timeline .demo-card .body .file_object .url {
         border: solid 1px #ff9900;
         padding-left: 1em;
@@ -7140,6 +7156,10 @@ body {
         border-bottom: 1px solid #46b8e9;
         padding-bottom: 0.5em;
         margin-bottom: 1em; }
+      #timeline .demo-card--step1 .body .link_to_pr .first a, #timeline .demo-card--step1 .body .link_to_pr .second a {
+        color: black; }
+        #timeline .demo-card--step1 .body .link_to_pr .first a:hover, #timeline .demo-card--step1 .body .link_to_pr .second a:hover {
+          color: #46b8e9; }
       #timeline .demo-card--step1 .reactions {
         text-align: center; }
         #timeline .demo-card--step1 .reactions ul {
@@ -7161,6 +7181,10 @@ body {
         border-bottom: 1px solid #3ee9d1;
         padding-bottom: 0.5em;
         margin-bottom: 1em; }
+      #timeline .demo-card--step2 .body .link_to_pr .first a, #timeline .demo-card--step2 .body .link_to_pr .second a {
+        color: black; }
+        #timeline .demo-card--step2 .body .link_to_pr .first a:hover, #timeline .demo-card--step2 .body .link_to_pr .second a:hover {
+          color: #3ee9d1; }
       #timeline .demo-card--step2 .reactions {
         text-align: center; }
         #timeline .demo-card--step2 .reactions ul {
@@ -7182,6 +7206,10 @@ body {
         border-bottom: 1px solid #ce43eb;
         padding-bottom: 0.5em;
         margin-bottom: 1em; }
+      #timeline .demo-card--step3 .body .link_to_pr .first a, #timeline .demo-card--step3 .body .link_to_pr .second a {
+        color: black; }
+        #timeline .demo-card--step3 .body .link_to_pr .first a:hover, #timeline .demo-card--step3 .body .link_to_pr .second a:hover {
+          color: #ce43eb; }
       #timeline .demo-card--step3 .reactions {
         text-align: center; }
         #timeline .demo-card--step3 .reactions ul {
@@ -7203,6 +7231,10 @@ body {
         border-bottom: 1px solid #4d92eb;
         padding-bottom: 0.5em;
         margin-bottom: 1em; }
+      #timeline .demo-card--step4 .body .link_to_pr .first a, #timeline .demo-card--step4 .body .link_to_pr .second a {
+        color: black; }
+        #timeline .demo-card--step4 .body .link_to_pr .first a:hover, #timeline .demo-card--step4 .body .link_to_pr .second a:hover {
+          color: #4d92eb; }
       #timeline .demo-card--step4 .reactions {
         text-align: center; }
         #timeline .demo-card--step4 .reactions ul {
@@ -7224,6 +7256,10 @@ body {
         border-bottom: 1px solid #46b8e9;
         padding-bottom: 0.5em;
         margin-bottom: 1em; }
+      #timeline .demo-card--step5 .body .link_to_pr .first a, #timeline .demo-card--step5 .body .link_to_pr .second a {
+        color: black; }
+        #timeline .demo-card--step5 .body .link_to_pr .first a:hover, #timeline .demo-card--step5 .body .link_to_pr .second a:hover {
+          color: #46b8e9; }
       #timeline .demo-card--step5 .reactions {
         text-align: center; }
         #timeline .demo-card--step5 .reactions ul {

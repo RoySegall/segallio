@@ -123,11 +123,11 @@ app = new Vue({
         }
         else if (entity_type === 'pull_request') {
           text.push(
-            "<div class='link_to_pr'>" +
-              "<div class='first'><i class='fal fa-code-branch'></i></div>" +
-              "<div class='second'></div>" +
-                "<p class='title'>" + post.name + "</p>" +
-                "<p class='repo'>" + post.repo_name + "</p>" +
+            "<div class='row link_to_pr'>" +
+              "<div class='col s1 first'><i class='fal fa-code-branch'></i></div>" +
+              "<div class='col s11 second'>" +
+                "<p class='title'><a href='" + post.url + "'>" + post.name + "</a></p>" +
+                "<p class='repo'><a href='https://www.github.com/" + post.repo_name + "'>" + post.repo_name + "</a></p>" +
               "</div>" +
             "</div>");
         }
