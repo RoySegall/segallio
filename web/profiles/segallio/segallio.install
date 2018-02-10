@@ -72,4 +72,5 @@ function segallio_install() {
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
   \Drupal::configFactory()->getEditable('system.site')->set('name', 'Roy Segall')->save(TRUE);
+  \Drupal::configFactory()->getEditable('system.theme')->set('default', 'segallio_theme')->save(TRUE);
 }
