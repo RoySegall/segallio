@@ -35,7 +35,6 @@ function segallio_puller_entity_stack(Drupal\Core\Entity\EntityInterface $entity
     'instagram',
     'picture',
     'pull_request',
-    'repository',
     'status',
     'tweet',
   ];

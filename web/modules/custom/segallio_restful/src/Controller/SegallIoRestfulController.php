@@ -76,8 +76,6 @@ class SegallIoRestfulController extends ControllerBase {
 
     $results = $storage
       ->getQuery()
-      // Todo: remove wehn reinstalling the system.
-      ->condition('entity_type', 'album', '!=')
       ->range($page * $perpage , $perpage)
       ->sort('created', 'DESC')
       ->execute();

@@ -83,7 +83,9 @@ class SegallIoInstagramPuller extends PullerBase implements PullerInterface, Con
    *   The file object.
    */
   public function getInstagramMedia($field) {
-    return system_retrieve_file($field->standard_resolution->url, NULL, TRUE, FILE_EXISTS_REPLACE);
+    $field = (object)$field;
+    $standart_resolution = (object)$field->standard_resolution;
+    return system_retrieve_file($standart_resolution->url, NULL, TRUE, FILE_EXISTS_REPLACE);
   }
 
   /**

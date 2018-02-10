@@ -99,7 +99,7 @@ app = new Vue({
             el.innerHTML = "<i class='fab fa-instagram'></i>";
             break;
 
-          case 'twitter':
+          case 'tweet':
             el.innerHTML = "<i class='fab fa-twitter'></i>";
             break;
         }
