@@ -18,11 +18,11 @@ class SegallIoHomePageController extends ControllerBase {
    */
   public function homePage() {
     $url = Url::fromRoute('segallio_restful.all_entries', [], ['absolute' => TRUE])->toString();
-
     return [
       '#theme' => 'homepage',
       '#attached' => [
         'library' => [
+          'core/drupalSettings',
           'segallio_theme/vue',
           'segallio_theme/vueHttp',
           'segallio_theme/timeline',

@@ -3,6 +3,7 @@
 namespace Drupal\segallio_instagram\Plugin\Puller;
 
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\kint\Plugin\Devel\Dumper\Kint;
 use Drupal\segallio_puller\Plugin\PullerBase;
 use Drupal\segallio_puller\Plugin\PullerInterface;
 
@@ -14,6 +15,7 @@ use Drupal\segallio_puller\Plugin\PullerInterface;
  *  social = "instagram",
  *  fields = {
  *   "id" = "post_id",
+ *   "link" = "url",
  *   "caption" = {"field" = "name", "callback" = "instagramText"},
  *   "likes" = {"field" = "hearts", "callback" = "instagramLikes"},
  *   "comments" = {"field" = "comments", "callback" = "instagramComments"},
