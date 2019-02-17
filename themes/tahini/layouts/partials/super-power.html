@@ -1,3 +1,13 @@
-<div class="row">
-    {{.superpower}} - {{.level}}
+<div class="row super-power">
+    <div class="col-md-5">
+        {{.superpower}}
+    </div>
+
+    <div class="col-md-6">
+        {{ range seq .level }} <i class="fa fa-star full-star"></i> {{end}}
+        {{ if lt .level 5 }}
+        {{ range seq (sub 5 .level) }} <i class="far fa-star empty-star"></i> {{end}}
+        {{end }}
+    </div>
+
 </div>

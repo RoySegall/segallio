@@ -1,4 +1,4 @@
-.who-am-i, .professional-info {
+.latest-projects, .latest-photos, .who-am-i, .professional-info {
   padding-top: 2em;
 
   h3 {
@@ -6,6 +6,10 @@
     font-family: 'Coiny', cursive;
     color: $blue1;
   }
+}
+
+
+.who-am-i {
 
   .profile-pic {
     border: solid 1px $orange1;
@@ -36,5 +40,33 @@
   .intro {
     padding-top: .25em;
     font-size: 1.25em;
+  }
+}
+
+.professional-info {
+
+  .wrapper {
+    padding-top: 1em;
+
+    .super-power {
+      padding-bottom: .5em;
+
+      .full-star {
+        color: $orange1;
+      }
+
+      .empty-star {
+        color: $blue1;
+      }
+    }
+
+    .job {
+      border-bottom: solid 1px $orange1;
+      margin-bottom: 1.25em;
+
+      span {
+        font-size: 1.25em;
+      }
+    }
   }
 }

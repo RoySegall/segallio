@@ -36,27 +36,33 @@
                     {{ partial "who-am-i" }}
 
                     <section class="professional-info">
-                        <h3>Who am I?</h3>
+                        <h3>Professional experience</h3>
 
-                        <div class="row">
-                            <div class="col-md-3">
+                        <div class="row wrapper">
+                            <div class="col-md-2">
                                 {{ range .Site.Data.superpowers }}
                                     {{ partial "super-power" . }}
                                 {{ end }}
                             </div>
 
-                            <div class="col-md-9">
+                            <div class="col-md-10">
                                 {{ range .Site.Data.jobs }}
                                     {{ partial "jobs" (dict "job" . "site" .Site) }}
                                 {{ end }}
                             </div>
                         </div>
                     </section>
+
+                    <section class="latest-projects">
+                        <h3>Latest projects</h3>
+                    </section>
+
+                    <section class="latest-photos">
+                        <h3>Latest photos</h3>
+                    </section>
                 </div>
             </div>
         </div>
-
-        <!--{{ .Params.places }}-->
 
     </body>
 </html>

@@ -1,29 +1,29 @@
 - superpower: PHP
   level: 5
 
-- superpower: CSS
-  level: 5
+- superpower: CSS/SASS
+  level: 4
 
 - superpower: JS
-  level: 5
+  level: 4
 
 - superpower: Python
-  level: 5
+  level: 3
 
 - superpower: NodeJS
-  level: 5
+  level: 2
 
 - superpower: MongoDB
-  level: 5
+  level: 2
 
 - superpower: Go
-  level: 5
+  level: 3
 
 - superpower: Vue.js
-  level: 5
+  level: 4
 
-- superpower: Rect
-  level: 5
+- superpower: React
+  level: 3
 
 - superpower: Drupal
   level: 5
