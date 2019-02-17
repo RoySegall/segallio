@@ -1,17 +1,26 @@
 <section class="who-am-i">
     <h3>Who am I?</h3>
 
-    <h1>I'm Roy Segall</h1>
+    <div class="row">
+        <div class="col-md-2">
+            {{$logo := resources.Get "images/profile.jpg"}}
+            <img alt="Logo" class="img-fluid profile-pic" src="{{$logo.Permalink}}" />
+            <ul class="text-center">
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-github"></i></li>
+                <li><i class="fab fa-linkedin"></i></li>
+            </ul>
+        </div>
 
-    <ul>
-        <li><i class="fab fa-facebook"></i></li>
-        <li><i class="fab fa-twitter-square"></i></li>
-        <li><i class="fab fa-github"></i></li>
-        <li><i class="fab fa-linkedin"></i></li>
-    </ul>
-    <p class="intro">
-        Enthusiastic, self-learned, highly motivated, love to explore new technologies,
-        contributing to open-source projects, speak at local meetups, makes the best Tahini you
-        can imagine, and an amateur photographer.
-    </p>
+        <div class="col-md-8">
+            <h1>I'm Roy Segall</h1>
+
+            <p class="intro">
+                Enthusiastic, self-learned, highly motivated, love to explore new technologies,
+                contributing to open-source projects, speak at local meetups, makes the best Tahini you
+                can imagine, and an amateur photographer.
+            </p>
+        </div>
+    </div>
 </section>

@@ -1,10 +1,14 @@
-.who-am-i {
+.who-am-i, .professional-info {
   padding-top: 2em;
 
   h3 {
     font-size: 2em;
     font-family: 'Coiny', cursive;
     color: $blue1;
+  }
+
+  .profile-pic {
+    border: solid 1px $orange1;
   }
 
   ul {

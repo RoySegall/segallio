@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d18a55c-347e-4ac0-839d-bb461ddac669" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/tahini/data/jobs.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/tahini/data/superpowers.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/tahini/layouts/partials/jobs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/tahini/layouts/partials/super-power.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/_FrontPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sass/_FrontPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/_gen/assets/scss/sass/main.scss_48b060fe05b0a273d182ef83c0605941.content" beforeDir="false" afterPath="$PROJECT_DIR$/resources/_gen/assets/scss/sass/main.scss_48b060fe05b0a273d182ef83c0605941.content" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/_gen/assets/scss/sass/main.scss_48b060fe05b0a273d182ef83c0605941.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/_gen/assets/scss/sass/main.scss_48b060fe05b0a273d182ef83c0605941.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/ga-hugo-theme" beforeDir="false" afterPath="$PROJECT_DIR$/themes/ga-hugo-theme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/_default/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/_default/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/_default/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/_default/single.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/partials/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/partials/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/partials/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/partials/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/tahini/layouts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tahini/layouts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/tahini/layouts/partials/who-am-i.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/tahini/layouts/partials/who-am-i.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,47 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/partials/jobs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/partials/who-am-i.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/sass/_FrontPage.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/_General.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="15" />
+            <state relative-caret-position="75">
+              <caret line="3" column="105" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -68,13 +55,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>&lt;title&gt;</find>
+      <find>webpack_assets</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/themes/ananke</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/ga-hugo-theme" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -91,12 +79,19 @@
         <option value="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/posts/list.html" />
         <option value="$PROJECT_DIR$/themes/tahini/layouts/partials/header.html" />
         <option value="$PROJECT_DIR$/themes/tahini/layouts/partials/head.html" />
-        <option value="$PROJECT_DIR$/content/_index.md" />
         <option value="$PROJECT_DIR$/assets/sass/_General.scss" />
-        <option value="$PROJECT_DIR$/themes/tahini/layouts/index.html" />
-        <option value="$PROJECT_DIR$/themes/tahini/layouts/partials/who-am-i.html" />
         <option value="$PROJECT_DIR$/assets/sass/main.scss" />
+        <option value="$PROJECT_DIR$/data/jobs.json" />
+        <option value="$PROJECT_DIR$/themes/tahini/data/jobs.json" />
+        <option value="$PROJECT_DIR$/data/jobs.yml" />
+        <option value="$PROJECT_DIR$/themes/tahini/layouts/partials/who-am-i.html" />
+        <option value="$PROJECT_DIR$/content/_index.md" />
         <option value="$PROJECT_DIR$/assets/sass/_FrontPage.scss" />
+        <option value="$PROJECT_DIR$/themes/tahini/data/jobs.yml" />
+        <option value="$PROJECT_DIR$/themes/tahini/layouts/partials/super-power.html" />
+        <option value="$PROJECT_DIR$/themes/tahini/data/superpowers.yml" />
+        <option value="$PROJECT_DIR$/themes/tahini/layouts/index.html" />
+        <option value="$PROJECT_DIR$/themes/tahini/layouts/partials/jobs.html" />
       </list>
     </option>
   </component>
@@ -133,8 +128,7 @@
             <path>
               <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
               <item name="quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
@@ -145,28 +139,27 @@
               <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
               <item name="quickstart" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="ga-hugo-theme" type="462c0819:PsiDirectoryNode" />
+              <item name="ananke" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
               <item name="quickstart" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="ga-hugo-theme" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="ga-hugo-theme" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="_default" type="462c0819:PsiDirectoryNode" />
+              <item name="ananke" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
               <item name="quickstart" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="tahini" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quickstart" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="tahini" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
@@ -182,6 +175,13 @@
               <item name="tahini" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
               <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="quickstart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="quickstart" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="tahini" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -199,15 +199,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/themes/tahini/data" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/themes/tahini/layouts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/themes/tahini/layouts/partials" />
+      <recent name="$PROJECT_DIR$/themes/tahini/data" />
+      <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets/sass" />
       <recent name="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/posts" />
-      <recent name="$PROJECT_DIR$/themes/ga-hugo-theme/layouts/_default" />
-      <recent name="$PROJECT_DIR$/themes/tahini/layouts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -232,12 +235,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550416913707</updated>
-      <workItem from="1550416917060" duration="7264000" />
+      <workItem from="1550416917060" duration="10428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7264000" />
+    <option name="totallyTimeSpent" value="10428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="23" width="2560" height="1417" extended-state="0" />
@@ -392,16 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/_index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="100">
-            <caret line="4" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/bootstrap-grid.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -415,24 +408,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/_General.scss">
+    <entry file="file://$PROJECT_DIR$/themes/ananke/data/webpack_assets.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/partials/who-am-i.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="43" />
+        <state>
+          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -443,10 +422,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/_General.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/_index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="3" selection-start-column="3" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/_FrontPage.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tahini/data/jobs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/partials/super-power.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tahini/data/superpowers.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/partials/who-am-i.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="105" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/tahini/layouts/partials/jobs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>

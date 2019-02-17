@@ -34,6 +34,24 @@
                     </header>
 
                     {{ partial "who-am-i" }}
+
+                    <section class="professional-info">
+                        <h3>Who am I?</h3>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                {{ range .Site.Data.superpowers }}
+                                    {{ partial "super-power" . }}
+                                {{ end }}
+                            </div>
+
+                            <div class="col-md-9">
+                                {{ range .Site.Data.jobs }}
+                                    {{ partial "jobs" (dict "job" . "site" .Site) }}
+                                {{ end }}
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

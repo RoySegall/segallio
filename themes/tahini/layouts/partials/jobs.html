@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-1">
+        {{.Site}}
+
+        {{ $logo := resources.Get .job.logo | resources.Minify | resources.Fingerprint }}
+        <img src="{{$logo}}" />
+    </div>
+
+    <div class="col-md-11">
+        <b>{{.job.years}}</b>; {{.job.name}}, {{.job.position}}. {{.job.description}}
+    </div>
+</div>
+
+
