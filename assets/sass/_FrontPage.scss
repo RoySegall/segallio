@@ -1,0 +1,36 @@
+.who-am-i {
+  padding-top: 2em;
+
+  h3 {
+    font-size: 2em;
+    font-family: 'Coiny', cursive;
+    color: $blue1;
+  }
+
+  ul {
+    padding: 0;
+    padding-top: .5em;
+
+    li {
+      display: inline;
+      padding-right: 1em;
+
+      i {
+        font-size: 1.5em;
+        color: $blue2;
+        -webkit-transition: color .5s; /* Safari */
+        transition: color .5s;
+
+        &:hover {
+          color: $orange1;
+
+        }
+      }
+    }
+  }
+
+  .intro {
+    padding-top: .25em;
+    font-size: 1.25em;
+  }
+}

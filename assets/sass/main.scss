@@ -1,0 +1,10 @@
+$orange1: #f7b75e;
+$blue1: #6acff1;
+$blue2: #0090c1;
+
+@mixin machineFont {
+  font-family: 'Poiret One', cursive;
+}
+
+@import "./_General";
+@import "./_FrontPage";
