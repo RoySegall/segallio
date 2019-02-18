@@ -62,8 +62,8 @@
                             {{ range (where .Pages "Section" "project" ) }}
                                 <div class="col-md-3">
                                     <div class="card">
-                                        {{ $plugins := resources.Get (printf "%s" .Params.image) }}
-                                        <img class="card-img-top" src="{{$plugins.Permalink}}" alt="{{.Title}} image">
+                                        {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
+                                        <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
                                         <div class="card-body">
                                             <h5 class="card-title">{{.Title}}</h5>
                                             <p class="card-text">{{.Params.shortDescription}}</p>
@@ -78,6 +78,23 @@
 
                     <section class="latest-photos">
                         <h3>Latest photos</h3>
+
+                        <p>Here you can find my latest photos I took. You can see more photos in <a href="/photos">here</a></p>
+
+                        <div class="row">
+                            {{ range $index, $element := .Site.Data.photos }}
+                            <div class="col-md-3">
+                                {{ $picture := resources.Get (printf "images/photos/%s" $element.picture) }}
+
+                                {{ if mod $index 2 }}
+                                    <img src="{{$picture.Permalink}}" class="img-fluid odd" title="{{$element.description}}" />
+                                {{ else }}
+                                    <img src="{{$picture.Permalink}}" class="img-fluid even" title="{{$element.description}}" />
+                                {{ end }}
+                            </div>
+                            {{end}}
+                        </div>
+
                     </section>
                 </div>
             </div>

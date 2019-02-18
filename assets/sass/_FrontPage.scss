@@ -83,3 +83,18 @@
     }
   }
 }
+
+.latest-photos {
+
+  img {
+    margin-bottom: 1em;
+
+    &.even {
+      border: solid 1px $orange1;
+    }
+
+    &.odd {
+      border: solid 1px $blue1;
+    }
+  }
+}
