@@ -60,7 +60,7 @@
 
                         <div class="row">
                             {{ range (where .Pages "Section" "project" ) }}
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="card">
                                         {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
                                         <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
@@ -82,8 +82,8 @@
                         <p>Here you can find my latest photos I took. You can see more photos in <a href="/photos">here</a></p>
 
                         <div class="row">
-                            {{ range $index, $element := .Site.Data.photos }}
-                            <div class="col-md-3">
+                            {{ range $index, $element := first 9 .Site.Data.photos }}
+                            <div class="col-md-4">
                                 {{ $picture := resources.Get (printf "images/photos/%s" $element.picture) }}
 
                                 {{ if mod $index 2 }}
