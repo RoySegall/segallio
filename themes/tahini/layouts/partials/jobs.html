@@ -1,7 +1,7 @@
 <div class="row job">
     <div class="col-md-1">
 
-        {{ $logo := resources.Get .job.logo }}
+        {{ $logo := resources.Get (printf "%s" .job.logo) }}
         <img src="{{$logo.Permalink}}" class="img-fluid" />
     </div>
 

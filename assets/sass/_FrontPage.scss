@@ -37,7 +37,7 @@
     }
   }
 
-  .intro {
+  .text {
     padding-top: .25em;
     font-size: 1.25em;
   }
@@ -66,6 +66,19 @@
 
       span {
         font-size: 1.25em;
+      }
+    }
+  }
+}
+
+.latest-projects {
+
+  .row {
+
+    .card {
+      margin-bottom: 1em;
+      .card-img-top {
+        max-height: 20em;
       }
     }
   }

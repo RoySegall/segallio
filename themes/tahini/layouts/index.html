@@ -55,6 +55,25 @@
 
                     <section class="latest-projects">
                         <h3>Latest projects</h3>
+
+                        <p>Here you can find various open source project I created or had any part.</p>
+
+                        <div class="row">
+                            {{ range (where .Pages "Section" "project" ) }}
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        {{ $plugins := resources.Get (printf "%s" .Params.image) }}
+                                        <img class="card-img-top" src="{{$plugins.Permalink}}" alt="{{.Title}} image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{.Title}}</h5>
+                                            <p class="card-text">{{.Params.shortDescription}}</p>
+                                            <a href="{{.Permalink}}" class="btn btn-primary">Have a deeper look</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{end}}
+                        </div>
+
                     </section>
 
                     <section class="latest-photos">
