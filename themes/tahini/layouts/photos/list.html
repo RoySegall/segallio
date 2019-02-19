@@ -35,7 +35,7 @@
 
             <div class="photos-page-wrapper">
                 <div class="row">
-                    {{ range $index, $element := .Site.Data.photos }}
+                    {{ range $index, $element := shuffle .Site.Data.photos }}
                     <div class="col-md-4 item">
                         {{ $picture := resources.Get (printf "images/photos/%s" $element.picture) }}
                         {{ $image := $picture.Resize "1200x q75" }}
