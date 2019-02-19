@@ -32,13 +32,13 @@
                         <h3>Professional experience</h3>
 
                         <div class="row wrapper">
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-3">
                                 {{ range .Site.Data.superpowers }}
                                     {{ partial "super-power" . }}
                                 {{ end }}
                             </div>
 
-                            <div class="col-md-9">
+                            <div class="col-12 col-md-9">
                                 {{ range .Site.Data.jobs }}
                                     {{ partial "jobs" (dict "job" . "site" .Site) }}
                                 {{ end }}
