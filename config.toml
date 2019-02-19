@@ -1,4 +1,8 @@
-baseURL = "http://example.org/"
+baseURL = "http://segall.io/"
 languageCode = "en-us"
 title = "Roy Segall | Computerised dreames"
 theme = "tahini"
+
+[imaging]
+# Default JPEG quality setting. Default is 75.
+quality = 75

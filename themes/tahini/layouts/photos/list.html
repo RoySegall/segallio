@@ -38,11 +38,12 @@
                     {{ range $index, $element := .Site.Data.photos }}
                     <div class="col-md-4 item">
                         {{ $picture := resources.Get (printf "images/photos/%s" $element.picture) }}
+                        {{ $image := $picture.Resize "1200x q75" }}
 
                         {{ if mod $index 2 }}
-                        <img src="{{$picture.Permalink}}" class="img-fluid odd" title="{{$element.description}}" />
+                        <img src="{{$image.Permalink}}" class="img-fluid odd" title="{{$element.description}}" />
                         {{ else }}
-                        <img src="{{$picture.Permalink}}" class="img-fluid even" title="{{$element.description}}" />
+                        <img src="{{$image.Permalink}}" class="img-fluid even" title="{{$element.description}}" />
                         {{ end }}
                     </div>
                     {{end}}

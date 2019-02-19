@@ -3,8 +3,9 @@
 
     <div class="row">
         <div class="col-md-2">
-            {{$logo := resources.Get "images/profile.jpg"}}
-            <img alt="Logo" class="img-fluid profile-pic" src="{{$logo.Permalink}}" />
+            {{ $profile := resources.Get "images/profile.jpg" }}
+            {{ $image := $profile.Resize "1200x q75" }}
+            <img alt="Logo" class="img-fluid profile-pic" src="{{$image.Permalink}}" />
             <ul class="text-center">
                 <li><i class="fab fa-facebook"></i></li>
                 <li><i class="fab fa-twitter-square"></i></li>
