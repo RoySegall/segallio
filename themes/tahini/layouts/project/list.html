@@ -31,22 +31,22 @@
                     </ol>
                </nav>
 
-               {{.Content}}
-
-               <div class="row">
-                    {{ range .Pages }}
-                    <div class="col-md-3">
-                         <div class="card">
-                              {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
-                              <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
-                              <div class="card-body">
-                                   <h5 class="card-title">{{.Title}}</h5>
-                                   <p class="card-text">{{.Params.shortDescription}}</p>
-                                   <a href="{{.Permalink}}" class="btn btn-primary">Have a deeper look</a>
+               <div class="projects-wrapper">
+                    <div class="row">
+                         {{ range .Pages }}
+                         <div class="col-md-3">
+                              <div class="card">
+                                   {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
+                                   <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
+                                   <div class="card-body">
+                                        <h5 class="card-title">{{.Title}}</h5>
+                                        <p class="card-text">{{.Params.shortDescription}}</p>
+                                        <a href="{{.Permalink}}" class="btn btn-primary">Have a deeper look</a>
+                                   </div>
                               </div>
                          </div>
+                         {{ end }}
                     </div>
-                    {{ end }}
                </div>
                {{ partial "footer" . }}
           </div>

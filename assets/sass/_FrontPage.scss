@@ -39,7 +39,6 @@
 
   .text {
     padding-top: .25em;
-    font-size: 1.25em;
   }
 }
 
@@ -63,10 +62,6 @@
     .job {
       border-bottom: solid 1px $orange1;
       margin-bottom: 1.25em;
-
-      span {
-        font-size: 1.25em;
-      }
     }
   }
 }
@@ -77,6 +72,7 @@
 
     .card {
       margin-bottom: 1em;
+
       .card-img-top {
         max-height: 20em;
       }

@@ -32,13 +32,13 @@
                         <h3>Professional experience</h3>
 
                         <div class="row wrapper">
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 {{ range .Site.Data.superpowers }}
                                     {{ partial "super-power" . }}
                                 {{ end }}
                             </div>
 
-                            <div class="col-md-10">
+                            <div class="col-md-9">
                                 {{ range .Site.Data.jobs }}
                                     {{ partial "jobs" (dict "job" . "site" .Site) }}
                                 {{ end }}
@@ -72,7 +72,7 @@
                     <section class="latest-photos">
                         <h3>Latest photos</h3>
 
-                        <p>Here you can find my latest photos I took. You can see more photos in <a href="/photos">here</a></p>
+                        <p>Here you can find my latest photos I took. You can see more photos in <a href="/photos">here</a>.</p>
 
                         <div class="row">
                             {{ range $index, $element := first 9 .Site.Data.photos }}
