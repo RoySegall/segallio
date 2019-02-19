@@ -1,4 +1,5 @@
 - name: Taliaz Health
+  class: taliaz
   years: 2018
   logo: images/companies/taliaz.png
   position: Developer
@@ -9,6 +10,7 @@
 
 - name: Real Commerce
   years: 2018
+  class: rc
   logo: images/companies/rc.png
   position: Consulting
   description: "
@@ -17,6 +19,7 @@
 
 - name: Gizra
   years: 2011-2018
+  class: gizra
   logo: images/companies/gizra.png
   position: Lead developer
   description: "
