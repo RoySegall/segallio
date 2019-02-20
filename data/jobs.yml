@@ -4,7 +4,16 @@
   logo: images/companies/taliaz.png
   position: Developer
   description: "
-    Once figures out I had enough with Drupal I join a company called Taliaz.
+    Once I figured out I had enough with Drupal I joined a company called Taliaz. Taliaz mission's was to help people
+    with hard depression. They managed to accomplish that by taking a swab sample from the patient, ask the patient a
+    couple of questions, and after a couple of days the patient(or the doctor) will get a report with the best matching
+    medicine. At the time I joined in, Taliaz decided to grow in start to develop all the products in-house instead of
+    using an out-source solutions. I helped to improve the current products: fix bugs, implement a couple of small
+    features. In the last month at Taliaz I started to write a new API based on Symfony which meant to serve all kind
+    of application: Desktop, Mobile, Smart wareable devices etc.
+
+    I got fired from Taliaz due to finance issues they had back then - pretty typical to a startup. I loved to work at
+    Taliaz: I met amazing people and learned a lot.
   "
 
 - name: Real Commerce
@@ -15,7 +24,7 @@
   description: "
     During my last three months at gizra, I worked at RealCommerce as a team leader and extra three months as a
     freelance. Since I knew Drupal very good I helped a Drupal based team inside the company to handle various tasks:
-    fix bugs, implements new features, update the design and make sure that the \"best practice\" is implemented.
+    fix bugs, implements new features, update the design and make sure that the \"best practices\" are implemented.
   "
 
 - name: Gizra
