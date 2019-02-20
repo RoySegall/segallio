@@ -13,7 +13,38 @@
 
 .project-wrapper-page {
 
+  hr {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .intro {
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 1.75em;
+      color: #9d9d9d;
+    }
+
+    h3 {
+      font-size: 1.25em;
+      color: #9d9d9d;
+    }
+
+    hr {
+      width: 50%;
+      background-color: $blue1;
+    }
+  }
+
   .second {
+
+    hr {
+      background-color: $orange1;
+    }
 
     .image {
 

@@ -62,6 +62,11 @@
     .job {
       border-bottom: solid 1px $orange1;
       margin-bottom: 1.25em;
+      padding-bottom: .5em;
+
+      .description {
+        line-height: 1.75em;
+      }
 
       @media only screen and (max-width: 600px) {
         padding-top: 1.25em;

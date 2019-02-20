@@ -7,7 +7,7 @@ title: About me
 ## History
 
 I was born on June 25th, 1989. When I was 12 years old, I started to work on sites related to my interest: Games and TV 
-shows. When I was 13 years old I joined a local community which supported and translated [Invision power board]() system. In 
+shows. When I was 13 years old I joined a local community which supported and translated [Invision power board](https://invisioncommunity.com/features/content/#forums) system. In 
 the meanwhile, I created scripts for fun.
 
 In Israel, there is conscription which forced me to join the `IDF`. At the age of 21, when I left the army I started to 

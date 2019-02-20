@@ -8,4 +8,4 @@ youtubeId: "OFzP_1oRNMY"
 github: "roysegall/bonapetit"
 ---
 
-Bonapetit is a dummy project
+Bonapetit is a dummy project, as most of my projects.
