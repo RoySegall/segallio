@@ -2,5 +2,24 @@
 
   .card {
     margin-bottom: 1em;
+    border: solid 1px $orange1;
+
+    img {
+      border-bottom: solid 1px $blue1;
+    }
+  }
+}
+
+
+.project-wrapper-page {
+
+  .second {
+
+    .image {
+
+      img {
+        border: solid 1px $blue1;
+      }
+    }
   }
 }

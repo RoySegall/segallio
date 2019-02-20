@@ -24,6 +24,8 @@
      <div class="row">
           <div class="col-md-10 mx-auto body-wrapper">
 
+               {{ partial "header" }}
+
                <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                          <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -34,12 +36,13 @@
                <div class="projects-wrapper">
                     <div class="row">
                          {{ range .Pages }}
-                         <div class="col-md-3">
+                         <div class="col-md-4">
                               <div class="card">
                                    {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
+                                   {{ $previewImage := $previewImage.Resize "1500x q75" }}
                                    <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
                                    <div class="card-body">
-                                        <h5 class="card-title">{{.Title}}</h5>
+                                        <h5 class="card-title"><a href="{{.Permalink}}">{{.Title}}</a></h5>
                                         <p class="card-text">{{.Params.shortDescription}}</p>
                                         <a href="{{.Permalink}}" class="btn btn-primary">Have a deeper look</a>
                                    </div>
