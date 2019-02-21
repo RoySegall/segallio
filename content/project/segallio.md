@@ -8,4 +8,8 @@ github: "roysegall/segallio"
 site: "http://www.segall.io"
 ---
 
-Bonapetit is a dummy project
+#### Background
+
+#### The idea
+
+#### My two cents on the stack

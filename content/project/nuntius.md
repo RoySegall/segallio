@@ -8,4 +8,8 @@ github: "roysegall/nuntius-bot"
 site: "http://www.nuntius.xyz"
 ---
 
-Bonapetit is a dummy project
+#### Background
+
+#### The idea
+
+#### My two cents on the stack

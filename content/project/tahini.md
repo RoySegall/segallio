@@ -7,4 +7,8 @@ shortDescription: "This is the store about the current site"
 github: "roysegall/tahini"
 ---
 
-Bonapetit is a dummy project
+#### Background
+
+#### The idea
+
+#### My two cents on the stack
