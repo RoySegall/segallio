@@ -81,7 +81,7 @@
                             <div class="col-md-4">
                                 {{ $picture := resources.Get (printf "images/photos/%s" $element.picture) }}
 
-                                {{ $image := $picture.Resize "1500x q75" }}
+                                {{ $image := $picture.Resize "1500x q50" }}
 
                                 {{ if mod $index 2 }}
                                     <img src="{{$image.Permalink}}" class="img-fluid odd" title="{{$element.description}}" />
