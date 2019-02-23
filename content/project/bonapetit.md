@@ -18,7 +18,7 @@ Let's say you have a food item: Egg, Butter, Milk, Apple, Banana, Ground beef, e
 with them or maybe which products you need to get in order to make something to eat. Well, with `bonapetit` you can do 
 it. 
 
-Once you in the front page you can choose which products you own and select how the search will take place: Get recipes
+Once you see the front page you can choose which products you own and select how the search will take place: Get recipes
 which contains **only what you own** or get recipes which **contains what you have but with more products** that you 
 might not have or have but not aware of that combination.
 
@@ -35,16 +35,13 @@ community that make your life very easy.
 and you start to layer up what you need: Routing system, HTTP requests, Store layer, and maybe `CSS` processors such as
 `LESS` or `SASS`. 
 
-When using something like `Vue CLI` that with a couple of settings, that could be save for later, you get a lot of 
-stuff: `typescript`, `VueX`, `Vue Router` and a lot more(including a UI for manging your project) with `React` it simply 
-does not exists. Yes, there could some documentation around the web but if I'm doing a lot of projects I won't clone
-the same repo and start form that point. With `Vue CLI` I'm getting a lot of stuff with a couple of commands.
+`Vue CLI` has a lot of power: with a couple of settings, that could be save for later, you get a lot of stuff with zero
+config: `typescript`, `VueX`, `Vue Router` and a lot more(including a UI for manging your project). With `React` it 
+simply does not exists. Yes, there could be some documentation around the web but if I'm doing a lot of projects I 
+won't clone the same repo and start form that point. With `Vue CLI` I'm getting a lot of stuff with a couple of 
+commands.
 
-But, there's another thing I need to consider - `React` has a couple of things that `Vue` is missing:
-
-* A support from a big company - Facebook supports react with the community while `Vue` is supported by companies that
-willing to support it and the community. Who can assure me that those companies won't backdown from the support they 
-provide in a two-three years?
-* NativeScript - There is another thing that don't exits for vue which is `React native`. Right when writing this lines,
-I did not hared about `Vue native` and if so, I think the it's the same as `React native`.
-
+But, there's another thing I need to consider - `React` has a support from a big company - Facebook - while `Vue` is 
+supported by developers from the community and companies that willing support with money. Who can assure me that those 
+companies won't back down from the support they provide in a two-three years? Who can make sure people still contribute 
+to `vue`?

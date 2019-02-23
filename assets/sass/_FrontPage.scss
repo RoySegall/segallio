@@ -64,6 +64,11 @@
       margin-bottom: 1.25em;
       padding-bottom: .5em;
 
+      .years, .name, .position {
+        font-weight: bold;
+
+      }
+
       .description {
         line-height: 1.75em;
       }
