@@ -1,5 +1,5 @@
 <div class="row job">
-    <div class="col-12 col-md-2">
+    <div class="col-12 col-md-2 {{.job.class}}">
 
         {{ $logo := resources.Get (printf "%s" .job.logo) }}
         <img src="{{$logo.Permalink}}" class="img-fluid" />

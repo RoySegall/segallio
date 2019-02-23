@@ -1,26 +1,45 @@
 - name: Taliaz Health
+  class: taliaz
   years: 2018
   logo: images/companies/taliaz.png
   position: Developer
   description: "
-    I took over the job of a single developer,
-    implemented complex features, fixed bugs in the system and created new
-    procedures in the daily workflow."
+    Once I figured out I had enough with Drupal I joined a company called Taliaz. Taliaz mission's was to help people
+    with hard depression. They managed to accomplish that by taking a swab sample from the patient, ask the patient a
+    couple of questions, and after a couple of days the patient(or the doctor) will get a report with the best matching
+    medicine. At the time I joined in, Taliaz decided to grow in start to develop all the products in-house instead of
+    using an out-source solutions. I helped to improve the current products: fix bugs, implement a couple of small
+    features. In the last month at Taliaz I started to write a new API based on Symfony which meant to serve all kind
+    of application: Desktop, Mobile, Smart wareable devices etc.
+
+    I got fired from Taliaz due to finance issues they had back then - pretty typical to a startup. I loved to work at
+    Taliaz: I met amazing people and learned a lot.
+  "
 
 - name: Real Commerce
   years: 2018
+  class: rc
   logo: images/companies/rc.png
   position: Consulting
   description: "
-    Helped the company to design new
-    features in a complex systems and improve performance."
+    During my last three months at gizra, I worked at RealCommerce as a team leader and extra three months as a
+    freelance. Since I knew Drupal very good I helped a Drupal based team inside the company to handle various tasks:
+    fix bugs, implements new features, update the design and make sure that the \"best practices\" are implemented.
+  "
 
 - name: Gizra
   years: 2011-2018
+  class: gizra
   logo: images/companies/gizra.png
   position: Lead developer
   description: "
-    Worked on big Drupal projects,
-    mentored new developers, created REST endpoints, designed DB
-    architecture, wrote QA tests, CI integration, wrote blog posts, presented in
-    Drupal events and produced some of them."
+    I joined gizra in June 2011, after working in Pizza Hut as a shift manager.
+    I had no real experience and until then all my coding stuff was a hobie.
+    At the beginning I worked on a couple of projects but eventually I worked on a QA site for medical questions for a
+    year and a half. Later on I worked on other projects until I joined an open source project called
+    OpenScholar. The work on OS took around 4-5 years in which I lead developers, handled complex tasks, helped to
+    implement CI/CD projects, and worked directly with the team from Harvard. Except for that, most of the work in gizra
+    based on contribution from the opensource community so it was natural, and the right thing to do, to give back to
+    the community: I talked on local meetups, created modules in Drupal, managed local events, mentored young developers
+    and much more.
+  "

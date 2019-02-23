@@ -2,5 +2,55 @@
 
   .card {
     margin-bottom: 1em;
+    border: solid 1px $orange1;
+
+    img {
+      border-bottom: solid 1px $blue1;
+    }
+  }
+}
+
+
+.project-wrapper-page {
+
+  hr {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .intro {
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 1.75em;
+      color: #9d9d9d;
+    }
+
+    h3 {
+      font-size: 1.25em;
+      color: #9d9d9d;
+    }
+
+    hr {
+      width: 50%;
+      background-color: $blue1;
+    }
+  }
+
+  .second {
+
+    hr {
+      background-color: $orange1;
+    }
+
+    .image {
+
+      img {
+        border: solid 1px $blue1;
+      }
+    }
   }
 }

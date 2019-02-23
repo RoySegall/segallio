@@ -1,58 +1,102 @@
 <html>
 <head>
-     <title>{{.Params.Title}} - {{ .Site.Title }}</title>
-     {{ $bootstrap := resources.Get "sass/bootstrap.css" | resources.Minify | resources.Fingerprint }}
-     <link rel="stylesheet" href="{{ $bootstrap.Permalink }}">
+    <title>{{.Params.Title}} - {{ .Site.Title }}</title>
+    {{ $bootstrap := resources.Get "sass/bootstrap.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $bootstrap.Permalink }}">
 
-     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-     <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One:200,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny:200,400,700,900" rel="stylesheet">
 
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </head>
 
 <body>
 
 <div class="container-fluid">
-     <div class="row">
-          <div class="col-md-10 mx-auto body-wrapper">
-               {{ partial "header" }}
+    <div class="row">
+        <div class="col-md-10 mx-auto body-wrapper project-wrapper-page">
+            {{ partial "header" }}
 
-               <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                         <li class="breadcrumb-item"><a href="/">Home</a></li>
-                         <li class="breadcrumb-item"><a href="/project">Projects</a></li>
-                         <li class="breadcrumb-item active" aria-current="page">{{.Params.Title}}</li>
-                    </ol>
-               </nav>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/project">Projects</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{.Params.Title}}</li>
+                </ol>
+            </nav>
 
-               <h1>{{.Params.Title}}</h1>
-               <hr />
+            <div class="intro">
+                <h1>{{.Params.Title}}</h1>
 
-               <h2>{{.Params.shortDescription}}</h2>
-               <h3>Technologies: {{.Params.technologies}}</h3>
+                <h2>{{.Params.shortDescription}}</h2>
+                <h3>Technologies: {{.Params.technologies}}</h3>
 
-               <div class="row">
-                    <div class="col-md-8">
-                         {{.Content}}
+                <hr/>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 first">
+                    {{.Content}}
+                </div>
+
+                <div class="col-md-4 second">
+                    {{ if or (.Params.github) (.Params.site) }}
+                        <div class="links">
+                            <h3>Links</h3>
+                            <hr />
+                                <ul>
+                                    {{ if .Params.github }}
+                                        <li>
+                                            <i class="fab fa-github-alt"></i>
+                                            <a href="http://www.github.com/{{ .Params.github }}" target="_blank"> Go to repo</a>
+                                        </li>
+                                    {{ end }}
+
+                                {{ if .Params.site }}
+                                    <li>
+                                        <i class="fas fa-eye"></i>
+                                        <a href="{{.Params.site}}" target="_blank"> Visit website</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+
+                        </div>
+                    {{ end }}
+
+                    {{ if .Params.youtubeId }}
+                        <div class="youtube">
+                            <h3>Youtube demo</h3>
+                            <hr/>
+
+                            <iframe width="100%" height="20%" src="https://www.youtube.com/embed/{{.Params.youtubeId}}"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                    {{ end }}
+
+                    <div class="image">
+                        <h3>Picture</h3>
+                        <hr />
+                        {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
+                        {{ $previewImage := $previewImage.Resize "1500x q75" }}
+                        <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
                     </div>
 
-                    <div class="col-md-4">
-                         <iframe width="560" height="315" src="https://www.youtube.com/embed/YNHqjFyk5gU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                         {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
-                         <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
-                    </div>
-               </div>
+                </div>
+            </div>
 
-          </div>
-     </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

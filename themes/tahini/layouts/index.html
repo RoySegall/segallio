@@ -10,9 +10,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One:200,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:200,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Coiny:200,400,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -56,9 +56,10 @@
                                 <div class="col-md-4">
                                     <div class="card">
                                         {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
+                                        {{ $previewImage := $previewImage.Resize "1500x q75" }}
                                         <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{.Title}}</h5>
+                                            <h5 class="card-title"><a href="{{.Permalink}}">{{.Title}}</a></h5>
                                             <p class="card-text">{{.Params.shortDescription}}</p>
                                             <a href="{{.Permalink}}" class="btn btn-primary">Have a deeper look</a>
                                         </div>
@@ -70,16 +71,17 @@
                     </section>
 
                     <section class="latest-photos">
-                        <h3>Latest photos</h3>
+                        <h3>Random photos</h3>
 
                         <p>Here you can find my latest photos I took. You can see more photos in <a href="/photos">here</a>.</p>
 
                         <div class="row">
-                            {{ range $index, $element := first 9 .Site.Data.photos }}
+
+                            {{ range $index, $element := (first 9 (shuffle .Site.Data.photos)) }}
                             <div class="col-md-4">
                                 {{ $picture := resources.Get (printf "images/photos/%s" $element.picture) }}
 
-                                {{ $image := $picture.Resize "1200x q75" }}
+                                {{ $image := $picture.Resize "1500x q50" }}
 
                                 {{ if mod $index 2 }}
                                     <img src="{{$image.Permalink}}" class="img-fluid odd" title="{{$element.description}}" />
