@@ -5,7 +5,7 @@ external-url: "http://www.github.com/roysegall/bonapetit"
 Image: "images/projects/bonapetit.png"
 shortDescription: "it was my first attempt with React"
 youtubeId: "OFzP_1oRNMY"
-github: "roysegall/bonapetit"
+github: "roysegall/bonappetit"
 ---
 #### Background
 Bonapetit is a dummy project, as most of my projects. After I learned in Frontend masters 
