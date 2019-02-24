@@ -6,7 +6,7 @@ Image: "images/projects/bonapetit.png"
 shortDescription: "it was my first attempt with React"
 youtubeId: "OFzP_1oRNMY"
 github: "roysegall/bonappetit"
-ogDescription: "Foo"
+ogDescription: "A case study for a React and NodeJS apps which help you to know what you should cook"
 ---
 #### Background
 Bonapetit is a dummy project, as most of my projects. After I learned in Frontend masters 

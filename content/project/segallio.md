@@ -6,7 +6,7 @@ image: "images/projects/segallio.png"
 shortDescription: "This is the store about the current site"
 github: "roysegall/segallio"
 site: "http://www.segall.io"
-ogDescription: "Foo"
+ogDescription: "The case study of the current site"
 ---
 
 #### Background

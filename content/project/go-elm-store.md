@@ -6,7 +6,7 @@ image: "images/projects/go-store.png"
 shortDescription: "Using Elm and Go"
 youtubeId: "gD_DEQFYdZI"
 github: "roysegall/elm-store"
-ogDescription: "Foo"
+ogDescription: "A case study for a books e-commerce site based on Elm and Go"
 ---
 
 #### Background

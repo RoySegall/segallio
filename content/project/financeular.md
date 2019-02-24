@@ -6,7 +6,7 @@ image: "images/projects/financeular.png"
 shortDescription: "Using Tahini with VueJS"
 youtubeId: "YyZuWTcg7Js"
 github: "roysegall/financeular"
-ogDescription: "Foo"
+ogDescription: "A case study for an app based on Symfony and Vue which helps you create a budget"
 ---
 
 #### Background
