@@ -10,6 +10,9 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+     {{ $favicon := resources.Get "images/favicon.ico" }}
+     <link rel="icon" href="{{$favicon.Permalink}}" type="image/gif" sizes="16x16">
+
      {{ $image := ((index (shuffle .Pages) 0).Params.image) }}
      {{ $picture := (resources.Get (printf "%s" $image)).Resize "1200x q75" }}
 
