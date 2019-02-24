@@ -1,0 +1,157 @@
+<html>
+<head>
+    <title>Nuntius - Roy Segall | Computerised dreames</title>
+    
+    <link rel="stylesheet" href="http://www.segall.io/sass/bootstrap.min.749a0d75952f94a278fe81818cd7bb30b1044900a9de530de2968d0e1a9db4d3.css">
+
+    
+    <link rel="stylesheet" href="http://www.segall.io/sass/main.min.57a33dab81d799836767cde70445f84c932e18f9306bb0ffc01f9f2c61463e07.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    
+    <meta property="og:title" content="{{.Params.Title}} - {{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="The story of creating a framework for creating a bot framework in PHP" />
+<meta property="og:image" content="http://www.segall.io/images/photos/photos-5_hu0c4994ced1c712df8ba71e5d57a7e9f5_236652_1200x0_resize_q75_box.jpg" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One:200,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:200,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Coiny:200,400,700,900" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135079112-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135079112-1');
+</script>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 mx-auto body-wrapper project-wrapper-page">
+            <header class="header text-center">
+    
+    <a href="/"><img alt="Logo" src="http://www.segall.io/images/logo.png" /></a>
+
+    <h2>If you can dream it - I can build it</h2>
+
+    <hr class="splitter" />
+</header>
+
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/project">Projects</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Nuntius</li>
+                </ol>
+            </nav>
+
+            <div class="intro">
+                <h1>Nuntius</h1>
+
+                <h2>Creating a bot framework based on PHP</h2>
+                <h3>Technologies: PHP, Symfony</h3>
+
+                <hr/>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 first">
+                    
+
+<h4 id="background">Background</h4>
+
+<p>When I worked at <code>gizra</code> there was a need for creating a chatbot in <code>slack</code>. My first weapon of choice was <code>PHP</code>
+because this was the most common language.</p>
+
+<p>When I started to look for frameworks in <code>PHP</code>, none of the solutions I found was good enough. Yes, they had a lot of
+stars at Github but the work with them, and the architecture was not my cup of tea. So, I remembered in one of the
+unwritten rules in development: if you don&rsquo;t find something that suits you - write it your self. I created something
+small that later on will grow into something bigger. Bigger than what I expected.</p>
+
+<h4 id="the-idea">The idea</h4>
+
+<p>So first, why that name? In order to understand it let&rsquo;s go to our Delorean time machine and had back a couple of years.
+I had enlightenment - let&rsquo;s create a chat system that will be fully modular: the backend could be in any language,
+the front end could be in any language but the only thing that matters is that they will speak in the same way. Some
+kind of a protocol. I choose the name <code>nuntius</code> which means <code>messaging</code> in Latin. The idea was too big for one person
+but the name was too good to be forgotten.</p>
+
+<p>When I came to scale the small script into something bigger, <code>nuntius</code> was a good choice. It sounds very exotic and
+probably no one would know what it really means, like any good name.</p>
+
+<p>So, what <code>nuntius</code> gives us that other frameworks not? First, ease of development and elegance in writing what you
+need to handle: text recognition, setting up a dev environment, documentation that would be easy to read and with a very
+detailed code examples, a DB layer that can be abstracted to any DB there is entity system and much more.</p>
+
+<p>The idea developed into something big and I bought a domain. I started to work on version 2.0 that will be much bigger
+than what we have now: modules system, better-caching layer, better entity system, plugins, and much more. But, I never
+got to finish the work.</p>
+
+<h4 id="my-two-cents-on-the-stack">My two cents on the stack</h4>
+
+<p>Up until that point, I never created a framework from scratch. I started to pick up <code>PHP</code> packages which can solve for
+me what I needed: Slack integration solved by a package which created by the <code>PHP</code> community, stuff like routing, file
+managing, dependency injection solved by <code>Symfony</code>.</p>
+
+<p>Packages that did not exist, such as an abstraction for Facebook messenger, created by me and extracted for external
+packages so other developers could use them however they desire.</p>
+
+                </div>
+
+                <div class="col-md-4 second">
+                    
+                        <div class="links">
+                            <h3>Links</h3>
+                            <hr />
+                                <ul>
+                                    
+                                        <li>
+                                            <i class="fab fa-github-alt"></i>
+                                            <a href="http://www.github.com/roysegall/nuntius-bot" target="_blank"> Go to repo</a>
+                                        </li>
+                                    
+
+                                
+                                    <li>
+                                        <i class="fas fa-eye"></i>
+                                        <a href="http://www.nuntius.xyz" target="_blank"> Visit website</a>
+                                    </li>
+                                
+                            </ul>
+
+                        </div>
+                    
+
+                    
+
+                    <div class="image">
+                        <h3>Picture</h3>
+                        <hr />
+                        
+                        
+                        <img class="card-img-top" src="http://www.segall.io/images/projects/nuntius_hu7f6ae88dea1b87562d0b80112bdf1625_171985_1500x0_resize_q75_box_2.png" alt="Nuntius image">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
