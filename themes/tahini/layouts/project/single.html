@@ -10,6 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    {{ $image := index (shuffle .Site.Data.photos) 0 }}
+    {{ $picture := (resources.Get (printf "images/photos/%s" $image.picture)).Resize "1200x q75" }}
+    {{ partial "og" (dict "title" "{{.Params.Title}} - {{ .Site.Title }}" "image" $picture.Permalink "type" "website" "description" .Params.ogDescription ) }}
+
     {{ partial "fonts" }}
     {{ partial "ga" }}
 </head>

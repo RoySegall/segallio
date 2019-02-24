@@ -12,6 +12,9 @@
 
         {{ partial "fonts" }}
         {{ partial "ga" }}
+
+        {{ $logo := resources.Get "images/logo.png" }}
+        {{ partial "og" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "Roy Segall personal site" ) }}
     </head>
 
     <body>
@@ -21,7 +24,6 @@
                 <div class="col-md-10 mx-auto body-wrapper">
 
                     {{ partial "header" }}
-
                     {{ partial "who-am-i" }}
 
                     <section class="professional-info">
