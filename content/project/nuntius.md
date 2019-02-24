@@ -6,6 +6,7 @@ image: "images/projects/nuntius.png"
 shortDescription: "Creating a bot framework based on PHP"
 github: "roysegall/nuntius-bot"
 site: "http://www.nuntius.xyz"
+ogDescription: "Foo"
 ---
 
 #### Background

@@ -6,6 +6,7 @@ image: "images/projects/financeular.png"
 shortDescription: "Using Tahini with VueJS"
 youtubeId: "YyZuWTcg7Js"
 github: "roysegall/financeular"
+ogDescription: "Foo"
 ---
 
 #### Background

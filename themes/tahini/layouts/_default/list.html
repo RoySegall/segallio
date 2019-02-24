@@ -10,6 +10,9 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+     {{ $logo := resources.Get "images/logo.png" }}
+     {{ partial "og" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "Roy Segall personal site" ) }}
+
      {{ partial "fonts" }}
      {{ partial "ga" }}
 </head>
