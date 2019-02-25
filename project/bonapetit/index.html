@@ -1,0 +1,186 @@
+<html>
+<head>
+    <title>Bonapetit - Roy Segall | Computerised dreames</title>
+    
+    <link rel="stylesheet" href="/www.segall.io/sass/bootstrap.min.749a0d75952f94a278fe81818cd7bb30b1044900a9de530de2968d0e1a9db4d3.css">
+
+    
+    <link rel="stylesheet" href="/www.segall.io/sass/main.min.3ed2e2237c0e4c072c9c873e98778ac6bb5d17b4a78582cd94fa5af50ae8a099.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="icon" href="/www.segall.io/images/favicon.ico" type="image/gif" sizes="16x16">
+
+    
+    
+    <meta property="og:title" content="Bonapetit" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A case study for a React and NodeJS apps which help you to know what you should cook" />
+<meta property="og:image" content="/www.segall.io/images/photos/photos-39_hu1555c3b6a9d98464a013d663a7acdca7_86891_1200x0_resize_q75_box.jpeg" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One:200,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:200,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Coiny:200,400,700,900" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135079112-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135079112-1');
+</script>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 mx-auto body-wrapper project-wrapper-page">
+            <header class="header text-center">
+    
+    <a href="/"><img alt="Logo" src="/www.segall.io/images/logo.png" /></a>
+
+    <h2>If you can dream it - I can build it</h2>
+
+    <hr class="splitter" />
+</header>
+
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/project">Projects</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Bonapetit</li>
+                </ol>
+            </nav>
+
+            <div class="intro">
+                <h1>Bonapetit</h1>
+
+                <h2>it was my first attempt with React</h2>
+                <h3>Technologies: 
+    
+        <span class="technology even">React</span>
+    
+
+    
+        <span class="technology odd">NodeJS</span>
+    
+
+    
+        <span class="technology even">MongoDB</span>
+    
+
+    
+        <span class="technology odd">Webpack</span>
+    
+
+</h3>
+
+                <hr/>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 first">
+                    
+
+<h4 id="background">Background</h4>
+
+<p>Bonapetit is a dummy project, as most of my projects. After I learned in Frontend masters
+<a href="https://frontendmasters.com/courses/complete-react-v4/">React</a> and
+<a href="https://frontendmasters.com/courses/node-js/">Node.js</a> I
+needed to practice what I&rsquo;ve learned.</p>
+
+<h4 id="the-idea">The idea</h4>
+
+<p>Let&rsquo;s say you have a food item: Egg, Butter, Milk, Apple, Banana, Ground beef, etc. And you don&rsquo;t know what you can make
+with them or maybe which products you need to get in order to make something to eat. Well, with <code>bonapetit</code> you can do
+it.</p>
+
+<p>Once you see the front page you can choose which products you own and select how the search will take place: Get recipes
+which contains <strong>only what you own</strong> or get recipes which <strong>contains what you have but with more products</strong> that you
+might not have or have but not aware of that combination.</p>
+
+<h4 id="my-two-cents-on-the-stack">My two cents on the stack</h4>
+
+<p><strong>Let start with the backend</strong>: Working with node was pretty nice. Yes, it&rsquo;s <code>JavaScript</code>, not my favorite language in
+the world, but the development was pretty easy. Installing <code>node</code> is pretty easy, setting up the server with <code>express</code>
+was easy as well and the work with <code>mongoose</code> and <code>MongoDB</code> was pretty much good for modeling data. Wiring up
+<code>typescript</code> and <code>nodemon</code> is well documented over the web. Creating a small and lightweight backend with <code>NodeJS</code>,
+<code>MongoDB</code> and
+<code>Express</code> is not that different from <code>Symfony</code> or <code>Flask</code> - there&rsquo;s a lot of documentation, tools, and support from the
+community that makes your life very easy.</p>
+
+<p><strong>Let&rsquo;s talk about the frontend</strong>: <code>React</code> has a lot of common with <code>Vue</code> - you start with the core: only the components
+and you start to layer up what you need: Routing system, HTTP requests, Store layer, and maybe <code>CSS</code> processors such as
+<code>LESS</code> or <code>SASS</code>.</p>
+
+<p><code>Vue CLI</code> has a lot of power: with a couple of settings, that could be saved for later, you get a lot of stuff with zero
+configs: <code>typescript</code>, <code>VueX</code>, <code>Vue Router</code> and a lot more(including a UI for managing your project). With <code>React</code> it
+simply does not exists. Yes, there could be some documentation around the web but if I&rsquo;m doing a lot of projects I
+won&rsquo;t clone the same repo and start to form that point. With <code>Vue CLI</code> I&rsquo;m getting a lot of stuff with a couple of
+commands.</p>
+
+<p>But, there&rsquo;s another thing I need to consider - <code>React</code> has to support from a big company - Facebook - while <code>Vue</code> is
+supported by developers from the community and companies that willing support with money. Who can assure me that those
+companies won&rsquo;t back down from the support they provide in two-three years? Who can make sure people still contribute
+to <code>vue</code>?</p>
+
+                </div>
+
+                <div class="col-md-4 second">
+                    
+                        <div class="links">
+                            <h3>Links</h3>
+                            <hr />
+                                <ul>
+                                    
+                                        <li>
+                                            <i class="fab fa-github-alt"></i>
+                                            <a href="http://www.github.com/roysegall/bonappetit" target="_blank"> Go to repo</a>
+                                        </li>
+                                    
+
+                                
+                            </ul>
+
+                        </div>
+                    
+
+                    
+                        <div class="youtube">
+                            <h3>Youtube demo</h3>
+                            <hr/>
+
+                            <iframe width="100%" height="20%" src="https://www.youtube.com/embed/OFzP_1oRNMY"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                    
+
+                    <div class="image">
+                        <h3>Picture</h3>
+                        <hr />
+                        
+                        
+                        <img class="card-img-top" src="/www.segall.io/images/projects/bonapetit_hu93fb2bf4f9e03ebd7f13bc5ae474f01d_327143_1500x0_resize_q75_box_2.png" alt="Bonapetit image">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

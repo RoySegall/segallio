@@ -1,0 +1,184 @@
+<html>
+<head>
+    <title>Go-elm store - Roy Segall | Computerised dreames</title>
+    
+    <link rel="stylesheet" href="/www.segall.io/sass/bootstrap.min.749a0d75952f94a278fe81818cd7bb30b1044900a9de530de2968d0e1a9db4d3.css">
+
+    
+    <link rel="stylesheet" href="/www.segall.io/sass/main.min.3ed2e2237c0e4c072c9c873e98778ac6bb5d17b4a78582cd94fa5af50ae8a099.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="icon" href="/www.segall.io/images/favicon.ico" type="image/gif" sizes="16x16">
+
+    
+    
+    <meta property="og:title" content="Go-elm store" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A case study for a books e-commerce site based on Elm and Go" />
+<meta property="og:image" content="/www.segall.io/images/photos/photos-9_huf0eb45ed59847f9d73c73637484bbf93_190868_1200x0_resize_q75_box.jpg" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One:200,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:200,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Coiny:200,400,700,900" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135079112-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135079112-1');
+</script>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 mx-auto body-wrapper project-wrapper-page">
+            <header class="header text-center">
+    
+    <a href="/"><img alt="Logo" src="/www.segall.io/images/logo.png" /></a>
+
+    <h2>If you can dream it - I can build it</h2>
+
+    <hr class="splitter" />
+</header>
+
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/project">Projects</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Go-elm store</li>
+                </ol>
+            </nav>
+
+            <div class="intro">
+                <h1>Go-elm store</h1>
+
+                <h2>Using Elm and Go</h2>
+                <h3>Technologies: 
+    
+        <span class="technology even">Golang</span>
+    
+
+    
+        <span class="technology odd">RethinkDB</span>
+    
+
+    
+        <span class="technology even">Elm</span>
+    
+
+</h3>
+
+                <hr/>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 first">
+                    
+
+<h4 id="background">Background</h4>
+
+<p>Let&rsquo;s look at the technologies - <code>Go</code> and <code>Elm</code>. Well, you might have heard of <code>Go</code> before(if not, I&rsquo;ll get to that) but
+what is <code>Elm</code>? <code>Elm</code> is a functional programming language which looks like <code>Haskell</code> and eventually compiles into <code>JS</code>.
+I came across this language while working at <code>gizra</code>. You can read
+<a href="https://www.gizra.com/content/elmlang-headless-drupal/">here</a>about why choosing <code>Elm</code> and not go with the flow and use
+<code>React</code> or maybe the new version of <code>Angular</code>.</p>
+
+<p>At the same time, I heard about <code>Go</code> - a language created by Google which solved the problems Google had. I decided to
+take a look and see what it all about. I saw a nice language, not that complex which looks to me as the future.</p>
+
+<p>I did not have a lot of experience with <code>Elm</code> since the projects I worked on did not use <code>Elm</code>. I took the challenge for
+creating a small project with <code>Elm</code> and this my story with <code>Elm</code> and <code>Go</code>.</p>
+
+<h4 id="the-idea">The idea</h4>
+
+<p>Half a year before the project conceived there was a trend of fake Oreilly&rsquo;s books that make fun of the general look -
+on the cover, there&rsquo;s an animal that doesn&rsquo;t have any connection to the main topic of the book, a title, and subtitle
+that comes to elaborate on the content.</p>
+
+<p>A friend of mine collected all the cover of the books. I decided to make an e-commerce site that sells the books.
+Overall, I tried to create a good experience with seeing all the books, showing a beautiful cart and having a cool
+checkout process with cool animations.</p>
+
+<h4 id="my-two-cents-on-the-stack">My two cents on the stack</h4>
+
+<p><strong>Let&rsquo;s talk about the DB:</strong> First, I want to talk about the DB I choose - <code>RethinkDB</code>. It&rsquo;s a <code>NoSQL</code> DB which has
+orientation for <code>realtime</code> events and has an awesome query language. It&rsquo;s also very easy to set up and have a built-in
+UI. But, the company behind the DB had some financial issues and shut down. Of course, the community stepped in but, for
+some reasons, the DB lost his fame and <code>MongoDB</code> remained the dominant DB in the NoSQL DBs. Personally, I love this DB
+and think it&rsquo;s a good DB but, you can&rsquo;t use a product like that in a production environment: security issues, a product
+that is not backed by a company is not a good selling item when arriving to do a pitch in front of client or CV bodies.</p>
+
+<p><strong>Let&rsquo;s talk about the backend</strong>: Well, the work with <code>Go</code> was very refreshing in compare when working with languages
+like <code>PHP</code> or <code>Python</code> at the time: I liked the typing system, the dependency manager(though in big projects it can get
+very complex but that&rsquo;s for another story), and the fact that the deployment process is very easy - compile the file and
+run as a service.</p>
+
+<p><strong>Let&rsquo;s talk about the frontend</strong>: Well, <code>Elm</code> is not an easy language, IMO. The work with <code>Elm</code> was hard. Every time I
+approached to do something it was very complicated; Nothing was easy with <code>Elm</code>. But, if you thought that programming
+in <code>Elm</code> disables the need for writing <code>JS</code> code you are wrong. If we need to access local storage in the browser, or
+maybe interact with a <code>JS</code> package that we found first - we would need to write <code>JS</code> code for that. IMO, I would not
+recommend <code>Elm</code> as my first choice for writing apps.</p>
+
+                </div>
+
+                <div class="col-md-4 second">
+                    
+                        <div class="links">
+                            <h3>Links</h3>
+                            <hr />
+                                <ul>
+                                    
+                                        <li>
+                                            <i class="fab fa-github-alt"></i>
+                                            <a href="http://www.github.com/roysegall/elm-store" target="_blank"> Go to repo</a>
+                                        </li>
+                                    
+
+                                
+                            </ul>
+
+                        </div>
+                    
+
+                    
+                        <div class="youtube">
+                            <h3>Youtube demo</h3>
+                            <hr/>
+
+                            <iframe width="100%" height="20%" src="https://www.youtube.com/embed/gD_DEQFYdZI"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                    
+
+                    <div class="image">
+                        <h3>Picture</h3>
+                        <hr />
+                        
+                        
+                        <img class="card-img-top" src="/www.segall.io/images/projects/go-store_hub04f27ca1a1c5bc7aa690b970d560be9_357899_1500x0_resize_q75_box_2.png" alt="Go-elm store image">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
