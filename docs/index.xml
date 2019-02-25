@@ -2,68 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Roy Segall | Computerised dreames</title>
-    <link>http://www.segall.io/</link>
+    <link>https://www.segall.io/</link>
     <description>Recent content on Roy Segall | Computerised dreames</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://www.segall.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.segall.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bonapetit</title>
-      <link>http://www.segall.io/project/bonapetit/</link>
+      <link>https://www.segall.io/project/bonapetit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.segall.io/project/bonapetit/</guid>
+      <guid>https://www.segall.io/project/bonapetit/</guid>
       <description>Background Bonapetit is a dummy project, as most of my projects. After I learned in Frontend masters React and Node.js I needed to practice what I&amp;rsquo;ve learned.
 The idea Let&amp;rsquo;s say you have a food item: Egg, Butter, Milk, Apple, Banana, Ground beef, etc. And you don&amp;rsquo;t know what you can make with them or maybe which products you need to get in order to make something to eat. Well, with bonapetit you can do it.</description>
     </item>
     
     <item>
       <title>Financeular</title>
-      <link>http://www.segall.io/project/financeular/</link>
+      <link>https://www.segall.io/project/financeular/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.segall.io/project/financeular/</guid>
+      <guid>https://www.segall.io/project/financeular/</guid>
       <description>Background Usually, I create a project for the technologies I&amp;rsquo;ve learned. This time, I created a project for an idea I had based on an open source project I created - Tahini. I did not create the project for learning something, but maybe start something that later could have revenue. But, after a while, I saw there&amp;rsquo;s something like 10-100 sites that do the same thing so I decided to quit and make it as a side project for myself.</description>
     </item>
     
     <item>
       <title>Go-elm store</title>
-      <link>http://www.segall.io/project/go-elm-store/</link>
+      <link>https://www.segall.io/project/go-elm-store/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.segall.io/project/go-elm-store/</guid>
+      <guid>https://www.segall.io/project/go-elm-store/</guid>
       <description>Background Let&amp;rsquo;s look at the technologies - Go and Elm. Well, you might have heard of Go before(if not, I&amp;rsquo;ll get to that) but what is Elm? Elm is a functional programming language which looks like Haskell and eventually compiles into JS. I came across this language while working at gizra. You can read hereabout why choosing Elm and not go with the flow and use React or maybe the new version of Angular.</description>
     </item>
     
     <item>
       <title>Nuntius</title>
-      <link>http://www.segall.io/project/nuntius/</link>
+      <link>https://www.segall.io/project/nuntius/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.segall.io/project/nuntius/</guid>
+      <guid>https://www.segall.io/project/nuntius/</guid>
       <description>Background When I worked at gizra there was a need for creating a chatbot in slack. My first weapon of choice was PHP because this was the most common language.
 When I started to look for frameworks in PHP, none of the solutions I found was good enough. Yes, they had a lot of stars at Github but the work with them, and the architecture was not my cup of tea.</description>
     </item>
     
     <item>
       <title>Segall IO</title>
-      <link>http://www.segall.io/project/segallio/</link>
+      <link>https://www.segall.io/project/segallio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.segall.io/project/segallio/</guid>
+      <guid>https://www.segall.io/project/segallio/</guid>
       <description>Background For a long time, I desired to own a personal site in which I can write all about the stuff I&amp;rsquo;m doing and did, present my CV in a better way and sell my self better. In the beginning, I thought of collecting data from any social network oriented site but it was to complex. Instead, I went with a static site generator.
 This is the story of segall.</description>
     </item>
     
     <item>
       <title>Tahnini</title>
-      <link>http://www.segall.io/project/tahini/</link>
+      <link>https://www.segall.io/project/tahini/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.segall.io/project/tahini/</guid>
+      <guid>https://www.segall.io/project/tahini/</guid>
       <description>Background After I started to work at Taliaz we planned on replacing the current architecture. Up until then, their tools were developed by a 3rd party company. The products developed in Yii and the backend written in another framework (which I don&amp;rsquo;t remember) - pretty much a mess.
 After working on the products - fixing some bugs, adding some minor features and preparing for some ISO standards - we, or should I say me, started to look deeper on how to replace the current architecture.</description>
     </item>
