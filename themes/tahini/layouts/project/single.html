@@ -15,7 +15,7 @@
 
     {{ $image := index (shuffle .Site.Data.photos) 0 }}
     {{ $picture := (resources.Get (printf "images/photos/%s" $image.picture)).Resize "1200x q75" }}
-    {{ partial "og" (dict "title" "{{.Params.Title}} - {{ .Site.Title }}" "image" $picture.Permalink "type" "website" "description" .Params.ogDescription ) }}
+    {{ partial "og" (dict "title" .Params.Title "image" $picture.Permalink "type" "website" "description" .Params.ogDescription ) }}
 
     {{ partial "fonts" }}
     {{ partial "ga" }}
@@ -40,7 +40,7 @@
                 <h1>{{.Params.Title}}</h1>
 
                 <h2>{{.Params.shortDescription}}</h2>
-                <h3>Technologies: {{.Params.technologies}}</h3>
+                <h3>Technologies: {{ partial "project-technologies" (dict "Technologies" .Params.technologies) }}</h3>
 
                 <hr/>
             </div>

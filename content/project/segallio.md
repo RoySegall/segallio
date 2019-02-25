@@ -1,6 +1,7 @@
 ---
 title: Segall IO
-technologies: HUGO
+technologies:
+    - HUGO
 external-url: "http://www.github.com/roysegall/segallio"
 image: "images/projects/segallio.png"
 shortDescription: "This is the store about the current site"

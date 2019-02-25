@@ -44,9 +44,10 @@
                               <div class="card">
                                    {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
                                    {{ $previewImage := $previewImage.Resize "1500x q75" }}
-                                   <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
+                                   <a href="{{.Permalink}}"><img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image"></a>
                                    <div class="card-body">
                                         <h5 class="card-title"><a href="{{.Permalink}}">{{.Title}}</a></h5>
+                                        <p><b>Technologies</b>: {{ partial "project-technologies" (dict "Technologies" .Params.technologies) }}</p>
                                         <p class="card-text">{{.Params.shortDescription}}</p>
                                         <a href="{{.Permalink}}" class="btn btn-primary">Have a deeper look</a>
                                    </div>

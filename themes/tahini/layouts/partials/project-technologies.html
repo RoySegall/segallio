@@ -1,0 +1,7 @@
+{{ range $index, $element := .Technologies }}
+    {{ if mod $index 2 }}
+        <span class="technology odd">{{$element}}</span>
+    {{ else }}
+        <span class="technology even">{{$element}}</span>
+    {{ end }}
+{{end}}

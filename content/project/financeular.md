@@ -1,6 +1,9 @@
 ---
 title: Financeular
-technologies: PHP, Symfony, Vue
+technologies: 
+    - PHP
+    - Symfony
+    - Vue
 external-url: "http://www.github.com/roysegall/bonapetit"
 image: "images/projects/financeular.png"
 shortDescription: "Using Tahini with VueJS"

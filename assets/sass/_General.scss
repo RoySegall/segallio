@@ -41,3 +41,18 @@ body {
     padding-bottom: .5em;
   }
 }
+
+.technology {
+  color: #fafafa;
+  padding: .25em .5em;
+  font-size: .75em;
+  border-radius: .25em;
+
+  &.odd {
+    background: $blue1;
+  }
+
+  &.even {
+    background: $orange1;
+  }
+}

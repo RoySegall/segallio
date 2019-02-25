@@ -1,6 +1,10 @@
 ---
 title: Bonapetit
-technologies: React, NodeJS, MongoDB, Webpack
+technologies: 
+    - React
+    - NodeJS
+    - MongoDB
+    - Webpack
 external-url: "http://www.github.com/roysegall/bonapetit"
 Image: "images/projects/bonapetit.png"
 shortDescription: "it was my first attempt with React"

@@ -1,6 +1,9 @@
 ---
 title: Go-elm store
-technologies: Golang, RethinkDB, Elm
+technologies:
+    - Golang
+    - RethinkDB
+    - Elm
 external-url: "http://www.github.com/roysegall/bonapetit"
 image: "images/projects/go-store.png"
 shortDescription: "Using Elm and Go"

@@ -1,6 +1,8 @@
 ---
 title: Nuntius
-technologies: PHP, Symfony
+technologies:
+    - PHP
+    - Symfony
 external-url: "http://www.github.com/roysegall/nuntius-bot"
 image: "images/projects/nuntius.png"
 shortDescription: "Creating a bot framework based on PHP"

@@ -50,7 +50,7 @@
                     <section class="latest-projects">
                         <h3>Latest projects</h3>
 
-                        <p>Here you can find various open source project I created or had any part.</p>
+                        <p>Here you can find various open source project I created or had any part. You can see more projects <a href="/project">here</a>.</p>
 
                         <div class="row">
                             {{ range first 6 (where .Pages "Section" "project" ) }}
@@ -58,9 +58,10 @@
                                     <div class="card">
                                         {{ $previewImage := resources.Get (printf "%s" .Params.image) }}
                                         {{ $previewImage := $previewImage.Resize "1500x q75" }}
-                                        <img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image">
+                                        <a href="{{.Permalink}}"><img class="card-img-top" src="{{$previewImage.Permalink}}" alt="{{.Title}} image"></a>
                                         <div class="card-body">
                                             <h5 class="card-title"><a href="{{.Permalink}}">{{.Title}}</a></h5>
+                                            <p><b>Technologies</b>: {{ partial "project-technologies" (dict "Technologies" .Params.technologies) }}</p>
                                             <p class="card-text">{{.Params.shortDescription}}</p>
                                             <a href="{{.Permalink}}" class="btn btn-primary">Have a deeper look</a>
                                         </div>

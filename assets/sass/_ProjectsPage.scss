@@ -1,8 +1,22 @@
+.latest-projects {
+  .card-body {
+    p {
+      margin-bottom: .25em;
+    }
+  }
+}
+
 .projects-wrapper {
 
   .card {
     margin-bottom: 1em;
     border: solid 1px $orange1;
+
+    .card-body {
+      p {
+        margin-bottom: .25em;
+      }
+    }
 
     img {
       border-bottom: solid 1px $blue1;
