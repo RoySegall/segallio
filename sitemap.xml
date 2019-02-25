@@ -3,50 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.segall.io/</loc>
+    <loc>https://segall.io/</loc>
   </url>
   
   <url>
-    <loc>https://www.segall.io/photos/</loc>
+    <loc>https://segall.io/photos/</loc>
   </url>
   
   <url>
-    <loc>https://www.segall.io/project/bonapetit/</loc>
+    <loc>https://segall.io/project/bonapetit/</loc>
   </url>
   
   <url>
-    <loc>https://www.segall.io/categories/</loc>
+    <loc>https://segall.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.segall.io/project/financeular/</loc>
+    <loc>https://segall.io/project/financeular/</loc>
   </url>
   
   <url>
-    <loc>https://www.segall.io/project/go-elm-store/</loc>
+    <loc>https://segall.io/project/go-elm-store/</loc>
   </url>
   
   <url>
-    <loc>https://www.segall.io/project/nuntius/</loc>
+    <loc>https://segall.io/project/nuntius/</loc>
   </url>
   
   <url>
-    <loc>https://www.segall.io/project/</loc>
+    <loc>https://segall.io/project/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.segall.io/project/segallio/</loc>
+    <loc>https://segall.io/project/segallio/</loc>
   </url>
   
   <url>
-    <loc>https://www.segall.io/tags/</loc>
+    <loc>https://segall.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.segall.io/project/tahini/</loc>
+    <loc>https://segall.io/project/tahini/</loc>
   </url>
   
 </urlset>
