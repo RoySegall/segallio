@@ -2,7 +2,7 @@ baseURL = "www.segall.io/"
 languageCode = "en-us"
 title = "Roy Segall | Computerised dreames"
 theme = "tahini"
-publishDir = "docs"
+publishDir = "compiles"
 
 [imaging]
 # Default JPEG quality setting. Default is 75.
