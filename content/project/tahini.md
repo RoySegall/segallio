@@ -22,7 +22,7 @@ very interesting.
 #### The idea
 We needed to solve one a major problem. You might think that creating an API that can serve any kind of app - desktop, 
 mobile, watch etc. - would be the problem. No, any API can do this. We needed to base the API on a framework which 
-probably stays relevant for years, and won't be absolute, or make you twitch your nose once you here the name, 
+probably stays relevant for years, and won't be obsolete, or make you twitch your nose once you hear the name, 
 like `YII`. 
 
 I looked over the web for the best frameworks. My first choice was `Symfony`. Since version 4 was released a couple of 

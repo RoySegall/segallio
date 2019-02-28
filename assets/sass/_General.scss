@@ -47,6 +47,8 @@ body {
   padding: .25em .5em;
   font-size: .75em;
   border-radius: .25em;
+  display: inline-block;
+  margin-top: .25em;
 
   &.odd {
     background: $blue1;

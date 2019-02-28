@@ -4,7 +4,7 @@ technologies:
     - HUGO
 external-url: "http://www.github.com/roysegall/segallio"
 image: "images/projects/segallio.png"
-shortDescription: "This is the store about the current site"
+shortDescription: "This is the story about the current site"
 github: "roysegall/segallio"
 site: "http://www.segall.io"
 ogDescription: "The case study of the current site"
