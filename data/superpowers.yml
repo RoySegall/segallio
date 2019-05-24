@@ -28,6 +28,9 @@
 - superpower: Drupal
   level: 5
 
+- superpower: Django
+  level: 2
+
 - superpower: Git
   level: 5
 

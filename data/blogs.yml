@@ -1,0 +1,52 @@
+- title: "Electron “Open With” for Mac OSX"
+  url: "https://medium.com/@roysegall/electron-open-with-for-mac-osx-f215a1fe2ce1"
+  date: "May 24, 2019"
+  source: "Medium"
+  intro: "
+  I love Apple products but mostly, what I use every day for making money, is an operating system. I love Mac OSX, I
+  think it’s one of the best OS for web development. No, Microsoft Windows is not good enough IMO for web development.
+  One of the things that doesn’t exist on the Mac OS is a proper image gallery.
+  "
+
+- title: "Write Your First Bot Using Nuntius"
+  url: "https://medium.com/@roysegall/electron-open-with-for-mac-osx-f215a1fe2ce1"
+  date: "June 01, 2017"
+  source: "Gizra"
+  intro: "
+  So what is a bot? If you’ve ever said Hey Siri, OK Google, Hey Cortona, or Alexa, then you have interacted with a bot.
+  That bot received an input, returned an output - it woke you up, reminded you of something, sent an email, or ordered
+  a new book from Amazon - and you if you’re lucky, a drone delivered it!
+  "
+
+- title: "Let’s Talk about Decoupled Authentication"
+  url: "https://www.gizra.com/content/restful-access-token"
+  date: "October 27, 2016"
+  source: "Gizra"
+  intro: "
+  For a traditional Drupal site, we don’t need to handle authentication, because Drupal has our back - a user submits
+  the login form, gets a cookie, and starts using the awesome site. But what about decoupled sites? How can we
+  authenticate the user?
+  "
+
+- title: "Drupal 8: Migrate Nodes with Attachments Easily"
+  url: "https://www.gizra.com/content/drupal-8-attachment-migration/"
+  date: "June 08, 2016"
+  source: "Gizra"
+  intro: "
+  Drupal-8-manina is at its highest. Modules are being ported, blog posts are being written, and new sites are being
+  coded, so we in Gizra decided to join the party.
+
+  We started with a simple site that will replace an existing static site. But we needed to migrate node attachments,
+  and we just couldn’t find an existing solution. Well, it was time to reach out to the community
+  "
+
+- title: "Drupal, Hippies and Backend Restrictions"
+  url: "https://www.gizra.com/content/apps-entity-restrictions/"
+  date: "January 17, 2016"
+  source: "Gizra"
+  intro: "
+  You might have heard of Burning Man. Basically it’s a lot of hippies settling down in the desert for a few days,
+  setting up small camps with different themes that make up a big, temporary city.
+
+  It’s not for me.
+  "
