@@ -47,6 +47,18 @@
                         </div>
                     </section>
 
+                    <section class="blog-posts">
+                        <h3>Blog posts</h3>
+                        Here you read various blog posts I wrote over the years: From my time at Gizra, and my blog
+                        posts at Medium.com
+
+                        <div class="col-12 col-md-12 wrapper">
+                            {{ range .Site.Data.blogs }}
+                                {{ partial "blog-posts" (dict "blogPost" . "site" .Site) }}
+                            {{ end }}
+                        </div>
+                    </section>
+
                     <section class="latest-projects">
                         <h3>Latest projects</h3>
 
@@ -67,30 +79,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            {{end}}
-                        </div>
-
-                    </section>
-
-                    <section class="latest-photos">
-                        <h3>Random photos</h3>
-
-                        <p>Here you can find my latest photos I took. You can see more photos in <a href="/photos">here</a>.</p>
-
-                        <div class="row">
-
-                            {{ range $index, $element := (first 9 (shuffle .Site.Data.photos)) }}
-                            <div class="col-md-4">
-                                {{ $picture := resources.Get (printf "images/photos/%s" $element.picture) }}
-
-                                {{ $image := $picture.Resize "1500x q50" }}
-
-                                {{ if mod $index 2 }}
-                                    <img src="{{$image.Permalink}}" class="img-fluid odd" title="{{$element.description}}" />
-                                {{ else }}
-                                    <img src="{{$image.Permalink}}" class="img-fluid even" title="{{$element.description}}" />
-                                {{ end }}
-                            </div>
                             {{end}}
                         </div>
 
