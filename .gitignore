@@ -1,3 +1,6 @@
 .idea
 resources
-
+.cache
+.temp
+.DS_Store
+node_modules
