@@ -1,21 +1,21 @@
 <template>
     <Layout>
-        <IntroductionOfRoy/>
-        <AboutRoy/>
-        <RoyJobs/>
+        <Introduction/>
+        <About/>
+        <Jobs/>
     </Layout>
 </template>
 
 <script>
-  import IntroductionOfRoy from "~/components/IntroductionOfRoy.vue"
-  import AboutRoy from "~/components/AboutRoy.vue"
-  import RoyJobs from "~/components/RoyJobs.vue"
+  import Introduction from "~/components/Introduction.vue"
+  import About from "~/components/About.vue"
+  import Jobs from "~/components/Jobs.vue"
 
   export default {
     components: {
-      IntroductionOfRoy,
-      AboutRoy,
-      RoyJobs
+      Introduction,
+      About,
+      Jobs
     }
   }
 </script>

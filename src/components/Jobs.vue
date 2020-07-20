@@ -11,13 +11,13 @@
 
 <script>
   import jobs from '@/data/jobs.yml'
-  import Job from './RoyJobs/Job';
+  import Job from './Jobs/Job';
 
   export default {
     components: {
       Job
     },
-    name: 'RoyJobs',
+    name: 'Jobs',
     data() {
       return {jobs}
     },

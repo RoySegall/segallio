@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'IntroductionOfRoy',
+  name: 'Introduction',
   data () {
     return {
     }

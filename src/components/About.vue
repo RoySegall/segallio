@@ -24,9 +24,9 @@
 </template>
 
 <script>
-  import SuperPowers from './about/SuperPowers';
-  import Story from './about/Story';
-  import Social from './about/Social';
+  import SuperPowers from './About/SuperPowers';
+  import Story from './About/Story';
+  import Social from './About/Social';
 
   export default {
     components: {
@@ -34,7 +34,7 @@
       Story,
       Social
     },
-    name: 'AboutRoy',
+    name: 'About',
     data() {
       return {}
     },
