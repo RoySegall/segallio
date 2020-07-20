@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-screen pl-32 pr-32 pt-10 text-center about-me">
+    <div class="h-screen w-screen pl-32 pr-32 pt-10 text-left about-me">
         <h2 class="text-3xl mb-4"><b>Who am I?</b></h2>
         <hr/>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-screen pl-32 pr-32 pt-10 text-center jobs">
+    <div class="w-screen pl-32 pr-32 pt-10 text-left jobs">
         <h2 class="text-3xl mb-4"><b>Professional experience</b></h2>
         <hr/>
 
