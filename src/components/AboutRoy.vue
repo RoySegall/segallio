@@ -1,16 +1,22 @@
 <template>
     <div class="h-screen w-screen pl-32 pr-32 pt-10 text-center about-me">
         <h2 class="text-3xl mb-4"><b>Who am I?</b></h2>
-        <hr />
+        <hr/>
 
         <div class="grid grid-cols-6 pt-6">
             <div class="col-span-1">
-                <g-image class="pr-4" src="~/assets/images/profile.jpg" fit="contain"/>
+                <g-image class="profile-pic" src="~/assets/images/profile.jpg" fit="contain"/>
+
+                <Social />
             </div>
-            <div class="col-span-5">
+            <div class="ml-4 col-span-5">
                 <div class="grid grid-cols-6">
-                    <div class="col-span-4 text-left"><Story /></div>
-                    <div class="col-span-2 text-right"><SuperPowers /></div>
+                    <div class="col-span-4 text-left">
+                        <Story/>
+                    </div>
+                    <div class="col-span-2 text-right">
+                        <SuperPowers/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -18,25 +24,32 @@
 </template>
 
 <script>
-    import SuperPowers from './about/SuperPowers';
-    import Story from './about/Story';
-export default {
+  import SuperPowers from './about/SuperPowers';
+  import Story from './about/Story';
+  import Social from './about/Social';
+
+  export default {
     components: {
       SuperPowers,
-      Story
+      Story,
+      Social
     },
-  name: 'AboutRoy',
-  data () {
-    return {
-    }
-  },
-}
+    name: 'AboutRoy',
+    data() {
+      return {}
+    },
+  }
 </script>
 
 <style lang="scss">
+
+    .profile-pic {
+        border: solid 1px #f7b75e;
+    }
+
     .about-me {
         hr {
-            border-bottom: solid 1px black;
+            border-bottom: solid 1px #f7b75e;
         }
     }
 </style>
