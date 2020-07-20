@@ -29,6 +29,9 @@
 
   export default {
     name: 'Blogs',
+    created() {
+      this.blogs = blogs.splice(0, 3);
+    },
     data() {
       return {blogs}
     },

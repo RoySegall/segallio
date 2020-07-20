@@ -1,11 +1,9 @@
 <template>
-    <div class="w-screen section jobs">
+    <div class="h-screen w-screen section jobs">
         <h2 class="text-3xl mb-4"><b>Professional experience</b></h2>
         <hr/>
 
-        <div v-for="job in jobs" class="pt-10">
-            <Job v-bind:job=job />
-        </div>
+        <Job v-bind:job=jobs[0] class="pt-10" />
     </div>
 </template>
 
