@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-screen pl-32 pr-32 pt-10 text-left blogs">
+    <div class="h-screen w-screen section blogs">
         <h2 class="text-3xl"><b>Recent blog posts</b></h2>
         <p class="text-xl pt-2 pb-2">Here you read various blog posts I wrote over the years: From my time at Gizra, and my blog posts at Medium.com</p>
 

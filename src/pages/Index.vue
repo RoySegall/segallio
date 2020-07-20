@@ -22,3 +22,12 @@
     }
   }
 </script>
+
+<style lang="scss">
+
+    .section {
+        padding-left: 10rem;
+        padding-right: 8rem;
+        text-align: left;
+    }
+</style>

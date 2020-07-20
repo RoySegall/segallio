@@ -1,5 +1,6 @@
 <template>
-    <div class="h-screen w-screen pl-32 pr-32 pt-10 text-left about-me">
+    <div class="h-screen w-screen section about-me">
+        <SideMenu/>
         <h2 class="text-3xl mb-4"><b>Who am I?</b></h2>
         <hr/>
 
@@ -27,12 +28,14 @@
   import SuperPowers from './About/SuperPowers';
   import Story from './About/Story';
   import Social from './About/Social';
+  import SideMenu from "~/components/SideMenu.vue"
 
   export default {
     components: {
       SuperPowers,
       Story,
-      Social
+      Social,
+      SideMenu,
     },
     name: 'About',
     data() {
