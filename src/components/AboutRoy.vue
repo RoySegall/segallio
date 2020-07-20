@@ -4,21 +4,30 @@
         <hr />
 
         <div class="grid grid-cols-6 pt-6">
-            <div class="col-span-2">
+            <div class="col-span-1">
                 <g-image class="pr-4" src="~/assets/images/profile.jpg" fit="contain"/>
             </div>
-            <div class="col-span-4 text-left">{{superpowers}}</div>
+            <div class="col-span-5">
+                <div class="grid grid-cols-6">
+                    <div class="col-span-4 text-left"><Story /></div>
+                    <div class="col-span-2 text-right"><SuperPowers /></div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-  import superpowers from '@/data/superpowers.yaml'
+    import SuperPowers from './about/SuperPowers';
+    import Story from './about/Story';
 export default {
-  name: 'RoysSuperPowers',
+    components: {
+      SuperPowers,
+      Story
+    },
+  name: 'AboutRoy',
   data () {
     return {
-      superpowers
     }
   },
 }

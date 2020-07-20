@@ -1,18 +1,18 @@
 <template>
     <Layout>
         <IntroductionOfRoy />
-        <RoysSuperPowers />
+        <AboutRoy />
     </Layout>
 </template>
 
 <script>
   import IntroductionOfRoy from "~/components/IntroductionOfRoy.vue"
-  import RoysSuperPowers from "~/components/RoysSuperPowers.vue"
+  import AboutRoy from "~/components/AboutRoy.vue"
 
   export default {
     components: {
       IntroductionOfRoy,
-      RoysSuperPowers
+      AboutRoy
     }
   }
 </script>
