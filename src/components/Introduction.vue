@@ -1,7 +1,12 @@
 <template>
-    <div class="grid justify-center content-center flex-wrap h-screen w-screen p-8">
-        <div class="text-6xl mb-6"><h1>Hello, I'm Roy Segall</h1></div>
-        <div class="text-4xl">Enthusiastic, self-learned, highly motivated, love to explore new technologies and contributing to open-source projects</div>
+    <div class="text-center pt-32 h-screen w-screen">
+        <h1 class="text-6xl">Hello, I'm Roy Segall</h1>
+
+        <p class="text-5xl pt-20">Enthusiastic, self-learned, highly motivated, love to explore new technologies</p>
+        <p class="text-5xl">and contributing to open-source projects.</p>
+
+        <g-image src="~/assets/images/funnyProfilePicture.png" class="m-auto pt-20" width="600"/>
+
     </div>
 </template>
 
