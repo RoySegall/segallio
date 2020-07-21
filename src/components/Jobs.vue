@@ -1,10 +1,16 @@
 <template>
-    <div class="h-screen w-screen section jobs">
-        <h2 class="text-3xl mb-6"><b>Professional experience</b></h2>
-        <hr/>
+    <div class="jobs">
+        <section class="main w-screen text-center">
+            <h2 class="text-4xl font-bold pb-4 text-white">Jobs</h2>
 
-        <Job v-bind:job=jobs[0] class="pt-20" />
+            <div class="job">
+                asdasd
+            </div>
+        </section>
+
+        <section class="filler"></section>
     </div>
+
 </template>
 
 <script>
@@ -25,8 +31,30 @@
 <style lang="scss">
 
     .jobs {
-        hr {
-            border-bottom: solid 1px #6bcff1;
+        width: 100vw;
+
+        .main {
+            height: 50vh;
+            background: #efb15e;
+            padding-top: 2em;
+
+            .job {
+
+                background-color: white;
+                border-radius: 6px;
+                color: #141c3a;
+                display: block;
+                padding: 1.25rem;
+                min-height: 75vh;
+                width: 100vh;
+                border: solid 2px #e6ab5d;
+                margin: 0 auto;
+            }
+        }
+
+        .filler {
+            height: 50vh;
         }
     }
+
 </style>

@@ -3,7 +3,7 @@
         <SideMenu/>
 
         <section class="text w-screen text-white text-center">
-            <h2 class="text-4xl font-bold pb-4">About me</h2>
+            <h2 class="text-4xl font-bold pb-4 mt-24">About me</h2>
 
             <p class="text-2xl w-3/4 m-auto pb-4">
                 Since I remember my self I know that I love to explore. Every time something electrical went down,
@@ -35,14 +35,13 @@
 <script>
   import SuperPowers from './About/SuperPowers';
   import Story from './About/Story';
-  import Social from './About/Social';
+
   import SideMenu from "~/components/SideMenu.vue"
 
   export default {
     components: {
       SuperPowers,
       Story,
-      Social,
       SideMenu,
     },
     name: 'About',

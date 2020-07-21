@@ -44,6 +44,7 @@
             position: absolute;
             top: 2em;
             left: 1vh;
+            width: 0;
 
             .side-menu-icon {
                 font-size: 2.5em;
@@ -53,7 +54,6 @@
             &.sticky {
                 position: fixed;
                 top: 0;
-                width: 100%;
 
                 ul {
                     padding-top: 1em;
