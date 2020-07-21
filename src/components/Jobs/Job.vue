@@ -29,7 +29,7 @@
 <style lang="scss">
 
     .job {
-        border-bottom: solid 1px #6bcff1;
+
 
         @media only screen and (max-width: 600px) {
             img {

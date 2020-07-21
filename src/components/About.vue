@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen w-screen section about-me">
         <SideMenu/>
-        <h2 class="text-3xl mb-4"><b>Who am I?</b></h2>
+        <h2 class="text-3xl mb-6"><b>Who am I?</b></h2>
         <hr/>
 
         <div class="grid grid-cols-6 pt-6">

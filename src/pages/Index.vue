@@ -4,6 +4,7 @@
         <About/>
         <Jobs/>
         <Blogs/>
+        <RecentProjects/>
     </Layout>
 </template>
 
@@ -12,6 +13,7 @@
   import About from "~/components/About.vue"
   import Jobs from "~/components/Jobs.vue"
   import Blogs from "~/components/Blogs.vue"
+  import RecentProjects from "~/components/RecentProjects.vue"
 
   export default {
     components: {
@@ -19,6 +21,7 @@
       About,
       Jobs,
       Blogs,
+      RecentProjects,
     }
   }
 </script>

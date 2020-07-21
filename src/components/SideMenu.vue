@@ -1,9 +1,10 @@
 <template>
     <div class="side-menu">
         <ul>
-            <li><font-awesome-icon class="side-menu-icon" icon="user-circle"/></li>
-            <li><font-awesome-icon class="side-menu-icon" icon="laptop-code"/></li>
-            <li><font-awesome-icon class="side-menu-icon" icon="book-reader"/></li>
+            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'user-circle']" /></li>
+            <li><font-awesome-icon class="side-menu-icon" :icon="['fal', 'laptop-code']"/></li>
+            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'book-reader']"/></li>
+            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'brackets-curly']" /></li>
         </ul>
     </div>
 </template>

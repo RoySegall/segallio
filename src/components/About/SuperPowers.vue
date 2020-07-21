@@ -1,9 +1,9 @@
 <template>
     <ul>
         <li v-for="superpower in superpowers" class="text-right pt-2">
-            <span class="pr-3">{{superpower['name']}}</span>
-            <font-awesome-icon class="star full ml-1" v-for="i in superpower['level']" icon="star"/>
-            <font-awesome-icon class="star empty ml-1" v-for="i in 5 - superpower['level']" icon="star"/>
+            <span class="pr-3 text-xl">{{superpower['name']}}</span>
+            <font-awesome-icon class="star full ml-1 text-xl" v-for="i in superpower['level']" :icon="['fas', 'star']"/>
+            <font-awesome-icon class="star empty ml-1 text-xl" v-for="i in 5 - superpower['level']" :icon="['fal', 'star']"/>
         </li>
     </ul>
 </template>
