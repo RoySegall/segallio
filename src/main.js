@@ -21,6 +21,12 @@ library.add(faBookReader)
 library.add(faBracketsCurly)
 
 export default function (Vue, { router, head, isClient }) {
+
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap'
+  })
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('font-awesome-icon', FontAwesomeIcon)
