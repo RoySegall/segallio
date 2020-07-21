@@ -42,7 +42,7 @@
 
         .side-menu {
             position: absolute;
-            top: 0;
+            top: 2em;
             left: 1vh;
 
             .side-menu-icon {
