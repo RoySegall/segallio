@@ -3,8 +3,8 @@
         <section class="main w-screen text-center">
             <h2 class="text-4xl font-bold pb-4 text-white">Jobs</h2>
 
-            <div class="job">
-                asdasd
+            <div class="job flex items-center">
+                <Job v-bind:job=jobs[0] />
             </div>
         </section>
 
@@ -39,16 +39,17 @@
             padding-top: 2em;
 
             .job {
-
                 background-color: white;
                 border-radius: 6px;
                 color: #141c3a;
-                display: block;
+                /*display: block;*/
                 padding: 1.25rem;
-                min-height: 75vh;
+                min-height: 60vh;
                 width: 100vh;
                 border: solid 2px #e6ab5d;
                 margin: 0 auto;
+                margin-top: 2em;
+
             }
         }
 

@@ -1,15 +1,13 @@
 <template>
-    <div class="job grid grid-cols-6 mb-6 pb-10 text-left">
-        <div :class=job.class class="col-span-1">
-            <g-image :src=getImagePath(job) fit="contain"/>
+    <div class="job-display">
+        <g-image :src=getImagePath(job) width="200" class="logo m-auto mt-4" />
+        <div class="m-auto flex items-center justify-center pt-4">
+            <font-awesome-icon class="arrow text-3xl mr-2" :icon="['fad', 'chevron-left']" />
+            <h2 class="text-2xl font-bold">{{job.name}}, {{job.years}} - {{job.position}}</h2>
+            <font-awesome-icon class="arrow text-3xl ml-2" :icon="['fad', 'chevron-right']" />
         </div>
 
-        <div class="col-span-5 info align-left text-xl ml-10">
-            <span class="font-bold">{{job.years}}</span>;
-            <span class="font-bold">{{job.name}}</span>,
-            <span class="font-bold">{{job.position}}</span>. <span
-                class="description leading-9">{{job.description}}</span>
-        </div>
+        <p class="pt-10 w-5/6 m-auto leading-loose">{{job.description}}</p>
     </div>
 
 </template>
@@ -28,39 +26,10 @@
 
 <style lang="scss">
 
-    .job {
+    .job-display {
 
-
-        @media only screen and (max-width: 600px) {
-            img {
-                margin-bottom: .25em;
-            }
-
-            .dreamed-diabetes {
-
-                img {
-                    max-width: 30%;
-                }
-            }
-
-            .taliaz {
-
-                img {
-                    max-width: 60%;
-                }
-            }
-
-            .rc {
-                img {
-                    max-width: 30%;
-                }
-            }
-
-            .gizra {
-                img {
-                    max-width: 50%;
-                }
-            }
+        .logo {
+            max-height: 10vh;
         }
     }
 </style>

@@ -40,7 +40,7 @@
         .about-me {
             background: #69c8e8;
             color: white;
-            height: 25vh;
+            min-height: 25vh;
         }
     }
 
