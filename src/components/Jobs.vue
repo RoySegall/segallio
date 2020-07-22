@@ -4,7 +4,7 @@
             <h2 class="text-4xl font-bold pb-4 text-white">Jobs</h2>
 
             <div class="job flex items-center">
-                <Job v-bind:job=jobs[0] />
+                <Job @switch-job="switchJob" v-bind:job=jobs[index] />
             </div>
         </section>
 
@@ -22,8 +22,31 @@
       Job
     },
     name: 'Jobs',
+    methods: {
+      switchJob: function (position) {
+
+        if (position === 'prev') {
+          if (this.index === this.jobs.length -1) {
+            return;
+          }
+
+          this.index = this.index + 1;
+
+        } else {
+
+          if (this.index === 0) {
+            return;
+          }
+
+          this.index = this.index - 1;
+        }
+      }
+    },
     data() {
-      return {jobs}
+      return {
+        jobs,
+        index: 0,
+      }
     },
   }
 </script>
