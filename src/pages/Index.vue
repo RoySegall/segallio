@@ -3,7 +3,7 @@
         <Introduction/>
         <About/>
         <Jobs/>
-<!--        <Blogs/>-->
+        <Blogs/>
 <!--        <RecentProjects/>-->
     </Layout>
 </template>

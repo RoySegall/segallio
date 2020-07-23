@@ -4,7 +4,7 @@
             <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'user-circle']" /></li>
             <li><font-awesome-icon class="side-menu-icon" :icon="['fal', 'laptop-code']"/></li>
             <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'book-reader']"/></li>
-            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'brackets-curly']" /></li>
+            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'map-marked']" /></li>
         </ul>
     </div>
 </template>

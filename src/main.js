@@ -7,12 +7,12 @@ import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faTwitterSquare, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faLaptopCode, faStar as faStarLight } from '@fortawesome/pro-light-svg-icons'
-import { faBracketsCurly, faBookReader, faUserCircle, faChevronLeft, faChevronRight } from '@fortawesome/pro-duotone-svg-icons'
+import { faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight } from '@fortawesome/pro-duotone-svg-icons'
 
 
 const icons = [
   faStarSolid, faStarLight, faFacebookSquare, faTwitterSquare, faGithub, faLinkedin, faUserCircle, faLaptopCode,
-  faBookReader, faBracketsCurly, faChevronLeft, faChevronRight
+  faBookReader, faMapMarked, faChevronLeft, faChevronRight
 ];
 
 icons.map((item) => {

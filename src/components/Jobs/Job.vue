@@ -37,7 +37,8 @@
     .job-display {
 
         .logo {
-            max-height: 10vh;
+            margin-top: 7vh;
+            height: 7vh;
         }
 
         .arrow {
