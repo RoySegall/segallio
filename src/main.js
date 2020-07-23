@@ -2,17 +2,19 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
-import { library,  } from '@fortawesome/fontawesome-svg-core'
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookSquare, faTwitterSquare, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faTwitter, faGithubAlt, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLaptopCode, faStar as faStarLight } from '@fortawesome/pro-light-svg-icons'
-import { faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight } from '@fortawesome/pro-duotone-svg-icons'
+import { faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight } from '@fortawesome/pro-duotone-svg-icons'
 
 
 const icons = [
-  faStarSolid, faStarLight, faFacebookSquare, faTwitterSquare, faGithub, faLinkedin, faUserCircle, faLaptopCode,
-  faBookReader, faMapMarked, faChevronLeft, faChevronRight
+  faStarSolid, faStarLight, faFacebookF, faTwitter, faGithubAlt, faLinkedinIn, faUserCircle, faLaptopCode,
+  faBookReader, faMapMarked, faChevronLeft, faChevronRight, faInstagram, faQuoteLeft, faQuoteRight
 ];
 
 icons.map((item) => {

@@ -1,17 +1,10 @@
 <template>
     <ul class="flex justify-center m-2 icons">
-        <li class="pl-3 pr-8"><a href="https://www.facebook.com/RoySegall" target="_blank">
-            <font-awesome-icon class="icon text-4xl" :icon="{ prefix: 'fab', iconName: 'facebook-square' }"/>
-        </a></li>
-        <li class="pr-8"><a href="https://www.twitter.com/RoySegall" target="_blank">
-            <font-awesome-icon class="icon text-4xl" :icon="{ prefix: 'fab', iconName: 'twitter-square' }"/>
-        </a></li>
-        <li class="pr-8"><a href="https://www.github.com/RoySegall" target="_blank">
-            <font-awesome-icon class="icon text-4xl" :icon="{ prefix: 'fab', iconName: 'github' }"/>
-        </a></li>
-        <li><a href="https://www.linkedin.com/in/roysegall" target="_blank">
-            <font-awesome-icon class="icon text-4xl" :icon="{ prefix: 'fab', iconName: 'linkedin' }"/>
-        </a></li>
+        <li class="pl-3 pr-8" v-for="icon in icons">
+            <a v-bind:href=icon.url target="_blank">
+                <font-awesome-icon class="icon text-4xl" :icon="{ prefix: icon.prefix, iconName: icon.iconName }"/>
+            </a>
+        </li>
     </ul>
 </template>
 
@@ -19,7 +12,15 @@
   export default {
     name: 'Social',
     data() {
-      return {}
+      return {
+        icons: [
+          {url: 'https://www.facebook.com/RoySegall', prefix: 'fab', iconName: 'facebook-f'},
+          {url: 'https://www.instagram.com/roysegall/', prefix: 'fab', iconName: 'instagram'},
+          {url: 'https://www.twitter.com/RoySegall/', prefix: 'fab', iconName: 'twitter'},
+          {url: 'https://www.github.com/RoySegall/', prefix: 'fab', iconName: 'github-alt'},
+          {url: 'https://www.linkedin.com/in/roysegall/', prefix: 'fab', iconName: 'linkedin-in'},
+        ]
+      }
     },
   }
 </script>
