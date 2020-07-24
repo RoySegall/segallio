@@ -33,4 +33,16 @@
     padding-right: 8rem;
     text-align: left;
   }
+
+  .text-to-read {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  .title-for-text {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: bold;
+    letter-spacing: .5em;
+    font-size: 2.5em;
+  }
 </style>

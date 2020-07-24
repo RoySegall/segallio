@@ -1,7 +1,7 @@
 <template>
   <div class="jobs">
     <section class="main w-screen text-center">
-      <h2 class="text-4xl font-bold pb-4 text-white">Jobs</h2>
+      <h2 class="text-4xl font-bold pb-4 text-white title-for-text">Jobs</h2>
 
       <Job class="job" @switch-job="switchJob" v-bind:job=jobs[index] />
     </section>

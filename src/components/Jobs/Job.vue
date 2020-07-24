@@ -1,5 +1,5 @@
 <template>
-  <div class="job-display">
+  <div class="job-display text-to-read">
     <g-image :src=getImagePath(job) width="200" class="logo m-auto"/>
 
     <div class="m-auto flex items-center justify-center pt-10 pb-4">

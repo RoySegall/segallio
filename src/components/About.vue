@@ -34,11 +34,11 @@
     }
 
     section {
-      padding-top: 2em;
       min-height: 50vh;
     }
 
     .filler {
+      padding-top: 2em;
       min-height: 50vh;
     }
   }
