@@ -5,6 +5,7 @@
     <Jobs/>
     <Blogs/>
     <Map/>
+    <Footer />
   </Layout>
 </template>
 
@@ -14,6 +15,7 @@
   import Jobs from "~/components/Jobs.vue"
   import Blogs from "~/components/Blogs.vue"
   import Map from "~/components/Map.vue"
+  import Footer from "~/components/Footer.vue"
 
   export default {
     components: {
@@ -22,6 +24,7 @@
       Jobs,
       Blogs,
       Map,
+      Footer
     }
   }
 </script>
