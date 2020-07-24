@@ -1,0 +1,7 @@
+- title: "DrupalCon Dublin"
+  description: "Bar!"
+  image: "dublin2016.jpeg"
+  year: 2016
+  geo:
+    - 47.313220
+    - -1.319482

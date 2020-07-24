@@ -53,4 +53,12 @@
     font-family: 'Caveat', cursive;
   }
 
+  .leaflet-map-pane {
+    z-index: 2 !important;
+  }
+
+  .leaflet-google-layer {
+    z-index: 1 !important;
+  }
+
 </style>

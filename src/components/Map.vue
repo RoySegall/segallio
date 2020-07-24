@@ -1,41 +1,37 @@
 <template>
 
-  <div  class="m-auto w-screen h-screen">
-    <div style="height: 500px; width: 75vw" class="pt-10 m-auto">
-      <l-map
-        v-if="showMap"
-        :zoom="zoom"
-        :center="center"
-        :options="mapOptions"
-        style="height: 80%"
-        @update:center="centerUpdate"
-        @update:zoom="zoomUpdate"
-      >
-        <l-tile-layer :url="url" :attribution="attribution"  />
-        <l-marker :lat-lng="withPopup">
-          <l-popup>
-            <div @click="innerClick">
-              I am a popup
-            </div>
-          </l-popup>
-        </l-marker>
-        <l-marker :lat-lng="withTooltip">
-          <l-tooltip :options="{ permanent: true, interactive: true }">
-            <div @click="innerClick">
-              I am a tooltip
-            </div>
-          </l-tooltip>
-        </l-marker>
-      </l-map>
-    </div>
+  <div class="w-screen h-screen m-auto map text-center">
 
+    <h2 class="text-4xl font-bold pb-4 title-for-text">Conferences I visited</h2>
+    <l-map class="displayed-map" :zoom="zoom" :center="center">
+      <l-tile-layer :url="url"></l-tile-layer>
+
+      <l-marker class="place" v-for="place in places" v-bind:lat-lng=place.geo>
+
+        <l-icon>
+          <font-awesome-icon class="text-4xl icon" :icon="['fas', 'map-marker-alt']"/>
+        </l-icon>
+
+      </l-marker>
+    </l-map>
+
+    <div class="m-auto w-3/4 text-left pt-10 grid grid-cols-12 text-to-read flex items-center items-stretch" v-if="selectedPlace !== null">
+      <div class="col-span-3 text-center ">
+        <g-image class="pb-2" :src="require(`!!assets-loader!@images/${places[selectedPlace].image}`)"  />
+
+        <span class="hand-writing text-3xl">{{places[selectedPlace].title}}, {{places[selectedPlace].year}}</span>
+      </div>
+      <div class="pl-4 col-span-3">
+        <p v-html=places[selectedPlace].description></p>
+      </div>
+    </div>
   </div>
 
 </template>
 
 <script>
-  import { latLng } from "leaflet";
-  import { LMap, LTileLayer, LMarker, LPopup, LTooltip } from "vue2-leaflet";
+  import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
+  import places from '@/data/places.yml'
 
   export default {
     name: "Map",
@@ -43,44 +39,35 @@
       LMap,
       LTileLayer,
       LMarker,
-      LPopup,
-      LTooltip
+      LIcon
     },
-    data() {
+    data () {
       return {
-        zoom: 13,
-        center: latLng(47.41322, -1.219482),
+        places,
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-        attribution:
-          '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-        withPopup: latLng(47.41322, -1.219482),
-        withTooltip: latLng(47.41422, -1.250482),
-        currentZoom: 11.5,
-        currentCenter: latLng(47.41322, -1.219482),
-        showParagraph: false,
-        mapOptions: {
-          zoomSnap: 0.5
-        },
-        showMap: true
+        zoom: 5,
+        center: [47.313220, 15.319482],
+        selectedPlace: 0
       };
-    },
-    methods: {
-      zoomUpdate(zoom) {
-        this.currentZoom = zoom;
-      },
-      centerUpdate(center) {
-        this.currentCenter = center;
-      },
-      showLongText() {
-        this.showParagraph = !this.showParagraph;
-      },
-      innerClick() {
-        alert("Click!");
-      }
     }
   }
 </script>
 
-<style>
+<style lang="scss">
+
+  .map {
+    min-height: 100vh;
+
+    .displayed-map {
+      height: 50vh;
+      width: 75vw;
+      margin: 0 auto;
+    }
+
+
+      .icon {
+        color: #e6ab5d;
+      }
+  }
 
 </style>

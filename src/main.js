@@ -6,7 +6,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-import {faStar as faStarSolid, faThumbtack, faHeart} from '@fortawesome/free-solid-svg-icons'
+import {faStar as faStarSolid, faThumbtack, faHeart, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 
 import {
   faFacebookF,
@@ -24,14 +24,15 @@ import {
 import {
   faMapMarked,
   faBookReader,
-  faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight
+  faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight, faMapPin, faMapMarker
 } from '@fortawesome/pro-duotone-svg-icons'
 
 
 const icons = [
   faStarSolid, faStarLight, faFacebookF, faTwitter, faGithubAlt, faLinkedinIn,
   faUserCircle, faLaptopCode, faBookReader, faMapMarked, faChevronLeft,
-  faChevronRight, faInstagram, faQuoteLeft, faQuoteRight, faThumbtack, faHeart
+  faChevronRight, faInstagram, faQuoteLeft, faQuoteRight, faThumbtack, faHeart,
+  faMapPin, faMapMarkerAlt
 ];
 
 import {LMap, LTileLayer, LMarker} from 'vue2-leaflet';
