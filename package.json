@@ -18,7 +18,9 @@
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "@gridsome/source-filesystem": "^0.6.2",
     "gridsome": "^0.7.0",
-    "gridsome-plugin-sass-resources-loader": "0.0.3"
+    "gridsome-plugin-sass-resources-loader": "0.0.3",
+    "leaflet": "^1.6.0",
+    "vue2-leaflet": "^2.5.2"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^3.0.1",

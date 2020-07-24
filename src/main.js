@@ -3,13 +3,13 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faTwitter, faGithubAlt, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faLaptopCode, faStar as faStarLight } from '@fortawesome/pro-light-svg-icons'
-import { faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight } from '@fortawesome/pro-duotone-svg-icons'
+import {faStar as faStarSolid} from '@fortawesome/free-solid-svg-icons'
+import {faFacebookF, faTwitter, faGithubAlt, faLinkedinIn, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import {faLaptopCode, faStar as faStarLight} from '@fortawesome/pro-light-svg-icons'
+import {faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight} from '@fortawesome/pro-duotone-svg-icons'
 
 
 const icons = [
@@ -17,11 +17,14 @@ const icons = [
   faBookReader, faMapMarked, faChevronLeft, faChevronRight, faInstagram, faQuoteLeft, faQuoteRight
 ];
 
+import {LMap, LTileLayer, LMarker} from 'vue2-leaflet';
+import 'leaflet/dist/leaflet.css';
+
 icons.map((item) => {
   library.add(item)
 });
 
-export default function (Vue, { router, head, isClient }) {
+export default function (Vue, {router, head, isClient}) {
 
   head.link.push({
     rel: 'stylesheet',
@@ -29,6 +32,9 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
-  Vue.component('font-awesome-icon', FontAwesomeIcon)
+  Vue.component('Layout', DefaultLayout);
+  Vue.component('font-awesome-icon', FontAwesomeIcon);
+  Vue.component('l-map', LMap);
+  Vue.component('l-tile-layer', LTileLayer);
+  Vue.component('l-marker', LMarker);
 }

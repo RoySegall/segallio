@@ -1,27 +1,35 @@
 <template>
-    <div class="side-menu">
-        <ul>
-            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'user-circle']" /></li>
-            <li><font-awesome-icon class="side-menu-icon" :icon="['fal', 'laptop-code']"/></li>
-            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'book-reader']"/></li>
-            <li><font-awesome-icon class="side-menu-icon" :icon="['fad', 'map-marked']" /></li>
-        </ul>
-    </div>
+  <div class="side-menu">
+    <ul>
+      <li>
+        <font-awesome-icon class="side-menu-icon" :icon="['fad', 'user-circle']"/>
+      </li>
+      <li>
+        <font-awesome-icon class="side-menu-icon" :icon="['fal', 'laptop-code']"/>
+      </li>
+      <li>
+        <font-awesome-icon class="side-menu-icon" :icon="['fad', 'book-reader']"/>
+      </li>
+      <li>
+        <font-awesome-icon class="side-menu-icon"  :icon="['fad', 'map-marked']"/>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
   export default {
     name: "SideMenu",
 
-    created () {
+    created() {
       window.addEventListener('scroll', this.handleScroll);
     },
-    destroyed () {
+    destroyed() {
       window.removeEventListener('scroll', this.handleScroll);
     },
 
     methods: {
-      handleScroll (event) {
+      handleScroll(event) {
         let aboutMe = document.querySelector(".about-me");
         let sideMenu = document.querySelector(".side-menu");
 
@@ -37,28 +45,28 @@
 
 <style lang="scss">
 
-    .about-me {
-        position: relative;
+  .about-me {
+    position: relative;
 
-        .side-menu {
-            position: absolute;
-            top: 2em;
-            left: 1vh;
-            width: 0;
+    .side-menu {
+      position: absolute;
+      top: 2em;
+      left: 1vh;
+      width: 0;
 
-            .side-menu-icon {
-                font-size: 2.5em;
-                margin-bottom: 3em;
-            }
+      .side-menu-icon {
+        font-size: 2.5em;
+        margin-bottom: 3em;
+      }
 
-            &.sticky {
-                position: fixed;
-                top: 0;
+      &.sticky {
+        position: fixed;
+        top: 0;
 
-                ul {
-                    padding-top: 1em;
-                }
-            }
+        ul {
+          padding-top: 1em;
         }
+      }
     }
+  }
 </style>

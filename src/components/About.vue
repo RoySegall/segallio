@@ -1,9 +1,9 @@
 <template>
-    <div class="about-me">
-        <SideMenu/>
-        <Story/>
-        <SuperPowers/>
-    </div>
+  <div class="about-me">
+    <SideMenu/>
+    <Story/>
+    <SuperPowers/>
+  </div>
 </template>
 
 <script>
@@ -27,19 +27,19 @@
 
 <style lang="scss">
 
-    .about-me {
+  .about-me {
 
-        .text {
-            background: #69c8e8;
-        }
-
-        section {
-            padding-top: 2em;
-            min-height: 50vh;
-        }
-
-        .filler {
-            min-height: 50vh;
-        }
+    .text {
+      background: #69c8e8;
     }
+
+    section {
+      padding-top: 2em;
+      min-height: 50vh;
+    }
+
+    .filler {
+      min-height: 50vh;
+    }
+  }
 </style>

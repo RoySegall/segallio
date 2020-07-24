@@ -1,11 +1,11 @@
 <template>
-    <Layout>
-        <Introduction/>
-        <About/>
-        <Jobs/>
-        <Blogs/>
-<!--        <RecentProjects/>-->
-    </Layout>
+  <Layout>
+    <Introduction/>
+    <About/>
+    <Jobs/>
+    <Blogs/>
+    <Map/>
+  </Layout>
 </template>
 
 <script>
@@ -13,7 +13,7 @@
   import About from "~/components/About.vue"
   import Jobs from "~/components/Jobs.vue"
   import Blogs from "~/components/Blogs.vue"
-  import RecentProjects from "~/components/RecentProjects.vue"
+  import Map from "~/components/Map.vue"
 
   export default {
     components: {
@@ -21,16 +21,16 @@
       About,
       Jobs,
       Blogs,
-      RecentProjects,
+      Map,
     }
   }
 </script>
 
 <style lang="scss">
 
-    .section {
-        padding-left: 10rem;
-        padding-right: 8rem;
-        text-align: left;
-    }
+  .section {
+    padding-left: 10rem;
+    padding-right: 8rem;
+    text-align: left;
+  }
 </style>
