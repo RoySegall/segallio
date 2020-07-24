@@ -50,12 +50,22 @@
           The female cat, <em>Tom</em>, is a real lady while <em>Sam</em>,
           the male cat, is a real trouble maker, but in a cute way.
         </p>
+
+        <Pictures/>
       </div>
 
     </div>
 
   </section>
 </template>
+
+<script>
+  import Pictures from "./Pictures";
+  export default {
+    name: 'Story',
+    components: {Pictures}
+  }
+</script>
 
 <style lang="scss">
 

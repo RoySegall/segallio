@@ -23,10 +23,14 @@ module.exports = {
       }
     ]
   },
+  chainWebpack: config => {
+    config.resolve.alias.set('@images', '@/assets/images')
+  },
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss",
     },
+
     // {
     //   use: '@gridsome/source-filesystem',
     //   options: {

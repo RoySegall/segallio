@@ -45,4 +45,9 @@
     letter-spacing: .5em;
     font-size: 2.5em;
   }
+
+  .hand-writing {
+    font-family: 'Caveat', cursive;
+  }
+
 </style>
