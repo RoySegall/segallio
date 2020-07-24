@@ -71,6 +71,15 @@
   It’s not for me.
   "
 
+- title: "simpleTest with Behat for Drupal 8"
+  url: "https://www.gizra.com/content/simpletest-behat-drupal-8/"
+  date: "April 28, 2015"
+  source: "Gizra"
+  intro: "
+  The first time I heard about Behat was at DrupalCon Munich 2012. Since then use of Behat has grown exponentially and
+  the tools it can be integrate with grew as well. With Behat we can test the markup of a page - pretty neat, right?
+  "
+
 - title: "How to deal with colliding aliases"
   url: "https://www.gizra.com/content/how-deal-colliding-aliases/"
   date: "March 01, 2012"
@@ -80,14 +89,4 @@
 
   users/[user:name]/blog – This is a page defined by Panels. It shows a list of latest blog posts
   users/[user:name]/blog/[node:title] – This is the alias of the node that is a blog post. But if you will try to use it, Drupal thinks you refer to the Panels page, and shows you the lastest blog posts, instead of the node
-  "
-
-- title: "Banner rotator"
-  url: "https://www.gizra.com/content/banner-rotator/"
-  date: "February 16, 2012"
-  source: "Gizra"
-  intro: "
-  A common design element we see lately in a lot of sites is a banner rotator - image slideshow with some text and links on the side.
-
-  There are several modules that try to deal with it in Drupal (such as “ddblock”, which we don’t use), however we find that using the good old Views slideshow module can give us everything we need
   "
