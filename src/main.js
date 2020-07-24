@@ -6,15 +6,32 @@ import DefaultLayout from '~/layouts/Default.vue'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-import {faStar as faStarSolid} from '@fortawesome/free-solid-svg-icons'
-import {faFacebookF, faTwitter, faGithubAlt, faLinkedinIn, faInstagram} from '@fortawesome/free-brands-svg-icons'
-import {faLaptopCode, faStar as faStarLight} from '@fortawesome/pro-light-svg-icons'
-import {faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight} from '@fortawesome/pro-duotone-svg-icons'
+import {faStar as faStarSolid, faThumbtack} from '@fortawesome/free-solid-svg-icons'
+
+import {
+  faFacebookF,
+  faTwitter,
+  faGithubAlt,
+  faLinkedinIn,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons'
+
+import {
+  faLaptopCode,
+  faStar as faStarLight
+} from '@fortawesome/pro-light-svg-icons'
+
+import {
+  faMapMarked,
+  faBookReader,
+  faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight
+} from '@fortawesome/pro-duotone-svg-icons'
 
 
 const icons = [
-  faStarSolid, faStarLight, faFacebookF, faTwitter, faGithubAlt, faLinkedinIn, faUserCircle, faLaptopCode,
-  faBookReader, faMapMarked, faChevronLeft, faChevronRight, faInstagram, faQuoteLeft, faQuoteRight
+  faStarSolid, faStarLight, faFacebookF, faTwitter, faGithubAlt, faLinkedinIn,
+  faUserCircle, faLaptopCode, faBookReader, faMapMarked, faChevronLeft,
+  faChevronRight, faInstagram, faQuoteLeft, faQuoteRight, faThumbtack
 ];
 
 import {LMap, LTileLayer, LMarker} from 'vue2-leaflet';

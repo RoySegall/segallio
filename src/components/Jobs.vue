@@ -3,7 +3,12 @@
     <section class="main w-screen text-center">
       <h2 class="text-4xl font-bold pb-4 text-white title-for-text">Jobs</h2>
 
-      <Job class="job" @switch-job="switchJob" v-bind:job=jobs[index] />
+      <Job class="job"
+           @switch-job="switchJob"
+           v-bind:job=jobs[index]
+           v-bind:nextActive=nextActive()
+           v-bind:prevActive=prevActive()
+      />
     </section>
 
     <section class="filler"></section>
@@ -38,7 +43,14 @@
 
           this.index = this.index - 1;
         }
-      }
+      },
+      nextActive: function () {
+        return this.index !== 0;
+      },
+
+      prevActive: function () {
+        return this.index + 1 !== this.jobs.length;
+      },
     },
     data() {
       return {

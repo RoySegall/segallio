@@ -2,6 +2,7 @@
   <div class="images">
     <ul class="flex items-center justify-between items-stretch pt-8">
       <li v-for="polaroid in polaroids" class="polaroid shadow-2xl">
+        <font-awesome-icon class="ml-1 text-xl text-right text-black icon shadow-2xl" :icon="['fas', 'thumbtack']"/>
         <g-image :src="require(`!!assets-loader!@images/${polaroid.image}`)" fit="cover"  />
 
         <p class="hand-writing text-2xl">{{polaroid.text}}</p>
@@ -41,12 +42,32 @@
       .polaroid {
         background: white;
         padding: 1vh;
+        position: relative;
+
+        .icon {
+          position: absolute;
+          font-size: 2em;
+
+          top: -.75em;
+          color: #e6ab5d;
+        }
 
         &:nth-child(odd) {
           transform: rotate(-5deg);
+
+          .icon {
+            left: -.5em;
+            transform: rotate(-20deg);
+          }
         }
+
         &:nth-child(even) {
           transform: rotate(5deg);
+
+          .icon {
+            right: -.25em;
+            transform: rotate(20deg);
+          }
         }
 
         img {
