@@ -3,5 +3,85 @@
   image: "dublin2016.jpeg"
   year: 2016
   geo:
-    - 47.313220
-    - -1.319482
+    - 53.347311
+    - -6.237484
+
+- title: "Drupal Dev Days Milan"
+  description: "Bar!"
+  image: "italy2016.jpeg"
+  year: 2016
+  geo:
+    - 45.468748
+    - 9.185801
+
+- title: "Drupal Iron Camp"
+  description: "Bar!"
+  image: "ironcamp2016.jpeg"
+  year: 2016
+  geo:
+    - 50.102968
+    - 14.391466
+
+- title: "DrupalCon Vienna"
+  description: "Bar!"
+  image: "austria2017.jpeg"
+  year: 2017
+  geo:
+    - 48.212819
+    - 16.413162
+
+- title: "Drupal Dev Days Seville"
+  description: "Bar!"
+  image: "spain2016.jpeg"
+  year: 2016
+  geo:
+    - 37.409554
+    - -5.999545
+
+- title: "DrupalCon Munich 2012"
+  description: "Bar!"
+#  image: "spain2016.jpeg"
+  year: 2012
+  geo:
+    - 48.152083
+    - 11.616964
+
+- title: "DrupalCon Amsterdam 2014"
+  description: "Bar!"
+#  image: "spain2016.jpeg"
+  year: 2014
+  geo:
+    - 52.341510
+    - 4.888737
+
+- title: "DrupalCon Barcelona 2015"
+  description: "Bar!"
+#  image: "spain2016.jpeg"
+  year: 2015
+  geo:
+    - 41.410883
+    - 2.218888
+
+- title: "Drupal Dev Days 2015"
+  description: "Bar!"
+#  image: "spain2016.jpeg"
+  year: 2015
+  geo:
+    - 43.612378
+    - 3.877080
+
+- title: "Trip with Noy to Rome"
+  description: "Bar!"
+#  image: "spain2016.jpeg"
+  year: 2017
+  geo:
+    - 41.899574
+    - 12.516430
+
+- title: "Trip with Noy to Paris"
+  description: "Bar!"
+#  image: "spain2016.jpeg"
+  year: 2017
+  geo:
+    - 48.861677
+    - 2.342254

@@ -3,7 +3,7 @@
     <g-image :src=getImagePath(job) width="200" class="logo m-auto"/>
 
     <div class="m-auto flex items-center justify-center pt-10 pb-4">
-      <a v-bind:class="{'cursor-pointer': prevActive}"v-on:click="$emit('switch-job', 'prev')">
+      <a v-bind:class="{'cursor-pointer': prevActive}" v-on:click="$emit('switch-job', 'prev')">
         <font-awesome-icon v-bind:class="{'arrow text-5xl ml-2': 1, 'active': prevActive}"
                            :icon="['fad', 'chevron-left']"/>
       </a>
