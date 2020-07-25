@@ -22,9 +22,8 @@ import {
 } from '@fortawesome/pro-light-svg-icons'
 
 import {
-  faMapMarked,
-  faBookReader,
-  faUserCircle, faChevronLeft, faChevronRight, faQuoteLeft, faQuoteRight, faMapPin, faMapMarker
+  faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight,
+  faQuoteLeft, faQuoteRight, faMapPin, faTimes
 } from '@fortawesome/pro-duotone-svg-icons'
 
 
@@ -32,7 +31,7 @@ const icons = [
   faStarSolid, faStarLight, faFacebookF, faTwitter, faGithubAlt, faLinkedinIn,
   faUserCircle, faLaptopCode, faBookReader, faMapMarked, faChevronLeft,
   faChevronRight, faInstagram, faQuoteLeft, faQuoteRight, faThumbtack, faHeart,
-  faMapPin, faMapMarkerAlt
+  faMapPin, faMapMarkerAlt, faTimes
 ];
 
 import {LMap, LTileLayer, LMarker} from 'vue2-leaflet';

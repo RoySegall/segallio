@@ -1,12 +1,12 @@
 <template>
 
-  <div class="w-screen h-screen m-auto map text-center">
+  <div class="w-screen m-auto map text-center">
 
     <h2 class="text-4xl font-bold pb-4 title-for-text">Conferences I visited</h2>
     <l-map class="displayed-map" :zoom="zoom" :center="center">
       <l-tile-layer :url="url"></l-tile-layer>
 
-      <l-marker @click="innerClick(index)" class="place" v-for="(place, index) in places" v-bind:lat-lng=place.geo>
+      <l-marker @click="changeSelectedPlace(index)" class="place" v-for="(place, index) in places" v-bind:lat-lng=place.geo>
 
         <l-icon>
           <a href="#">
@@ -17,22 +17,14 @@
       </l-marker>
     </l-map>
 
-    <div class="m-auto w-3/4 text-left pt-10 grid grid-cols-12 text-to-read flex items-center items-stretch" v-if="selectedPlace !== null">
-      <div class="col-span-3 text-center ">
-<!--        <g-image class="pb-2" :src="require(`!!assets-loader!@images/${places[selectedPlace].image}`)"  />-->
-
-        <span class="hand-writing text-3xl">{{places[selectedPlace].title}}, {{places[selectedPlace].year}}</span>
-      </div>
-      <div class="pl-4 col-span-3">
-        <p v-html=places[selectedPlace].description></p>
-      </div>
-    </div>
+    <Place v-bind:place=places[selectedPlace] v-if="selectedPlace !== null" />
   </div>
 
 </template>
 
 <script>
   import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
+  import Place from "./Map/Place";
   import places from '@/data/places.yml'
 
   export default {
@@ -41,10 +33,11 @@
       LMap,
       LTileLayer,
       LMarker,
-      LIcon
+      LIcon,
+      Place,
     },
     methods: {
-      innerClick(index) {
+      changeSelectedPlace(index) {
         this.selectedPlace = index
       }
     },
@@ -73,6 +66,10 @@
 
     .icon {
       color: #e6ab5d;
+    }
+
+    .close {
+      color: #ffa2a2;
     }
   }
 

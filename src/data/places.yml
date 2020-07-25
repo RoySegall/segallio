@@ -6,7 +6,7 @@
     - 53.347311
     - -6.237484
 
-- title: "Drupal Dev Days Milan"
+- title: "DrupalDevDays Milan"
   description: "Bar!"
   image: "italy2016.jpeg"
   year: 2016
@@ -30,7 +30,7 @@
     - 48.212819
     - 16.413162
 
-- title: "Drupal Dev Days Seville"
+- title: "DrupalDevDays Seville"
   description: "Bar!"
   image: "spain2016.jpeg"
   year: 2016
@@ -38,41 +38,44 @@
     - 37.409554
     - -5.999545
 
-- title: "DrupalCon Munich 2012"
+- title: "DrupalCon Munich"
   description: "Bar!"
-#  image: "spain2016.jpeg"
+  image: "drupalcon_2012.jpg"
   year: 2012
+  show_rights: 1
   geo:
     - 48.152083
     - 11.616964
 
-- title: "DrupalCon Amsterdam 2014"
+- title: "DrupalCon Amsterdam"
   description: "Bar!"
-#  image: "spain2016.jpeg"
+  image: "amsterdam2014.jpg"
   year: 2014
+  show_rights: 1
   geo:
     - 52.341510
     - 4.888737
 
-- title: "DrupalCon Barcelona 2015"
+- title: "DrupalCon Barcelona"
   description: "Bar!"
-#  image: "spain2016.jpeg"
+  image: "barcelona2015.jpeg"
   year: 2015
   geo:
     - 41.410883
     - 2.218888
 
-- title: "Drupal Dev Days 2015"
+- title: "DrupalDevDays Montpellier"
   description: "Bar!"
-#  image: "spain2016.jpeg"
+  image: "devdays2015.jpg"
   year: 2015
+  show_rights: 1
   geo:
     - 43.612378
     - 3.877080
 
 - title: "Trip with Noy to Rome"
   description: "Bar!"
-#  image: "spain2016.jpeg"
+  image: "rome.jpg"
   year: 2017
   geo:
     - 41.899574
@@ -80,7 +83,7 @@
 
 - title: "Trip with Noy to Paris"
   description: "Bar!"
-#  image: "spain2016.jpeg"
+  image: "paris.jpg"
   year: 2017
   geo:
     - 48.861677
