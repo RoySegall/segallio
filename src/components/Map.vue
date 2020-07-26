@@ -1,30 +1,34 @@
 <template>
-
   <div class="w-screen m-auto map text-center">
 
-    <h2 class="text-4xl font-bold pb-4 title-for-text">Conferences I visited</h2>
+    <h2 class="text-4xl font-bold pb-4 title-for-text">
+      Conferences I visited
+    </h2>
+
     <l-map class="displayed-map" :zoom="zoom" :center="center">
       <l-tile-layer :url="url"></l-tile-layer>
 
-      <l-marker @click="changeSelectedPlace(index)" class="place" v-for="(place, index) in places" v-bind:lat-lng=place.geo>
-
-        <l-icon>
-          <a href="#">
-            <font-awesome-icon class="text-4xl icon" :icon="['fas', 'map-marker-alt']"/>
-          </a>
-        </l-icon>
-
+      <l-marker
+        @click="changeSelectedPlace(index)"
+        class="place"
+        v-for="(place, index) in places"
+        v-bind:lat-lng=place.geo>
+          <l-icon><Icon /></l-icon>
       </l-marker>
     </l-map>
 
-    <Place v-bind:place=places[selectedPlace] v-if="selectedPlace !== null" />
+    <Place
+      @close="closePlace"
+      v-if="selectedPlace !== null"
+      v-bind:place=places[selectedPlace]
+    />
   </div>
-
 </template>
 
 <script>
   import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
   import Place from "./Map/Place";
+  import Icon from "./Map/Icon";
   import places from '@/data/places.yml'
 
   export default {
@@ -35,10 +39,14 @@
       LMarker,
       LIcon,
       Place,
+      Icon,
     },
     methods: {
       changeSelectedPlace(index) {
         this.selectedPlace = index
+      },
+      closePlace() {
+        this.selectedPlace = null
       }
     },
     data () {
@@ -68,8 +76,15 @@
       color: #e6ab5d;
     }
 
-    .close {
-      color: #ffa2a2;
+    .place-description {
+      position: relative;
+
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #ffa2a2;
+      }
     }
   }
 

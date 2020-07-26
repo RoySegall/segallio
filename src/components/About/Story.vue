@@ -6,50 +6,53 @@
 
       <div class="text-to-read text-xl w-3/4 m-auto">
         <p class="pb-4">
-          Since I remember myself I love to explore. Every time something
-          electrical went down, everyone knew that they need to give it to me so
-          I could tear it down and see the inside. Explore the anatomy and see
-          the kit, the electrical components and I did not afraid of breaking
-          stuff since it's already headed to the garbage.
+          Ever since I can remember, I have always loved investigating and
+          discovering how things work. I was soon known as the guy everyone
+          turned to whenever an electronic device broke down. I enjoyed
+          separating the broken devices and studying the different electrical
+          components, which I was able to do freely and carelessly without the
+          risk of destroying the already ruined device.
         </p>
 
         <p class="pb-4">
-          Over the years, I change my position; Moved to a chair in front of a
-          nice desk. At the beginning I started to help at local forums to
-          support a popular bulletin board system but quickly I decided I want
-          to create one by myself but in order to do that I need to know how to
-          program. Eventually I learned by myself from books and tutorials and
-          at school. At last I landed my first job at <em>gizra</em>.
+          With the knowledge I’ve gained, I moved on up to sit on a chair at a
+          nice desk. I started by helping local forums to support a popular
+          bulletin board system but had quickly decided that I want to create
+          one by myself. In order to do that, however, one needs to know
+          programming - and so, I’ve taught myself using books and tutorials,
+          enabling me to qualify for my first job at <em>Gizra</em>.
         </p>
 
         <p class="pb-4">
-          In addition to my daily job I love to contribute to open source
-          projects. My contribution reflects that any non-commercial code which
-          might be helpful to someone else, even for someone that built a site for
-          his cat, will end up in a open repository over Github or even a blog
-          post at Medium or on the blogs section in my employee site.
+          In my free time I enjoy contributing to open source projects. I do so
+          by providing non-commercial codes that can help others. The biggest
+          and smallest cause alike, even someone whose goal is to simply create
+          a website about his cat, can then find a code to help them in an open
+          repository at Github or a blog post at <em>Medium</em>.
         </p>
 
         <p class="pb-4">
-          My open source career has a couple of modules for <em>Drupal</em>,
-          which impact big sites and organizations like <em>universities</em>
-          or the european commission but there are couple of stuff that are
-          really close to my heart: Organizing a couple of local
-          <em>DrupalCamps</em> and working for NPO goes by the name
-          <em>"The public knowledge workshop" (Hasadna)</em> which aims on taking
-          a government data, or any public data, and make it easy to understand
-          rather than handle confusing spreadsheets (which you can hear about
-          it <em><a href="http://notarbut.co/ep84-public-knowledge/" class="underline">here</a></em>).
+          My accomplishments in my open source career include a few modules for
+          <em>Drupal</em>, used by large organizations like universities and the
+          EU. Other accomplishments, which I am very proud of as I hold them
+          dear to my heart, include a couple of local DrupalCamps I’ve
+          successfully organized as well as working for the NPO:
+          <em>"The public knowledge workshop" (Hasadna)</em>, whose goal is to make
+          government or any other public data more accessible than it currently
+          is and easier to understand without having to go through confusing
+          spreadsheets.
         </p>
 
         <p class="pb-4">
-          Except for that, I own two cats, with my lovely fiance
-          <em><a href="https://www.instagram.com/noythecatlady/" class="underline">Noy</a></em>,
-          which goes by the names
-          <em><a href="https://www.instagram.com/tomandsamthecats/" class="underline">Tom and Sam</a></em>.
-          The female cat, <em>Tom</em>, is a real lady while <em>Sam</em>,
-          the male cat, is a real trouble maker, but in a cute way.
+          Besided work and programming, I live with my fiancée,
+          <a href="https://www.instagram.com/noythecatlady/" class="underline"><em>Noy</em></a>
+          and our two cats -
+          <a href="https://www.instagram.com/tomandsamthecats/" class="underline"><em>Tom</em></a>,
+          the female cat, is quite the lady, while
+          <a href="https://www.instagram.com/tomandsamthecats/" class="underline"><em>Sam</em></a>,
+          the male cat, is the adorable troublemaker.
         </p>
+
 
         <Pictures/>
       </div>

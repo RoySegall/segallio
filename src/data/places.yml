@@ -42,7 +42,12 @@
   description: "Bar!"
   image: "drupalcon_2012.jpg"
   year: 2012
-  show_rights: 1
+  rights:
+    license: https://creativecommons.org/licenses/by-sa/2.0/
+    publisher: Drupal Associtation
+    source: flicker
+    url: https://www.flickr.com/photos/drupalassoc/7893709730/in/pool-drupalconmunich/
+
   geo:
     - 48.152083
     - 11.616964
@@ -51,7 +56,11 @@
   description: "Bar!"
   image: "amsterdam2014.jpg"
   year: 2014
-  show_rights: 1
+  rights:
+    license: https://creativecommons.org/licenses/by-nc-sa/2.0/
+    publisher: Josef Jerabek
+    source: flicker
+    url: https://www.flickr.com/photos/pepej/15427887546/in/pool-drupalconamsterdam/
   geo:
     - 52.341510
     - 4.888737
@@ -68,7 +77,11 @@
   description: "Bar!"
   image: "devdays2015.jpg"
   year: 2015
-  show_rights: 1
+  rights:
+    license: https://creativecommons.org/licenses/by-nc-sa/2.0/
+    publisher: Amazee Labs
+    source: flicker
+    url: https://www.flickr.com/photos/amazeelabs/17150395996/in/album-72157651602377908/
   geo:
     - 43.612378
     - 3.877080

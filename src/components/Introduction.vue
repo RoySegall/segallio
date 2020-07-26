@@ -9,7 +9,7 @@
         projects.</p>
 
       <g-image src="~/assets/images/funnyProfilePicture.png"
-               class="m-auto pt-10" width="600"/>
+               class="m-auto pt-10" width="500"/>
 
       <Social class="pt-16"/>
     </div>
