@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen m-auto map text-center">
+  <div class="w-screen m-auto map text-center"  id="places">
 
     <h2 class="text-4xl font-bold pb-4 title-for-text">
       Conferences I visited

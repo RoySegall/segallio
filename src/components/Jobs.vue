@@ -1,6 +1,6 @@
 <template>
   <div class="jobs">
-    <section class="main w-screen text-center">
+    <section class="main w-screen text-center" id="jobs">
       <h2 class="text-4xl font-bold pb-4 text-white title-for-text">Jobs</h2>
 
       <Job class="job"

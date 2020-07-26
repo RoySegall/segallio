@@ -17,13 +17,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 import {
-  faLaptopCode,
   faStar as faStarLight,
 } from '@fortawesome/pro-light-svg-icons'
 
 import {
   faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight,
-  faQuoteLeft, faQuoteRight, faMapPin, faTimes
+  faQuoteLeft, faQuoteRight, faMapPin, faTimes, faLaptopCode
 } from '@fortawesome/pro-duotone-svg-icons'
 
 

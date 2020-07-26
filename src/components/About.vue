@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me">
+  <div class="about-me" id="about">
     <SideMenu/>
     <Story/>
     <SuperPowers/>

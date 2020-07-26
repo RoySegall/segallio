@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen w-screen blogs">
 
-    <section class="main w-screen text-center">
+    <section class="main w-screen text-center" id="blogs">
       <h2 class="text-4xl font-bold pb-12 text-white title-for-text">Recent blog posts</h2>
 
       <div class="m-auto w-3/4 grid grid-cols-3 gap-3 text-to-read">

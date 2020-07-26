@@ -31,6 +31,10 @@
 
 <style lang="scss">
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   .section {
     padding-left: 10rem;
     padding-right: 8rem;

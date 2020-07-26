@@ -1,17 +1,10 @@
 <template>
   <div class="side-menu">
     <ul>
-      <li>
-        <font-awesome-icon class="side-menu-icon" :icon="['fad', 'user-circle']"/>
-      </li>
-      <li>
-        <font-awesome-icon class="side-menu-icon" :icon="['fal', 'laptop-code']"/>
-      </li>
-      <li>
-        <font-awesome-icon class="side-menu-icon" :icon="['fad', 'book-reader']"/>
-      </li>
-      <li>
-        <font-awesome-icon class="side-menu-icon"  :icon="['fad', 'map-marked']"/>
+      <li v-for="link in links">
+        <a :href=link.section>
+          <font-awesome-icon class="side-menu-icon" :icon="['fad', link.icon]"/>
+        </a>
       </li>
     </ul>
   </div>
@@ -21,6 +14,14 @@
   export default {
     name: "SideMenu",
 
+    data() {
+      return {links: [
+          {icon: 'user-circle', section: '#about'},
+          {icon: 'laptop-code', section: '#jobs'},
+          {icon: 'book-reader', section: '#blogs'},
+          {icon: 'map-marked', section: '#places'},
+      ]}
+    },
     created() {
       window.addEventListener('scroll', this.handleScroll);
     },
@@ -50,7 +51,7 @@
 
     .side-menu {
       position: absolute;
-      top: 2em;
+      top: 1em;
       left: 1vh;
       width: 0;
 
