@@ -16,7 +16,7 @@
     </div>
     <div class="pl-4 col-span-9 place-description">
       <p v-html=place.description></p>
-      <a href="#">
+      <a>
         <font-awesome-icon
           v-on:click="$emit('close')"
           class="text-4xl close"
