@@ -55,7 +55,7 @@
     data() {
       return {
         jobs,
-        index: 3,
+        index: 2,
       }
     },
   }

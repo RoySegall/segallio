@@ -43,9 +43,39 @@
   logo: rc.png
   position: Consulting
   description: "
-    During my last three months at gizra, I worked at RealCommerce as a team leader and an extra three months as a
-    freelance. Since I knew Drupal very good I helped a Drupal-based team inside the company to handle various tasks:
-    fix bugs, implements new features, update the design and make sure that the \"best practices\" are implemented.
+  <p>
+    At my last 3 months over <em>gizra</em> I got a bonus from my CTO,
+    <em>Amitai</em>: Another project company needed help with a <em>Drupal</em>
+    based project and I was sent to the task. It was something that I did with a
+    customer in the past, <em>Harvard</em>, which I need to do two stuff:
+    consulting with issues which related to <em>Drupal</em> and managed other
+    employee and help them to maintain the project.
+  </p>
+
+  <p>
+  It was a very special time period for me: I was looking for a job and went to
+  job interviews but yet, I was doing consulting for another company which I
+  know nothing about their organization workflow. It felt to me that I need to
+  join to another company, become a one of their oen for very short period time
+  but still keep my eyes open for my next long term preofessional relationship.
+  </p>
+
+  <p>
+  From the social prespective they were good, really! I felt I was at home and
+  love the people. From my professional prespective I couldn't take it anymore -
+  another <em>Drupal</em> project that has no CI nor automated tests. But, the
+  team, project manager and the CTO was very helpful and even propose me a
+  poisition. I declined because I was looking fo r something else.
+  </p>
+
+  <p>
+  Each company Iv'e been to, even for a short period, I take the good stuff and
+  try to look how it impacted me. From <em>Real Commerce</em> I took the ability
+  to look beyond to simple developer point of view and can see how the feature,
+  or the lack of infrastructure can hurt our development, got a better
+  understand how <em>Drupal</em> can help big organizations in these days,
+  especially when there are cool technologies like <em>NodeJS</em>.
+  </p>
   "
 
 - name: Gizra
@@ -106,14 +136,3 @@
   first place.
   </p>
   "
-#  description: "
-#    I joined gizra in June 2011, after working in Pizza Hut as a shift manager.
-#    I had no real experience and until then all my coding stuff was a Hobie.
-#    In the beginning, I worked on a couple of projects but eventually, I worked on a QA site for medical questions for a
-#    year and a half. Later on, I worked on other projects until I joined an open source project called
-#    OpenScholar. The work on OS took around 4-5 years in which I lead developers, handled complex tasks, helped to
-#    implement CI/CD projects, and worked directly with the team from Harvard. Except for that, most of the work in gizra
-#    based on a contribution from the opensource community so it was natural, and the right thing to do, to give back to
-#    the community: I talked on local meetups, created modules in Drupal, managed local events, mentored young developers
-#    and much more.
-#  "
