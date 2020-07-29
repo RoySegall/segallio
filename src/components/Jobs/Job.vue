@@ -11,7 +11,7 @@
       <div>
         <h2 class="text-3xl font-bold">{{job.name}}, {{job.years}} - {{job.position}}</h2>
 
-        <p class="pt-10 w-5/6 m-auto leading-loose" v-html=job.description></p>
+        <p class="pt-10 w-5/6 m-auto leading-loose description" v-html=job.description></p>
       </div>
 
       <a v-bind:class="{'cursor-pointer': nextActive}" v-on:click="$emit('switch-job', 'next')">
@@ -43,6 +43,20 @@
     .logo {
       margin-top: 7vh;
       height: 7vh;
+    }
+
+    .description {
+      text-align: left;
+
+      p {
+        margin-bottom: .75em;
+
+        em {
+          font-weight: bold;
+          text-decoration: underline;
+          color: #65bad8;
+        }
+      }
     }
 
     .arrow {
