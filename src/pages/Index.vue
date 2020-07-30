@@ -4,8 +4,9 @@
     <About/>
     <Jobs/>
     <Blogs/>
+    <Contributions/>
     <Map/>
-    <Footer />
+    <Footer/>
   </Layout>
 </template>
 
@@ -14,6 +15,7 @@
   import About from "~/components/About.vue"
   import Jobs from "~/components/Jobs.vue"
   import Blogs from "~/components/Blogs.vue"
+  import Contributions from "~/components/Contributions.vue"
   import Map from "~/components/Map.vue"
   import Footer from "~/components/Footer.vue"
 
@@ -23,6 +25,7 @@
       About,
       Jobs,
       Blogs,
+      Contributions,
       Map,
       Footer
     }

@@ -1,6 +1,6 @@
 <template>
-  <div class="m-auto w-3/4 text-left pt-10 grid grid-cols-12 text-to-read flex items-center items-stretch">
-    <div class="col-span-3 text-center ">
+  <div class="m-auto w-3/4 text-left pt-10 text-to-read flex items-center items-stretch">
+    <div class="text-center">
       <g-image
         class="pb-2"
         :src="require(`!!assets-loader!@images/${place.image}`)"
@@ -14,15 +14,7 @@
       </p>
       <span class="hand-writing text-3xl">{{place.title}}, {{place.year}}</span>
     </div>
-    <div class="pl-4 col-span-9 place-description">
-      <p v-html=place.description></p>
-      <a>
-        <font-awesome-icon
-          v-on:click="$emit('close')"
-          class="text-4xl close"
-          :icon="['fad', 'times']" />
-      </a>
-    </div>
+
   </div>
 </template>
 

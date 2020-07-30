@@ -9,11 +9,8 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import {faStar as faStarSolid, faThumbtack, faHeart, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 
 import {
-  faFacebookF,
-  faTwitter,
-  faGithubAlt,
-  faLinkedinIn,
-  faInstagram
+  faFacebookF, faTwitter, faGithubAlt, faLinkedinIn, faInstagram, faPhp,
+  faPython, faNode, faDrupal
 } from '@fortawesome/free-brands-svg-icons'
 
 import {
@@ -22,7 +19,7 @@ import {
 
 import {
   faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight,
-  faQuoteLeft, faQuoteRight, faMapPin, faTimes, faLaptopCode
+  faQuoteLeft, faQuoteRight, faMapPin, faTimes, faLaptopCode, faCodeBranch
 } from '@fortawesome/pro-duotone-svg-icons'
 
 
@@ -30,7 +27,8 @@ const icons = [
   faStarSolid, faStarLight, faFacebookF, faTwitter, faGithubAlt, faLinkedinIn,
   faUserCircle, faLaptopCode, faBookReader, faMapMarked, faChevronLeft,
   faChevronRight, faInstagram, faQuoteLeft, faQuoteRight, faThumbtack, faHeart,
-  faMapPin, faMapMarkerAlt, faTimes
+  faMapPin, faMapMarkerAlt, faTimes, faCodeBranch, faPhp, faPython, faNode,
+  faDrupal
 ];
 
 import {LMap, LTileLayer, LMarker} from 'vue2-leaflet';
