@@ -1,6 +1,8 @@
 <template>
   <div class="job-display text-to-read">
-    <g-image :src=getImagePath(job) width="200" class="logo m-auto"/>
+    <a :href=job.url target="_blank">
+      <g-image :src=getImagePath(job) width="200" class="logo m-auto"/>
+    </a>
 
     <div class="m-auto flex items-center justify-center pt-10 pb-4">
       <a v-bind:class="{'cursor-pointer': prevActive}" v-on:click="$emit('switch-job', 'prev')">
@@ -9,7 +11,7 @@
       </a>
 
       <div>
-        <h2 class="text-3xl font-bold">{{job.name}}, {{job.years}} - {{job.position}}</h2>
+        <h2 class="text-3xl font-bold">{{job.name}}, {{job.years}}: {{job.position}}</h2>
 
         <p class="pt-10 w-5/6 m-auto leading-loose description" v-html=job.description></p>
       </div>

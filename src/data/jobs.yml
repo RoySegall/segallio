@@ -3,20 +3,50 @@
   years: 2019
   logo: dreamed-diabetes.png
   position: Developer
+  url: https://dreamed-diabetes.com
   description: "
-  After I got fired from Taliaz I started to look for a Job once more. The job search took around 3 months and I nailed
-  a position in company I rather not specify. I decided to hide it from my resume since the job position was at a
-  company that had nothing in which I believe: No CI, No PR and code reviews and not a single good principle for a
-  project managing. After an unpleasant event that occur I decided to quit it and look for a better job.
+  <p>
+  2018 was a rough year. I quit my job, and then I found another job which I
+  loved very much. Then, I got fired. Here I was, looking for a job, again. Took
+  me a couple of months but I found it. It was a, pardon my french, crappy job.
+  It was so bad I rather not talk about it, and delete any reference of me being
+  employed there. After three months I decided to quit and look for another jbo.
+  </p>
 
-  I arrived finally to Dreamed Diabetes, a company which developed an algorithm that can suggest a better insulin plans
-  for patients with Type 1 Diabetes. This time I look for the right signals - All the best practices, a good challenge,
-  Technologies I did not worked with, and a work life balance.
+  <p>
+  This time, I knew what I was looking for and the search was grueling, each
+  place was not interested in my skills or it was something I did not want to
+  do. But then, like a ray of sunshine between a crack of clouds from gray sky
+  I found it - my next, and current position, at <em>Dreamed Diabetes</em>.
+  </p>
 
-  In addition to all of the above there was one thing that I decided to pick this position - getting out of my comfort
-  zone. Dreamed uses Windows as the OS for developing and the stack is ReactJS with Django. Technologies I did not had
-  the chance to work with. The very best thing with getting of the comfort zone is that you get to do stuff you did not
-  thought of before.
+  <p>
+  Very similar to the previous job on the list, <em>Taliaz</em>, the work in
+  <em>Dreamed Diabetes</em> is all about doing good: Helping people with
+  <em>Diabetes</em> to live better. It doing by getting their diabetes
+  information, process it with a smart algorythim and then provide a treatment
+  plan which improve, and might saves, the patient's life. Surely, something
+  not everyone can vouch for himself.
+  </p>
+
+  <p>
+  The work in <em>Dreamed Diabetes</em> is done in technologies I could dreamed
+  of at the time: <em>Python</em> and <em>React</em>, which thrilles me a lot.
+  But, not only the technologies makes me happy - there's so much more. Seeing
+  how people really lives with diabetes and understanding that there's more than
+  just inject them self <em>Insulin</em> was shocking. I won't go deep but I can
+  say that there's a hole new world that invailed to me, something that don't
+  teach you a lot in schools and that's a shame.
+  </p>
+
+  <p>
+  We talked about the technical stuff, let's talk a bit about the people - wow!
+  It's been a while since I found place that keep so much smart people in one
+  place (well, they have to if they doing such a noble goal). But besides of
+  them being smart I can say that they really heart-warming, bear-care people
+  with the feet on the ground. I do believe I found a place that will forever
+  stay in my heart.
+  </p>
   "
 
 - name: Taliaz Health
@@ -24,6 +54,7 @@
   years: 2018
   logo: taliaz.png
   position: Developer
+  url: https://www.taliazhealth.com/
   description: "
     <p>
     It true, I havn't been on a lot of companies over the years. I 'spent'
@@ -81,6 +112,7 @@
   class: rc
   logo: rc.png
   position: Consulting
+  url: https://www.realcommerce.co.il/
   description: "
   <p>
     At my last 3 months over <em>gizra</em> I got a bonus from my CTO,
@@ -122,6 +154,7 @@
   class: gizra
   logo: gizra.png
   position: Lead developer
+  url: https://www.gizra.com/
   description: "
   <p>
   It was <em>June 2011</em> and Rotchild st. will start to fill with tents. I
