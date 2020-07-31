@@ -48,7 +48,7 @@
           this.repositories = this.originalRepositories;
           return;
         }
-        
+
         this.selectedTech = technology;
         this.repositories = this.originalRepositories.filter(repository => {
           return repository.technologies.indexOf(technology) !== -1;

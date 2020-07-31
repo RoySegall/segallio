@@ -5,7 +5,7 @@
       <a class="cursor-pointer"
          v-bind:class="{'text-black': technology.name == selectedTech}"
          v-on:click="$emit('filter-by-lang', technology.name)">
-        <font-awesome-icon class="side-menu-icon" :icon="['fab', technology.icon]"/>
+        <font-awesome-icon class="side-menu-icon" :icon="[technology.category, technology.icon]"/>
       </a>
     </li>
   </ul>

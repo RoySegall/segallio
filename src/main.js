@@ -20,7 +20,7 @@ import {
 import {
   faMapMarked, faBookReader, faUserCircle, faChevronLeft, faChevronRight,
   faQuoteLeft, faQuoteRight, faMapPin, faTimes, faLaptopCode, faCodeBranch,
-  faNotEqual
+  faNotEqual, faUserRobot
 } from '@fortawesome/pro-duotone-svg-icons'
 
 
@@ -29,7 +29,7 @@ const icons = [
   faUserCircle, faLaptopCode, faBookReader, faMapMarked, faChevronLeft,
   faChevronRight, faInstagram, faQuoteLeft, faQuoteRight, faThumbtack, faHeart,
   faMapPin, faMapMarkerAlt, faTimes, faCodeBranch, faPhp, faPython, faNode,
-  faDrupal, faNotEqual
+  faDrupal, faNotEqual, faUserRobot
 ];
 
 import {LMap, LTileLayer, LMarker} from 'vue2-leaflet';

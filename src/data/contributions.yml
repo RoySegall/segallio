@@ -1,20 +1,40 @@
 technologies:
   - name: PHP
+    category: fab
     icon: php
 
   - name: Python
+    category: fab
     icon: python
 
   - name: Node
+    category: fab
     icon: node
 
   - name: Drupal
+    category: fab
     icon: drupal
+
+  - name: Bots
+    category: fad
+    icon: user-robot
 
 repositories:
 
   - name: Organic Groups
     url: https://www.github.com/gizra/og
+    position: contributor
+    description: "
+    <p>
+    Became co mainter bla bla bla
+    </p>
+    "
+    technologies:
+      - PHP
+      - Drupal
+
+  - name: Message
+    url: https://www.github.com/gizra/message
     position: contributor
     description: "
     <p>
@@ -36,6 +56,7 @@ repositories:
     "
     technologies:
       - PHP
+      - Bots
 
   - name: Hasadna
     position: contributor
@@ -51,3 +72,87 @@ repositories:
       - Node
       - Python
       - Drupal
+
+  - name: Message UI
+    position: Owner
+    url: https://github.com/roysegall/message_ui
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - PHP
+      - Drupal
+
+  - name: Gatsby Orchestrator
+    position: Owner
+    url: https://github.com/RoySegall/gatsby_orchestrator
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - PHP
+      - Drupal
+
+  - name: Gatsby plugin trigger deploy
+    position: Owner
+    url: https://github.com/RoySegall/gatsby-plugin-trigger-deploy
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - Node
+      - GatsbyJs
+
+  - name: Gatsby plugin revisions
+    position: Owner
+    url: https://github.com/RoySegall/gatsby-plugin-revisions
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - Node
+      - GatsbyJs
+
+  - name: Django deocrated routes
+    position: Owner
+    url: https://github.com/RoySegall/django-decorated-routes
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - Python
+      - Django
+
+  - name: Django tivol
+    position: Owner
+    url: https://github.com/RoySegall/django-tivol
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - Python
+      - Django
+
+  - name: Facebook Messenger send API
+    position: Owner
+    url: https://github.com/RoySegall/facebook-messenger-send-api
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - PHP
+      - Bots
