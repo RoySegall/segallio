@@ -6,10 +6,13 @@
       <h2 class="text-4xl font-bold text-white pb-4 title-for-text">Contributions</h2>
 
       <div class="w-3/4 m-auto text-to-read">
-        <Filters v-bind:technologies=contributions.technologies />
+        <Technologies
+          v-bind:technologies=technologies
+          v-bind:selectedTech=selectedTech
+          @filter-by-lang="filterByTech" />
 
         <div class="text-left pt-4 grid grid-cols-3 gap-3">
-          <div v-for="repository in contributions.repositories" class="repository">
+          <div v-for="repository in repositories" class="repository">
             <Repository v-bind:repository=repository />
           </div>
         </div>
@@ -22,15 +25,34 @@
 
 <script>
   import contributions from '@/data/contributions.yml';
-  import Filters from './Contributions/Filters';
+  import Technologies from './Contributions/Technologies';
   import Repository from './Contributions/Repository';
 
   export default {
     name: "Contributions",
-    components: {Filters, Repository},
+    components: {Technologies, Repository},
     data() {
       return {
-        contributions
+        contributions,
+        repositories: contributions.repositories,
+        originalRepositories: contributions.repositories,
+        technologies: contributions.technologies,
+        selectedTech: null,
+      }
+    },
+    methods: {
+      filterByTech: function (technology) {
+
+        if (this.selectedTech && this.selectedTech == technology) {
+          this.selectedTech = null;
+          this.repositories = this.originalRepositories;
+          return;
+        }
+        
+        this.selectedTech = technology;
+        this.repositories = this.originalRepositories.filter(repository => {
+          return repository.technologies.indexOf(technology) !== -1;
+        });
       }
     }
   }
