@@ -26,7 +26,14 @@ repositories:
     position: contributor
     description: "
     <p>
-    Became co mainter bla bla bla
+    <b>Oranig Groups</b> is a module for Drupal. I contributed to the module
+    during my work at <b>gizra</b> and started the port from the Drupal 7 to
+    Drupal 8.
+    </p>
+
+    <p>
+    The module provides a groups functionality which similar to Facebook groups,
+    or any content access based on the groups of the content consumer.
     </p>
     "
     technologies:
@@ -38,7 +45,15 @@ repositories:
     position: contributor
     description: "
     <p>
-    Became co mainter bla bla bla
+    <b>Message</b> is a module for Drupal. I contributed to the module
+    during my work at <b>gizra</b> and started the port from the Drupal 7 to
+    Drupal 8.
+    </p>
+
+    <p>
+    The module provides the options to have a template of message for specific
+    a scenario. One of the use cases is soemthing which is similar to a
+    <b>feed</b> in a social media site.
     </p>
     "
     technologies:
@@ -50,8 +65,15 @@ repositories:
     position: contributor
     logo: nuntius.png
     description: "
+      <p>During my work at <b>gizra</b> there was a need to create an
+      integration to the slack. The problem is that I could not find any good
+      PHP framework for creating bots. So I created one.
+      </p>
+
       <p>
-      Became co mainter bla bla bla
+      The framework provided some cool feature like a DB layer, service
+      container and a couple of practices which I took from the <b>Symfony</b>
+      library.
       </p>
     "
     technologies:
@@ -59,12 +81,19 @@ repositories:
       - Bots
 
   - name: Hasadna
-    position: contributor
+    position: leader
     url: https://www.hasadna.org.il/
     logo: hasadna.png
     description: "
       <p>
-      Became co mainter bla bla bla
+      <b>Hasadna</b> is an NPO which aims on taking a public data (Government
+      data) and make it eady to understand for the average Joe.
+      </p>
+
+      <p>
+      The project Iv'e been working on has the goal on taking all the data
+      regarding the pension of money of the citizens in Israel and show them
+      where their money is invested.
       </p>
     "
     technologies:
@@ -78,7 +107,15 @@ repositories:
     url: https://github.com/roysegall/message_ui
     description: "
       <p>
-      Became co mainter bla bla bla
+      The <b>Message UI</b> module provides a UI layer for the <be>Message</b>
+      module. Since Drupal 7 did not had a built UI for any entities a need for
+      a simple UI has popped.
+      </p>
+
+      <p>
+      The module aimed to helped the development with the <b>Message</b> module
+      like deleting a lot of messages at one or editing message instances in the
+      system.
       </p>
     "
     technologies:
