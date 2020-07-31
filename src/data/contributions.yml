@@ -11,13 +11,42 @@ technologies:
   - name: Drupal
     icon: drupal
 
-repositores:
+repositories:
 
   - name: Organic Groups
-    technologies: PHP, Drupal
+    url: https://www.github.com/gizra/og
+    position: contributor
+    description: "
+    <p>
+    Became co mainter bla bla bla
+    </p>
+    "
+    technologies:
+      - PHP
+      - Drupal
 
   - name: Nuntius
-    technologies: PHP
+    url: https://www.github.com/roysegall/nuntius
+    position: contributor
+    logo: nuntius.png
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - PHP
 
   - name: Hasadna
-    technologies: PHP
+    position: contributor
+    url: https://www.hasadna.org.il/
+    logo: hasadna.png
+    description: "
+      <p>
+      Became co mainter bla bla bla
+      </p>
+    "
+    technologies:
+      - PHP
+      - Node
+      - Python
