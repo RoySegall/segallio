@@ -1,32 +1,26 @@
 <template>
-  <div class="w-screen m-auto map text-center"  id="places">
+  <div class="w-screen m-auto map text-center" id="places">
 
     <h2 class="text-4xl font-bold pb-4 title-for-text">
-      Conferences I visited
+      Places I visited
     </h2>
 
     <l-map class="displayed-map" :zoom="zoom" :center="center">
       <l-tile-layer :url="url"></l-tile-layer>
-
       <l-marker
-        @click="changeSelectedPlace(index)"
         class="place"
         v-for="(place, index) in places"
+        :key=index
         v-bind:lat-lng=place.geo>
           <l-icon><Icon /></l-icon>
+          <l-popup><Place v-bind:place=place /></l-popup>
       </l-marker>
     </l-map>
-
-    <Place
-      @close="closePlace"
-      v-if="selectedPlace !== null"
-      v-bind:place=places[selectedPlace]
-    />
   </div>
 </template>
 
 <script>
-  import { LMap, LTileLayer, LMarker, LIcon } from "vue2-leaflet";
+  import { LMap, LTileLayer, LMarker, LIcon, LPopup } from "vue2-leaflet";
   import Place from "./Map/Place";
   import Icon from "./Map/Icon";
   import places from '@/data/places.yml'
@@ -40,14 +34,7 @@
       LIcon,
       Place,
       Icon,
-    },
-    methods: {
-      changeSelectedPlace(index) {
-        this.selectedPlace = index
-      },
-      closePlace() {
-        this.selectedPlace = null
-      }
+      LPopup
     },
     data () {
       return {
@@ -64,11 +51,11 @@
 <style lang="scss">
 
   .map {
-    min-height: 100vh;
+    min-height: 75vh;
 
     .displayed-map {
-      height: 50vh;
-      width: 75vw;
+      height: 60vh;
+      width: 90vw;
       margin: 0 auto;
     }
 
