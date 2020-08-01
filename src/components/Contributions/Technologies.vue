@@ -2,8 +2,6 @@
   <ul class="flex filter text-white text-5xl">
     <li class="pr-6">
       Filter by:
-      <span class="block text-xs">Click on the icon to filter contributions.</span>
-      <span class="block text-xs">Click again to disable the filter.</span>
     </li>
     <li v-for="(technology, index) in technologies" :key=index  class="pr-16">
       <a class="cursor-pointer"

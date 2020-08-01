@@ -1,6 +1,6 @@
 <template>
 
-  <div class="h-screen w-screen contributions" id="contributions">
+  <div class="w-screen contributions" id="contributions">
 
     <section class="main w-screen text-center">
       <h2 class="text-4xl font-bold text-white pb-4 title-for-text">Contributions</h2>
@@ -64,6 +64,7 @@
     min-height: 100vh;
     width: 100vw;
     padding-top: 2em;
+    padding-bottom: 2em;
     background: #e6ab5d;
 
     ul.technologies {

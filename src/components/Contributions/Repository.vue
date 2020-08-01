@@ -1,7 +1,7 @@
 <template>
-  <div class="grid grid-cols-6 items-center">
-    <div class="col-span-1"><Logo v-bind:logo=repository.logo /></div>
-    <div class="col-span-5"><RepositoryInformation :repository="repository"/></div>
+  <div class="grid grid-cols-12 items-center h-full">
+    <div class="col-span-2"><Logo v-bind:logo=repository.logo /></div>
+    <div class="col-span-10 h-full"><RepositoryInformation :repository="repository"/></div>
   </div>
 </template>
 

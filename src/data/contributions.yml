@@ -23,17 +23,12 @@ repositories:
 
   - name: Organic Groups
     url: https://www.github.com/gizra/og
-    position: contributor
+    position: Contributor
     description: "
     <p>
-    <b>Oranig Groups</b> is a module for Drupal. I contributed to the module
-    during my work at <b>gizra</b> and started the port from the Drupal 7 to
-    Drupal 8.
-    </p>
-
-    <p>
-    The module provides a groups functionality which similar to Facebook groups,
-    or any content access based on the groups of the content consumer.
+    A module for Drupal provides a groups functionality which similar to
+    Facebook groups, or any content access based on the groups of the content
+    consumer.
     </p>
     "
     technologies:
@@ -42,18 +37,12 @@ repositories:
 
   - name: Message
     url: https://www.github.com/gizra/message
-    position: contributor
+    position: Contributor
     description: "
     <p>
-    <b>Message</b> is a module for Drupal. I contributed to the module
-    during my work at <b>gizra</b> and started the port from the Drupal 7 to
-    Drupal 8.
-    </p>
-
-    <p>
-    The module provides the options to have a template of message for specific
-    a scenario. One of the use cases is soemthing which is similar to a
-    <b>feed</b> in a social media site.
+    A module for Drupal which provides the options to have a template of message
+    for specific a scenario. One of the use cases is something which is similar
+    to a feed in a social media site.
     </p>
     "
     technologies:
@@ -62,18 +51,13 @@ repositories:
 
   - name: Nuntius
     url: https://www.github.com/roysegall/nuntius
-    position: contributor
+    position: Owner
     logo: nuntius.png
     description: "
       <p>During my work at <b>gizra</b> there was a need to create an
-      integration to the slack. The problem is that I could not find any good
-      PHP framework for creating bots. So I created one.
-      </p>
-
-      <p>
-      The framework provided some cool feature like a DB layer, service
-      container and a couple of practices which I took from the <b>Symfony</b>
-      library.
+      integration to the slack. Since I did not found any framework which will
+      match my needs I decided to create a custom one with nice features like
+      DB layer like service container.
       </p>
     "
     technologies:
@@ -81,19 +65,14 @@ repositories:
       - Bots
 
   - name: Hasadna
-    position: leader
+    position: Leader
     url: https://www.hasadna.org.il/
     logo: hasadna.png
     description: "
       <p>
-      <b>Hasadna</b> is an NPO which aims on taking a public data (Government
-      data) and make it eady to understand for the average Joe.
-      </p>
-
-      <p>
-      The project Iv'e been working on has the goal on taking all the data
-      regarding the pension of money of the citizens in Israel and show them
-      where their money is invested.
+      As part of my work for an NGO called <b>Hasadna</b> I'm leading a project
+      which has the goal on taking all the data regarding the pension of money
+      of the citizens in Israel and show them where their money is invested.
       </p>
     "
     technologies:
@@ -106,17 +85,11 @@ repositories:
     position: Owner
     url: https://github.com/roysegall/message_ui
     description: "
-      <p>
-      The <b>Message UI</b> module provides a UI layer for the <be>Message</b>
-      module. Since Drupal 7 did not had a built UI for any entities a need for
-      a simple UI has popped.
-      </p>
-
-      <p>
-      The module aimed to helped the development with the <b>Message</b> module
-      like deleting a lot of messages at one or editing message instances in the
-      system.
-      </p>
+    <p>
+    Since Drupal 7 did not had a proper UI layout for any custom entity there
+    was a need on providing a way to interact with the Message entities which
+    provided by the <b>Message</b> module.
+    </p>
     "
     technologies:
       - PHP
@@ -126,9 +99,11 @@ repositories:
     position: Owner
     url: https://github.com/RoySegall/gatsby_orchestrator
     description: "
-      <p>
-      Became co mainter bla bla bla
-      </p>
+    <p>
+    A module for <b>Drupal 8</b> which provides set of API for managing a
+    <b>GatsbyJS</b> site like deploying or any other custom logic. The module
+    has a support for the <b>GatsbyJS</b> plugins I created.
+    </p>
     "
     technologies:
       - PHP
@@ -139,7 +114,10 @@ repositories:
     url: https://github.com/RoySegall/gatsby-plugin-trigger-deploy
     description: "
       <p>
-      Became co mainter bla bla bla
+      The plugin provide endpoint for trigger deployments of your
+      <b>GatsbyJS</b> site. Though it has been written with a state of mind that
+      <b>Drupal 8</b> site will the main customer, the interaction is pretty
+      robust for any 3rd party integration.
       </p>
     "
     technologies:
@@ -151,31 +129,35 @@ repositories:
     url: https://github.com/RoySegall/gatsby-plugin-revisions
     description: "
       <p>
-      Became co mainter bla bla bla
+      The plugin provides an endpoint for creating a revision, snapshot, of a
+      <b>GatsbyJS</b>. Though it has been written with a state of mind that
+      <b>Drupal 8</b> site will the main customer, the interaction is pretty
+      robust for any 3rd party integration.
       </p>
     "
     technologies:
       - Node
       - GatsbyJs
 
-  - name: Django deocrated routes
+  - name: Django tivol
     position: Owner
-    url: https://github.com/RoySegall/django-decorated-routes
+    url: https://github.com/RoySegall/django-tivol
     description: "
-      <p>
-      Became co mainter bla bla bla
-      </p>
+      <p>My first <b>Django</b> package which can read of data from various
+      sources like CSV, Excel, JSON, Yaml and MySQL. Once the data is processed
+      from the source it will be saved to the DB.</p>
     "
     technologies:
       - Python
       - Django
 
-  - name: Django tivol
+  - name: Django deocrated routes
     position: Owner
-    url: https://github.com/RoySegall/django-tivol
+    url: https://github.com/RoySegall/django-decorated-routes
     description: "
-      <p>
-      Became co mainter bla bla bla
+      <p>My second <b>Django</b> package which aims on reducing the amount of
+      lines in the <b>url.py</b> and auto-register controllers by using a
+      decorator. The idea was 'borrowed' from <b>Symfony</b> framework.
       </p>
     "
     technologies:
@@ -187,9 +169,26 @@ repositories:
     url: https://github.com/RoySegall/facebook-messenger-send-api
     description: "
       <p>
-      Became co mainter bla bla bla
+      When working on the <b>Nuntius</b> framework, there was a need to have an
+      abstraction for the Facebook Messenger API. Since I thought the
+      implementation was good I decided to export it.
       </p>
     "
     technologies:
       - PHP
       - Bots
+
+  - name: RethinkDB
+    position: Owner
+    url: https://github.com/roysegall/rethinkdb
+    logo: rethinkdb.png
+    description: "
+      <p>
+      The module provide a way to connect <b>Drupal 8</b> to external NoSQL DB.
+      Unfortunately, the company behind the product has been shutdown and the
+      need for the module has vanished.
+      </p>
+    "
+    technologies:
+      - PHP
+      - Drupal

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <a v-bind:href=repository.url target="_blank" class="text-2xl font-bold underline block">{{repository.name}}</a>
+  <div class="flex content-between flex-wrap h-full">
+    <a v-bind:href=repository.url target="_blank" class="text-2xl font-bold underline block w-full">{{repository.name}}</a>
     <p class="pt-2 font-light leading-loose" v-html=repository.description></p>
     <RepositoryMetadata :repository="repository"/>
   </div>
