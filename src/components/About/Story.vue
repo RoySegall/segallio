@@ -1,5 +1,5 @@
 <template>
-  <section class="text w-screen text-white text-center flex items-center pt-0 about">
+  <section class="text about about-me-section xs:pt-20 sm:pt-20 md:pt-20">
 
     <div>
       <h2 class="pb-4 title-for-text">About me</h2>
@@ -54,7 +54,7 @@
         </p>
 
 
-        <Pictures/>
+<!--        <Pictures/>-->
       </div>
 
     </div>

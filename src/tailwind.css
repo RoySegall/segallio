@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 
+/* Introduction */
+
 .introduction {
   @apply w-screen flex content-between flex-wrap justify-center font-bold
 }
@@ -40,6 +42,11 @@
   .introduction-p {
     @apply text-4xl
   }
+}
+
+/* About me */
+.about-me-section {
+  @apply w-screen text-white text-center flex items-center pt-0
 }
 
 @tailwind utilities;

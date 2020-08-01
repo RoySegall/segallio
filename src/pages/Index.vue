@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Introduction/>
-<!--    <About/>-->
+    <About/>
 <!--    <Jobs/>-->
 <!--    <Blogs/>-->
 <!--    <Contributions/>-->

@@ -38,12 +38,6 @@
     h1 {
       font-family: 'Rubik', cursive;
     }
-
-    .about-me {
-      background: #69c8e8;
-      color: white;
-      min-height: 25vh;
-    }
   }
 
 </style>

@@ -70,5 +70,33 @@
         }
       }
     }
+
+    @media(max-width: 1024px) {
+
+      .side-menu, .side-menu.sticky  {
+        background: white;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding: 1em;
+        margin: 0 auto;
+        border-bottom: solid 1px black;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+
+          .side-menu-icon {
+            padding: 0;
+            margin: 0;
+          }
+
+        }
+      }
+
+      .side-menu.sticky {
+        padding-top: 0;
+      }
+    }
   }
 </style>
