@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <Introduction/>
-    <About/>
-    <Jobs/>
-    <Blogs/>
-    <Contributions/>
-    <Map/>
-    <Footer/>
+<!--    <About/>-->
+<!--    <Jobs/>-->
+<!--    <Blogs/>-->
+<!--    <Contributions/>-->
+<!--    <Map/>-->
+<!--    <Footer/>-->
   </Layout>
 </template>
 

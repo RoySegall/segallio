@@ -3,6 +3,8 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 
+import "./tailwind.css";
+
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 

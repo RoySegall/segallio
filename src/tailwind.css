@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+
+.introduction {
+  @apply w-screen flex content-between flex-wrap justify-center font-bold
+}
+
+.introduction-h1 {
+  @apply text-6xl pt-2
+}
+
+.introduction-p {
+  @apply text-center text-4xl pt-10 font-hairline block w-full
+}
+
+@screen xs {
+  .introduction-h1 {
+    @apply text-4xl
+  }
+
+  .introduction-p {
+    @apply pl-1 pr-1 text-3xl
+  }
+}
+@screen sm {
+  .introduction-h1 {
+    @apply text-4xl
+  }
+
+  .introduction-p {
+    @apply text-3xl
+  }
+}
+
+@screen md {
+  .introduction-h1 {
+    @apply text-5xl
+  }
+
+  .introduction-p {
+    @apply text-4xl
+  }
+}
+
+@tailwind utilities;
