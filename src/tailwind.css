@@ -1,6 +1,34 @@
 @tailwind base;
 @tailwind components;
 
+.text-to-read {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.title-for-text {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+  letter-spacing: .5em;
+  font-size: 2.5em;
+}
+
+.hand-writing {
+  font-family: 'Caveat', cursive;
+}
+
+.orange-color {
+  color: #efb15e;
+}
+
+.blue-color {
+  color: #6bcff1;
+}
+
+.blue-background {
+  background: #69c8e8;
+}
+
 /* Introduction */
 
 .introduction {
@@ -15,6 +43,36 @@
   @apply text-center text-4xl pt-10 font-hairline block w-full
 }
 
+/* About me */
+.about-me-section {
+  @apply w-screen text-white text-center flex items-center pt-0 blue-background
+}
+
+.about-me-superpowers {
+  @apply w-screen text-center
+}
+
+.about-me-superpowers-h2 {
+  @apply orange-color text-4xl font-bold pb-4 title-for-text
+}
+
+.about-me-superpowers-ul {
+  @apply w-3/4 m-auto text-to-read
+}
+
+.star {
+  @apply ml-1 text-xl text-right
+}
+
+.star-full {
+  @apply star orange-color
+}
+
+.star-empty {
+  @apply star blue-color
+}
+
+/* Responsive */
 @screen xs {
   .introduction-h1 {
     @apply text-4xl
@@ -23,7 +81,16 @@
   .introduction-p {
     @apply pl-1 pr-1 text-3xl
   }
+
+  .about-me-section {
+    @apply pt-20
+  }
+
+  .about-me-superpowers-ul {
+    @apply w-11/12
+  }
 }
+
 @screen sm {
   .introduction-h1 {
     @apply text-4xl
@@ -31,6 +98,14 @@
 
   .introduction-p {
     @apply text-3xl
+  }
+
+  .about-me-section {
+    @apply pt-20
+  }
+
+  .about-me-superpowers-ul {
+    @apply w-6/12
   }
 }
 
@@ -42,11 +117,14 @@
   .introduction-p {
     @apply text-4xl
   }
-}
 
-/* About me */
-.about-me-section {
-  @apply w-screen text-white text-center flex items-center pt-0
+  .about-me-section {
+    @apply pt-20
+  }
+
+  .about-me-superpowers-ul {
+    @apply w-6/12
+  }
 }
 
 @tailwind utilities;

@@ -28,11 +28,6 @@
 <style lang="scss">
 
   .about-me {
-
-    .text {
-      background: #69c8e8;
-    }
-
     section {
       min-height: 50vh;
     }

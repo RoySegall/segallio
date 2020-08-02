@@ -1,10 +1,10 @@
 <template>
-  <section class="text about about-me-section xs:pt-20 sm:pt-20 md:pt-20">
+  <section class="text about-me-section">
 
     <div>
       <h2 class="pb-4 title-for-text">About me</h2>
 
-      <div class="text-to-read text-xl w-3/4 m-auto">
+      <div class="text-to-read text-xl m-auto w-3/4 xs:w-11/12 sm:w-11/12 md:w-11/12">
         <p class="pb-4">
           Ever since I can remember, I have always loved investigating and
           discovering how things work. I was soon known as the guy everyone
@@ -72,7 +72,7 @@
 
 <style lang="scss">
 
-  .about {
+  .about-me-section {
     em {
       color: white;
       font-weight: bold;
