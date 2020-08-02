@@ -2,7 +2,7 @@
   <Layout>
     <Introduction/>
     <About/>
-<!--    <Jobs/>-->
+    <Jobs/>
 <!--    <Blogs/>-->
 <!--    <Contributions/>-->
 <!--    <Map/>-->

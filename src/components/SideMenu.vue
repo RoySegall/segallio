@@ -75,7 +75,6 @@
 
       .side-menu  {
         background: white;
-        display: none;
         top: 0;
         left: 0;
         width: 100vw;
@@ -96,7 +95,6 @@
       }
 
       .side-menu.sticky {
-        display: block;
         padding-top: 0;
       }
     }

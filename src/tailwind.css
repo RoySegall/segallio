@@ -29,6 +29,7 @@
   background: #69c8e8;
 }
 
+
 /* Introduction */
 
 .introduction {
@@ -86,6 +87,10 @@
     @apply pt-20
   }
 
+  .about-me-superpowers {
+    @apply pb-4
+  }
+
   .about-me-superpowers-ul {
     @apply w-11/12
   }
@@ -104,6 +109,10 @@
     @apply pt-20
   }
 
+  .about-me-superpowers {
+    @apply pb-4
+  }
+
   .about-me-superpowers-ul {
     @apply w-6/12
   }
@@ -120,6 +129,10 @@
 
   .about-me-section {
     @apply pt-20
+  }
+
+  .about-me-superpowers {
+    @apply pb-4
   }
 
   .about-me-superpowers-ul {

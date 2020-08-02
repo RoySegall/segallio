@@ -1,7 +1,7 @@
 <template>
-  <div class="jobs">
-    <section class="main w-screen text-center" id="jobs">
-      <h2 class="text-4xl font-bold pb-4 text-white title-for-text">Jobs</h2>
+  <div class="jobs" id="jobs">
+    <section class="main w-screen text-center" >
+      <h2 class="text-4xl font-bold  text-white title-for-text pb-4 sm:pb-0 md:pb-0 md:pb-0 pt-4">Jobs</h2>
 
       <Job class="job"
            @switch-job="switchJob"
@@ -69,7 +69,6 @@
     .main {
       height: 50vh;
       background: #efb15e;
-      padding-top: 2em;
 
       .job {
         background-color: white;
@@ -77,15 +76,14 @@
         color: #141c3a;
         padding: 1.25rem;
         min-height: 60vh;
-        width: 100vh;
+        max-width: 100vh;
         border: solid 2px #e6ab5d;
         margin: 0 auto;
-        margin-top: 2em;
       }
     }
 
     .filler {
-      height: 50vh;
+      min-height: 50vh;
     }
   }
 
