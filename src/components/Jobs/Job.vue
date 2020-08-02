@@ -4,21 +4,26 @@
       <g-image :src=getImagePath(job) width="200" class="logo m-auto"/>
     </a>
 
-    <div class="m-auto flex items-center justify-center pt-10 pb-4">
-      <a v-bind:class="{'cursor-pointer': prevActive}" v-on:click="$emit('switch-job', 'prev')">
-        <font-awesome-icon v-bind:class="{'arrow text-5xl ml-2': 1, 'active': prevActive}"
-                           :icon="['fad', 'chevron-left']"/>
+    <div class="job-item">
+      <a v-bind:class="{'cursor-pointer': prevActive}"
+         v-on:click="$emit('switch-job', 'prev')">
+        <font-awesome-icon
+          v-bind:class="{'arrow text-5xl ml-2': 1, 'active': prevActive}"
+          :icon="['fad', 'chevron-left']"/>
       </a>
 
       <div>
-        <h2 class="text-3xl font-bold">{{job.name}}, {{job.years}}: {{job.position}}</h2>
+        <h3 class="text-3xl font-bold">{{job.name}}, {{job.years}}:
+          {{job.position}}</h3>
 
-        <p class="pt-10 w-5/6 m-auto leading-loose description" v-html=job.description></p>
+        <p class="job-description description" v-html=job.description></p>
       </div>
 
-      <a v-bind:class="{'cursor-pointer': nextActive}" v-on:click="$emit('switch-job', 'next')">
-        <font-awesome-icon v-bind:class="{'arrow text-5xl ml-2': 1, 'active': nextActive}"
-                           :icon="['fad', 'chevron-right']"/>
+      <a v-bind:class="{'cursor-pointer': nextActive}"
+         v-on:click="$emit('switch-job', 'next')">
+        <font-awesome-icon
+          v-bind:class="{'arrow text-5xl ml-2': 1, 'active': nextActive}"
+          :icon="['fad', 'chevron-right']"/>
       </a>
     </div>
 

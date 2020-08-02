@@ -2,7 +2,7 @@
   <section class="text about-me-section">
 
     <div>
-      <h2 class="pb-4 title-for-text">About me</h2>
+      <h2 class="pb-4 pt-4 title-for-text">About me</h2>
 
       <div class="text-to-read text-xl m-auto w-3/4 xs:w-11/12 sm:w-11/12 md:w-11/12">
         <p class="pb-4">

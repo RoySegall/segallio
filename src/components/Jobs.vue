@@ -1,7 +1,7 @@
 <template>
-  <div class="jobs" id="jobs">
-    <section class="main w-screen text-center" >
-      <h2 class="text-4xl font-bold  text-white title-for-text pb-4 sm:pb-0 md:pb-0 md:pb-0 pt-4">Jobs</h2>
+  <div class="jobs w-screen" id="jobs">
+    <section class="jobs-section" >
+      <h2 class="jobs-section-h2">Jobs</h2>
 
       <Job class="job"
            @switch-job="switchJob"
@@ -64,11 +64,8 @@
 <style lang="scss">
 
   .jobs {
-    width: 100vw;
 
-    .main {
-      height: 50vh;
-      background: #efb15e;
+    .jobs-section {
 
       .job {
         background-color: white;
