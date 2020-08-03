@@ -1,5 +1,5 @@
 <template>
-  <div class="footer text-center w-screen text-to-read">
+  <div class="footer text-center w-screen text-to-read xs:pt-4">
     Designed with
     <font-awesome-icon class="icon" :icon="['fas', 'heart']"/> by
     <b>Roy</b> and <b>Noy</b>

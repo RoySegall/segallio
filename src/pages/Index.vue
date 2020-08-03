@@ -5,8 +5,8 @@
     <Jobs/>
     <Blogs/>
     <Contributions/>
-<!--    <Map/>-->
-<!--    <Footer/>-->
+    <Map/>
+    <Footer/>
   </Layout>
 </template>
 
