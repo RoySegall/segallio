@@ -54,7 +54,7 @@
         </p>
 
 
-<!--        <Pictures/>-->
+        <Pictures class="xs:hidden sm:hidden md:hidden"/>
       </div>
 
     </div>

@@ -2,7 +2,7 @@
   <div class="side-menu">
     <ul>
       <li v-for="link in links">
-        <a :href=link.section>
+        <a :href=link.section @click="handleClick">
           <font-awesome-icon class="side-menu-icon" :icon="['fad', link.icon]"/>
         </a>
       </li>
@@ -31,7 +31,28 @@
     },
 
     methods: {
+      handleClick(event) {
+        if (window.innerWidth >= 1024) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const elementId = event.currentTarget
+          .getAttribute('href')
+          .replace('#', '');
+
+        const targetPosition = document.getElementById(elementId);
+        let menuHeight = 0;
+
+        if (elementId !== 'about') {
+          menuHeight = document.querySelector('.side-menu').clientHeight;
+        }
+        console.log(menuHeight);
+        window.scroll({top: targetPosition.offsetTop - menuHeight});
+      },
       handleScroll(event) {
+
         let aboutMe = document.querySelector(".about-me");
         let sideMenu = document.querySelector(".side-menu");
 
@@ -90,7 +111,6 @@
             padding: 0;
             margin: 0;
           }
-
         }
       }
 
