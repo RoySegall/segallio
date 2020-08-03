@@ -4,7 +4,7 @@
     <About/>
     <Jobs/>
     <Blogs/>
-<!--    <Contributions/>-->
+    <Contributions/>
 <!--    <Map/>-->
 <!--    <Footer/>-->
   </Layout>

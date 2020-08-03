@@ -3,15 +3,16 @@
   <div class="w-screen contributions" id="contributions">
 
     <section class="main w-screen text-center">
-      <h2 class="text-4xl font-bold text-white pb-4 title-for-text">Contributions</h2>
+      <h2 class="text-4xl xs:text-2xl font-bold text-white pb-4 title-for-text">Contributions</h2>
 
-      <div class="w-3/4 m-auto text-to-read">
+      <div class="grid-width">
         <Technologies
           v-bind:technologies=technologies
           v-bind:selectedTech=selectedTech
+          class=""
           @filter-by-lang="filterByTech" />
 
-        <div class="text-left pt-4 grid grid-cols-3 gap-3">
+        <div class="text-left pt-4 grid-responsive">
           <div v-for="repository in repositories" class="repository">
             <Repository v-bind:repository=repository />
           </div>

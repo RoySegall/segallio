@@ -1,10 +1,10 @@
 <template>
-  <div class="h-screen w-screen blogs">
+  <div class="w-screen blogs">
 
     <section class="main w-screen text-center" id="blogs">
       <h2 class="text-4xl font-bold pb-12 text-white title-for-text">Recent blog posts</h2>
 
-      <div class="responsive-grid">
+      <div class="grid-width grid-responsive">
         <div v-for="blog in blogs" class="blog pl-5 pr-5 pt-5 flex items-center">
           <div>
             <span class="font-bold underline pb-5 text-2xl block">
@@ -24,8 +24,6 @@
       </div>
 
     </section>
-
-    <section class="filler xs:hidden sm:hidden md:hidden"></section>
   </div>
 </template>
 
@@ -43,9 +41,11 @@
 <style lang="scss">
 
   .blogs {
-    .main, .filler {
+    min-height: 100vh;
+
+    .main {
       background: #67c1e0;
-      min-height: 50vh;
+      min-height: 100vh;
       padding-top: 2em;
 
       .blog {
