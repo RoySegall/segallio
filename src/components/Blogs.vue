@@ -4,14 +4,8 @@
     <section class="main w-screen text-center" id="blogs">
       <h2 class="text-4xl font-bold pb-12 text-white title-for-text">Recent blog posts</h2>
 
-      <div class="m-auto text-to-read
-        w-3/4 md:w-11/12 xs:w-11/12 sm:w-11/12 lg:w-11/12
-        xs:pb-4 sm:pb-4 md:pb-4
-        grid grid-cols-3 gap-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1
-         ">
-        <div v-for="blog in blogs"
-             class="blog pl-5 pr-5 pt-5 flex items-center">
-
+      <div class="responsive-grid">
+        <div v-for="blog in blogs" class="blog pl-5 pr-5 pt-5 flex items-center">
           <div>
             <span class="font-bold underline pb-5 text-2xl block">
                 <a :href=blog.url target="_blank">{{blog.title}}</a>
