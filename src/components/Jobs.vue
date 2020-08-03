@@ -11,7 +11,11 @@
       />
     </section>
 
-    <section class="filler"></section>
+    <section class="filler
+    xs:hidden
+    sm:hidden
+    md:hidden
+"></section>
   </div>
 
 </template>

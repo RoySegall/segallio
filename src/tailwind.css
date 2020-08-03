@@ -115,6 +115,10 @@
     @apply w-11/12
   }
 
+  .jobs-section {
+    height: auto;
+  }
+
   .jobs-section-h2 {
     @apply pb-4
   }
@@ -141,6 +145,10 @@
     @apply w-9/12
   }
 
+  .jobs-section {
+    height: auto;
+  }
+
   .jobs-section-h2 {
     @apply pb-4
   }
@@ -165,6 +173,10 @@
 
   .about-me-superpowers-ul {
     @apply w-9/12
+  }
+
+  .jobs-section {
+    height: auto;
   }
 
   .jobs-section-h2 {
