@@ -54,7 +54,7 @@
         </p>
 
 
-        <Pictures class="xs:hidden sm:hidden md:hidden"/>
+        <Pictures class="xs:hidden sm:hidden"/>
       </div>
 
     </div>

@@ -1,9 +1,9 @@
 <template>
   <div class="images">
-    <ul class="flex items-center justify-between items-stretch pt-8">
+    <ul class="flex lg:items-center justify-between items-stretch pt-8">
       <li v-for="polaroid in polaroids" class="polaroid shadow-2xl">
-        <font-awesome-icon class="ml-1 text-xl text-right text-black icon shadow-2xl" :icon="['fas', 'thumbtack']"/>
-        <g-image :src="require(`!!assets-loader!@images/${polaroid.image}`)" fit="cover"  />
+<!--        <font-awesome-icon class="ml-1 text-xl text-right text-black icon shadow-2xl" :icon="['fas', 'thumbtack']"/>-->
+        <g-image :src="require(`!!assets-loader!@images/${polaroid.image}`)" width="100"  />
 
         <p class="hand-writing text-2xl">{{polaroid.text}}</p>
       </li>
@@ -19,7 +19,7 @@
         polaroids: [
           {image: 'gizra.jpeg', text: 'With the gizra guys'},
           {image: 'hasadna.jpeg', text: 'At the "Hasadna"'},
-          {image: 'me.jpeg', text: 'At DrupalCamp 2017'},
+          // {image: 'me.jpeg', text: 'At DrupalCamp 2017'},
           {image: 'family.jpeg', text: 'My family'},
         ],
       }
@@ -53,26 +53,22 @@
         }
 
         &:nth-child(odd) {
-          transform: rotate(-5deg);
 
           .icon {
             left: -.5em;
-            transform: rotate(-20deg);
           }
         }
 
         &:nth-child(even) {
-          transform: rotate(5deg);
 
           .icon {
             right: -.25em;
-            transform: rotate(20deg);
           }
         }
 
         img {
           margin-bottom: .75em;
-          width: 10vw;
+          width: 10em;
         }
 
         p {
