@@ -2,309 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67f244d-31ea-47c8-8b21-af524a8fc8fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/About.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Contributions/Contributions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Contributions/Contributions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Footer/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Footer/Footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gridsome.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gridsome.server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/archetypes/default.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/companies/dreamed-diabetes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/companies/gizra.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/images/gizra.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/companies/rc.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/images/rc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/companies/taliaz.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/images/taliaz.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/IMG_3186.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/IMG_3270.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-11.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-12.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-13.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-14.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-16.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-17.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-18.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-21.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-22.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-23.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-24.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-25.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-26.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-27.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-28.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-31.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-32.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-33.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-34.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-35.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-36.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-37.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-38.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-39.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-40.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-41.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-42.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-43.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-44.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-45.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-46.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-47.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-48.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-49.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-50.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-51.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-58.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/photos/photos-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/profile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/projects/bonapetit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/projects/financeular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/projects/go-store.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/projects/nuntius.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/projects/segallio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/images/projects/tahini.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/_FrontPage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/_General.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/_Overrides.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/_PhotosPage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/_ProjectsPage.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/_Responsive.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/assets/sass/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/config.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/_index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/photos/_index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/project/bonapetit.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/project/financeular.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/project/go-elm-store.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/project/nuntius.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/project/segallio.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/content/project/tahini.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/data/blogs.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/data/jobs.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/data/photos.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/data/superpowers.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/deploy.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/categories/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/categories/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/companies/gizra.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/companies/rc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/companies/taliaz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-10_hu89d1f24160f0955340b7d9b6cde6f385_309864_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-10_hu89d1f24160f0955340b7d9b6cde6f385_309864_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-11_hu074cfda9886ddfbaf2dca15b4a1efdc1_16264779_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-11_hu074cfda9886ddfbaf2dca15b4a1efdc1_16264779_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-12_hu97ea338441829af905b52fbf08efefe9_16074963_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-13_hu84e911e4dc6779c955225cb608ac80df_17603423_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-14_hu870e260391955c7a8506de6086a4fc46_14893889_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-15_hub727e19e7bf8cec6395a687b8b7eb939_11563283_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-16_hu66706da0ff0a4d030b7945daf7fc63b2_13737334_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-17_hu94fa2183342401f95766e9b35d59b321_12900791_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-18_hu2247d3227f0776ac92fa924f1dbf9f9d_12404343_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-19_hu12a4670279ea7bcd44aa78f9cc643398_17754872_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-1_huaa27381f3332d3df00c38dd7718030e3_139753_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-20_hu1d848f800e1848bafe96165b1ab7df4e_15967986_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-20_hu1d848f800e1848bafe96165b1ab7df4e_15967986_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-21_huc585bb0673e2b4eb7b39b152b1654a6b_3738820_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-22_hu5ccd9abf4bcfd48d5c846ccb023c0d0b_3425418_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-23_hu6853dfacd87760ffb8b6036f3eb695c8_3114825_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-23_hu6853dfacd87760ffb8b6036f3eb695c8_3114825_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-24_hu1a5385461241c0c253c80642d483bd57_3655841_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-24_hu1a5385461241c0c253c80642d483bd57_3655841_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-25_huaad5c7556e7f5709b84d7f953fd1aa13_4113774_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-25_huaad5c7556e7f5709b84d7f953fd1aa13_4113774_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-26_hu96aeaf38ac78e5af1fb92555de349026_2952718_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-27_hu4f5a1fb834d4609d76bdb3dff75e1a75_4507183_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-28_hu48ada133e728d4f91b913a77628f9075_4472648_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-29_hu6952ad0abd153edd467d818121265ca9_15568226_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-29_hu6952ad0abd153edd467d818121265ca9_15568226_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-2_hu42e6969c80a7119f7b495741359fb4d8_400587_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-30_hudbea3243fc0a37f7fbc84c29a08b0e6e_19164037_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-31_hu87cd5c2b0d39a03529fdcc08c0186334_87686_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-32_hu65798ecf79dc36e6288155a9c750d96c_88849_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-32_hu65798ecf79dc36e6288155a9c750d96c_88849_1500x0_resize_q50_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-33_hu430339c462a2882fc0490573fbd934cf_219287_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-34_hud1f1667f6f0d3879999ebdfbbc14ab14_119875_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-34_hud1f1667f6f0d3879999ebdfbbc14ab14_119875_1500x0_resize_q50_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-35_huae56ec6954ed2599b0f09e9e89f669e7_150764_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-35_huae56ec6954ed2599b0f09e9e89f669e7_150764_1500x0_resize_q50_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-36_hu76c6cf8eab9c8d612e0a0907661e69d0_112667_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-37_hu65c6c55b520196331323f13d6e229cd5_108052_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-37_hu65c6c55b520196331323f13d6e229cd5_108052_1500x0_resize_q50_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-38_huc44cfecc87da25402dcb11de1e6f2754_104923_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-39_hu1555c3b6a9d98464a013d663a7acdca7_86891_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-39_hu1555c3b6a9d98464a013d663a7acdca7_86891_1500x0_resize_q50_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-3_huacf1493dd0436c45f38a431f1d8a97db_299583_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-40_hue32229489bae69434ae9ed175da3ab1d_83800_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-41_hu4a9c021334581508faea6d3ba1e2a251_54870_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-42_hu889ef212876169480f6571a418174c96_104711_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-43_hubb5c36b153bd956fc20c0dc980315283_150719_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-44_hu043ca63e8fb8da75d20d2c973ee051a6_75518_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-45_hu0782a346411df5b19f30523848f3321f_569781_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-46_hu0501199066dc16591ec06f9401152a65_530108_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-47_hubec4bd272c0ccf464ccf612c4095b833_530965_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-48_hud6cfc381052c1fd57bd0986326a19ced_594226_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-48_hud6cfc381052c1fd57bd0986326a19ced_594226_1500x0_resize_q50_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-49_huba673b86982ed23b27dbcb08f15ad25d_384711_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-4_hu304772576cd8911ea542b4bf02183645_395911_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-50_hu4b9462ce0b729374d7f80395afa16c0c_53315_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-50_hu4b9462ce0b729374d7f80395afa16c0c_53315_1500x0_resize_q50_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-51_huc9eab0025f2f45985b3e9656be81d608_221963_1200x0_resize_q75_box.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-5_hu0c4994ced1c712df8ba71e5d57a7e9f5_236652_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-5_hu0c4994ced1c712df8ba71e5d57a7e9f5_236652_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-6_hu9d8393b7df5a959b713858c32e46694d_357886_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-6_hu9d8393b7df5a959b713858c32e46694d_357886_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-7_hu16f9eb94ef5b3f53dcd98f3715805c54_153935_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-7_hu16f9eb94ef5b3f53dcd98f3715805c54_153935_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-8_hu15043b9d60823aed8230e1cd6785e4fa_122170_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-8_hu15043b9d60823aed8230e1cd6785e4fa_122170_1500x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/photos/photos-9_huf0eb45ed59847f9d73c73637484bbf93_190868_1200x0_resize_q75_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/profile_hud0cb4cd55a023377bab59c5ff8899a84_3414760_1200x0_resize_q50_box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/bonapetit_hu93fb2bf4f9e03ebd7f13bc5ae474f01d_327143_1500x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/financeular_hu8c2583e20b480261dcc23eb4d362d342_62628_1500x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/go-store_hub04f27ca1a1c5bc7aa690b970d560be9_357899_1200x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/go-store_hub04f27ca1a1c5bc7aa690b970d560be9_357899_1500x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/nuntius_hu7f6ae88dea1b87562d0b80112bdf1625_171985_1500x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/segallio_hu81163e1a2a8afa2beb5aa6083569d97b_468271_1200x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/segallio_hu81163e1a2a8afa2beb5aa6083569d97b_468271_1500x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/images/projects/tahini_hud1e59c24d4135d216e98d61f20b0547f_270064_1500x0_resize_q75_box_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/photos/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/photos/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/bonapetit/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/financeular/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/go-elm-store/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/nuntius/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/segallio/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/project/tahini/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/sass/bootstrap.min.749a0d75952f94a278fe81818cd7bb30b1044900a9de530de2968d0e1a9db4d3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/sass/main.min.3ed2e2237c0e4c072c9c873e98778ac6bb5d17b4a78582cd94fa5af50ae8a099.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/tags/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/docs/tags/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/archetypes/default.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/_default/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/blog-posts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/fonts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/ga.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/jobs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/og.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/project-technologies.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/super-power.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/partials/who-am-i.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/photos/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/project/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/layouts/project/single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/themes/tahini/theme.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/amsterdam2014.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/amsterdam2014.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/austria2017.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/austria2017.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/barcelona2015.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/barcelona2015.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/devdays2015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/devdays2015.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/drupalcon_2012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/drupalcon_2012.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/dublin2016.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/dublin2016.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/family.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/family.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/funnyProfilePicture.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/funnyProfilePicture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/gizra.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/gizra.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/hasadna.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/hasadna.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/ironcamp2016.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/ironcamp2016.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/italy2016.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/italy2016.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/me.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/me.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/paris.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/paris.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/rome.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/rome.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/spain2016.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/assets/images/spain2016.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/Pictures.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/About/Pictures.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/Social.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/About/Social.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/Story.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/About/Story.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/SuperPowers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/About/SuperPowers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Blogs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Blogs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contributions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Contributions.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contributions/Logo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Contributions/Logo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contributions/Repository.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Contributions/Repository.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contributions/RepositoryInformation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Contributions/RepositoryInformation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contributions/RepositoryMetadata.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Contributions/RepositoryMetadata.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contributions/Technologies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Contributions/Technologies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Introduction.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Introduction.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Jobs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Jobs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Jobs/Job.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Jobs/Job.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Map.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Map/Icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Map/Icon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Map/Place.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/Map/Place.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/SideMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/blogs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/blogs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/contributions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/contributions.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/jobs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/jobs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/places.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/places.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/superpowers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/superpowers.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/layouts/Default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/layouts/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/pages/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/pages/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/templates/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/dreamed-diabetes.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/images/dreamed-diabetes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/gizra.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/hasadna.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/images/hasadna.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/nuntius.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/images/nuntius.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/rc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/rethinkdb.png" beforeDir="false" afterPath="$PROJECT_DIR$/old2/static/images/rethinkdb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/taliaz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/old2/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/About.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Social.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Social.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/introduction.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -338,18 +46,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/compoents/Introduction" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/src/components/RoyJobs" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/about" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/src/compoents/Footer" />
       <recent name="$PROJECT_DIR$/src/compoents/Aout" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/old2" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -376,7 +84,7 @@
       <workItem from="1596277282976" duration="19546000" />
       <workItem from="1596430309443" duration="1914000" />
       <workItem from="1596434108338" duration="12224000" />
-      <workItem from="1596657276168" duration="12840000" />
+      <workItem from="1596657276168" duration="16981000" />
     </task>
     <servers />
   </component>
