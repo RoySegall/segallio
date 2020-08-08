@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67f244d-31ea-47c8-8b21-af524a8fc8fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/SideMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/SideMenu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/Story.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/Story.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/StarIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPower.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPowerList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPowers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/Job.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/Job.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/dreamed-diabetes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/gizra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/rc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Jobs/taliaz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/hasadna.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/nuntius.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/rethinkdb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/dreamed.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old2/src/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/SideMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old2/src/data/superpowers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/superpowers.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/About/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/About/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/About.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Introduction/Social.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Introduction/Social.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/compoents/Jobs" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -49,18 +53,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/compoents/Jobs" />
       <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/compoents/Introduction" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/src/components/RoyJobs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/compoents/Jobs" />
       <recent name="$PROJECT_DIR$/src/compoents/About/SuperPowers" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/src/compoents/Footer" />
       <recent name="$PROJECT_DIR$/src/compoents/Aout" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -87,7 +91,7 @@
       <workItem from="1596277282976" duration="19546000" />
       <workItem from="1596430309443" duration="1914000" />
       <workItem from="1596434108338" duration="12224000" />
-      <workItem from="1596657276168" duration="22595000" />
+      <workItem from="1596657276168" duration="31383000" />
     </task>
     <servers />
   </component>

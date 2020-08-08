@@ -11,7 +11,7 @@ const Icon = ({item}) => <li className="pl-3 pr-8">
 
 export const Social = () => <div className="block w-full pt-16 pb-2">
     <ul className="flex justify-center m-2 icons">
-        {icons.map(item => <Icon item={item} />)}
+        {icons.map((item, index) => <Icon key={index} item={item} />)}
     </ul>
 </div>
 
