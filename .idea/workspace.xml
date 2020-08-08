@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67f244d-31ea-47c8-8b21-af524a8fc8fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Icons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Social.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compoents/Introduction/Social.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/introduction.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/SideMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/SideMenu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/Story.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/Story.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/StarIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPower.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPowerList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPowers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Introduction/Introduction.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old2/src/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/components/SideMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old2/src/data/superpowers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/superpowers.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/About/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/About/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/About.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +56,11 @@
       <recent name="$PROJECT_DIR$/src/components/RoyJobs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/compoents/About/SuperPowers" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/src/compoents/Footer" />
       <recent name="$PROJECT_DIR$/src/compoents/Aout" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/old2" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -84,7 +87,7 @@
       <workItem from="1596277282976" duration="19546000" />
       <workItem from="1596430309443" duration="1914000" />
       <workItem from="1596434108338" duration="12224000" />
-      <workItem from="1596657276168" duration="16981000" />
+      <workItem from="1596657276168" duration="22595000" />
     </task>
     <servers />
   </component>
@@ -111,10 +114,10 @@
     </state>
     <state x="620" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596809431163" />
     <state x="620" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1049@0.23.1792.1049" timestamp="1596790798626" />
-    <state x="462" y="219" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1596038303715">
+    <state x="462" y="219" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1596868104619">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
-    <state x="462" y="219" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596038303715" />
+    <state x="462" y="219" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596868104619" />
     <state x="100" y="123" width="1592" height="849" key="DiffContextDialog" timestamp="1595541492165">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
@@ -149,16 +152,16 @@
     <state x="684" y="468" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596281587542" />
     <state x="684" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097/1792.0.2560.1440@0.23.1792.1097" timestamp="1596398043533" />
     <state x="684" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596482711500" />
-    <state x="594" y="315" width="604" height="513" key="find.popup" timestamp="1596485613658">
-      <screen x="0" y="23" width="1792" height="1097" />
-    </state>
-    <state x="594" y="302" width="604" height="490" key="find.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596200313220" />
-    <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.0.2560.1440@0.23.1792.1097" timestamp="1596397619564" />
-    <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596485613658" />
-    <state x="561" y="256" width="670" height="676" key="search.everywhere.popup" timestamp="1596656153235">
+    <state x="594" y="302" width="604" height="490" key="find.popup" timestamp="1596868412852">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
-    <state x="561" y="256" width="670" height="676" key="search.everywhere.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596230719740" />
+    <state x="594" y="302" width="604" height="490" key="find.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596868412852" />
+    <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.0.2560.1440@0.23.1792.1097" timestamp="1596397619564" />
+    <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596485613658" />
+    <state x="561" y="256" width="670" height="676" key="search.everywhere.popup" timestamp="1596871584298">
+      <screen x="0" y="23" width="1792" height="1049" />
+    </state>
+    <state x="561" y="256" width="670" height="676" key="search.everywhere.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596871584298" />
     <state x="561" y="256" width="670" height="676" key="search.everywhere.popup/0.23.1792.1049@0.23.1792.1049" timestamp="1596656153235" />
     <state x="561" y="267" width="670" height="707" key="search.everywhere.popup/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596485621989" />
     <state x="626" y="391" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596790768874">

@@ -15,13 +15,13 @@
     name: "SideMenu",
 
     data() {
-      return {links: [
-          {icon: 'user-circle', section: '#about'},
-          {icon: 'laptop-code', section: '#jobs'},
-          {icon: 'book-reader', section: '#blogs'},
-          {icon: 'code-branch', section: '#contributions'},
-          {icon: 'map-marked', section: '#places'},
-      ]}
+      // return {links: [
+      //     {icon: 'user-circle', section: '#about'},
+      //     {icon: 'laptop-code', section: '#jobs'},
+      //     {icon: 'book-reader', section: '#blogs'},
+      //     {icon: 'code-branch', section: '#contributions'},
+      //     {icon: 'map-marked', section: '#places'},
+      // ]}
     },
     created() {
       window.addEventListener('scroll', this.handleScroll);

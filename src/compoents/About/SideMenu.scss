@@ -1,0 +1,51 @@
+.about-me {
+  position: relative;
+
+  .side-menu {
+    position: absolute;
+    top: 1em;
+    left: 1vh;
+    width: 0;
+
+    .side-menu-icon {
+      font-size: 2.5em;
+      margin-bottom: 3em;
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+
+      ul {
+        padding-top: 1em;
+      }
+    }
+  }
+
+  @media(max-width: 1024px) {
+
+    .side-menu  {
+      background: white;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      padding: 1em;
+      margin: 0 auto;
+      border-bottom: solid 1px black;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+
+        .side-menu-icon {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    .side-menu.sticky {
+      padding-top: 0;
+    }
+  }
+}
