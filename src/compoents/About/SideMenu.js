@@ -44,7 +44,6 @@ export class SideMenu extends Component {
         if (elementId !== 'about') {
             menuHeight = document.querySelector('.side-menu').clientHeight;
         }
-        console.log(menuHeight);
         window.scroll({top: targetPosition.offsetTop - menuHeight});
     }
 

@@ -2,16 +2,12 @@ import React from "react";
 import "./Jobs.scss";
 import {StaticQuery, graphql} from "gatsby"
 import {Job} from "./Job";
-import rc from "./rc.png";
-import gizra from "./gizra.png";
-import taliaz from "./taliaz.png";
-import dreamed from "./dreamed-diabetes.png";
 
 const query = graphql`
   {
     allMarkdownRemark(
         filter: {frontmatter: {type: {eq: "job"}}}, 
-        sort: {fields: frontmatter___entry, order: DESC}
+        sort: {fields: frontmatter___entry, order: ASC}
     ) {
       nodes {
         html
@@ -25,51 +21,109 @@ const query = graphql`
           title
         }
       }
+    },
+    dreamed: file(relativePath: { eq: "dreamed-diabetes.png" }) {
+      childImageSharp {
+          fluid {
+            src
+          }
+      }
+    },
+    gizra: file(relativePath: { eq: "gizra.png" }) {
+      childImageSharp {
+          fluid {
+            src
+          }
+      }
+    },
+    rc: file(relativePath: { eq: "rc.png" }) {
+      childImageSharp {
+          fluid {
+            src
+          }
+      }
+    },
+    taliaz: file(relativePath: { eq: "taliaz.png" }) {
+      childImageSharp {
+          fluid {
+            src
+          }
+      }
     }
   }
 `
-
-export class Jobs extends React.Component {
+class Jobs extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             selected: 0,
-            images: {0: dreamed, 1: taliaz, 2: rc, 3: gizra},
+            images: props.images
         };
     }
 
-    nextButton() {
+    handleJobNavigation = (event) => {
+        event.preventDefault();
 
+        const {jobs} = this.props;
+        const position = event.currentTarget.getAttribute('data-browse');
+        let selected = this.state.selected;
+
+        if (position === 'prev') {
+            if (selected === jobs.length - 1) {
+                return;
+            }
+
+            selected = selected + 1;
+
+        } else {
+
+            if (selected === 0) {
+                return;
+            }
+
+            selected = selected - 1;
+        }
+
+        this.setState({selected})
     }
 
-    prevButton() {
+    render() {
 
-    }
+        const {jobs} = this.props;
+        const {selected, images} = this.state;
 
-    Jobs(data) {
         return <>
             <div className="jobs w-screen" id="jobs">
                 <section className="jobs-section">
                     <h2 className="jobs-section-h2">Jobs</h2>
 
                     <Job
-                        data={data.allMarkdownRemark.nodes[this.state.selected]}
-                        nextButton={this.nextButton}
-                        prevButton={this.prevButton}
-                        selectedPicture={this.state.images[this.state.selected]}
+                        job={jobs[selected]}
+                        selectedImage={images[selected]}
+                        handleJobBrowsing={this.handleJobNavigation}
+                        nextActive={selected !== 0}
+                        prevActive={selected + 1 !== jobs.length}
                     />
                 </section>
             </div>
             <section className="filler xs:hidden sm:hidden md:hidden"></section>
         </>
     }
-
-    render() {
-        return <StaticQuery
-            query={query}
-            render={data => this.Jobs(data)}
-        />
-    }
 }
 
+
+const jobs = () => <StaticQuery
+    query={query}
+    render={data => <Jobs
+        jobs={data.allMarkdownRemark.nodes}
+        images={{
+            0: data.dreamed.childImageSharp.fluid.src,
+            1: data.taliaz.childImageSharp.fluid.src,
+            2: data.rc.childImageSharp.fluid.src,
+            3: data.gizra.childImageSharp.fluid.src,
+        }}
+    />}
+/>
+
+export default jobs;
