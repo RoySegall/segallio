@@ -13,7 +13,7 @@ export default function Home() {
     <Introduction/>
     <About/>
     <Jobs/>
-    {/*<Blogs/>*/}
+    <Blogs/>
     {/*<Contributions/>*/}
     {/*/!*<Map/>*!/*/}
     {/*<Footer/>*/}

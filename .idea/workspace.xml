@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67f244d-31ea-47c8-8b21-af524a8fc8fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/markdowns/gizra.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/rc.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/taliaz.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/About/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/SideMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/Job.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Jobs/Job.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/Job.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Jobs/Job.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/dreamed-diabetes.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/dreamed-diabetes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/gizra.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/gizra.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/rc.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/taliaz.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/taliaz.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/markdowns/dreamed.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/markdowns/dreamed.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +78,7 @@
       <workItem from="1596277282976" duration="19546000" />
       <workItem from="1596430309443" duration="1914000" />
       <workItem from="1596434108338" duration="12224000" />
-      <workItem from="1596657276168" duration="39167000" />
+      <workItem from="1596657276168" duration="40446000" />
     </task>
     <servers />
   </component>
@@ -154,10 +145,10 @@
     <state x="684" y="468" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596281587542" />
     <state x="684" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097/1792.0.2560.1440@0.23.1792.1097" timestamp="1596398043533" />
     <state x="684" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596482711500" />
-    <state x="594" y="302" width="604" height="490" key="find.popup" timestamp="1596868412852">
+    <state x="594" y="302" width="604" height="490" key="find.popup" timestamp="1597090958675">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
-    <state x="594" y="302" width="604" height="490" key="find.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596868412852" />
+    <state x="594" y="302" width="604" height="490" key="find.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1597090958675" />
     <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.0.2560.1440@0.23.1792.1097" timestamp="1596397619564" />
     <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596485613658" />
     <state x="561" y="256" width="670" height="676" key="search.everywhere.popup" timestamp="1597085379596">
@@ -213,7 +204,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/compoents/Jobs/Jobs.js</url>
-          <line>117</line>
+          <line>116</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
