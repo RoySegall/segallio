@@ -1,5 +1,7 @@
 import React from "react"
 import "./Blogs.scss";
+import {faQuoteLeft, faQuoteRight} from "@fortawesome/pro-duotone-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Blogs = () => <div className="w-screen blogs">
 
@@ -16,9 +18,9 @@ export const Blogs = () => <div className="w-screen blogs">
                     <span className="block font-bold">source, <span className="date">date</span>.</span>
 
                     <p className="pt-4 pb-8 text-left font-light leading-loose">
-                        <font-awesome-icon className="icon fa-2x fa-pull-left"/>
+                        <FontAwesomeIcon className="icon fa-2x fa-pull-left" icon={faQuoteLeft} />
                         <span className="italic">intro</span>
-                        <font-awesome-icon className="icon fa-2x fa-pull-right"/>
+                        <FontAwesomeIcon className="icon fa-2x fa-pull-right" icon={faQuoteRight}/>
                     </p>
                 </div>
 

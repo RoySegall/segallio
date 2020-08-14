@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67f244d-31ea-47c8-8b21-af524a8fc8fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-django-routes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-vue-masonite.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Jobs/Jobs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/markdowns/dreamed.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/markdowns/job-dreamed.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/markdowns/gizra.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/markdowns/job-gizra.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/markdowns/rc.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/markdowns/job-rc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/markdowns/taliaz.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/markdowns/job-taliaz.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +81,7 @@
       <workItem from="1596277282976" duration="19546000" />
       <workItem from="1596430309443" duration="1914000" />
       <workItem from="1596434108338" duration="12224000" />
-      <workItem from="1596657276168" duration="40446000" />
+      <workItem from="1596657276168" duration="42591000" />
     </task>
     <servers />
   </component>
@@ -139,10 +142,10 @@
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state x="100" y="123" width="1592" height="849" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1595781733606" />
-    <state x="684" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596482711500">
-      <screen x="0" y="23" width="1792" height="1097" />
+    <state x="684" y="468" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597353666443">
+      <screen x="0" y="23" width="1792" height="1049" />
     </state>
-    <state x="684" y="468" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596281587542" />
+    <state x="684" y="468" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1597353666443" />
     <state x="684" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097/1792.0.2560.1440@0.23.1792.1097" timestamp="1596398043533" />
     <state x="684" y="488" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596482711500" />
     <state x="594" y="302" width="604" height="490" key="find.popup" timestamp="1597090958675">
