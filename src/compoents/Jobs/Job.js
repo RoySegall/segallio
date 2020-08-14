@@ -19,7 +19,7 @@ export const Job = ({job, handleJobBrowsing, nextActive, selectedImage, prevActi
                         {job.frontmatter.name}, {job.frontmatter.years}: {job.frontmatter.position}
                     </h3>
 
-                    <p className="job-description description" dangerouslySetInnerHTML={{ __html: job.html }}></p>
+                    <div className="job-description description" dangerouslySetInnerHTML={{ __html: job.html }}></div>
                 </div>
 
                 <a onClick={handleJobBrowsing} className="cursor-pointer" data-browse='next'>

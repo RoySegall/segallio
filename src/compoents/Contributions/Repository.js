@@ -12,7 +12,7 @@ export const Repository = ({contribution}) => <div className="repository">
                 <a target="_blank" className="text-2xl font-bold underline block w-full">
                     {contribution.frontmatter.title}
                 </a>
-                <p className="pt-2 font-light leading-loose" dangerouslySetInnerHTML={{ __html: contribution.html }}></p>
+                <div className="pt-2 font-light leading-loose" dangerouslySetInnerHTML={{ __html: contribution.html }}></div>
 
                 <div className="pt-2">
                     <div className="inline">

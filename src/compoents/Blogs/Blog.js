@@ -12,7 +12,7 @@ export default ({blog}) => <div className="blog pl-5 pr-5 pt-5 flex items-center
 
         <p className="pt-4 pb-8 text-left font-light leading-loose">
             <FontAwesomeIcon className="icon fa-2x fa-pull-left" icon={faQuoteLeft}/>
-            <span className="italic" dangerouslySetInnerHTML={{ __html: blog.html }}></span>
+            <div className="italic" dangerouslySetInnerHTML={{ __html: blog.html }}></div>
             <FontAwesomeIcon className="icon fa-2x fa-pull-right" icon={faQuoteRight}/>
         </p>
     </div>
