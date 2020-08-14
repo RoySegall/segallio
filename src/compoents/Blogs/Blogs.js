@@ -23,7 +23,6 @@ const query = graphql`{
 `
 
 const Blogs = ({blogs}) => <div className="w-screen blogs">
-
     <section className="main w-screen text-center" id="blogs">
         <h2 className="text-4xl font-bold pb-12 text-white title-for-text">Recent blog posts</h2>
 
@@ -36,10 +35,7 @@ const Blogs = ({blogs}) => <div className="w-screen blogs">
 
 
 const blogs = () => (
-    <StaticQuery
-        query={query}
-        render={data => <Blogs blogs={data.allMarkdownRemark.nodes}/>}
-    />
+    <StaticQuery query={query} render={data => <Blogs blogs={data.allMarkdownRemark.nodes}/>} />
 )
 
 export default blogs

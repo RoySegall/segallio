@@ -53,7 +53,7 @@ class Contributions extends Component {
 
                 <div className="grid-width">
                     <Technologies selectedTechnology={this.state.selectedTechnology} setTechnologyCallback={this.setTechnology}/>
-                    <Repositories contributions={contributions}/>
+                    <Repositories contributions={contributions} selectedTechnology={this.state.selectedTechnology}/>
                 </div>
 
             </section>
@@ -62,10 +62,7 @@ class Contributions extends Component {
 }
 
 const contributions = () => (
-    <StaticQuery
-    query={query}
-    render={data => <Contributions contributions={data.allMarkdownRemark.nodes}/>}
-    />
+    <StaticQuery query={query} render={data => <Contributions contributions={data.allMarkdownRemark.nodes}/>} />
 )
 
 export default contributions
