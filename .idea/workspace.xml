@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67f244d-31ea-47c8-8b21-af524a8fc8fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-aliases-alias.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-decouple-authentication.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-drupal-hippies.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-electron-max-os.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-migrate-nodes-attachment.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-nuntius.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-simpletest-behat.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/About/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/SideMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPowers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/About/SuperPowers/SuperPowers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Blogs/Blogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/markdowns/blog-django-routes.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/markdowns/blog-django-routes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/markdowns/blog-vue-masonite.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/markdowns/blog-vue-masonite.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old2/src/data/blogs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/blogs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,7 @@
       <workItem from="1596277282976" duration="19546000" />
       <workItem from="1596430309443" duration="1914000" />
       <workItem from="1596434108338" duration="12224000" />
-      <workItem from="1596657276168" duration="46184000" />
+      <workItem from="1596657276168" duration="47470000" />
     </task>
     <servers />
   </component>
