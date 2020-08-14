@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.gizra.com/content/simpletest-behat-drupal-8
-slug: "/blog/my-first-post"
 source: "gizra"
 date: "2015-04-28"
 title: "simpleTest with Behat for Drupal 8"

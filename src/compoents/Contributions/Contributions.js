@@ -1,9 +1,27 @@
 import React, {Component} from "react"
+import { StaticQuery, graphql } from "gatsby"
 import "./Contributions.scss";
 import {Technologies} from "./Technologies";
 import {Repositories} from "./Repositories";
 
-export class Contributions extends Component {
+const query = graphql`
+      {
+        allMarkdownRemark(filter: {frontmatter: {type: {eq: "contribution"}}}, limit: 9) {
+          nodes {
+            html
+            frontmatter {
+              title
+              url
+              position
+              title
+              technologies
+            }
+          }
+        }
+      }
+    `
+
+class Contributions extends Component {
 
     constructor(props) {
         super(props);
@@ -26,6 +44,8 @@ export class Contributions extends Component {
     }
 
     render() {
+        const {contributions} = this.props;
+
         return <div className="w-screen contributions" id="contributions">
 
             <section className="main w-screen text-center">
@@ -33,11 +53,20 @@ export class Contributions extends Component {
 
                 <div className="grid-width">
                     <Technologies selectedTechnology={this.state.selectedTechnology} setTechnologyCallback={this.setTechnology}/>
-                    <Repositories />
+                    <Repositories contributions={contributions}/>
                 </div>
 
             </section>
         </div>
     }
 }
+
+const contributions = () => (
+    <StaticQuery
+    query={query}
+    render={data => <Contributions contributions={data.allMarkdownRemark.nodes}/>}
+    />
+)
+
+export default contributions
 

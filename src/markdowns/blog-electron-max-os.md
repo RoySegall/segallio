@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://medium.com/@roysegall/electron-open-with-for-mac-osx-f215a1fe2ce1
-slug: "/blog/my-first-post"
 source: "Medium"
 date: "2019-05-24"
 title: "Electron “Open With” for Mac OSX"

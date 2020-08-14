@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.medium.com/@roysegall/introduction-django-decorated-routes-35c93fd3fee0
-slug: "/blog/my-first-post"
 source: "Medium"
 date: "2020-05-29"
 title: "Introduction: Django Decorated Routes"

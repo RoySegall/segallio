@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.gizra.com/content/write-your-first-bot-using-nuntius/
-slug: "/blog/my-first-post"
 source: "gizra"
 date: "2017-06-01"
 title: "Write Your First Bot Using Nuntius"

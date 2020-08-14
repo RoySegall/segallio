@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.gizra.com/content/how-deal-colliding-aliases
-slug: "/blog/my-first-post"
 source: "gizra"
 date: "2012-03-01"
 title: "How to deal with colliding aliases"

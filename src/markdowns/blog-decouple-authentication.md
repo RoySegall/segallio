@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.gizra.com/content/restful-access-token
-slug: "/blog/my-first-post"
 source: "gizra"
 date: "2016-10-27"
 title: "Let’s Talk about Decoupled Authentication"

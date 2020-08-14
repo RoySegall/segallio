@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.medium.com/swlh/introduction-to-masonite-and-vuejs-e8538064a054
-slug: "/blog/my-first-post"
 source: "Medium"
 date: "2019-12-7"
 title: "Introduction to Masonite and VueJS"

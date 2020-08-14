@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.gizra.com/content/drupal-8-attachment-migration
-slug: "/blog/my-first-post"
 source: "gizra"
 date: "2016-06-08"
 title: "Drupal 8: Migrate Nodes with Attachments Easily"

@@ -1,7 +1,6 @@
 ---
 type: blog
 url: https://www.gizra.com/content/apps-entity-restrictions
-slug: "/blog/my-first-post"
 source: "gizra"
 date: "2016-01-17"
 title: "Drupal 8: Migrate Nodes with Attachments Easily"
