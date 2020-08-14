@@ -14,7 +14,7 @@ export default function Home() {
     <About/>
     <Jobs/>
     <Blogs/>
-    {/*<Contributions/>*/}
+    <Contributions/>
     {/*/!*<Map/>*!/*/}
     {/*<Footer/>*/}
   </>

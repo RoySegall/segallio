@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67f244d-31ea-47c8-8b21-af524a8fc8fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-aliases-alias.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-decouple-authentication.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-drupal-hippies.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-electron-max-os.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-migrate-nodes-attachment.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-nuntius.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/markdowns/blog-simpletest-behat.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Contributions/Repositories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compoents/Contributions/Technologies.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old2/src/data/blogs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/old2/src/data/blogs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Contributions/Contributions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Contributions/Contributions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compoents/Contributions/Contributions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/compoents/Contributions/Contributions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <workItem from="1596277282976" duration="19546000" />
       <workItem from="1596430309443" duration="1914000" />
       <workItem from="1596434108338" duration="12224000" />
-      <workItem from="1596657276168" duration="47470000" />
+      <workItem from="1596657276168" duration="51180000" />
     </task>
     <servers />
   </component>
@@ -155,10 +152,11 @@
     <state x="594" y="302" width="604" height="490" key="find.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1597090958675" />
     <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.0.2560.1440@0.23.1792.1097" timestamp="1596397619564" />
     <state x="594" y="315" width="604" height="513" key="find.popup/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596485613658" />
-    <state x="561" y="256" width="670" height="676" key="search.everywhere.popup" timestamp="1597085379596">
-      <screen x="0" y="23" width="1792" height="1049" />
+    <state x="2593" y="338" width="958" height="914" key="search.everywhere.popup" timestamp="1597416561660">
+      <screen x="1792" y="23" width="2560" height="1417" />
     </state>
     <state x="561" y="256" width="670" height="676" key="search.everywhere.popup/0.23.1792.1049/1792.23.2560.1417@0.23.1792.1049" timestamp="1596871584298" />
+    <state x="2593" y="338" width="958" height="914" key="search.everywhere.popup/0.23.1792.1049/1792.23.2560.1417@1792.23.2560.1417" timestamp="1597416561660" />
     <state x="561" y="256" width="670" height="676" key="search.everywhere.popup/0.23.1792.1049@0.23.1792.1049" timestamp="1597085379596" />
     <state x="561" y="267" width="670" height="707" key="search.everywhere.popup/0.23.1792.1097/1792.23.2560.1369@0.23.1792.1097" timestamp="1596485621989" />
     <state x="626" y="391" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596790768874">
