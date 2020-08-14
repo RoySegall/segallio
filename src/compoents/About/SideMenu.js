@@ -59,8 +59,8 @@ export class SideMenu extends Component {
         }
     }
 
-    link(link) {
-        return <li>
+    link(link, key) {
+        return <li key={key}>
             <a href={link.section} onClick={this.handleClick}>
                 <FontAwesomeIcon icon={link.icon} className="side-menu-icon" />
             </a>
@@ -70,7 +70,7 @@ export class SideMenu extends Component {
     render() {
         return <div className="side-menu">
             <ul>
-                {this.state.links.map(link => this.link(link))}
+                {this.state.links.map((link, key) => this.link(link, key))}
             </ul>
         </div>
     }
