@@ -3,7 +3,8 @@ import './map.scss';
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 import places from "./places.yml"
 
-const MapElement = (props) => <div className="w-screen m-auto map text-center" id="places">
+const MapElement = (props) => {
+    return <div className="w-screen m-auto map text-center" id="places">
     <h2 className="text-4xl font-bold pb-4 title-for-text">
         Places I visited
     </h2>
@@ -23,8 +24,8 @@ const MapElement = (props) => <div className="w-screen m-auto map text-center" i
 
 
     </Map>
-</div>;
+</div>;}
 
 export default GoogleApiWrapper({
-    apiKey: ('AIzaSyAjOSJxD8vnpZs8ve0rFhVBLcY3KmzN0zA')
+    apiKey: (process.env.GATSBY_GOOGLE_MAPS_KEY)
 })(MapElement)

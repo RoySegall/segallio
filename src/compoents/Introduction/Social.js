@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {icons} from "./Icons";
 
 const Icon = ({item}) => <li className="pl-3 pr-8">
-    <a href={item.url} target="_blank">
+    <a href={item.url} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={item.iconName} className="icon text-4xl" />
     </a>
 </li>

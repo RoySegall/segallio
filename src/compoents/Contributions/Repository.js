@@ -7,7 +7,7 @@ const Logo = ({contribution, icons}) => {
 
     if (logoName) {
         if (typeof icons[logoName] == 'string') {
-            return <img className="m-auto" src={icons[logoName]} />
+            return <img className="m-auto" src={icons[logoName]} alt={`${logoName} representation`} />
         }
 
         return <FontAwesomeIcon icon={icons[logoName]} className="text-center m-auto text-6xl"/>
@@ -24,7 +24,7 @@ export const Repository = ({contribution, icons}) => <div className="repository"
         </div>
         <div className="col-span-9 xs:col-span-12 h-full pl-1">
             <div className="flex content-between flex-wrap h-full">
-                <a target="_blank" className="text-2xl font-bold underline block w-full">
+                <a href={contribution.frontmatter.url} target="_blank" className="text-2xl font-bold underline block w-full">
                     {contribution.frontmatter.title}
                 </a>
                 <div className="pt-2 font-light leading-loose" dangerouslySetInnerHTML={{ __html: contribution.html }}></div>

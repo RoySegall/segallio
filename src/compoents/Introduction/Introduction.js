@@ -22,7 +22,7 @@ const Introduction = ({imageSrc}) => <div className="introduction first-section"
         motivated, love to explore new technologies
     </p>
     <p className="introduction-p">and contributing to open-source projects.</p>
-    <img alt="Funny picture of mu self" src={imageSrc} />
+    <img alt="Funny protrait of my self" src={imageSrc} />
     <Social />
 </div>
 

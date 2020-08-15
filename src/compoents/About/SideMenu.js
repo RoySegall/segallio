@@ -28,9 +28,6 @@ export class SideMenu extends Component {
     }
 
     handleClick(event) {
-        if (window.innerWidth >= 1024) {
-            return;
-        }
 
         event.preventDefault();
 
@@ -39,12 +36,19 @@ export class SideMenu extends Component {
             .replace('#', '');
 
         const targetPosition = document.getElementById(elementId);
-        let menuHeight = 0;
 
-        if (elementId !== 'about') {
-            menuHeight = document.querySelector('.side-menu').clientHeight;
+        let top = targetPosition.offsetTop;
+        if (window.innerWidth <= 1024) {
+            let menuHeight = 0;
+
+            if (elementId !== 'about') {
+                menuHeight = document.querySelector('.side-menu').clientHeight;
+            }
+
+            top = top - menuHeight
         }
-        window.scroll({top: targetPosition.offsetTop - menuHeight});
+
+        window.scroll({top});
     }
 
     handleScroll(event) {
