@@ -16,6 +16,6 @@ export default function Home() {
     <Blogs/>
     <Contributions/>
     {/*/!*<Map/>*!/*/}
-    {/*<Footer/>*/}
+    <Footer/>
   </>
 }
