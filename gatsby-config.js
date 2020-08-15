@@ -18,6 +18,7 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-remark`,
+        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -31,6 +32,12 @@ module.exports = {
                 name: 'markdown',
                 path: `${__dirname}/src/markdowns`,
             },
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "UA-135079112-1",
+            }
         },
         {
             resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -53,4 +60,13 @@ module.exports = {
             },
         }
     ],
+
+    siteMetadata: {
+        title: "Roy Segall",
+        titleTemplate: "%s · Who am I?",
+        description:
+            "My personal site, stuff I did and what I love (beside Pizza!).",
+        url: "https://segall.io", // No trailing slash allowed!
+        twitterUsername: "@roysegall",
+    },
 }

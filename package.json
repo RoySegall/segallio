@@ -26,8 +26,10 @@
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.26",
     "gatsby-image": "^2.4.14",
+    "gatsby-plugin-google-analytics": "^2.3.13",
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.25",
     "gatsby-source-filesystem": "^2.3.24",
@@ -36,7 +38,8 @@
     "google-maps-react": "^2.0.6",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "prettier": "2.0.5",

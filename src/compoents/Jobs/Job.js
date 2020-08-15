@@ -10,7 +10,7 @@ export const Job = ({job, handleJobBrowsing, nextActive, selectedImage, prevActi
         </a>
 
         <div className="job-item">
-            <a href='#' onClick={handleJobBrowsing} className="cursor-pointer" data-browse='prev'>
+            <a onClick={handleJobBrowsing} className={`${prevActive ? "cursor-pointer" : null}`} data-browse='prev'>
                 <FontAwesomeIcon className={`arrow text-5xl ml-2 ${prevActive ? 'active' : null}`} icon={faChevronLeft} />
             </a>
 
@@ -23,7 +23,7 @@ export const Job = ({job, handleJobBrowsing, nextActive, selectedImage, prevActi
                 </div>
             </div>
 
-            <a href='#' onClick={handleJobBrowsing} className="cursor-pointer" data-browse='next'>
+            <a onClick={handleJobBrowsing} className={`${nextActive ? "cursor-pointer" : null}`} data-browse='next'>
                 <FontAwesomeIcon className={`arrow text-5xl ml-2 ${nextActive ? 'active' : null}`} icon={faChevronRight} />
             </a>
         </div>
