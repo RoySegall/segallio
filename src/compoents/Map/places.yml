@@ -122,13 +122,3 @@
   geo:
     - 48.861677
     - 2.342254
-
-- title: "Home!"
-  description: "Bar!"
-  image: "paris.jpg"
-  tooltip: 'tooltip for marker1'
-
-  year: 2017
-  geo:
-    - 32.073933
-    - 34.818537

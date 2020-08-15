@@ -17,12 +17,17 @@ const query = graphql`
 
 const Introduction = ({imageSrc}) => <div className="introduction first-section">
     <h1 className="introduction-h1">Hello, I'm Roy Segall</h1>
-    <p className="introduction-p">
-        Enthusiastic, self-learned, highly
-        motivated, love to explore new technologies
-    </p>
-    <p className="introduction-p">and contributing to open-source projects.</p>
-    <img alt="Funny protrait of my self" src={imageSrc} />
+    <div className="introduction-p">
+        <p>
+            Enthusiastic, self-learned, highly
+            motivated, love to explore new technologies
+        </p>
+        <p className="introduction-p">and contributing to open-source projects.</p>
+    </div>
+
+    <div className="pt-10">
+        <img alt="Funny protrait of my self" src={imageSrc} />
+    </div>
     <Social />
 </div>
 

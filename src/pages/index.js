@@ -22,7 +22,9 @@ export default function Home() {
     <Jobs/>
     <Blogs/>
     <Contributions/>
-    <Map />
+    <div className="mb-10 xs:mb-24">
+      <Map />
+    </div>
     <Footer/>
   </>
 }
