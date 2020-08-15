@@ -51,7 +51,28 @@ const query = graphql`
               logo
             }
           }
-        }
+        },
+        hasadna: file(relativePath: { eq: "hasadna.png" }) {
+            childImageSharp {
+                fluid {
+                    src
+                }
+            }
+        },
+        nuntius: file(relativePath: { eq: "nuntius.png" }) {
+            childImageSharp {
+                fluid {
+                    src
+                }
+            }
+        },
+        rethinkdb: file(relativePath: { eq: "rethinkdb.png" }) {
+            childImageSharp {
+                fluid {
+                    src
+                }
+            }
+        },
       }
     `
 
@@ -78,7 +99,10 @@ class Contributions extends Component {
     }
 
     render() {
-        const {contributions} = this.props;
+        const {contributions, hasadna, nuntius, rethinkdb} = this.props;
+        icons['Hasadna'] = hasadna;
+        icons['Nuntius'] = nuntius;
+        icons['RethinkDB'] = rethinkdb;
 
         return <div className="w-screen contributions" id="contributions">
 
@@ -104,7 +128,14 @@ class Contributions extends Component {
 }
 
 const contributions = () => (
-    <StaticQuery query={query} render={data => <Contributions contributions={data.allMarkdownRemark.nodes}/>} />
+    <StaticQuery query={query} render={data =>
+        <Contributions
+            contributions={data.allMarkdownRemark.nodes}
+            hasadna={data.hasadna.childImageSharp.fluid.src}
+            nuntius={data.nuntius.childImageSharp.fluid.src}
+            rethinkdb={data.rethinkdb.childImageSharp.fluid.src}
+        />
+    } />
 )
 
 export default contributions

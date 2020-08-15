@@ -3,20 +3,26 @@ import {faGithubAlt} from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 
 const Logo = ({contribution, icons}) => {
+    const logoName = contribution.frontmatter.logo;
 
-    if (contribution.frontmatter.logo) {
-        return <FontAwesomeIcon icon={icons[contribution.frontmatter.logo]} className="side-menu-icon text-6xl"/>
+    if (logoName) {
+        if (typeof icons[logoName] == 'string') {
+            return <img className="m-auto" src={icons[logoName]} />
+        }
+
+        return <FontAwesomeIcon icon={icons[logoName]} className="text-center m-auto text-6xl"/>
     }
+
 
     return <FontAwesomeIcon icon={faGithubAlt} className="side-menu-icon text-6xl"/>
 }
 
 export const Repository = ({contribution, icons}) => <div className="repository">
     <div className="grid grid-cols-12 items-center h-full">
-        <div className="col-span-2 xs:col-span-12">
+        <div className="col-span-3 xs:col-span-12 text-center">
             <Logo contribution={contribution} icons={icons}/>
         </div>
-        <div className="col-span-10 xs:col-span-12 h-full pl-1">
+        <div className="col-span-9 xs:col-span-12 h-full pl-1">
             <div className="flex content-between flex-wrap h-full">
                 <a target="_blank" className="text-2xl font-bold underline block w-full">
                     {contribution.frontmatter.title}
