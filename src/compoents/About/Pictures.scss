@@ -1,0 +1,43 @@
+.images {
+
+  ul {
+    padding-bottom: 1em;
+
+    .polaroid {
+      background: white;
+      padding: 1vh;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        font-size: 2em;
+
+        top: -.75em;
+        color: #e6ab5d;
+      }
+
+      &:nth-child(odd) {
+
+        .icon {
+          left: -.5em;
+        }
+      }
+
+      &:nth-child(even) {
+
+        .icon {
+          right: -.25em;
+        }
+      }
+
+      img {
+        margin-bottom: .75em;
+        width: 15em;
+      }
+
+      p {
+        color: black;
+      }
+    }
+  }
+}

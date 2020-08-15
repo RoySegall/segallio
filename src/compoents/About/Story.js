@@ -1,5 +1,6 @@
 import React from "react";
 import "./Story.scss";
+import Pictures from "./Pictures";
 
 export default () => {
     return <section className="text about-me-section">
@@ -48,15 +49,14 @@ export default () => {
 
                 <p className="pb-4">
                     Besided work and programming, I live with my wife, <a href="https://www.instagram.com/noythecatlady/" className="underline"><em>Noy</em></a>
-                     and our two cats -
-                    <a href="https://www.instagram.com/tomandsamthecats/" className="underline"><em>Tom</em></a>,
-                     the female cat, is quite the lady, while
-                    <a href="https://www.instagram.com/tomandsamthecats/" className="underline"><em>Sam</em></a>,
-                     the male cat, is the adorable troublemaker.
+                    &nbsp;and our two cats -
+                    &nbsp;<a href="https://www.instagram.com/tomandsamthecats/" className="underline"><em>Tom</em></a>,
+                    &nbsp;the female cat, is quite the lady, while
+                    &nbsp;<a href="https://www.instagram.com/tomandsamthecats/" className="underline"><em>Sam</em></a>,
+                    &nbsp;the male cat, is the adorable troublemaker.
                 </p>
 
-
-                {/*<Pictures class="xs:hidden sm:hidden"/>*/}
+                <Pictures />
             </div>
 
         </div>
