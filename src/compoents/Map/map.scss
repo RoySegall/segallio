@@ -1,0 +1,23 @@
+.map {
+  min-height: 75vh;
+
+  .display-map {
+    height: 70vh !important;
+    margin: 0 auto;
+  }
+
+  .icon {
+    color: #e6ab5d;
+  }
+
+  .place-description {
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #ffa2a2;
+    }
+  }
+}

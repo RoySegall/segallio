@@ -1,0 +1,134 @@
+- title: "DrupalCon Dublin"
+  description: "Bar!"
+  image: "dublin2016.jpeg"
+  year: 2016
+  tooltip: 'tooltip for marker1'
+  geo:
+    - 53.347311
+    - -6.237484
+
+- title: "DrupalDevDays Milan"
+  description: "Bar!"
+  image: "italy2016.jpeg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2016
+  geo:
+    - 45.468748
+    - 9.185801
+
+- title: "Drupal Iron Camp"
+  description: "Bar!"
+  image: "ironcamp2016.jpeg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2016
+  geo:
+    - 50.102968
+    - 14.391466
+
+- title: "DrupalCon Vienna"
+  description: "Bar!"
+  image: "austria2017.jpeg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2017
+  geo:
+    - 48.212819
+    - 16.413162
+
+- title: "DrupalDevDays Seville"
+  description: "Bar!"
+  image: "spain2016.jpeg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2016
+  geo:
+    - 37.409554
+    - -5.999545
+
+- title: "DrupalCon Munich"
+  description: "Bar!"
+  image: "drupalcon_2012.jpg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2012
+  rights:
+    license: https://creativecommons.org/licenses/by-sa/2.0/
+    publisher: Drupal Associtation
+    source: flicker
+    url: https://www.flickr.com/photos/drupalassoc/7893709730/in/pool-drupalconmunich/
+
+  geo:
+    - 48.152083
+    - 11.616964
+
+- title: "DrupalCon Amsterdam"
+  description: "Bar!"
+  image: "amsterdam2014.jpg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2014
+  rights:
+    license: https://creativecommons.org/licenses/by-nc-sa/2.0/
+    publisher: Josef Jerabek
+    source: flicker
+    url: https://www.flickr.com/photos/pepej/15427887546/in/pool-drupalconamsterdam/
+  geo:
+    - 52.341510
+    - 4.888737
+
+- title: "DrupalCon Barcelona"
+  description: "Bar!"
+  image: "barcelona2015.jpeg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2015
+  geo:
+    - 41.410883
+    - 2.218888
+
+- title: "DrupalDevDays Montpellier"
+  description: "Bar!"
+  image: "devdays2015.jpg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2015
+  rights:
+    license: https://creativecommons.org/licenses/by-nc-sa/2.0/
+    publisher: Amazee Labs
+    source: flicker
+    url: https://www.flickr.com/photos/amazeelabs/17150395996/in/album-72157651602377908/
+  geo:
+    - 43.612378
+    - 3.877080
+
+- title: "Trip with Noy to Rome"
+  description: "Bar!"
+  image: "rome.jpg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2017
+  geo:
+    - 41.899574
+    - 12.516430
+
+- title: "Trip with Noy to Paris"
+  description: "Bar!"
+  image: "paris.jpg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2017
+  geo:
+    - 48.861677
+    - 2.342254
+
+- title: "Home!"
+  description: "Bar!"
+  image: "paris.jpg"
+  tooltip: 'tooltip for marker1'
+
+  year: 2017
+  geo:
+    - 32.073933
+    - 34.818537
