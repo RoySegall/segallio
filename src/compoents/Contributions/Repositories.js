@@ -9,10 +9,10 @@ const filterContributionsBySelectedTech = (contribution, selectedTechnology) => 
     return true;
 }
 
-export const Repositories = ({contributions, selectedTechnology}) => <div className="text-left pt-4 grid-responsive">
+export const Repositories = ({contributions, selectedTechnology, icons}) => <div className="text-left pt-4 grid-responsive">
     {
         contributions
             .filter((contribution) => filterContributionsBySelectedTech(contribution, selectedTechnology))
-            .map((contribution, key) => <Repository contribution={contribution} key={key}/>)
+            .map((contribution, key) => <Repository contribution={contribution} key={key} icons={icons}/>)
     }
 </div>

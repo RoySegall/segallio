@@ -1,24 +1,3 @@
-technologies:
-  - name: PHP
-    category: fab
-    icon: php
-
-  - name: Python
-    category: fab
-    icon: python
-
-  - name: Node
-    category: fab
-    icon: node
-
-  - name: Drupal
-    category: fab
-    icon: drupal
-
-  - name: Bots
-    category: fad
-    icon: user-robot
-
 repositories:
 
   - name: Organic Groups
