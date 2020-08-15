@@ -107,7 +107,8 @@ class Jobs extends React.Component {
                     />
                 </section>
             </div>
-            <section className="filler xs:hidden sm:hidden md:hidden"></section>
+            <section className="filler xs:hidden sm:hidden md:hidden">
+            </section>
         </>
     }
 }

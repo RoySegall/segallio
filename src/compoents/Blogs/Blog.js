@@ -8,7 +8,9 @@ export default ({blog}) => <div className="blog pl-5 pr-5 pt-5 flex items-center
             <a href={blog.frontmatter.url} rel="noreferrer" target="_blank">{blog.frontmatter.title}</a>
         </span>
 
-        <span className="block font-bold">{blog.frontmatter.source}, <span className="date">{blog.frontmatter.date}</span>.</span>
+        <span className="block font-bold">
+            {blog.frontmatter.source}, <span className="date">{blog.frontmatter.date}</span>.
+        </span>
 
         <p className="pt-4 pb-8 text-left font-light leading-loose">
             <FontAwesomeIcon className="icon fa-2x fa-pull-left" icon={faQuoteLeft}/>
