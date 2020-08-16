@@ -1,0 +1,10 @@
+.icon {
+  color: black;
+  -webkit-transition: color .5s; /* Safari */
+  transition: color .5s;
+
+  &:hover {
+    color: #f7b75e;
+
+  }
+}

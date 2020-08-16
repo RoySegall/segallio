@@ -1,0 +1,18 @@
+.blogs {
+  min-height: 100vh;
+
+  .main {
+    background: #67c1e0;
+    min-height: 100vh;
+    padding-top: 2em;
+
+    .blog {
+      background: white;
+      min-height: 28vh;
+
+      .date, .icon {
+        color: #e6ab5d;
+      }
+    }
+  }
+}
