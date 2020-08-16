@@ -8,5 +8,5 @@ technologies:
     - Python
     - Django
 ---
-My first *Django* package which can read of data from various sources like CSV, Excel, JSON, Yaml and MySQL. Once the 
+My first *Django* package. The package can read data from various sources like CSV, Excel, JSON, Yaml, and MySQL. Once the 
 data is processed from the source it will be saved to the DB.

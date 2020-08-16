@@ -8,5 +8,5 @@ technologies:
     - PHP
     - Drupal
 ---
-A module for Drupal which provides the options to have a template of message for specific a scenario. One of the use 
-cases is something which is similar to a feed in a social media site.
+A module for Drupal. Provides the options to have a template of message for specific a scenario. One of the use 
+cases are similar to a feed on a social media site.

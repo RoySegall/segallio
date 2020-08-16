@@ -8,5 +8,5 @@ technologies:
     - PHP
     - Drupal
 ---
-A module for Drupal provides a groups functionality which similar to Facebook groups, or any content access based on the 
+A module for Drupal. Provides a groups functionality which similar to Facebook groups, or any content access based on the 
 groups of the content consumer.
