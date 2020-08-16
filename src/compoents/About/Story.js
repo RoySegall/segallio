@@ -48,7 +48,7 @@ export default () => {
                 </p>
 
                 <p className="pb-4">
-                    Besided work and programming, I live with my wife, <a href="https://www.instagram.com/noythecatlady/" className="underline"><em>Noy</em></a>
+                    Besided work and programming, I live with my wife, <a href="https://www.instagram.com/noygevasegall/" className="underline"><em>Noy</em></a>
                     &nbsp;and our two cats -
                     &nbsp;<a href="https://www.instagram.com/tomandsamthecats/" className="underline"><em>Tom</em></a>,
                     &nbsp;the female cat, is quite the lady, while

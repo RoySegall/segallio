@@ -5,7 +5,7 @@ import places from "./places.yml"
 
 const MapElement = (props) => <div className="w-screen m-auto map text-center" id="places">
     <h2 className="text-4xl font-bold pb-4 title-for-text">
-        Places I visited
+        Places I've visited
     </h2>
 
     <Map
@@ -20,8 +20,6 @@ const MapElement = (props) => <div className="w-screen m-auto map text-center" i
         {places.map((place, key) =>
             <Marker key={key} position={{lat: place.geo[0], lng: place.geo[1]}} />
         )}
-
-
     </Map>
 </div>
 
