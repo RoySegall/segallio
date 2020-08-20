@@ -1,6 +1,18 @@
 .about-me {
   position: relative;
 
+  .svg-inline--fa .fa-primary {
+    fill: #ffd7a0;
+    opacity: 1;
+    opacity: var(--fa-primary-opacity, 1);
+  }
+
+  .svg-inline--fa .fa-secondary {
+    fill: #17546a;
+    opacity: 0.4;
+    opacity: var(--fa-secondary-opacity, 0.4);
+  }
+
   .side-menu {
     position: absolute;
     top: 1em;
@@ -15,6 +27,18 @@
     &.sticky {
       position: fixed;
       top: 0;
+
+      .svg-inline--fa .fa-primary {
+        fill: #ffba5c;
+        opacity: 1;
+        opacity: var(--fa-primary-opacity, 1);
+      }
+
+      .svg-inline--fa .fa-secondary {
+        fill: #00668a;
+        opacity: 0.4;
+        opacity: var(--fa-secondary-opacity, 0.4);
+      }
 
       ul {
         padding-top: 1em;
