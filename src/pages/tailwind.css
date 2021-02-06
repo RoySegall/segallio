@@ -110,7 +110,7 @@
     }
 
     .introduction-p {
-        @apply pl-1 pr-1 text-3xl
+        @apply pl-1 pr-1 text-2xl
     }
 
     .about-me-section {

@@ -1,7 +1,11 @@
 .first-section {
   min-height: 100vh;
 
-  h1 {
-    font-family: 'Rubik', cursive;
+  .portrait {
+    max-height: 55vh;
+
+    @media(max-width: 360px) {
+      max-height: 38vh;
+    }
   }
 }
