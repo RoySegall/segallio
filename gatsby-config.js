@@ -40,23 +40,26 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            resolve: `gatsby-plugin-webfonts`,
             options: {
-                fonts: fonts.map(font => {
-                    return {
-                        family: font,
-                        "variants": [
-                            "100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900",
-                        ],
-                        "subsets": [
-                            "latin-ext"
-                        ]
-                    }
-                }),
-                "formats": [
-                    "woff",
-                    "woff2"
-                ]
+                fonts: {
+                    google: fonts.map(font => {
+                        return {
+                            family: font,
+                            "variants": [
+                                "100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900",
+                            ],
+                            "subsets": [
+                                "latin-ext"
+                            ]
+                        }
+                    }),
+
+                },
+                formatAgents: {
+                    woff: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko`,
+                    woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
+                }
             },
         }
     ],
