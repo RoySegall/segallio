@@ -43,7 +43,7 @@
 }
 
 .introduction-p {
-    @apply text-center text-4xl font-hairline block w-full
+    @apply text-center text-4xl font-thin block w-full
 }
 
 /* About me */
@@ -108,7 +108,7 @@
     .introduction-h1 {
         @apply text-4xl
     }
-    
+
 
     .introduction-p {
         @apply pl-1 pr-1 text-2xl

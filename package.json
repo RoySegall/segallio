@@ -24,20 +24,22 @@
     "@fortawesome/pro-regular-svg-icons": "^5.14.0",
     "@fortawesome/pro-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "autoprefixer": "^10.2.4",
     "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-google-analytics": "^2.11.0",
     "gatsby-plugin-postcss": "^3.7.0",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sass": "^3.2.0",
     "gatsby-plugin-sharp": "^2.14.1",
+    "gatsby-plugin-webfonts": "^1.1.4",
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-transformer-remark": "^2.16.0",
     "gatsby-transformer-sharp": "^2.12.0",
     "google-maps-react": "^2.0.6",
     "node-sass": "^5.0.0",
+    "postcss": "^8.2.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
@@ -45,7 +47,7 @@
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "prettier": "2.2.1",
-    "tailwindcss": "^1.6.2"
+    "tailwindcss": "^2.0.2"
   },
   "repository": {
     "type": "git",

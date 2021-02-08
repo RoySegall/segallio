@@ -21,7 +21,7 @@ const query = graphql`
 const Picture = ({item, index}) => {
     const Label = PicturesLabel.labels[index];
     return <li className="polaroid shadow-2xl">
-        <img src={item.childImageSharp.fluid.src} alt={Label} />
+        <img loading="lazy" src={item.childImageSharp.fluid.src} alt={Label} />
         <p className="hand-writing text-2xl">{Label}</p>
     </li>
 }
