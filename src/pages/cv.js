@@ -3,6 +3,7 @@ import {Helmet} from "react-helmet";
 import CVImage from "../images/CVimage.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelopeOpen, faMobile, faMapMarkerAlt} from "@fortawesome/pro-light-svg-icons";
+import CvJobs from "../compoents/Jobs/CvJob";
 
 export default function CV() {
   return  <>
@@ -31,12 +32,13 @@ export default function CV() {
       </div>
     </header>
 
-    <main className="flex justify-center pt-5">
-      <section className="w-11/12">
-        <p className="text-xl font-extralight leading-relaxed">
-          Enthusiastic, self-learned, highly motivated, love to explore new technologies, contributing to open-source
-          projects, speak at local meetups, makes the best Tahini you can imagine, and an amateur chef.</p>
-      </section>
+    <main className="w-11/12 m-auto">
+      <p className="text-xl font-extralight leading-relaxed py-5">
+        Enthusiastic, self-learned, highly motivated, love to explore new technologies, contributing to open-source
+        projects, speak at local meetups, makes the best Tahini you can imagine, and an amateur chef.
+      </p>
+
+      <CvJobs />
     </main>
 
   </>
