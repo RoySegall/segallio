@@ -26,7 +26,7 @@ const Introduction = ({imageSrc}) => <div className="introduction first-section"
     </div>
 
     <div className="pt-10">
-        <img alt="Funny portrait of my self" src={imageSrc} className="portrait" />
+        <img alt="Funny portrait of my self" loading="lazy" src={imageSrc} className="portrait" />
     </div>
     <Social />
 </div>

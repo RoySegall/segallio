@@ -6,13 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const Job = ({job, handleJobBrowsing, nextActive, selectedImage, prevActive}) => <div className="job">
     <div className="job-display text-to-read">
         <a href={job.frontmatter.url} target="_blank" rel="noreferrer">
-            <img className="logo m-auto" src={selectedImage} alt={`${job.frontmatter.name}'s logo`} />
+            <img loading="lazy" className="logo m-auto" src={selectedImage} alt={`${job.frontmatter.name}'s logo`} />
         </a>
 
         <div className="job-item">
-            <a onClick={handleJobBrowsing} className={`${prevActive ? "cursor-pointer" : null}`} data-browse='prev'>
+            <button onClick={handleJobBrowsing} className={`${prevActive ? "cursor-pointer" : null}`} data-browse='prev'>
                 <FontAwesomeIcon className={`arrow text-5xl ml-2 ${prevActive ? 'active' : null}`} icon={faChevronLeft} />
-            </a>
+            </button>
 
             <div>
                 <h3 className="text-3xl font-bold">
@@ -23,9 +23,9 @@ export const Job = ({job, handleJobBrowsing, nextActive, selectedImage, prevActi
                 </div>
             </div>
 
-            <a onClick={handleJobBrowsing} className={`${nextActive ? "cursor-pointer" : null}`} data-browse='next'>
+            <button onClick={handleJobBrowsing} className={`${nextActive ? "cursor-pointer" : null}`} data-browse='next'>
                 <FontAwesomeIcon className={`arrow text-5xl ml-2 ${nextActive ? 'active' : null}`} icon={faChevronRight} />
-            </a>
+            </button>
         </div>
 
     </div>

@@ -11,10 +11,10 @@ export const Technologies = ({selectedTechnology, setTechnologyCallback, technol
             {technologies.map((technology, key) => {
                 const selected = selectedTechnology === technology.name ? 'text-black' : '';
                 return <li key={key} className={`xs:text-3xl sm:text-4xl md:text-4xl ${selected}`}>
-                    <a className="cursor-pointer" onClick={setTechnologyCallback} data-technology={technology.name}>
+                    <button className="cursor-pointer" onClick={setTechnologyCallback} data-technology={technology.name}>
                         <FontAwesomeIcon icon={technology.icon} />
                         <span className="block text-xs">{technology.name}</span>
-                    </a>
+                    </button>
                 </li>
             })}
         </ul>
