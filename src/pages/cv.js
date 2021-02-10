@@ -15,7 +15,7 @@ export default function CV() {
 
     <header className="blue-background text-center shadow-xl">
       <div className="py-4">
-        <img src={CVImage} className="ml-auto mr-auto rounded-full h-40 w-40 border border-white shadow-xl" />
+        <img src={CVImage} className="ml-auto mr-auto rounded-full h-28 w-28 border border-white shadow-xl" />
       </div>
 
       <div>
@@ -38,7 +38,33 @@ export default function CV() {
         projects, speak at local meetups, makes the best Tahini you can imagine, and an amateur chef.
       </p>
 
-      <CvJobs />
+      <section className="cv-jobs pb-5">
+        <h3 className="uppercase text-2xl font-semibold underline orange-color pb-5">Professional history</h3>
+
+        <div className="grid grid-flow-col auto-cols-max">
+          <div className="pr-10 flex">
+            <div className="pr-2"><img src={CVImage} className="ml-auto mr-auto w-20 shadow-xl" /></div>
+            <div className="flex flex-col">
+              <span className="text-xl blue-color">Dreamed Diabetes</span>
+              <span className="font-thin">2019 - Now</span>
+              <span className="font-extralight">Developer</span>
+            </div>
+
+          </div>
+
+          <div className="font-light">
+            <p className="pb-2">Techonoliges: <u>React, React native, Django</u></p>
+
+            <p className="">Dreamed Diabetes is a small startup which aims on helping with diabetes to get better treatment. I joined a small development team, which later on scaled up.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 className="uppercase text-2xl font-semibold underline orange-color pb-5">Open Source Contributions</h3>
+
+      </section>
+      {/*<CvJobs />*/}
     </main>
 
   </>
