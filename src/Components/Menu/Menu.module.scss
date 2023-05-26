@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #9f64d9;
+  margin: 0 auto;
+
+  .innerMenu {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 10vw;
+
+      li {
+        list-style: none;
+
+      }
+    }
+  }
+}
