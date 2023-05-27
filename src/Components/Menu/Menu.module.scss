@@ -5,10 +5,14 @@
   border-bottom: 1px solid #9f64d9;
   margin: 0 auto;
 
+  .text {
+    font-size: 1.5em;
+  }
+
   .innerMenu {
     width: 1000px;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
 
@@ -17,11 +21,11 @@
       padding: 0;
       display: flex;
       justify-content: space-between;
-      width: 10vw;
+      width: 15vw;
 
       li {
         list-style: none;
-
+        font-size: 1.5em;
       }
     }
   }

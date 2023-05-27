@@ -1,3 +1,38 @@
 .introduction {
-  padding-top: 10px;
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 75vh;
+  width: 1000px;
+
+  img {
+    position: inherit !important;
+    height: 60vh !important;
+  }
+
+  .messages {
+    width: 50%;
+    padding-left: .5em;
+
+    .message {
+      margin: 0;
+      padding: 1em;
+      background: #2196f3;
+      border-radius: 1em;
+      border: solid 1px #b345fb;
+      width: 100%;
+      color: white;
+      margin-top: 1em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .introSubTitle {
+    padding-top: 1em;
+    font-size: 1.25em;
+  }
 }
