@@ -1,4 +1,4 @@
-import styles from './menu.module.scss';
+import styles from './Menu.module.scss';
 import {robotoMono} from "@/common/fonts";
 
 export const Menu = () => <div className={`${styles.menu} ${robotoMono.className}`}>

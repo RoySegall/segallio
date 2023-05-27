@@ -1,2 +1,2 @@
-import styles from './blogPosts.module.scss';
+import styles from './BlogPosts.module.scss';
 export const BlogPosts = () => <div className={styles.blogPosts}>Blog posts</div>
