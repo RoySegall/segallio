@@ -1,38 +1,62 @@
-.introduction {
-  padding-top: 20px;
+.introductionWrapper {
+  margin-top: 20px;
   position: relative;
   display: flex;
-  flex-direction: row;
-  height: 75vh;
-  width: 1000px;
+  flex-direction: column;
+  min-height: 100vh;
+  border: solid 2px gray;
+  border-radius: 10px;
+  width: 500px;
 
-  img {
-    position: inherit !important;
-    height: 60vh !important;
-  }
-
-  .messages {
-    width: 50%;
+  .top {
+    display: flex;
+    border-bottom: 1px;
     padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-bottom: 2px solid gray;
+    margin-bottom: 15px;
 
-    .message {
-      margin: 0;
-      padding: 1em;
-      background: #2196f3;
-      border-radius: 1em;
+    .photo {
+      width: 75px;
+      height: 75px;
+      background-image: url('/photos/avatar.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
       border: solid 1px #b345fb;
-      width: 100%;
-      color: white;
-      margin-top: 1em;
+    }
 
-      &:first-child {
-        margin-top: 0;
-      }
+    .texts {
+      padding-left: 10px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
     }
   }
 
-  .introSubTitle {
-    padding-top: 1em;
-    font-size: 1.25em;
+  .introduction {
+    height: 50vh;
+
+    .messages {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+
+      .message {
+        font-size: 1em;
+        margin: 0;
+        padding: .75em;
+        border-radius: 1em;
+        background: #d7e6e9;
+        border: solid 1px #b345fb;
+        width: 95%;
+        color: black;
+        margin-top: 1em;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }

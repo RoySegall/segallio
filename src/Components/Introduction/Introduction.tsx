@@ -1,9 +1,10 @@
-import Image from 'next/image';
-import picture from './pictures/first.jpg';
+'use client';
 import styles from './introduction.module.scss';
-import {robotoMono} from "@/common/fonts";
+import {useState, useEffect} from "react";
+import {Message} from "@/Components/Introduction/Message";
+import {sleep} from "@/common/uitls";
 
-const messages = [
+const myMessages = [
     'Hello, my name is Roy Segall',
     "I'm a software developer from israel",
     "I'm married and own two cats: Sam and freddy",
@@ -12,12 +13,34 @@ const messages = [
     "You can ping me up at Linkedin, facebook, twitter or github",
 ];
 
+export const Introduction = () => {
+    const [messages, setMessages] = useState<string[]>([]);
 
-export const Introduction = () => <div className={styles.introduction}>
-    <div>
-        <Image src={picture} fill={true} alt={'Personal picture'} />
+    useEffect(() => {
+        (async () => {
+            for (let i = 0; i < myMessages.length; i++) {
+                setMessages(messages => [...messages, myMessages[i]]);
+                await sleep(2);
+            }
+        })();
+    }, []);
+
+    return <div className={styles.introductionWrapper}>
+
+        <div className={styles.top}>
+            <div className={styles.photo}></div>
+            <div className={styles.texts}>
+                <span className={styles.name}>Roy Segall</span>
+                <span className={styles.title}>Software engeneer at Tricentis israel</span>
+            </div>
+        </div>
+
+        <div className={styles.introduction}>
+            <div className={styles.messages}>
+                {messages.map((message, key) => <Message message={message} key={key} />)}
+            </div>
+        </div>
     </div>
-    <div className={styles.messages}>
-        {messages.map((message, key) => <p key={key} className={`${styles.message} ${robotoMono.className}`}>{message}</p>)}
-    </div>
-</div>
+
+
+}
