@@ -1,6 +1,68 @@
-.jobs {
+.jobsWrapper {
   margin-top: 20px;
   display: flex;
-  min-height: 100vh;
-  align-items: center;
+  min-height: 105vh;
+  width: 100vw;
+  background: #2f84ff;
+
+  .jobs {
+    padding-left: 2em;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      color: white;
+      font-weight: 400;
+      font-size: 3em;
+      text-transform: uppercase;
+    }
+
+    .content {
+      width: 75%;
+      background: white;
+      height: 60%;
+      margin-top: 5em;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.75);
+      overflow: hidden;
+
+
+      margin-right: auto;
+      margin-left: auto;
+
+      .header {
+        text-align: center;
+        padding-top: 2em;
+
+        .logo {
+          height: 3em;
+        }
+
+        .jobTitle {
+          font-size: 1.5em;
+          font-weight: 500;
+        }
+      }
+
+      .jobInfo {
+        padding-top: 1em;
+        width: 80%;
+        height: 70%;
+        margin: auto;
+        overflow: hidden;
+        overflow-y: visible;
+
+        p {
+          text-align: left;
+          margin: 0;
+          padding: 0;
+          padding-bottom: 1em;
+          font-size: 1.25em;
+          font-weight: 200;
+          line-height: 1.75;
+        }
+      }
+    }
+  }
 }
