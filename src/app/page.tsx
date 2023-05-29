@@ -6,7 +6,7 @@ import {BlogPosts} from "@/Components/BlogPosts";
 
 export default function Home() {
     return <div className={styles.home}>
-        <Menu />
+        {/*<Menu />*/}
         <Introduction />
         <Jobs />
         <BlogPosts />

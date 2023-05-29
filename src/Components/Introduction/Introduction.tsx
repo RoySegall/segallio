@@ -3,6 +3,9 @@ import styles from './introduction.module.scss';
 import {useState, useEffect} from "react";
 import {Message} from "@/Components/Introduction/Message";
 import {sleep} from "@/common/uitls";
+import Image from 'next/image';
+import picture from './pictures/avatar.jpg'
+import {robotoMono} from "@/common/fonts";
 
 const myMessages = [
     'Hello, my name is Roy Segall',
@@ -25,22 +28,28 @@ export const Introduction = () => {
         })();
     }, []);
 
-    return <div className={styles.introductionWrapper}>
+    return <div className={styles.introductionSection}>
 
-        <div className={styles.top}>
-            <div className={styles.photo}></div>
-            <div className={styles.texts}>
-                <span className={styles.name}>Roy Segall</span>
-                <span className={styles.title}>Software engeneer at Tricentis israel</span>
+        <div className={styles.introductionWrapper}>
+            <div className={styles.top}>
+                <div className={styles.photo}>
+                    <Image src={picture} width="150" height="150" alt={'Personal picture'} />
+                </div>
+                <div className={styles.texts}>
+                    <span className={`${styles.name} ${robotoMono.className}`}>Roy Segall</span>
+                    <span className={`${styles.title} ${robotoMono.className}`}>Software engeneer at Tricentis israel</span>
+                </div>
             </div>
-        </div>
 
-        <div className={styles.introduction}>
-            <div className={styles.messages}>
-                {messages.map((message, key) => <Message message={message} key={key} />)}
+            <div className={styles.introduction}>
+                <div className={styles.messages}>
+                    {messages.map((message, key) => <Message message={message} key={key} />)}
+                </div>
+
+                <div className={styles.inputWrapper}>
+                    <input />
+                </div>
             </div>
         </div>
     </div>
-
-
 }

@@ -1,60 +1,105 @@
-.introductionWrapper {
+.introductionSection {
   margin-top: 20px;
-  position: relative;
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  border: solid 2px gray;
-  border-radius: 10px;
-  width: 500px;
+  align-items: center;
 
-  .top {
+  .introductionWrapper {
     display: flex;
-    border-bottom: 1px;
-    padding-left: .5em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    border-bottom: 2px solid gray;
-    margin-bottom: 15px;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0 0 10px #6B6B6B7F;
 
-    .photo {
-      width: 75px;
-      height: 75px;
-      background-image: url('/photos/avatar.jpg');
-      background-size: cover;
-      background-position: center;
-      border-radius: 50%;
-      border: solid 1px #b345fb;
-    }
 
-    .texts {
-      padding-left: 10px;
+    .top {
       display: flex;
-      justify-content: space-evenly;
-      flex-direction: column;
+      border-bottom: 1px;
+      padding-left: .5em;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      border-bottom: 1px solid #6B6B6B7F;
+      margin-bottom: 15px;
+
+      .photo {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        position: relative;
+
+        img {
+          color: transparent;
+          left: -25px;
+          position: absolute;
+          top: -10px;
+        }
+      }
+
+      .texts {
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        .name {
+          font-size: 2em;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .title {
+          font-size: 1em;
+          color: #6B6B6B7F;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
     }
-  }
 
-  .introduction {
-    height: 50vh;
+    .introduction {
+      height: 50vh;
 
-    .messages {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
+      .inputWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #6B6B6B7F;
 
-      .message {
-        font-size: 1em;
-        margin: 0;
-        padding: .75em;
-        border-radius: 1em;
-        background: #d7e6e9;
-        border: solid 1px #b345fb;
-        width: 95%;
-        color: black;
-        margin-top: 1em;
+        input {
+          margin-left: 1em;
+          margin-right: 1em;
+          width: 100%;
+          border-radius: 10px;
+          border: none;
+          background: rgba(201, 201, 201, 0.5);
+          height: 30px;
+          margin-top: 5px;
+        }
+      }
 
-        &:first-child {
-          margin-top: 0;
+
+
+      .messages {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        overflow: scroll;
+        height: 90%;
+        overflow-y: visible;
+
+        .message {
+          font-size: 1em;
+          margin: 0;
+          padding: .75em;
+          border-radius: 1em;
+          background: #2f84ff;
+          width: 95%;
+          color: white;
+          margin-top: 1em;
+
+          &:first-child {
+            margin-top: 0;
+          }
         }
       }
     }
