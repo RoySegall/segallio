@@ -47,7 +47,7 @@ export const Introduction = () => {
                 </div>
 
                 <div className={styles.inputWrapper}>
-                    <input />
+                    <input placeholder='Say something nice :)' />
                 </div>
             </div>
         </div>
