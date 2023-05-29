@@ -20,8 +20,6 @@
       padding-bottom: .5em;
       border-bottom: 1px solid #6B6B6B7F;
       margin-bottom: 15px;
-      box-shadow: 1px 2px 5px rgba(107, 107, 107, 0.4980392157);;
-
 
       .photo {
         border-radius: 50%;
@@ -76,7 +74,7 @@
           border: none;
           background: rgba(201, 201, 201, 0.5);
           height: 30px;
-          margin-top: 10px;
+          margin-top: 1em;
           padding-left: 1em;
 
           &:focus {
