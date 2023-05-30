@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import {Job} from "@/Components/Jobs/data/Job";
-import image from './pictures/dreamed-diabetes.png'
+import image from './pictures/rc.png'
 
 export const RealCommerce: Job = {
     image: image,
