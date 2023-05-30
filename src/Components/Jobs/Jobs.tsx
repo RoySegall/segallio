@@ -9,8 +9,8 @@ import {Dreamed} from "@/Components/Jobs/data/Dreamed";
 import {Gizra} from "@/Components/Jobs/data/Gizra";
 import {RealCommerce} from "@/Components/Jobs/data/RealCommerce";
 import {Taliaz} from "@/Components/Jobs/data/Taliaz";
-import left from '@/common/chevron-left-duotone.svg';
-import right from '@/common/chevron-right-duotone.svg';
+import left from './chevron-left-duotone.svg';
+import right from './chevron-right-duotone.svg';
 import {useCallback, useMemo, useState} from "react";
 
 const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
