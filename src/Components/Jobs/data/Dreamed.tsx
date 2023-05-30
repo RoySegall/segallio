@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-
-
 import {Job} from "@/Components/Jobs/data/Job";
-import image from './dreamed-diabetes.png'
+import image from './pictures/dreamed-diabetes.png'
 
 export const Dreamed: Job = {
     image: image,

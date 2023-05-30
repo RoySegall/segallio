@@ -1,9 +1,10 @@
 import type {FC} from 'react';
 import styles from './jobs.module.scss';
 import {robotoMono} from "@/common/fonts";
-import {Dreamed} from "@/Components/Jobs/data/Dreamed";
 import Image from 'next/image';
 import type {Job} from "@/Components/Jobs/data/Job";
+import {Dreamed} from "@/Components/Jobs/data/Dreamed";
+import {Gizra} from "@/Components/Jobs/data/Gizra";
 
 const Job: FC<{job: Job}> = ({job}) => <>
     <div className={styles.header}>
@@ -24,7 +25,7 @@ export const Jobs = () => <div className={styles.jobsWrapper} id='jobs'>
     <div className={styles.jobs}>
         <h2 className={robotoMono.className}>Jobs</h2>
         <div className={styles.content}>
-            <Job job={Dreamed} />
+            <Job job={Gizra} />
         </div>
     </div>
 
