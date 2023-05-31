@@ -36,6 +36,13 @@
       .arrow {
         margin-top: auto;
         margin-bottom: auto;
+        font-size: 2.5em;
+        background: none;
+        border: none;
+
+        &.active {
+            color: #2f84ff;
+        }
       }
 
       .jobWrapper {

@@ -13,6 +13,10 @@ import left from './chevron-left-duotone.svg';
 import right from './chevron-right-duotone.svg';
 import {useCallback, useMemo, useState} from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import {Testim} from "@/Components/Jobs/data/Testim";
+
 const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
     <div className={styles.header}>
 
@@ -28,7 +32,7 @@ const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
 </div>;
 
 export const Jobs = () => {
-    const jobs = useMemo( () => [Dreamed, Taliaz, RealCommerce, Gizra], []);
+    const jobs = useMemo( () => [Testim, Dreamed, Taliaz, RealCommerce, Gizra], []);
     const [selectedJob, setSelectedJob] = useState(0);
     const selectJob = useCallback((position: 'next' | 'prev') => {
         let selected = selectedJob;
@@ -46,14 +50,18 @@ export const Jobs = () => {
         }
     }, [jobs, selectedJob]);
 
-    return <div className={styles.jobsWrapper} id='jobs'>
+    const isActive = useMemo(() => ({
+        prev: selectedJob !== jobs.length - 1,
+        next: selectedJob !== 0
+    }), [selectedJob, jobs]);
 
+    return <div className={styles.jobsWrapper} id='jobs'>
         <div className={styles.jobs}>
             <h2 className={robotoMono.className}>Jobs</h2>
             <div className={styles.content}>
-                <Image src={left} height={50} width={50} alt={'left'} className={styles.arrow} onClick={() => selectJob('next')} />
+                <button onClick={() => selectJob('next')} className={`${styles.arrow} ${isActive.next && styles.active}`}><FontAwesomeIcon icon={faChevronLeft} /></button>
                 <Job job={jobs[selectedJob]} />
-                <Image src={right} height={50} width={50} alt={'left'} className={styles.arrow} onClick={() => selectJob('prev')} />
+                <button onClick={() => selectJob('prev')} className={`${styles.arrow} ${isActive.prev && styles.active}`}><FontAwesomeIcon icon={faChevronRight} /></button>
             </div>
         </div>
     </div>
