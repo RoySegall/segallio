@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 import {Message} from "@/Components/Introduction/Message";
 import {sleep} from "@/common/uitls";
 import Image from 'next/image';
-import picture from './pictures/avatar.jpg'
+import picture from './pictures/avatar.jpeg'
 import {robotoMono} from "@/common/fonts";
 
 const myMessages = [
@@ -32,12 +32,9 @@ export const Introduction = () => {
 
         <div className={styles.introductionWrapper}>
             <div className={styles.top}>
-                <div className={styles.photo}>
-                    <Image src={picture} width="150" height="150" alt={'Personal picture'} />
-                </div>
+                <Image src={picture} width="75" height="75" alt={'Personal picture'} />
                 <div className={styles.texts}>
                     <span className={`${styles.name} ${robotoMono.className}`}>Roy Segall</span>
-                    <span className={`${styles.title} ${robotoMono.className}`}>Software engeneer at Tricentis israel</span>
                 </div>
             </div>
 
