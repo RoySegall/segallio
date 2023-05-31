@@ -2,7 +2,7 @@
 import {Job} from "@/Components/Jobs/data/Job";
 import image from './pictures/rc.png'
 
-export const RealCommerce: Job = {
+export const realCommerce: Job = {
     image: image,
     name: 'Real Commerce',
     period: {

@@ -2,7 +2,7 @@
 import {Job} from "@/Components/Jobs/data/Job";
 import image from './pictures/taliaz.png'
 
-export const Taliaz: Job = {
+export const taliaz: Job = {
     image: image,
     name: 'Taliaz',
     period: {
