@@ -1,21 +1,14 @@
 'use client';
 
-import type {FC} from 'react';
+import {useCallback, useMemo, useState} from "react";
 import styles from './jobs.module.scss';
 import {robotoMono} from "@/common/fonts";
 import Image from 'next/image';
-import type {Job} from "@/Components/Jobs/data/Job";
-import {dreamed} from "@/Components/Jobs/data/Dreamed";
-import {gizra} from "@/Components/Jobs/data/Gizra";
-import {realCommerce} from "@/Components/Jobs/data/RealCommerce";
-import {taliaz} from "@/Components/Jobs/data/Taliaz";
-import left from './chevron-left-duotone.svg';
-import right from './chevron-right-duotone.svg';
-import {useCallback, useMemo, useState} from "react";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import {testim} from "@/Components/Jobs/data/Testim";
+import {jobs as jobEntries} from './data'
+import type {FC} from 'react';
+import type {Job} from "@/Components/Jobs/data/Job";
 
 const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
     <div className={styles.header}>
@@ -32,7 +25,7 @@ const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
 </div>;
 
 export const Jobs = () => {
-    const jobs = useMemo( () => [testim, dreamed, taliaz, realCommerce, gizra], []);
+    const jobs = useMemo( () => [jobEntries.testim, jobEntries.dreamed, jobEntries.taliaz, jobEntries.realCommerce, jobEntries.gizra], []);
     const [selectedJob, setSelectedJob] = useState(0);
     const selectJob = useCallback((position: 'next' | 'prev') => {
         let selected = selectedJob;
