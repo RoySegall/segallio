@@ -6,18 +6,26 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons'
 
 const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div className={styles.blog}>
-    <div className={styles.top}>
-        <span className={`${styles.title} ${robotoMono.className}`}><a href={url} target={'_blank'}>{title}</a></span>
-        <div className={styles.metadata}>
-            <span className={styles.source}>{source}, </span>
-            <span className={styles.date}>{date}</span>
+        <div className={styles.first}>
+            <FontAwesomeIcon icon={faQuoteLeft} className={`${styles.quote}`} />
         </div>
-    </div>
-    <div className={styles.paragraphWrapper}>
-        <FontAwesomeIcon icon={faQuoteLeft} className={`${styles.quote} ${styles.left}`} />
-        <p>{paragraph}</p>
-        <FontAwesomeIcon icon={faQuoteRight} className={`${styles.quote} ${styles.right}`} />
-    </div>
+
+        <div className={styles.second}>
+            <div className={styles.top}>
+                <span className={`${styles.title} ${robotoMono.className}`}><a href={url} target={'_blank'}>{title}</a></span>
+            </div>
+            <div className={styles.paragraphWrapper}>
+                <p>{paragraph}</p>
+            </div>
+            <div className={styles.metadata}>
+                <span className={styles.source}>{source}, </span>
+                <span className={styles.date}>{date}</span>
+            </div>
+        </div>
+
+        <div className={styles.third}>
+            <FontAwesomeIcon icon={faQuoteRight} className={`${styles.quote} ${styles.right}`} />
+        </div>
 </div>
 
 export const BlogPosts = () => <div className={styles.blogsPostsWrapper}>
