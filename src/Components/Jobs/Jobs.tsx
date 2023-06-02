@@ -4,8 +4,8 @@ import {useCallback, useMemo, useState} from "react";
 import styles from './jobs.module.scss';
 import {robotoMono} from "@/common/fonts";
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import {jobs as jobEntries} from './data'
 import type {FC} from 'react';
 import type {Job} from "@/Components/Jobs/data/Job";

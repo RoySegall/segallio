@@ -1,18 +1,23 @@
 import styles from './BlogPosts.module.scss';
 import {robotoMono} from "@/common/fonts";
+import type {FC} from "react";
+import {BlogPost, blogs} from "@/Components/BlogPosts/Blogs";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons'
 
-const BlogPost = () => <div className={styles.blog}>
+const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div className={styles.blog}>
     <div>
-        <span className={`${styles.title} ${robotoMono.className}`}>Why I love pizza</span>
+        <span className={`${styles.title} ${robotoMono.className}`}><a href={url} target={'_blank'}>{title}</a></span>
         <div className={styles.metadata}>
-            <span className={styles.source}>Italiza, </span>
-            <span className={styles.date}>2022-06-25</span>
+            <span className={styles.source}>{source}, </span>
+            <span className={styles.date}>{date}</span>
         </div>
     </div>
-    <p>
-        I just finished up my two years of work in Dreamed Diabetes. I won’t go into what they do (since their website
-        is pretty cool), but I would describe how it feels to be a med-teach company developer.
-    </p>
+    <div className={styles.paragraphWrapper}>
+        <FontAwesomeIcon icon={faQuoteLeft} className={`${styles.quote} ${styles.left}`} />
+        <p>{paragraph}</p>
+        <FontAwesomeIcon icon={faQuoteRight} className={`${styles.quote} ${styles.right}`} />
+    </div>
 </div>
 
 export const BlogPosts = () => <div className={styles.blogsPostsWrapper}>
@@ -20,18 +25,7 @@ export const BlogPosts = () => <div className={styles.blogsPostsWrapper}>
         <h2>Blog posts</h2>
 
         <div className={styles.blogsWrapper}>
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
+            {blogs.map((blog, index) => <BlogPost key={index} {...blog} />)}
         </div>
     </div>
 </div>
