@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons'
 
 const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div className={styles.blog}>
-    <div>
+    <div className={styles.top}>
         <span className={`${styles.title} ${robotoMono.className}`}><a href={url} target={'_blank'}>{title}</a></span>
         <div className={styles.metadata}>
             <span className={styles.source}>{source}, </span>
