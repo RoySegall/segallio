@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 import {Message} from "@/Components/Introduction/Message";
 import {sleep} from "@/common/uitls";
 import Image from 'next/image';
-import picture from './pictures/avatar.jpeg'
+import picture from './pictures/avatar.jpg'
 import {robotoMono} from "@/common/fonts";
 
 const myMessages = [
@@ -18,6 +18,7 @@ const myMessages = [
 
 export const Introduction = () => {
     const [messages, setMessages] = useState<string[]>([]);
+    const [collapseIntroduction, setCollapseIntroduction] = useState<boolean>(false);
 
     useEffect(() => {
         (async () => {
@@ -25,14 +26,15 @@ export const Introduction = () => {
                 setMessages(messages => [...messages, myMessages[i]]);
                 await sleep(2);
             }
+
+            setCollapseIntroduction(true);
         })();
     }, []);
 
-    return <div className={styles.introductionSection}>
-
+    return <div className={`${styles.introductionSection} ${collapseIntroduction && styles.collapseSection}`}>
         <div className={styles.introductionWrapper}>
             <div className={styles.top}>
-                <Image src={picture} width="75" height="75" alt={'Personal picture'} />
+                <div className={styles.photo}><Image src={picture} width="75" height="75" alt={'Personal picture'} /></div>
                 <div className={styles.texts}>
                     <span className={`${styles.name} ${robotoMono.className}`}>Roy Segall</span>
                 </div>
