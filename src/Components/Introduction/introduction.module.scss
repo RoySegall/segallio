@@ -4,6 +4,11 @@
   min-height: 100vh;
   align-items: center;
 
+  &.collapseSection {
+    min-height: 81vh;
+    transition: min-height 1s ease-in-out;
+  }
+
   .introductionWrapper {
     display: flex;
     flex-direction: column;

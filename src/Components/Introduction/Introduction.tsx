@@ -18,6 +18,7 @@ const myMessages = [
 
 export const Introduction = () => {
     const [messages, setMessages] = useState<string[]>([]);
+    const [collapseIntroduction, setCollapseIntroduction] = useState<boolean>(false);
 
     useEffect(() => {
         (async () => {
@@ -25,11 +26,12 @@ export const Introduction = () => {
                 setMessages(messages => [...messages, myMessages[i]]);
                 await sleep(2);
             }
+
+            setCollapseIntroduction(true);
         })();
     }, []);
 
-    return <div className={styles.introductionSection}>
-
+    return <div className={`${styles.introductionSection} ${collapseIntroduction && styles.collapseSection}`}>
         <div className={styles.introductionWrapper}>
             <div className={styles.top}>
                 <div className={styles.photo}><Image src={picture} width="75" height="75" alt={'Personal picture'} /></div>
