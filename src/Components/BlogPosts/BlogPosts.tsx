@@ -1,9 +1,9 @@
 import styles from './BlogPosts.module.scss';
 import {robotoMono} from "@/common/fonts";
-import type {FC} from "react";
 import {BlogPost, blogs} from "@/Components/BlogPosts/Blogs";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons'
+import {faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
+import type {FC} from "react";
 
 const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div className={styles.blog}>
         <div className={styles.first}>
@@ -11,7 +11,7 @@ const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div cl
         </div>
 
         <div className={styles.second}>
-            <div className={styles.top}>
+            <div className={styles.top}>src/Components/Jobs/data/index.ts
                 <span className={`${styles.title} ${robotoMono.className}`}><a href={url} target={'_blank'}>{title}</a></span>
             </div>
             <div className={styles.paragraphWrapper}>
