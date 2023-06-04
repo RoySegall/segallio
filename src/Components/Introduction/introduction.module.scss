@@ -16,6 +16,11 @@
     width: 450px;
     box-shadow: 0 0 10px #6B6B6B7F;
 
+    @media only screen and (max-width: 600px) {
+      width: 90vw;
+      height: 50vh;
+    }
+
     .top {
       display: flex;
       border-bottom: 1px;
@@ -87,6 +92,10 @@
         margin-top: .25em;
         padding-top: .5em;
         padding-bottom: .5em;
+
+        @media only screen and (max-width: 600px) {
+          height: 55px;
+        }
 
         input {
           height: 30px;
