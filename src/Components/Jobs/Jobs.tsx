@@ -11,16 +11,22 @@ import type {FC} from 'react';
 import type {Job} from "@/Components/Jobs/data/Job";
 import type {IconProp} from "@fortawesome/fontawesome-svg-core";
 
-const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
+interface JobProps {
+    job: Job;
+    navigationsCallback: (position: 'next' | 'prev') => void;
+    isActive: { next: boolean, prev: boolean };
+}
+
+const Job: FC<JobProps> = ({job, navigationsCallback, isActive}) => <div className={styles.jobWrapper}>
     <div className={styles.header}>
-        <NavigationButton icon={faChevronLeft} selectJob={() => {}} isActive={true} isMobile={true} />
+        <NavigationButton icon={faChevronLeft} selectJob={() => {navigationsCallback('next')}} isActive={isActive.next} isMobile={true} />
         <div className={styles.logoAndTitle}>
             <div className={styles.logo}>
                 <Image src={job.image} fill alt={job.name} />
             </div>
             <h3 className={`${robotoMono.className} ${styles.jobTitle}`}>{job.name}, {job.period.start} {job.period?.end && ` - ${job.period.end}`}: {job.position}</h3>
         </div>
-        <NavigationButton icon={faChevronRight} selectJob={() => {}} isActive={true} isMobile={true} />
+        <NavigationButton icon={faChevronRight} selectJob={() => {navigationsCallback('prev')}} isActive={isActive.prev} isMobile={true} />
     </div>
 
     <div className={styles.jobInfo}>
@@ -64,7 +70,7 @@ export const Jobs = () => {
             <h2 className={robotoMono.className}>Jobs</h2>
             <div className={styles.content}>
                 <NavigationButton icon={faChevronLeft} selectJob={() => selectJob('next')} isActive={isActive.next} />
-                <Job job={jobs[selectedJob]} />
+                <Job job={jobs[selectedJob]} navigationsCallback={selectJob} isActive={isActive} />
                 <NavigationButton icon={faChevronRight} selectJob={() => selectJob('prev')} isActive={isActive.prev} />
             </div>
         </div>
