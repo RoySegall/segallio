@@ -5,6 +5,10 @@
   width: 100vw;
   background: #2f84ff;
 
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
+
   .jobs {
     padding-left: 2em;
     width: 95%;
@@ -89,9 +93,26 @@
         .header {
           text-align: center;
           padding-top: 2em;
+          justify-content: center;
 
           @media only screen and (max-width: 600px) {
             padding-top: .25em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: .5em;
+            padding-right: .5em;
+          }
+
+          .logoAndTitle {
+            @media only screen and (max-width: 600px) {
+
+              h3 {
+                margin: 0;
+                padding: 0;
+                padding-bottom: .5em;
+              }
+            }
           }
 
           .logo {

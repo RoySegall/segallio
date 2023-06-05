@@ -14,12 +14,13 @@ import type {IconProp} from "@fortawesome/fontawesome-svg-core";
 const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
     <div className={styles.header}>
         <NavigationButton icon={faChevronLeft} selectJob={() => {}} isActive={true} isMobile={true} />
-
-
-        <div className={styles.logo}>
-            <Image src={job.image} fill alt={job.name} />
+        <div className={styles.logoAndTitle}>
+            <div className={styles.logo}>
+                <Image src={job.image} fill alt={job.name} />
+            </div>
+            <h3 className={`${robotoMono.className} ${styles.jobTitle}`}>{job.name}, {job.period.start} {job.period?.end && ` - ${job.period.end}`}: {job.position}</h3>
         </div>
-        <h3 className={`${robotoMono.className} ${styles.jobTitle}`}>{job.name}, {job.period.start} {job.period?.end && ` - ${job.period.end}`}: {job.position}</h3>
+        <NavigationButton icon={faChevronRight} selectJob={() => {}} isActive={true} isMobile={true} />
     </div>
 
     <div className={styles.jobInfo}>
