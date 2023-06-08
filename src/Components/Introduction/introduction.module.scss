@@ -4,8 +4,12 @@
   min-height: 100vh;
   align-items: center;
 
+  @media only screen and (max-width: 600px) {
+    align-items: start;
+  }
+
   &.collapseSection {
-    min-height: 81vh;
+    min-height: 66vh;
     transition: min-height 1s ease-in-out;
   }
 
@@ -18,7 +22,12 @@
 
     @media only screen and (max-width: 600px) {
       width: 90vw;
-      height: 50vh;
+      height: 80vh;
+
+      &.collapseSection {
+        transition: min-height 1s ease-in-out;
+        height: 65vh;
+      }
     }
 
     .top {
@@ -63,6 +72,15 @@
       display: flex;
       flex-direction: column;
 
+      @media only screen and (max-width: 600px) {
+        height: 70vh;
+
+        &.collapseSection {
+          height: 50vh;
+          transition: min-height 1s ease-in-out;
+        }
+      }
+
       .messages {
         padding-left: 0.5em;
         padding-right: 0.5em;
@@ -94,7 +112,13 @@
         padding-bottom: .5em;
 
         @media only screen and (max-width: 600px) {
-          height: 55px;
+          height: 65px;
+          transition: min-height 1s ease-in-out;
+
+          &.collapseSection {
+            height: 30px;
+            transition: min-height 1s ease-in-out;
+          }
         }
 
         input {
