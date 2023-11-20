@@ -51,10 +51,29 @@ export const Jobs = () => {
     return <div className={styles.jobsWrapper} id='jobs'>
         <div className={styles.jobs}>
             <h2 className={robotoMono.className}>Jobs</h2>
+
             <div className={styles.content}>
-                <button onClick={() => selectJob('next')} className={`${styles.arrow} ${isActive.next && styles.active}`}><FontAwesomeIcon icon={faChevronLeft} /></button>
-                <Job job={jobs[selectedJob]} />
-                <button onClick={() => selectJob('prev')} className={`${styles.arrow} ${isActive.prev && styles.active}`}><FontAwesomeIcon icon={faChevronRight} /></button>
+
+                <div className={styles.timeline}>
+                    <div className={styles.line}></div>
+
+                    <div className={styles.items}>
+                        <div className={styles.jobImage}>
+                            <div className={styles.circle}></div>
+                            <Image src={jobEntries.testim.image} alt={'a'} height={100} />
+                        </div>
+
+                        <div className={styles.jobImage}>
+                            <div className={styles.circle}></div>
+                            <Image src={jobEntries.gizra.image} alt={'a'} height={100} />
+                        </div>
+                    </div>
+
+
+                </div>
+            {/*    <button onClick={() => selectJob('next')} className={`${styles.arrow} ${isActive.next && styles.active}`}><FontAwesomeIcon icon={faChevronLeft} /></button>*/}
+            {/*    <Job job={jobs[selectedJob]} />*/}
+            {/*    <button onClick={() => selectJob('prev')} className={`${styles.arrow} ${isActive.prev && styles.active}`}><FontAwesomeIcon icon={faChevronRight} /></button>*/}
             </div>
         </div>
     </div>
