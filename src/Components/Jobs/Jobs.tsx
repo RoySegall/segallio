@@ -26,55 +26,17 @@ const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
 
 export const Jobs = () => {
     const jobs = useMemo( () => [jobEntries.testim, jobEntries.dreamed, jobEntries.taliaz, jobEntries.realCommerce, jobEntries.gizra], []);
-    const [selectedJob, setSelectedJob] = useState(0);
-    const selectJob = useCallback((position: 'next' | 'prev') => {
-        let selected = selectedJob;
 
-        if (position === 'prev') {
-            if (selected === jobs.length - 1) {
-                return;
-            }
-
-            return setSelectedJob(selected + 1);
-        }
-
-        if (selected !== 0) {
-            return setSelectedJob(selected - 1);
-        }
-    }, [jobs, selectedJob]);
-
-    const isActive = useMemo(() => ({
-        prev: selectedJob !== jobs.length - 1,
-        next: selectedJob !== 0
-    }), [selectedJob, jobs]);
-
-    return <div className={styles.jobsWrapper} id='jobs'>
+    return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id='jobs'>
         <div className={styles.jobs}>
-            <h2 className={robotoMono.className}>Jobs</h2>
-
-            <div className={styles.content}>
-
-                <div className={styles.timeline}>
-                    <div className={styles.line}></div>
-
-                    <div className={styles.items}>
-                        <div className={styles.jobImage}>
-                            <div className={styles.circle}></div>
-                            <Image src={jobEntries.testim.image} alt={'a'} height={100} />
-                        </div>
-
-                        <div className={styles.jobImage}>
-                            <div className={styles.circle}></div>
-                            <Image src={jobEntries.gizra.image} alt={'a'} height={100} />
-                        </div>
-                    </div>
-
-
-                </div>
-            {/*    <button onClick={() => selectJob('next')} className={`${styles.arrow} ${isActive.next && styles.active}`}><FontAwesomeIcon icon={faChevronLeft} /></button>*/}
-            {/*    <Job job={jobs[selectedJob]} />*/}
-            {/*    <button onClick={() => selectJob('prev')} className={`${styles.arrow} ${isActive.prev && styles.active}`}><FontAwesomeIcon icon={faChevronRight} /></button>*/}
-            </div>
+            <h2>Jobs</h2>
         </div>
+
+        <div className={styles.timeline}>
+
+            <h3>Updates</h3>
+            <label>23 in the last 7 hours</label>
+        </div>
+
     </div>
 }
