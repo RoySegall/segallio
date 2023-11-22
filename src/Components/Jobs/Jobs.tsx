@@ -28,15 +28,39 @@ export const Jobs = () => {
     const jobs = useMemo( () => [jobEntries.testim, jobEntries.dreamed, jobEntries.taliaz, jobEntries.realCommerce, jobEntries.gizra], []);
 
     return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id='jobs'>
-        <div className={styles.jobs}>
-            <h2>Jobs</h2>
-        </div>
-
         <div className={styles.timeline}>
+            <h3>Jobs</h3>
 
-            <h3>Updates</h3>
-            <label>23 in the last 7 hours</label>
+            <div className={styles.box}>
+
+                <div className={styles.container}>
+
+                    <div className={styles.lines}>
+                        <div className={styles.dot}></div>
+                        <div className={styles.line}></div>
+                        <div className={styles.dot}></div>
+                        <div className={styles.line}></div>
+                        <div className={styles.dot}></div>
+                        <div className={styles.line}></div>
+                        <div className={styles.dot}></div>
+                        <div className={styles.line}></div>
+                    </div>
+
+                    <div className={styles.cards}>
+                        <div className={styles.card}>
+
+                            <h4>16:30</h4>
+                            <p>Believing Is The Absence<br /> Of Doubt</p>
+                        </div>
+
+                        <div className={`${styles.card} ${styles.mid}`}>
+                            <h4>15:22</h4>
+                            <p>Start With A Baseline</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
     </div>
 }
