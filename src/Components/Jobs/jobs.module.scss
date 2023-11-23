@@ -1,13 +1,44 @@
 .jobsWrapper {
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  min-height: 91vh;
+  flex-direction: row;
+  min-height: 100vh;
   width: 100vw;
   background: #2f84ff;
+  justify-content: space-between;
+
+
+  .job {
+    margin-top: 2em;
+    margin-left: 1em;
+    background: white;
+    height: 90%;
+    width: 75%;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #825ee4;
+    box-shadow: 0 20px 53px -30px white;
+    margin-right: 1em;
+
+    img {
+      margin: 0 auto;
+    }
+
+    .paragraphs {
+      overflow-y: auto;
+    }
+
+    p {
+      font-size: 1.2em;
+      font-weight: 300;
+      line-height: 2em;
+    }
+  }
 
   .timeline {
-    width: 355px;
+    width: 325px;
     height: 670px;
     background: #ECF1F524;
     mix-blend-mode: normal;
@@ -33,58 +64,45 @@
         width: 100%;
         display: flex;
 
-        .lines {
-
-          .dot {
-            width: 14px;
-            height: 14px;
-            background: #D1D6E6;
-            border-radius: 7px;
-          }
-
-          .line {
-            height: 100px;
-            width: 2px;
-            background: #D1D6E6;
-            margin-left: 5.3px;
-          }
-        }
-
         .cards {
           margin-left: 12px;
           transform: translateY(-10px);
+          border-left: #D1D6E6 solid 2px;
+          padding-left: 1em;
 
           .card {
-            padding-left: 1em;
-            padding-right: 1em;
-            padding-top: .10em;
-            padding-bottom: .10em;
-            width: 25vw;
-            //width: 249px;
-            //height: 93px;
-            //padding-top: 25px;
+            padding: 1em .5em;
+            width: 250px;
             background: #FFFFFF;
             border-radius: 10px;
             box-shadow: 0 16px 15px -10px rgba(105, 96, 215, 0.0944602);
             margin-bottom: 10px;
-            //padding-left: 1em;
+            position: relative;
+            cursor: pointer;
 
-            &.mid {
-              //height: 71px;
+            .dot {
+              width: 14px;
+              height: 14px;
+              background: #D1D6E6;
+              position: absolute;
+              border-radius: 7px;
+              left: -23px;
+
+              &.active {
+                background: #825ee4;
+              }
             }
 
             h4 {
-              font-style: normal;
-              font-weight: bold;
-              font-size: 14px;
+              font-weight: 500;
               margin: 0;
+              padding-bottom: .5em;
             }
 
             p {
+              font-size: .95em;
               margin: 0;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 16px;
+              font-weight: 300;
               color: #2B2862;
             }
           }

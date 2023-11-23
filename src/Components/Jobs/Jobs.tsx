@@ -4,8 +4,6 @@ import {useCallback, useMemo, useState} from "react";
 import styles from './jobs.module.scss';
 import {robotoMono} from "@/common/fonts";
 import Image from 'next/image';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import {jobs as jobEntries} from './data'
 import type {FC} from 'react';
 import type {Job} from "@/Components/Jobs/data/Job";
@@ -26,41 +24,31 @@ const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
 
 export const Jobs = () => {
     const jobs = useMemo( () => [jobEntries.testim, jobEntries.dreamed, jobEntries.taliaz, jobEntries.realCommerce, jobEntries.gizra], []);
-
+    const [selectedJob, setSelectedJob] = useState(jobEntries.gizra.id);
+    const selectedJobData = useMemo(() => jobs.find(job => job.id === selectedJob) || jobEntries.testim, [jobs, selectedJob]);
     return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id='jobs'>
         <div className={styles.timeline}>
             <h3>Jobs</h3>
 
             <div className={styles.box}>
-
                 <div className={styles.container}>
-
-                    <div className={styles.lines}>
-                        <div className={styles.dot}></div>
-                        <div className={styles.line}></div>
-                        <div className={styles.dot}></div>
-                        <div className={styles.line}></div>
-                        <div className={styles.dot}></div>
-                        <div className={styles.line}></div>
-                        <div className={styles.dot}></div>
-                        <div className={styles.line}></div>
-                    </div>
-
                     <div className={styles.cards}>
-                        <div className={styles.card}>
-
-                            <h4>16:30</h4>
-                            <p>Believing Is The Absence<br /> Of Doubt</p>
-                        </div>
-
-                        <div className={`${styles.card} ${styles.mid}`}>
-                            <h4>15:22</h4>
-                            <p>Start With A Baseline</p>
-                        </div>
+                        {jobs.map((job, index) => <div className={styles.card} key={index} onClick={() => setSelectedJob(job.id)}>
+                                <div className={`${styles.dot} ${job.id === selectedJob && styles.active}`}></div>
+                                <h4>{job.name}</h4>
+                                <p>{job.position}, {job.period.start} {job.period.end && `- ${job.period.end}`}</p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
+        </div>
+        <div className={styles.job}>
+            <Image src={selectedJobData.image} height={70} alt={selectedJobData.name} />
 
+            <div className={styles.paragraphs}>
+                {selectedJobData.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+            </div>
         </div>
     </div>
 }

@@ -1,6 +1,7 @@
 import type ReactChild from 'react';
 
 export interface Job {
+    id: string;
     name: string;
     position: string;
     image: any;
