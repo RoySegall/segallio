@@ -3,6 +3,7 @@ import {Job} from "@/Components/Jobs/data/Job";
 import image from './pictures/rc.png'
 
 export const realCommerce: Job = {
+    id: 'realCommerce',
     image: image,
     name: 'Real Commerce',
     period: {

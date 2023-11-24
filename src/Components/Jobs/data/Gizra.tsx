@@ -3,8 +3,9 @@ import {Job} from "@/Components/Jobs/data/Job";
 import image from './pictures/gizra.png'
 
 export const gizra: Job = {
+    id: 'gizra',
     image: image,
-    name: 'Dreamed Diabetes',
+    name: 'gizra',
     period: {
         end: '2011',
         start: '2018'

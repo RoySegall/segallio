@@ -9,7 +9,7 @@
   }
 
   &.collapseSection {
-    min-height: 86vh;
+    min-height: 100vh;
     transition: min-height 1s ease-in-out;
 
     @media only screen and (max-width: 600px) {

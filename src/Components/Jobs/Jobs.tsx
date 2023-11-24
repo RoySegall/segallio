@@ -1,77 +1,44 @@
 'use client';
 
-import {useCallback, useMemo, useState} from "react";
+import {useMemo, useState} from "react";
 import styles from './jobs.module.scss';
 import {robotoMono} from "@/common/fonts";
 import Image from 'next/image';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import {jobs as jobEntries} from './data'
-import type {FC} from 'react';
 import type {Job} from "@/Components/Jobs/data/Job";
-import type {IconProp} from "@fortawesome/fontawesome-svg-core";
-
-interface JobProps {
-    job: Job;
-    navigationsCallback: (position: 'next' | 'prev') => void;
-    isActive: { next: boolean, prev: boolean };
-}
-
-const Job: FC<JobProps> = ({job, navigationsCallback, isActive}) => <div className={styles.jobWrapper}>
-    <div className={styles.header}>
-        <NavigationButton icon={faChevronLeft} selectJob={() => {navigationsCallback('next')}} isActive={isActive.next} isMobile={true} />
-        <div className={styles.logoAndTitle}>
-            <div className={styles.logo}>
-                <Image src={job.image} fill alt={job.name} />
-            </div>
-            <h3 className={`${robotoMono.className} ${styles.jobTitle}`}>{job.name}, {job.period.start} {job.period?.end && ` - ${job.period.end}`}: {job.position}</h3>
-        </div>
-        <NavigationButton icon={faChevronRight} selectJob={() => {navigationsCallback('prev')}} isActive={isActive.prev} isMobile={true} />
-    </div>
-
-    <div className={styles.jobInfo}>
-        {job.paragraphs.map((paragraph, index) => <p key={index} className={robotoMono.className}>{paragraph}</p>)}
-    </div>
-</div>;
-
-const NavigationButton: FC<{selectJob: any, isActive: boolean, icon: IconProp, isMobile?: boolean}> = (props) => {
-    const {selectJob, isActive, icon, isMobile} = props;
-    return <button onClick={selectJob} className={`${styles.arrow} ${isActive && styles.active} ${isMobile && styles.mobile}`}>
-        <FontAwesomeIcon icon={icon} />
-    </button>
-}
 
 export const Jobs = () => {
-    const jobs = useMemo( () => [jobEntries.testim, jobEntries.dreamed, jobEntries.taliaz, jobEntries.realCommerce, jobEntries.gizra], []);
-    const [selectedJob, setSelectedJob] = useState(0);
-    const selectJob = useCallback((position: 'next' | 'prev') => {
-        let selected = selectedJob;
+    const jobs = [
+        jobEntries.gizra,
+        jobEntries.realCommerce,
+        jobEntries.taliaz,
+        jobEntries.dreamed,
+        jobEntries.testim,
+    ];
+    const [selectedJob, setSelectedJob] = useState(jobEntries.gizra.id);
+    const selectedJobData = useMemo(() => jobs.find(job => job.id === selectedJob) || jobEntries.testim, [jobs, selectedJob]);
+    return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id='jobs'>
+        <div className={styles.timeline}>
+            <h3>Jobs</h3>
 
-        if (position === 'prev') {
-            if (selected === jobs.length - 1) {
-                return;
-            }
+            <div className={styles.box}>
+                <div className={styles.container}>
+                    <div className={styles.cards}>
+                        {jobs.map((job, index) => <div className={styles.card} key={index} onClick={() => setSelectedJob(job.id)}>
+                                <div className={`${styles.dot} ${job.id === selectedJob && styles.active}`}></div>
+                                <h4>{job.name}</h4>
+                                <p>{job.position}, {job.period.start} {job.period.end && `- ${job.period.end}`}</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className={styles.job}>
+            <Image src={selectedJobData.image} height={70} alt={selectedJobData.name} />
 
-            return setSelectedJob(selected + 1);
-        }
-
-        if (selected !== 0) {
-            return setSelectedJob(selected - 1);
-        }
-    }, [jobs, selectedJob]);
-
-    const isActive = useMemo(() => ({
-        prev: selectedJob !== jobs.length - 1,
-        next: selectedJob !== 0
-    }), [selectedJob, jobs]);
-
-    return <div className={styles.jobsWrapper} id='jobs'>
-        <div className={styles.jobs}>
-            <h2 className={robotoMono.className}>Jobs</h2>
-            <div className={styles.content}>
-                <NavigationButton icon={faChevronLeft} selectJob={() => selectJob('next')} isActive={isActive.next} />
-                <Job job={jobs[selectedJob]} navigationsCallback={selectJob} isActive={isActive} />
-                <NavigationButton icon={faChevronRight} selectJob={() => selectJob('prev')} isActive={isActive.prev} />
+            <div className={styles.paragraphs}>
+                {selectedJobData.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
             </div>
         </div>
     </div>

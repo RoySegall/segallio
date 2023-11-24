@@ -3,6 +3,7 @@ import {Job} from "@/Components/Jobs/data/Job";
 import image from './pictures/tricentis.png'
 
 export const testim: Job = {
+    id: 'testim',
     image: image,
     name: 'Testim / Tricetis IL',
     period: {

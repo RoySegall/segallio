@@ -1,168 +1,111 @@
 .jobsWrapper {
   margin-top: 20px;
   display: flex;
-  min-height: 91vh;
+  flex-direction: row;
+  min-height: 100vh;
   width: 100vw;
   background: #2f84ff;
+  justify-content: space-between;
 
-  @media only screen and (max-width: 600px) {
-    justify-content: center;
-    padding-bottom: 20px;
-    min-height: 80vh;
-  }
+  .job {
+    margin-top: 2em;
+    margin-left: 1em;
+    background: white;
+    height: 90%;
+    width: 75%;
+    padding: 1em;
+    border-radius: 10px;
 
-  .jobs {
-    padding-left: 2em;
-    width: 95%;
     display: flex;
     flex-direction: column;
+    border: solid 2px #825ee4;
+    box-shadow: 0 20px 53px -30px white;
+    margin-right: 1em;
 
-    @media only screen and (max-width: 600px) {
-      padding-left: .75em;
+    img {
+      margin: 0 auto;
     }
 
-    h2 {
-      color: white;
-      font-weight: 400;
-      font-size: 3em;
+    .paragraphs {
+      overflow-y: auto;
+    }
+
+    p {
+      font-size: 1.2em;
+      font-weight: 300;
+      line-height: 2em;
+    }
+  }
+
+  .timeline {
+    width: 325px;
+    height: 670px;
+    background: #ECF1F524;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(15px);
+    margin-left: 2em;
+    box-shadow: 0 20px 53px -30px rgba(95, 102, 173, 0.566816);
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 2em;
+
+    h3 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 2em;
+      color: #FFFFFF;
+      padding-bottom: 1em;
+      text-align: center;
       text-transform: uppercase;
-
-      @media only screen and (max-width: 600px) {
-        margin: 0;
-        padding: 0;
-
-        margin-top: .75em;
-        margin-bottom: .75em;
-      }
     }
 
-    .content {
-      width: 75%;
-      height: 75%;
-      display: flex;
+    .box {
+      margin-top: 2em;
 
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.75);
-      overflow: hidden;
+      .container {
+        width: 100%;
+        display: flex;
 
-      margin-top: 1em;
-      padding-bottom: 2em;
-      padding-left: 1em;
-      padding-right: 1em;
-      margin-right: auto;
-      margin-left: auto;
+        .cards {
+          margin-left: 12px;
+          transform: translateY(-10px);
+          border-left: #D1D6E6 solid 2px;
+          padding-left: 1em;
 
-      @media only screen and (max-width: 600px) {
-        width: 97%;
-        height: 79%;
-        padding-left: .25em;
-        padding-right: .25em;
-        margin: 0;
-      }
+          .card {
+            padding: 1em .5em;
+            width: 250px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 16px 15px -10px rgba(105, 96, 215, 0.0944602);
+            margin-bottom: 10px;
+            position: relative;
+            cursor: pointer;
 
-      .arrow {
-        margin-top: auto;
-        margin-bottom: auto;
-        font-size: 2.5em;
-        background: none;
-        border: none;
+            .dot {
+              width: 14px;
+              height: 14px;
+              background: #D1D6E6;
+              position: absolute;
+              border-radius: 7px;
+              left: -23px;
 
-
-        &.active {
-            color: #2f84ff;
-        }
-
-        @media only screen and (max-width: 600px) {
-          display: none;
-          visibility: hidden;
-        }
-
-        &.mobile {
-          display: none;
-          visibility: hidden;
-
-          @media only screen and (max-width: 600px) {
-            display: block;
-            visibility: visible;
-            margin-top: auto;
-          }
-        }
-      }
-
-      .jobWrapper {
-
-        .header {
-          text-align: center;
-          padding-top: 2em;
-          justify-content: center;
-
-          @media only screen and (max-width: 600px) {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            min-height: 6em;
-            padding-top: 0.75em;
-            padding-right: 0.5em;
-            padding-left: 0.5em;
-          }
-
-          .logoAndTitle {
-            @media only screen and (max-width: 600px) {
-
-              h3 {
-                margin: 0;
-                padding: 0;
-                padding-bottom: .5em;
+              &.active {
+                background: #825ee4;
               }
             }
-          }
 
-          .logo {
-            position: relative;
-
-            img {
-              position: static !important;
-              width: 10em !important;
-              max-height: 5em !important;
-            }
-          }
-
-          .jobTitle {
-            font-size: 1.5em;
-            font-weight: 500;
-          }
-        }
-
-        .jobInfo {
-          padding-top: 1em;
-          width: 80%;
-          height: 70%;
-          margin: auto;
-          overflow: hidden;
-          overflow-y: visible;
-
-          @media only screen and (max-width: 600px) {
-            padding-top: 0;
-            width: 95%;
-            height: 90%;
-          }
-
-          p {
-            text-align: left;
-            margin: 0;
-            padding: 0;
-            padding-bottom: 1em;
-            font-size: 1.25em;
-            font-weight: 200;
-            line-height: 1.75;
-
-            em {
-              text-decoration: underline;
-              color: #2f84ff;
+            h4 {
               font-weight: 500;
+              margin: 0;
+              padding-bottom: .5em;
+            }
+
+            p {
+              font-size: .95em;
+              margin: 0;
+              font-weight: 300;
+              color: #2B2862;
             }
           }
         }
