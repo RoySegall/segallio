@@ -1,6 +1,6 @@
 'use client';
 
-import {useCallback, useMemo, useState} from "react";
+import {useMemo, useState} from "react";
 import styles from './jobs.module.scss';
 import {robotoMono} from "@/common/fonts";
 import Image from 'next/image';
@@ -23,7 +23,13 @@ const Job: FC<{job: Job}> = ({job}) => <div className={styles.jobWrapper}>
 </div>;
 
 export const Jobs = () => {
-    const jobs = useMemo( () => [jobEntries.testim, jobEntries.dreamed, jobEntries.taliaz, jobEntries.realCommerce, jobEntries.gizra], []);
+    const jobs = [
+        jobEntries.gizra,
+        jobEntries.realCommerce,
+        jobEntries.taliaz,
+        jobEntries.dreamed,
+        jobEntries.testim,
+    ];
     const [selectedJob, setSelectedJob] = useState(jobEntries.gizra.id);
     const selectedJobData = useMemo(() => jobs.find(job => job.id === selectedJob) || jobEntries.testim, [jobs, selectedJob]);
     return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id='jobs'>
