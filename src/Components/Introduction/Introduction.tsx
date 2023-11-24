@@ -1,12 +1,12 @@
 'use client';
 import styles from './introduction.module.scss';
-import {useState, useEffect, FC} from "react";
+import {useState, useEffect, FC, useReducer, useCallback} from "react";
 import {Message} from "@/Components/Introduction/Message";
 import {sleep} from "@/common/uitls";
 import Image from 'next/image';
 import picture from './pictures/avatar.jpg'
 import {robotoMono} from "@/common/fonts";
-import {actions, messages} from "@/Components/Introduction/interfacesAndTexts";
+import {actions, ChatItem, messages} from "@/Components/Introduction/interfacesAndTexts";
 import type {ActionProps} from "@/Components/Introduction/interfacesAndTexts";
 
 
@@ -26,16 +26,16 @@ import type {ActionProps} from "@/Components/Introduction/interfacesAndTexts";
 // 5. Where can I catch you?
 
 
-const Action: FC<ActionProps> = ({emoji, text, handler}) => {
+const Action: FC<ActionProps> = ({emoji, text }) => {
     const [show, setShow] = useState(false);
     useEffect(() => {
         setTimeout(() => setShow(true), 250);
     }, []);
 
-    return <div className={`${styles.action} ${show && styles.appear}`} onClick={handler}>{emoji} {text}</div>;
+    return <div className={`${styles.action} ${show && styles.appear}`}>{emoji} {text}</div>;
 }
 
-const Actions = () => {
+const Actions: FC<{addItemHandler: (item: ChatItem) => void}> = ({addItemHandler}) => {
     const [activeActions, setActiveActions] = useState<ActionProps[]>([]);
 
     useEffect(() => {
@@ -48,23 +48,24 @@ const Actions = () => {
     }, []);
 
     return <div className={`${styles.actions} ${robotoMono.className}`}>
-        {activeActions.map((action, i) => <Action key={i} {...action} />)}
+        {activeActions.map((action, i) => <div key={i} onClick={() => action.handler(addItemHandler)}><Action {...action} /></div>)}
     </div>
 };
 
+
 export const Introduction = () => {
-    const [activeMessages, setActiveMessages] = useState<string[]>([]);
+    const [items, setItems] = useState<ChatItem[]>([]);
+    const addItem = useCallback((item: ChatItem) => setItems(items => [...items, item]), [setItems, items]);
     const [collapseIntroduction, setCollapseIntroduction] = useState(false);
-    const [showActions, setShowActions] = useState(false);
 
     useEffect(() => {
         (async () => {
             for (let i = 0; i < messages.length; i++) {
-                setActiveMessages(activeMessages => [...activeMessages, messages[i]]);
+                addItem({type: 'message', message: messages[i]})
                 await sleep(1.75);
             }
 
-            setShowActions(true);
+            addItem({type: 'actions'});
         })();
     }, []);
 
@@ -79,11 +80,16 @@ export const Introduction = () => {
 
             <div className={`${styles.introduction} ${collapseIntroduction && styles.collapseSection}`}>
                 <div className={styles.messages}>
-                    {activeMessages.map((message, key) => <Message message={message} key={key} />)}
+                    {items.map((item, key) => {
+                        if (item.type === 'message') {
+                            return <Message message={item.message!} key={key} />
+                        }
+
+                        if (item.type === 'actions') {
+                            return <Actions key={key} addItemHandler={addItem} />
+                        }
+                    })}
                 </div>
-
-                {showActions && <Actions />}
-
                 <div  className={`${styles.inputWrapper} ${collapseIntroduction && styles.collapseSection}`}>
                     <input placeholder='Say something nice :)' />
                 </div>
