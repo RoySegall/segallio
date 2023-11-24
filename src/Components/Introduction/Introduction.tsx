@@ -1,19 +1,13 @@
 'use client';
 import styles from './introduction.module.scss';
-import {useState, useEffect} from "react";
+import {useState, useEffect, FC} from "react";
 import {Message} from "@/Components/Introduction/Message";
 import {sleep} from "@/common/uitls";
 import Image from 'next/image';
 import picture from './pictures/avatar.jpg'
 import {robotoMono} from "@/common/fonts";
-
-const myMessages = [
-    'Hello, my name is Roy Segall',
-    "I'm a software developer from israel",
-    "I'm married and own two cats: Sam and freddy",
-    "I'm working in Tricentis israel as a full stack developer",
-    "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
-];
+import {actions, messages} from "@/Components/Introduction/interfacesAndTexts";
+import type {ActionProps} from "@/Components/Introduction/interfacesAndTexts";
 
 
 // actions:
@@ -31,25 +25,48 @@ const myMessages = [
 // 4. I want to read your blog posts (link to blog posts)
 // 5. Where can I catch you?
 
+
+const Action: FC<ActionProps> = ({emoji, text, handler}) => {
+    const [show, setShow] = useState(false);
+    useEffect(() => {
+        setTimeout(() => setShow(true), 250);
+    }, []);
+
+    return <div className={`${styles.action} ${show && styles.appear}`} onClick={handler}>{emoji} {text}</div>;
+}
+
 const Actions = () => {
-    return <>asdasdasd</>
+    const [activeActions, setActiveActions] = useState<ActionProps[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            for (let i = 0; i < actions.length; i++) {
+                setActiveActions(activeActions => [...activeActions, actions[i]]);
+                await sleep(1.5);
+            }
+        })();
+    }, []);
+
+    return <div className={`${styles.actions} ${robotoMono.className}`}>
+        {activeActions.map((action, i) => <Action key={i} {...action} />)}
+    </div>
 };
 
 export const Introduction = () => {
-    const [messages, setMessages] = useState<string[]>([myMessages[0]]);
+    const [activeMessages, setActiveMessages] = useState<string[]>([]);
     const [collapseIntroduction, setCollapseIntroduction] = useState(false);
-    const [showActions, setShowActions] = useState(true);
+    const [showActions, setShowActions] = useState(false);
 
-    // useEffect(() => {
-    //     (async () => {
-    //         for (let i = 0; i < myMessages.length; i++) {
-    //             setMessages(messages => [...messages, myMessages[i]]);
-    //             await sleep(2);
-    //         }
-    //
-    //         setCollapseIntroduction(true);
-    //     })();
-    // }, []);
+    useEffect(() => {
+        (async () => {
+            for (let i = 0; i < messages.length; i++) {
+                setActiveMessages(activeMessages => [...activeMessages, messages[i]]);
+                await sleep(1.75);
+            }
+
+            setShowActions(true);
+        })();
+    }, []);
 
     return <div className={`${styles.introductionSection} ${collapseIntroduction && styles.collapseSection}`}>
         <div className={`${styles.introductionWrapper} ${collapseIntroduction && styles.collapseSection}`}>
@@ -62,7 +79,7 @@ export const Introduction = () => {
 
             <div className={`${styles.introduction} ${collapseIntroduction && styles.collapseSection}`}>
                 <div className={styles.messages}>
-                    {messages.map((message, key) => <Message message={message} key={key} />)}
+                    {activeMessages.map((message, key) => <Message message={message} key={key} />)}
                 </div>
 
                 {showActions && <Actions />}

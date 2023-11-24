@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    width: 450px;
+    width: 540px;
     box-shadow: 0 0 10px #6B6B6B7F;
 
     @media only screen and (max-width: 600px) {
@@ -131,7 +131,7 @@
 
         input {
           height: 30px;
-          width: 89%;
+          width: 94%;
           margin-left: .5em;
           margin-right: .5em;
 
@@ -151,6 +151,33 @@
           }
         }
       }
+    }
+  }
+}
+
+.actions {
+  padding: .5em;
+  display: flex;
+  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  .action {
+    margin-left: 0.5em;
+    margin-right: 0;
+    background: #00c2e8;
+    color: #133567;
+    padding: .5em;
+    border-radius: 10px;
+    font-weight: 300;
+    margin-bottom: .5em;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+
+    &.appear {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
