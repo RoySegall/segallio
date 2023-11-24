@@ -11,7 +11,7 @@ const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div cl
         </div>
 
         <div className={styles.second}>
-            <div className={styles.top}>src/Components/Jobs/data/index.ts
+            <div className={styles.top}>
                 <span className={`${styles.title} ${robotoMono.className}`}><a href={url} target={'_blank'}>{title}</a></span>
             </div>
             <div className={styles.paragraphWrapper}>

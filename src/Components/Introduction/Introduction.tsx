@@ -32,7 +32,7 @@ export const Introduction = () => {
     }, []);
 
     return <div className={`${styles.introductionSection} ${collapseIntroduction && styles.collapseSection}`}>
-        <div className={styles.introductionWrapper}>
+        <div className={`${styles.introductionWrapper} ${collapseIntroduction && styles.collapseSection}`}>
             <div className={styles.top}>
                 <div className={styles.photo}><Image src={picture} width="75" height="75" alt={'Personal picture'} /></div>
                 <div className={styles.texts}>
@@ -40,12 +40,12 @@ export const Introduction = () => {
                 </div>
             </div>
 
-            <div className={styles.introduction}>
+            <div className={`${styles.introduction} ${collapseIntroduction && styles.collapseSection}`}>
                 <div className={styles.messages}>
                     {messages.map((message, key) => <Message message={message} key={key} />)}
                 </div>
 
-                <div className={styles.inputWrapper}>
+                <div  className={`${styles.inputWrapper} ${collapseIntroduction && styles.collapseSection}`}>
                     <input placeholder='Say something nice :)' />
                 </div>
             </div>
