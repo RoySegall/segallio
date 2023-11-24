@@ -91,6 +91,10 @@
         overflow: scroll;
         height: 90%;
         overflow-y: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 0.5em;
 
         .message {
           font-size: .95em;
