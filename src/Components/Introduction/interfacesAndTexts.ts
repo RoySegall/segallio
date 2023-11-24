@@ -17,19 +17,19 @@ export type ChatItem = MessageItem | ActionsItem;
 
 export const messages = [
     'Hello, my name is Roy Segall',
-    "I'm a software developer from israel",
-    "I'm married and own two cats: Sam and freddy",
-    "I'm working in Tricentis israel as a full stack developer",
-    "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
+    // "I'm a software developer from israel",
+    // "I'm married and own two cats: Sam and freddy",
+    // "I'm working in Tricentis israel as a full stack developer",
+    // "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
 ];
 
+const catchUp: Action = {
+    emoji: "📲",
+    text: "Where can catch-up with you?",
+    handler: (addItemHandler) => {}
+};
+
 // actions:
-// 1. are you free for hire?
-//    no :)
-//    Are you sure?
-//    yes
-//    Really really sure?
-//    yes... but you can try again in a the future. Maybe soemthing will change.
 // 2. what is you stack?
 //    I'm a full stack developer, I can do everything. In my last(current) job I did some ux ui issues I think i'm not just full stack developer.
 //    but what is the tech?
@@ -43,16 +43,34 @@ export const actions: Action[] = [
         emoji: "👨‍💻",
         text: "Can I hire you?",
         handler: async (addItemHandler) => {
-            addItemHandler({type: 'message', message: "I'm not looking for a new job right now"});
-            addItemHandler({type: 'actions', actions: [
-                    {emoji: "🍕", text: "Pizza", handler: () => {}},
-            ]});
+            const lookingForJob = false;
+
+            if (!lookingForJob) {
+                addItemHandler({type: 'message', message: "I'm not looking for a new job right now"});
+                await sleep(2);
+
+                addItemHandler({type: 'actions', actions: [{
+                    emoji: "🍕",
+                    text: "Are you sure?",
+                    handler: () => {
+                        addItemHandler({type: 'message', message: "Yes.... I'm sure :) but you can try again in the future. Maybe something will change"});
+                    }
+                }]})
+            } else {
+                addItemHandler({type: 'message', message: "Yes. you can look at the how to catch up"});
+                await sleep(2);
+                addItemHandler({type: 'actions', actions: [catchUp]});
+            }
         },
     },
     {
         emoji: "⚒️",
         text: "What is your stack?",
-        handler: (addItemHandler) => {}
+        handler: async (addItemHandler) => {
+            addItemHandler({type: 'message', message: "Currently I'm working with react, node and a bit of appium"});
+            await sleep(2);
+            addItemHandler({type: 'message', message: "Currently I'm working with react, node and a bit of appium"})
+        }
     },
     {
         emoji: "📖",
@@ -64,10 +82,6 @@ export const actions: Action[] = [
         text: "What did you blog about?",
         handler: (addItemHandler) => {}
     },
-    {
-        emoji: "📲",
-        text: "Where can catch-up with you?",
-        handler: (addItemHandler) => {}
-    },
+    catchUp,
 ];
 
