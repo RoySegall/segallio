@@ -26,7 +26,7 @@ const Actions: FC<ActionsProps> = ({addItemHandler, actions}) => <div className=
 export const Introduction = () => {
     const [items, setItems] = useState<ChatItem[]>([]);
     const addItem = useCallback((item: ChatItem) => setItems(items => [...items, item]), [setItems, items]);
-    const messageRef = useRef(null);
+    const messageRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         (async () => {
