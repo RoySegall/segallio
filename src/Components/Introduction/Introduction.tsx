@@ -7,25 +7,25 @@ import Image from 'next/image';
 import picture from './pictures/avatar.jpg'
 import {robotoMono} from "@/common/fonts";
 import {Action, ActionsProps, ChatItem, messages, actions} from "@/Components/Introduction/interfacesAndTexts";
+import {Top} from "@/Components/Introduction/Top";
 
-const Action: FC<Action> = ({emoji, text }) => {
+const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji, text, addItemHandler, handler }) => {
     const [show, setShow] = useState(false);
     useEffect(() => {
         setTimeout(() => setShow(true), 250);
     }, []);
 
-    return <div className={`${styles.action} ${show && styles.appear}`}>{emoji} {text}</div>;
+    return <div className={`${styles.action} ${show && styles.appear}`} onClick={() => handler(addItemHandler)}>{emoji} {text}</div>;
 }
 
 const Actions: FC<ActionsProps> = ({addItemHandler, actions}) => <div className={`${styles.actions} ${robotoMono.className}`}>
-    {actions.map((action, i) => <div key={i} onClick={() => action.handler(addItemHandler)}><Action {...action} /></div>)}
+    {actions.map((action, i) => <Action key={i} {...action} addItemHandler={addItemHandler} />)}
 </div>;
 
 
 export const Introduction = () => {
     const [items, setItems] = useState<ChatItem[]>([]);
     const addItem = useCallback((item: ChatItem) => setItems(items => [...items, item]), [setItems, items]);
-    const [collapseIntroduction, setCollapseIntroduction] = useState(false);
 
     useEffect(() => {
         (async () => {
@@ -38,16 +38,11 @@ export const Introduction = () => {
         })();
     }, []);
 
-    return <div className={`${styles.introductionSection} ${collapseIntroduction && styles.collapseSection}`}>
-        <div className={`${styles.introductionWrapper} ${collapseIntroduction && styles.collapseSection}`}>
-            <div className={styles.top}>
-                <div className={styles.photo}><Image src={picture} width="75" height="75" alt={'Personal picture'} /></div>
-                <div className={styles.texts}>
-                    <span className={`${styles.name} ${robotoMono.className}`}>Roy Segall</span>
-                </div>
-            </div>
+    return <div className={`${styles.introductionSection} ${robotoMono.className}`}>
+        <div className={styles.introductionWrapper}>
+            <Top />
 
-            <div className={`${styles.introduction} ${collapseIntroduction && styles.collapseSection}`}>
+            <div className={`${styles.introduction}`}>
                 <div className={styles.messages}>
                     {items.map((item, key) => {
                         if (item.type === 'message') {
@@ -59,10 +54,13 @@ export const Introduction = () => {
                         }
                     })}
                 </div>
-                <div  className={`${styles.inputWrapper} ${collapseIntroduction && styles.collapseSection}`}>
-                    <input placeholder='Say something nice :)' />
-                </div>
             </div>
         </div>
     </div>
+
+    // return <div className={`${styles.introductionSection} ${collapseIntroduction && styles.collapseSection}`}>
+    //     <div className={`${styles.introductionWrapper} ${collapseIntroduction && styles.collapseSection}`}>
+
+    //     </div>
+    // </div>
 }
