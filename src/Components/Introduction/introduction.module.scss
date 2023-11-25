@@ -27,7 +27,7 @@
     }
 
     .introduction {
-      height: 48vh;
+      height: 49vh;
 
       @media only screen and (max-width: 600px) {
         height: 70vh;
@@ -39,12 +39,14 @@
       }
 
       .messages {
+        margin-left: .75em;
         padding-left: 0.5em;
         padding-right: 0.5em;
         overflow: scroll;
         height: 90%;
         overflow-y: visible;
         padding-bottom: 0.5em;
+        scroll-behavior: smooth;
 
         .message {
           font-size: .95em;

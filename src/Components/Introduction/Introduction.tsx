@@ -1,6 +1,6 @@
 'use client';
 import styles from './introduction.module.scss';
-import {useState, useEffect, FC, useCallback} from "react";
+import {useState, useEffect, FC, useCallback, useRef} from "react";
 import {Message} from "@/Components/Introduction/Message";
 import {sleep} from "@/common/uitls";
 import Image from 'next/image';
@@ -26,6 +26,7 @@ const Actions: FC<ActionsProps> = ({addItemHandler, actions}) => <div className=
 export const Introduction = () => {
     const [items, setItems] = useState<ChatItem[]>([]);
     const addItem = useCallback((item: ChatItem) => setItems(items => [...items, item]), [setItems, items]);
+    const messageRef = useRef(null);
 
     useEffect(() => {
         (async () => {
@@ -38,12 +39,18 @@ export const Introduction = () => {
         })();
     }, []);
 
+    useEffect(() => {
+        if (messageRef.current) {
+            messageRef.current.scrollTop = messageRef.current.scrollHeight;
+        }
+    }, [items.length, messageRef.current]);
+
     return <div className={`${styles.introductionSection} ${robotoMono.className}`}>
         <div className={styles.introductionWrapper}>
             <Top />
 
             <div className={`${styles.introduction}`}>
-                <div className={styles.messages}>
+                <div className={styles.messages} ref={messageRef}>
                     {items.map((item, key) => {
                         if (item.type === 'message') {
                             return <Message message={item.message!} key={key} />
@@ -57,10 +64,4 @@ export const Introduction = () => {
             </div>
         </div>
     </div>
-
-    // return <div className={`${styles.introductionSection} ${collapseIntroduction && styles.collapseSection}`}>
-    //     <div className={`${styles.introductionWrapper} ${collapseIntroduction && styles.collapseSection}`}>
-
-    //     </div>
-    // </div>
 }
