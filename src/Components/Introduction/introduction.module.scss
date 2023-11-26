@@ -15,6 +15,7 @@
     width: 40vw;
     height: 55vh;
     box-shadow: 0px 1px 20px 0px #eaeaea;
+    border: solid 1px #2f84ff24;
 
     @media only screen and (max-width: 600px) {
       width: 90vw;
@@ -28,6 +29,7 @@
 
     .introduction {
       height: 49vh;
+      overflow-y: scroll;
 
       @media only screen and (max-width: 600px) {
         height: 70vh;
@@ -43,7 +45,7 @@
         padding-left: 0.5em;
         padding-right: 0.5em;
         overflow: scroll;
-        height: 90%;
+        height: 40vh;
         overflow-y: visible;
         padding-bottom: 0.5em;
         scroll-behavior: smooth;
@@ -61,6 +63,25 @@
         }
       }
     }
+
+    .bottomActions {
+      //padding: 1em;
+      border-top: 1px solid #ebebeb;
+
+      .foo {
+        overflow: scroll;
+        display: flex;
+        padding-top: 0em;
+
+        div {
+          .action {
+            margin-left: 1em;
+            margin-right: 1em;
+            min-width: 200px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -69,24 +90,24 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
 
-  .action {
-    padding: 15px;
-    width: fit-content;
-    cursor: pointer;
-    margin-right: 0;
-    background: #2f84ff;
-    color: white;
-    border-radius: 20px;
-    font-weight: 300;
-    margin-bottom: .75em;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease;
+.action {
+  padding: 15px;
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 0;
+  background: #2f84ff;
+  color: white;
+  border-radius: 20px;
+  font-weight: 300;
+  margin-bottom: .75em;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
 
-    &.appear {
-      visibility: visible;
-      opacity: 1;
-    }
+  &.appear {
+    visibility: visible;
+    opacity: 1;
   }
 }

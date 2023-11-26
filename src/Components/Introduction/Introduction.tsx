@@ -34,8 +34,6 @@ export const Introduction = () => {
                 addItem({type: 'message', message: messages[i]})
                 await sleep(1.75);
             }
-
-            addItem({type: 'actions', actions});
         })();
     }, []);
 
@@ -60,6 +58,21 @@ export const Introduction = () => {
                             return <Actions actions={item.actions} key={key} addItemHandler={addItem} />
                         }
                     })}
+                </div>
+
+                <div className={styles.bottomActions}>
+                    {/*padding: 10px 15px;*/}
+                        <div className={styles.foo}>
+                            <div><Action {...actions[0]} /></div>
+                            <div><Action {...actions[0]} /></div>
+                            <div><Action {...actions[0]} /></div>
+                            <div><Action {...actions[0]} /></div>
+                            <div><Action {...actions[0]} /></div>
+                            <div><Action {...actions[0]} /></div>
+                            <div><Action {...actions[0]} /></div>
+                            <div><Action {...actions[0]} /></div>
+                        </div>
+
                 </div>
             </div>
         </div>
