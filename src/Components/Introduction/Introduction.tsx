@@ -15,7 +15,11 @@ const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji,
         setTimeout(() => setShow(true), 250);
     }, []);
 
-    return <div className={`${styles.action} ${show && styles.appear}`} onClick={() => handler(addItemHandler)}>{emoji} {text}</div>;
+    return <div className={`${styles.action} ${show && styles.appear}`} onClick={async () => {
+        addItemHandler({type: 'actions', actions: [{emoji, text, handler: () => {}}]})
+        await sleep(1.25);
+        handler(addItemHandler)
+    }}>{emoji} {text}</div>;
 }
 
 const Actions: FC<ActionsProps> = ({addItemHandler, actions}) => <div className={`${styles.actions} ${robotoMono.className}`}>
@@ -63,14 +67,9 @@ export const Introduction = () => {
                 <div className={styles.bottomActions}>
                     {/*padding: 10px 15px;*/}
                         <div className={styles.foo}>
-                            <div><Action {...actions[0]} /></div>
-                            <div><Action {...actions[0]} /></div>
-                            <div><Action {...actions[0]} /></div>
-                            <div><Action {...actions[0]} /></div>
-                            <div><Action {...actions[0]} /></div>
-                            <div><Action {...actions[0]} /></div>
-                            <div><Action {...actions[0]} /></div>
-                            <div><Action {...actions[0]} /></div>
+                            {actions.map((action, index) => <div className={styles.actionWrapper} key={index}>
+                                <Action {...action} addItemHandler={addItem}/>
+                            </div>)}
                         </div>
 
                 </div>

@@ -71,13 +71,15 @@
       .foo {
         overflow: scroll;
         display: flex;
-        padding-top: 0em;
+        padding-top: 1em;
 
-        div {
+        .actionWrapper {
+          min-width: fit-content;
+
           .action {
+            padding: 0.5em 0.75em;
             margin-left: 1em;
             margin-right: 1em;
-            min-width: 200px;
           }
         }
       }
