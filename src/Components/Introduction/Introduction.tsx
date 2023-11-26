@@ -30,6 +30,7 @@ const Actions: FC<ActionsProps> = ({addItemHandler, actions}) => <div className=
 export const Introduction = () => {
     const [items, setItems] = useState<ChatItem[]>([]);
     const addItem = useCallback((item: ChatItem) => setItems(items => [...items, item]), [setItems, items]);
+    const [showActions, setShowActions] = useState(false);
     const messageRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -38,6 +39,7 @@ export const Introduction = () => {
                 addItem({type: 'message', message: messages[i]})
                 await sleep(1.75);
             }
+            setShowActions(true);
         })();
     }, []);
 
@@ -65,13 +67,11 @@ export const Introduction = () => {
                 </div>
 
                 <div className={styles.bottomActions}>
-                    {/*padding: 10px 15px;*/}
-                        <div className={styles.foo}>
-                            {actions.map((action, index) => <div className={styles.actionWrapper} key={index}>
-                                <Action {...action} addItemHandler={addItem}/>
-                            </div>)}
-                        </div>
-
+                    <div className={styles.foo}>
+                        {showActions && actions.map((action, index) => <div className={styles.actionWrapper} key={index}>
+                            <Action {...action} addItemHandler={addItem}/>
+                        </div>)}
+                    </div>
                 </div>
             </div>
         </div>
