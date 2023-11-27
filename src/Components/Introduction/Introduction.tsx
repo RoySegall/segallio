@@ -16,7 +16,7 @@ const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji,
     }, []);
 
     return <div className={`${styles.action} ${show && styles.appear}`} onClick={async () => {
-        addItemHandler({type: 'actions', actions: [{emoji, text, handler: () => {}}]})
+        addItemHandler({type: 'actions', actions: [{emoji, text, handler: () => {}}]});
         await sleep(1.25);
         handler(addItemHandler)
     }}>{emoji} {text}</div>;
@@ -67,9 +67,9 @@ export const Introduction = () => {
                 </div>
 
                 <div className={styles.bottomActions}>
-                    <div className={styles.foo}>
+                    <div className={styles.actionsWrapper}>
                         {showActions && actions.map((action, index) => <div className={styles.actionWrapper} key={index}>
-                            <Action {...action} addItemHandler={addItem}/>
+                            <Action {...action} addItemHandler={addItem} />
                         </div>)}
                     </div>
                 </div>

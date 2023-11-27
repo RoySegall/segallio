@@ -17,10 +17,10 @@ export type ChatItem = MessageItem | ActionsItem;
 
 export const messages = [
     'Hello, my name is Roy Segall',
-    "I'm a software developer from israel",
-    "I'm married and own two cats: Sam and freddy",
-    "I'm working in Tricentis israel as a full stack developer",
-    "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
+    // "I'm a software developer from israel",
+    // "I'm married and own two cats: Sam and freddy",
+    // "I'm working in Tricentis israel as a full stack developer",
+    // "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
 ];
 
 const catchUp: Action = {
@@ -41,21 +41,12 @@ const catchUp: Action = {
 export const actions: Action[] = [
     {
         emoji: "👨‍💻",
-        text: "Can I hire you?",
+        text: "Are you looking for a job?",
         handler: async (addItemHandler) => {
             const lookingForJob = false;
 
             if (!lookingForJob) {
                 addItemHandler({type: 'message', message: "I'm not looking for a new job right now"});
-                await sleep(2);
-
-                addItemHandler({type: 'actions', actions: [{
-                    emoji: "🍕",
-                    text: "Are you sure?",
-                    handler: () => {
-                        addItemHandler({type: 'message', message: "Yes.... I'm sure :) but you can try again in the future. Maybe something will change"});
-                    }
-                }]})
             } else {
                 addItemHandler({type: 'message', message: "Yes. you can look at the how to catch up"});
                 await sleep(2);

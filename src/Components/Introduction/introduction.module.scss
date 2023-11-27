@@ -29,7 +29,7 @@
 
     .introduction {
       height: 49vh;
-      overflow-y: scroll;
+      overflow: hidden;
 
       @media only screen and (max-width: 600px) {
         height: 70vh;
@@ -44,8 +44,8 @@
         margin-left: .75em;
         padding-left: 0.5em;
         padding-right: 0.5em;
-        overflow: scroll;
         height: 40vh;
+        overflow: hidden;
         overflow-y: visible;
         padding-bottom: 0.5em;
         scroll-behavior: smooth;
@@ -65,13 +65,13 @@
     }
 
     .bottomActions {
-      //padding: 1em;
       border-top: 1px solid #ebebeb;
 
-      .foo {
-        overflow: scroll;
+      .actionsWrapper {
+        overflow: hidden;
         display: flex;
         padding-top: 1em;
+        overflow-x: scroll;
 
         .actionWrapper {
           min-width: fit-content;
@@ -97,16 +97,15 @@
 .action {
   padding: 15px;
   width: fit-content;
-  cursor: pointer;
   margin-right: 0;
   background: #2f84ff;
   color: white;
   border-radius: 20px;
   font-weight: 300;
-  margin-bottom: .75em;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease;
+  cursor: pointer;
 
   &.appear {
     visibility: visible;
