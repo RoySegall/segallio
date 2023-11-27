@@ -6,16 +6,27 @@ import {sleep} from "@/common/uitls";
 import Image from 'next/image';
 import picture from './pictures/avatar.jpg'
 import {robotoMono} from "@/common/fonts";
-import {Action, ActionsProps, ChatItem, messages, actions} from "@/Components/Introduction/interfacesAndTexts";
+import {
+    Action,
+    ActionsProps,
+    ChatItem,
+    messages,
+    actions,
+    ActionsItem
+} from "@/Components/Introduction/interfacesAndTexts";
 import {Top} from "@/Components/Introduction/Top";
 
-const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji, text, addItemHandler, handler }) => {
+const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji, text, addItemHandler, handler, disabled }) => {
     const [show, setShow] = useState(false);
     useEffect(() => {
         setTimeout(() => setShow(true), 250);
     }, []);
 
-    return <div className={`${styles.action} ${show && styles.appear}`} onClick={async () => {
+    return <div className={`${styles.action} ${show && styles.appear} ${!disabled && styles.cursor}`} onClick={async () => {
+        if (disabled) {
+            return;
+        }
+
         addItemHandler({type: 'actions', actions: [{emoji, text, handler: () => {}}]});
         await sleep(1.25);
         handler(addItemHandler)
@@ -29,7 +40,14 @@ const Actions: FC<ActionsProps> = ({addItemHandler, actions}) => <div className=
 
 export const Introduction = () => {
     const [items, setItems] = useState<ChatItem[]>([]);
-    const addItem = useCallback((item: ChatItem) => setItems(items => [...items, item]), [setItems, items]);
+    const addItem = useCallback((item: ChatItem) => {
+
+        if (item.type === 'actions') {
+            item.actions = item.actions.map((action) => ({...action, disabled: true}));
+        }
+
+        setItems(items => [...items, item])
+    }, [setItems, items]);
     const [showActions, setShowActions] = useState(false);
     const messageRef = useRef<HTMLDivElement>(null);
 

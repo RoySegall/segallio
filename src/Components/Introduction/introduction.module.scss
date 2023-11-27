@@ -41,10 +41,9 @@
       }
 
       .messages {
-        margin-left: .75em;
         padding-left: 0.5em;
         padding-right: 0.5em;
-        height: 40vh;
+        height: 41vh;
         overflow: hidden;
         overflow-y: visible;
         padding-bottom: 0.5em;
@@ -72,6 +71,11 @@
         display: flex;
         padding-top: 1em;
         overflow-x: scroll;
+
+
+        &::-webkit-scrollbar {
+          display: none;  /* Safari and Chrome */
+        }
 
         .actionWrapper {
           min-width: fit-content;
@@ -105,7 +109,10 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease;
-  cursor: pointer;
+
+  &.cursor {
+    cursor: pointer;
+  }
 
   &.appear {
     visibility: visible;

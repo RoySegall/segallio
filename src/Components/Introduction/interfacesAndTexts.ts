@@ -4,6 +4,7 @@ export interface Action {
     emoji: string,
     text: string,
     handler: (addItemHandler: (item: ChatItem) => void) => void,
+    disabled?: boolean,
 }
 
 export interface ActionsProps {
@@ -12,15 +13,15 @@ export interface ActionsProps {
 }
 
 type MessageItem = {type: 'message', message: string};
-type ActionsItem = {type: 'actions', actions: Action[]};
+export type ActionsItem = {type: 'actions', actions: Action[]};
 export type ChatItem = MessageItem | ActionsItem;
 
 export const messages = [
     'Hello, my name is Roy Segall',
-    // "I'm a software developer from israel",
-    // "I'm married and own two cats: Sam and freddy",
-    // "I'm working in Tricentis israel as a full stack developer",
-    // "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
+    "I'm a software developer from israel",
+    "I'm married and own two cats: Sam and freddy",
+    "I'm working in Tricentis israel as a full stack developer",
+    "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
 ];
 
 const catchUp: Action = {
