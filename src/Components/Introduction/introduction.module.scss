@@ -4,6 +4,11 @@
   min-height: 100vh;
   align-items: center;
 
+  &.collapsed {
+    min-height: 89vh;
+    transition: min-height 1s ease-in-out;
+  }
+
   @media only screen and (max-width: 600px) {
     align-items: start;
   }
@@ -19,7 +24,7 @@
 
     @media only screen and (max-width: 600px) {
       width: 90vw;
-      height: 80vh;
+      height: 89vh;
 
       &.collapseSection {
         transition: min-height 1s ease-in-out;
@@ -49,6 +54,10 @@
         padding-bottom: 0.5em;
         scroll-behavior: smooth;
 
+        @media only screen and (max-width: 600px) {
+          height: 61vh;
+        }
+
         .message {
           font-size: .95em;
           padding: 20px;
@@ -72,6 +81,9 @@
         padding-top: 1em;
         overflow-x: scroll;
 
+        @media only screen and (max-width: 600px) {
+          padding-top: .5em;
+        }
 
         &::-webkit-scrollbar {
           display: none;  /* Safari and Chrome */

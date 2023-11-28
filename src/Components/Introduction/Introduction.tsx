@@ -39,6 +39,7 @@ const Actions: FC<ActionsProps> = ({addItemHandler, actions}) => <div className=
 
 
 export const Introduction = () => {
+    const [collapsed, setCollapsed] = useState(false);
     const [items, setItems] = useState<ChatItem[]>([]);
     const addItem = useCallback((item: ChatItem) => {
 
@@ -58,16 +59,17 @@ export const Introduction = () => {
                 await sleep(1.75);
             }
             setShowActions(true);
+            setCollapsed(true);
         })();
     }, []);
 
     useEffect(() => {
         if (messageRef.current) {
-            messageRef.current.scrollTop = messageRef.current.scrollHeight;
+            messageRef.current.scrollTop = messageRef.current.scrollHeight + 10000;
         }
     }, [items.length, messageRef.current]);
 
-    return <div className={`${styles.introductionSection} ${robotoMono.className}`}>
+    return <div className={`${styles.introductionSection} ${robotoMono.className} ${collapsed && styles.collapsed}`}>
         <div className={styles.introductionWrapper}>
             <Top />
 

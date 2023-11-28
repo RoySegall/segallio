@@ -30,15 +30,6 @@ const catchUp: Action = {
     handler: (addItemHandler) => {}
 };
 
-// actions:
-// 2. what is you stack?
-//    I'm a full stack developer, I can do everything. In my last(current) job I did some ux ui issues I think i'm not just full stack developer.
-//    but what is the tech?
-//    I used to work with Drupal for a lot of time (you can read in the job sections, link). I worked with python in Dreamed (link to job and mark dreamed) and now I'm doing react, node, a bit of appium.
-// 3. I want to see you story in the industry (link to jobs)
-// 4. I want to read your blog posts (link to blog posts)
-// 5. Where can I catch you?
-
 export const actions: Action[] = [
     {
         emoji: "👨‍💻",
@@ -61,7 +52,9 @@ export const actions: Action[] = [
         handler: async (addItemHandler) => {
             addItemHandler({type: 'message', message: "Currently I'm working with react, node and a bit of appium"});
             await sleep(2);
-            addItemHandler({type: 'message', message: "Currently I'm working with react, node and a bit of appium"})
+            addItemHandler({type: 'message', message: "But I used to work with Drupal for a lot of years during my job at gizra"})
+            await sleep(2);
+            addItemHandler({type: 'message', message: "I worked with Django in Dreamed and in my contribution in the hasadna"})
         }
     },
     {
