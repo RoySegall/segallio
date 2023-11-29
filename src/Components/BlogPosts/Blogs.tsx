@@ -10,6 +10,13 @@ export interface BlogPost {
 
 export const blogs: BlogPost[] = [
     {
+        url: "https://www.testim.io/blog/a-developers-take-on-qa/",
+        date: "July 24, 2023",
+        title: "A Developer’s Take on QA",
+        source: "Testim IO blog",
+        paragraph: <>Testim by Tricentis, originally named Testim, was created in 2014 to help anyone author automated tests. At the time, Selenium was king and tools to help developers automate their tests (e.g. Cypress, Puppeteer, and Playwright) were science fiction.</>
+    },
+    {
         url: "https://www.testim.io/blog/mocking-in-testing/",
         date: "January 05, 2022",
         title: "Mocking in Testing: from zero to hero",
