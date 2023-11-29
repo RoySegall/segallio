@@ -74,7 +74,7 @@ export const Introduction = () => {
         <div className={styles.introductionWrapper}>
             <Top />
 
-            <div className={`${styles.introduction}`}>
+            <div className={`${styles.introduction} ${collapsed && styles.collapsed}`}>
                 <div className={styles.messages} ref={messageRef}>
                     {items.map((item, key) => {
                         if (item.type === 'message') {
