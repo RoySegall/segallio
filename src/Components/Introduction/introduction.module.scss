@@ -5,7 +5,7 @@
   align-items: center;
 
   &.collapsed {
-    min-height: 89vh;
+    min-height: 85vh;
     transition: min-height 1s ease-in-out;
   }
 
@@ -17,8 +17,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    width: 40vw;
-    height: 57vh;
+    width: 600px;
+    height: 600px;
     box-shadow: 0px 1px 20px 0px #eaeaea;
     border: solid 1px #2f84ff24;
 
@@ -33,7 +33,6 @@
     }
 
     .introduction {
-      height: 49vh;
       overflow: hidden;
 
       @media only screen and (max-width: 600px) {
@@ -48,7 +47,7 @@
       .messages {
         padding-left: 0.5em;
         padding-right: 0.5em;
-        height: 42vh;
+        height: 415px;
         overflow: hidden;
         overflow-y: visible;
         padding-bottom: 0.5em;
@@ -74,7 +73,6 @@
 
     .bottomActions {
       border-top: 1px solid #ebebeb;
-      padding-top: 0.25em;
 
       .actionsWrapper {
         overflow: hidden;

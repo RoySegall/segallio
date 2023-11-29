@@ -59,6 +59,7 @@ export const Introduction = () => {
                 await sleep(1.75);
             }
             setShowActions(true);
+            await sleep(.5);
             setCollapsed(true);
         })();
     }, []);
