@@ -1,11 +1,25 @@
 .jobsWrapper {
   margin-top: 20px;
   display: flex;
-  flex-direction: row;
   min-height: 100vh;
   width: 100vw;
   background: #2f84ff;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 3em;
+
+  h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 3em;
+    text-transform: uppercase;
+  }
+
+  .timelineJobWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+  }
+
 
   .job {
     margin-top: 2em;
@@ -39,11 +53,10 @@
 
   .timeline {
     width: 325px;
-    height: 670px;
+    height: 480px;
     background: #ECF1F524;
     mix-blend-mode: normal;
     backdrop-filter: blur(15px);
-    margin-left: 2em;
     box-shadow: 0 20px 53px -30px rgba(95, 102, 173, 0.566816);
     border-radius: 10px;
     padding: 1em;
