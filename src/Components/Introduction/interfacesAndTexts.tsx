@@ -1,4 +1,5 @@
 import {sleep} from "@/common/uitls";
+import ReactChild from "react";
 
 export interface Action {
     emoji: string,
@@ -12,22 +13,30 @@ export interface ActionsProps {
     actions: Action[]
 }
 
-type MessageItem = {type: 'message', message: string};
+type MessageItem = {type: 'message', message: string | ReactChild.JSX.Element};
 export type ActionsItem = {type: 'actions', actions: Action[]};
 export type ChatItem = MessageItem | ActionsItem;
 
 export const messages = [
     'Hello, my name is Roy Segall',
     "I'm a software developer from israel",
-    "I'm married and own two cats: Sam and freddy",
+    "I'm married to my lovely wife Noy and own two cats: Sam and freddy",
     "I'm working in Tricentis israel as a full stack developer",
     "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
 ];
 
+const workEmail = 'r.segall@tricentis.com';
+
 const catchUp: Action = {
     emoji: "📲",
-    text: "Where can catch-up with you?",
-    handler: (addItemHandler) => {}
+    text: "Where can I catch-up with you?",
+    handler: async (addItemHandler) => {
+        addItemHandler({type: 'message', message: "You can send me an email to roy@segall.io"});
+        if (workEmail) {
+            await sleep(1.75);
+            addItemHandler({type: 'message', message: "But if it's related to work you can send email to r.segall@tricentis.com"});
+        }
+    }
 };
 
 export const actions: Action[] = [
@@ -60,12 +69,18 @@ export const actions: Action[] = [
     {
         emoji: "📖",
         text: "What's your story?",
-        handler: (addItemHandler) => {}
+        handler: async (addItemHandler) => {
+            addItemHandler({type: 'message', message: "I'm glad you asked 😃"});
+            await sleep(2);
+            addItemHandler({type: 'message', message: <>You can go to the <a href="#jobs">jobs</a> section and read about my story</>});
+        }
     },
     {
         emoji: "📰",
         text: "What did you blog about?",
-        handler: (addItemHandler) => {}
+        handler: async (addItemHandler) => {
+            addItemHandler({type: 'message', message: <>You can read about my blogs in the <a href="#blogs">blogs</a></>});
+        }
     },
     catchUp,
 ];

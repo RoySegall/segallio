@@ -36,7 +36,6 @@
       .messages {
         padding-left: 0.5em;
         padding-right: 0.5em;
-        //height: 415px;
         overflow: hidden;
         overflow-y: visible;
         padding-bottom: 0.5em;
@@ -54,6 +53,11 @@
           margin-top: .5em;
           margin-bottom: .5em;
           line-height: 1.5;
+
+          a {
+            color: black;
+            font-weight: 500;
+          }
         }
       }
     }

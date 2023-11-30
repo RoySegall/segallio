@@ -34,7 +34,7 @@ export const Jobs = () => {
     ];
     const [jobId, setJobId] = useState(jobEntries.gizra.id);
     const selectedJob = useMemo(() => jobs.find(job => job.id === jobId) || jobEntries.testim, [jobs, jobId]);
-    return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id='jobs'>
+    return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id="jobs">
         <h2>Jobs</h2>
 
         <div className={styles.timelineJobWrapper}>

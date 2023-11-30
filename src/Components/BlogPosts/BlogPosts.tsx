@@ -29,7 +29,7 @@ const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div cl
 </div>
 
 export const BlogPosts = () => <div className={styles.blogsPostsWrapper}>
-    <div className={`${styles.blogs} ${robotoMono.className}`}>
+    <div className={`${styles.blogs} ${robotoMono.className}`} id="blogs">
         <h2>Blog posts</h2>
 
         <div className={styles.blogsWrapper}>

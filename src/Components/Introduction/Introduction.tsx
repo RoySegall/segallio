@@ -10,7 +10,7 @@ import {
     ChatItem,
     messages,
     actions,
-} from "@/Components/Introduction/interfacesAndTexts";
+} from "./interfacesAndTexts";
 import {Top} from "@/Components/Introduction/Top";
 
 const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji, text, addItemHandler, handler, disabled }) => {
