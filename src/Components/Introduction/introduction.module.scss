@@ -9,6 +9,10 @@
     transition: min-height 1s ease-in-out;
   }
 
+  @media only screen and (max-width: 600px) {
+    align-items: start;
+  }
+
   .introductionWrapper {
     display: flex;
     flex-direction: column;
@@ -17,27 +21,28 @@
     height: 600px;
     box-shadow: 0px 1px 20px 0px #eaeaea;
     border: solid 1px #2f84ff24;
+    justify-content: space-between;
 
     @media only screen and (max-width: 600px) {
       width: 90vw;
-      height: 80vh;
+      height: 95%;
     }
 
     .introduction {
       overflow: hidden;
+      margin-bottom: auto;
+      padding-bottom: .5em;
 
       .messages {
         padding-left: 0.5em;
         padding-right: 0.5em;
-        height: 415px;
+        //height: 415px;
         overflow: hidden;
         overflow-y: visible;
         padding-bottom: 0.5em;
         scroll-behavior: smooth;
-
-        @media only screen and (max-width: 600px) {
-          height: 52vh;
-        }
+        height: 100%;
+        margin-bottom: 1em;
 
         .message {
           font-size: .95em;
@@ -55,6 +60,7 @@
 
     .bottomActions {
       border-top: 1px solid #ebebeb;
+      min-height: 60px;
 
       .actionsWrapper {
         overflow: hidden;

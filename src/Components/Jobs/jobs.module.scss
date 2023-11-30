@@ -52,8 +52,8 @@
 
     @media only screen and (max-width: 600px) {
       margin-left: 0;
-      width: 80%;
-      height: 75%;
+      width: 80vw;
+      height: 65vh;
     }
 
     img {
@@ -102,12 +102,16 @@
 
       @media only screen and (max-width: 600px) {
         margin-top: 0;
-        overflow: scroll;
       }
 
       .container {
         width: 100%;
         display: flex;
+
+        @media only screen and (max-width: 600px) {
+          overflow: scroll;
+          width: 92vw;
+        }
 
         .cards {
           margin-left: 12px;
