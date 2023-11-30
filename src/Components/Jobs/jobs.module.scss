@@ -1,11 +1,22 @@
 .jobsWrapper {
   margin-top: 20px;
   display: flex;
-  min-height: 101vh;
+  min-height: 97vh;
   width: 100vw;
   background: #2f84ff;
   flex-direction: column;
   padding-left: 3em;
+
+  @media only screen and (max-width: 600px) {
+    min-height: auto;
+  }
+
+  em {
+    color: #825ee4;
+    margin-left: .2em;
+    margin-right: .2em;
+    font-weight: 500;
+  }
 
   h2 {
     color: white;
@@ -19,6 +30,10 @@
     flex-direction: row;
     width: 98%;
     height: 87vh;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
   }
 
   .job {
@@ -34,6 +49,12 @@
     border: solid 2px #825ee4;
     box-shadow: 0 20px 53px -30px white;
     margin-right: 1em;
+
+    @media only screen and (max-width: 600px) {
+      margin-left: 0;
+      width: 80vw;
+      height: 65vh;
+    }
 
     img {
       margin: 0 auto;
@@ -60,6 +81,12 @@
     border-radius: 10px;
     padding: 1em;
 
+    @media only screen and (max-width: 600px) {
+      background: none;
+      padding: 0;
+      height: auto;
+    }
+
     h3 {
       margin: 0;
       font-weight: bold;
@@ -73,15 +100,33 @@
     .box {
       margin-top: 2em;
 
+      @media only screen and (max-width: 600px) {
+        margin-top: 0;
+      }
+
       .container {
         width: 100%;
         display: flex;
+
+        @media only screen and (max-width: 600px) {
+          overflow: scroll;
+          width: 92vw;
+        }
 
         .cards {
           margin-left: 12px;
           transform: translateY(-10px);
           border-left: #D1D6E6 solid 2px;
           padding-left: 1em;
+
+          @media only screen and (max-width: 600px) {
+            transform: none;
+            display: flex;
+            flex-direction: row;
+            border: none;
+            margin-left: 0;
+            padding-left: 0;
+          }
 
           .card {
             padding: 1em .5em;
@@ -93,6 +138,14 @@
             position: relative;
             cursor: pointer;
 
+            @media only screen and (max-width: 600px) {
+              margin-right: 1em;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
             .dot {
               width: 14px;
               height: 14px;
@@ -100,6 +153,10 @@
               position: absolute;
               border-radius: 7px;
               left: -23px;
+
+              @media only screen and (max-width: 600px) {
+                display: none;
+              }
 
               &.active {
                 background: #825ee4;

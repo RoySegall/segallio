@@ -5,7 +5,7 @@
   align-items: center;
 
   &.collapsed {
-    min-height: 85vh;
+    min-height: 88vh;
     transition: min-height 1s ease-in-out;
   }
 
@@ -21,41 +21,27 @@
     height: 600px;
     box-shadow: 0px 1px 20px 0px #eaeaea;
     border: solid 1px #2f84ff24;
+    justify-content: space-between;
 
     @media only screen and (max-width: 600px) {
       width: 90vw;
-      height: 89vh;
-
-      &.collapseSection {
-        transition: min-height 1s ease-in-out;
-        height: 65vh;
-      }
+      height: 95%;
     }
 
     .introduction {
       overflow: hidden;
-
-      @media only screen and (max-width: 600px) {
-        height: 70vh;
-
-        &.collapseSection {
-          height: 50vh;
-          transition: min-height 1s ease-in-out;
-        }
-      }
+      margin-bottom: auto;
+      padding-bottom: .5em;
 
       .messages {
         padding-left: 0.5em;
         padding-right: 0.5em;
-        height: 415px;
         overflow: hidden;
         overflow-y: visible;
         padding-bottom: 0.5em;
         scroll-behavior: smooth;
-
-        @media only screen and (max-width: 600px) {
-          height: 61vh;
-        }
+        height: 100%;
+        margin-bottom: 1em;
 
         .message {
           font-size: .95em;
@@ -67,12 +53,18 @@
           margin-top: .5em;
           margin-bottom: .5em;
           line-height: 1.5;
+
+          a {
+            color: black;
+            font-weight: 500;
+          }
         }
       }
     }
 
     .bottomActions {
       border-top: 1px solid #ebebeb;
+      min-height: 60px;
 
       .actionsWrapper {
         overflow: hidden;
@@ -93,8 +85,8 @@
 
           .action {
             padding: 0.5em 0.75em;
-            margin-left: 1em;
-            margin-right: 1em;
+            margin-left: .5em;
+            margin-right: .5em;
           }
         }
       }

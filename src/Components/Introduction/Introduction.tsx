@@ -3,8 +3,6 @@ import styles from './introduction.module.scss';
 import {useState, useEffect, FC, useCallback, useRef} from "react";
 import {Message} from "@/Components/Introduction/Message";
 import {sleep} from "@/common/uitls";
-import Image from 'next/image';
-import picture from './pictures/avatar.jpg'
 import {robotoMono} from "@/common/fonts";
 import {
     Action,
@@ -12,8 +10,7 @@ import {
     ChatItem,
     messages,
     actions,
-    ActionsItem
-} from "@/Components/Introduction/interfacesAndTexts";
+} from "./interfacesAndTexts";
 import {Top} from "@/Components/Introduction/Top";
 
 const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji, text, addItemHandler, handler, disabled }) => {
@@ -51,6 +48,11 @@ export const Introduction = () => {
     }, [setItems, items]);
     const [showActions, setShowActions] = useState(false);
     const messageRef = useRef<HTMLDivElement>(null);
+    const scrollToBottom = useCallback(() => {
+        if (messageRef.current) {
+            messageRef.current.scrollTop = messageRef.current.scrollHeight + 10000;
+        }
+    }, [messageRef]);
 
     useEffect(() => {
         (async () => {
@@ -65,16 +67,20 @@ export const Introduction = () => {
     }, []);
 
     useEffect(() => {
-        if (messageRef.current) {
-            messageRef.current.scrollTop = messageRef.current.scrollHeight + 10000;
-        }
-    }, [items.length, messageRef.current]);
+        scrollToBottom();
+    }, [items.length]);
+
+    useEffect(() => {
+        sleep(1.25).then(() => {
+            scrollToBottom();
+        });
+    }, [messageRef.current?.scrollHeight]);
 
     return <div className={`${styles.introductionSection} ${robotoMono.className} ${collapsed && styles.collapsed}`}>
         <div className={styles.introductionWrapper}>
             <Top />
 
-            <div className={`${styles.introduction}`}>
+            <div className={`${styles.introduction} ${collapsed && styles.collapsed}`}>
                 <div className={styles.messages} ref={messageRef}>
                     {items.map((item, key) => {
                         if (item.type === 'message') {
@@ -86,13 +92,13 @@ export const Introduction = () => {
                         }
                     })}
                 </div>
+            </div>
 
-                <div className={styles.bottomActions}>
-                    <div className={styles.actionsWrapper}>
-                        {showActions && actions.map((action, index) => <div className={styles.actionWrapper} key={index}>
-                            <Action {...action} addItemHandler={addItem} />
-                        </div>)}
-                    </div>
+            <div className={styles.bottomActions}>
+                <div className={styles.actionsWrapper}>
+                    {showActions && actions.map((action, index) => <div className={styles.actionWrapper} key={index}>
+                        <Action {...action} addItemHandler={addItem} />
+                    </div>)}
                 </div>
             </div>
         </div>

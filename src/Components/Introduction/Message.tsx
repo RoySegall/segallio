@@ -1,9 +1,9 @@
 import styles from "@/Components/Introduction/introduction.module.scss";
 import {robotoMono} from "@/common/fonts";
 import {Loading} from "@/Components/Loading";
-import {FC, useEffect, useState} from "react";
+import ReactChild, {FC, useEffect, useState} from "react";
 
-export const Message: FC<{message: string}> = ({message}) => {
+export const Message: FC<{message: string|ReactChild.JSX.Element}> = ({message}) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
