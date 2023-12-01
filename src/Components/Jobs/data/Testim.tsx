@@ -34,12 +34,30 @@ export const testim: Job = {
             After a year, <em>testim</em> was acquired by <em>Tricentis</em>, a leading company in the QA domain with
             fantastic products. Yes, the transition to Tricentis was a bit of an emotional rollercoaster, but it opened
             doors to an incredible opportunity—starting to work on a new product called <em>Testim Mobile</em>.
+
         </>,
+
         <>
             My time at <em>Dreamed Diabetes</em> showed me how tough it is to automate mobile apps. Now, being part of
             the crew building <em>Testim Mobile</em> feels like a dream project where I can tackle those tough spots.
             Working on <em>testim</em> mobile has been epic—we're crafting something that speaks to the challenges I've
             faced. The future? A bit of a mystery, but trust me, it's looking awesome.
         </>,
+
+        <>
+            After a year <em>testim</em> was acquired by <em>Tricentis</em> - a leading company with amazing products in
+            the QA world. Yes, moving to outlook was pretty sad but an amazing opportunity was around the corner;
+            Starting to work on a new product called <em>Testim Mobile</em>.
+        </>,
+        <>
+            You probably asking your self why. In <em>Dreamed Diabetes</em> I found out that doing automation for mobile
+            application is hard. Very hard. Now, starting to work on a new product where I can bring to the table all the
+            stuff that I know people would struggle with was a dream come true.
+        </>,
+        <>
+            As the work on <em>testim</em> mobile progressed it looked like we made the correct choices and got to bring
+            to the world a product that designed by a developer who knows the struggle of mobile automation. As always,
+            what the future hold it's mystery but for now it's is looking amazing.
+        </>
     ],
 }
