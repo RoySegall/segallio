@@ -12,47 +12,34 @@ export const testim: Job = {
     position: 'Developer',
     paragraphs: [
         <>
-            Yes, <em>Dreamed diabetes</em> did a lot of important stuff but I was missing something I had in <em>gizra</em> -
-            contributing code, blog posts, meetup. As <em>Dreamed Diabetes</em> goal did not align with what I was looking
-            I decided to look for another job. Besides that, <em>Python</em> was not that amazing language. Sure, every
-            language have it's own magic but I could much more from <em>PHP</em>.
+            In my career, I've had some awesome gigs, like at <em>Dreamed Diabetes</em> and <em>gizra</em>. But I missed
+            the buzz of sharing ideas, blogging, and hanging out at meetups—it's what really gets me going. So, I started
+            looking for a new job that fit the bill.
         </>,
 
         <>
-            As I was looking for a job for some while I thought I could not find what I was looking for - a product
-            company with an active blog so I could write about what I was doing, talking on meetups. Yes, in Israel there
-            are about 5-10 companies that doing it but I hoped something will come up.
+            Imagine this: I was on the lookout, but finding a company that ticked all my boxes — a cool product focus and
+            an active blog—seemed like finding a unicorn in Israel. Then, out of the blue, a recruiter mentioned
+            <em>testim</em>. The more I learned, the more it felt like fate. Their thing? Making E2E tests a breeze
+            without drowning in code—just what I needed after grappling with QA headaches at <em>Dreamed Diabetes</em>.
         </>,
 
         <>
-            Then, it happens. A recruiter suggested that I will send my CV to <em>testim</em>. As I progresses in the
-            interviews it looked like a good place to work at. The idea behind testim is to help people write E2E tests
-            without the need to write code. Yet alone, the work in <em>Dremeaed Diabetes</em> I found out the world of QA
-            is pretty hard yet alone trying to work with Selenium or cypress turns out pretty hard. In retrospect,
-            <em>testim</em> was a good place to work at which I could give my knowledge back.
+            Joining <em>testim</em> was a rollercoaster of learning! I dove into <em>Typescript</em>, <em>mobx</em>,
+            <em>MongoDB</em>, and <em>Express</em>. The tech magic at <em>testim</em> blew my mind, teaching me loads
+            about automation and why <em>mobx</em> rocks in managing stuff (though I'm up for a friendly debate on that 😄).
         </>,
 
         <>
-            Just like any new place learning new tech was amazing (and hard). I learned <em>Typescript</em>, <em>mobx</em>,
-            <em>MongoDB</em>, <em>Express</em> and more. The amount of sophistication that made <em>testim</em> work was
-            beyond 11. I was able to learn better on how automation works, tools and that <em>mobx</em> is far better state
-            management than <em>redux</em> (you can try to convinced me 😄).
-        </>,
-
-        <>
-            After a year <em>testim</em> was acquired by <em>Tricentis</em> - a leading company with amazing products in
-            the QA world. Yes, moving to outlook was pretty sad but an amazing opportunity was around the corner;
-            Starting to work on a new product called <em>Testim Mobile</em>.
+            After a year, <em>testim</em> was acquired by <em>Tricentis</em>, a leading company in the QA domain with
+            fantastic products. Yes, the transition to Tricentis was a bit of an emotional rollercoaster, but it opened
+            doors to an incredible opportunity—starting to work on a new product called <em>Testim Mobile</em>.
         </>,
         <>
-            You probably asking your self why. In <em>Dreamed Diabetes</em> I found out that doing automation for mobile
-            application is hard. Very hard. Now, starting to work on a new product where I can bring to the table all the
-            stuff that I know people would struggle with was a dream come true.
+            My time at <em>Dreamed Diabetes</em> showed me how tough it is to automate mobile apps. Now, being part of
+            the crew building <em>Testim Mobile</em> feels like a dream project where I can tackle those tough spots.
+            Working on <em>testim</em> mobile has been epic—we're crafting something that speaks to the challenges I've
+            faced. The future? A bit of a mystery, but trust me, it's looking awesome.
         </>,
-        <>
-            As the work on <em>testim</em> mobile progressed it looked like we made the correct choices and got to bring
-            to the world a product that designed by a developer who knows the struggle of mobile automation. As always,
-            what the future hold it's mystery but for now it's is looking amazing.
-        </>
     ],
 }

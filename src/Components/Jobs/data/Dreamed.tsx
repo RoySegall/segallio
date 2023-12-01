@@ -13,34 +13,34 @@ export const dreamed: Job = {
     position: 'Full Stack Developer',
     paragraphs: [
         <>
-            2018 was a rough year. I quit my job, and then I found another job which I loved very much. Then, I got
-            fired. Surprisingly, I was looking for a job, again. Took me a couple of months but I found it. It was a,
-            pardon my french, crappy job. It was so bad I rather not talk about it, and delete any reference of me being
-            employed there. After three months I decided to quit and look for another job.
+            Ah, 2018—a rollercoaster of a year. I made a leap from one job to another, finding myself in a role I adored.
+            But life threw a curveball, and I unexpectedly found myself job hunting again. It took a while, but I landed
+            a gig—a terrible one, to put it mildly. It was so awful that I'd rather wipe any mention of it from existence.
+            Three months in, I knew I had to escape and start anew.
         </>,
         <>
-            This time, I knew what I was looking for and the search was grueling, each place was not interested in my
-            skills or it was something I did not want to do. But then, like a ray of sunshine between a crack of clouds
-            from a gray sky I found it - my next, and current position, at <em>Dreamed Diabetes</em>.
+            This time around, I had a clear picture of what I sought. The search was tough—each opportunity didn't quite
+            match my skills or desires. Then, like a beacon of hope breaking through stormy clouds, I stumbled upon it—my
+            current haven—at <em>Dreamed Diabetes</em>.
         </>,
         <>
-            Very similar to the previous job on the list, <em>Taliaz</em>, the work in <em>Dreamed Diabetes</em> is all
-            about doing good: Helping people with <em>Diabetes</em> to live better. It doing it by getting their diabetes
-            information, process it with a smart algorithm, and then provide a treatment plan which improves, and might
-            saves, the patient's life. Surely, something not everyone can vouch for themself.
+            Similar to my past stint at <em>Taliaz</em>, <em>Dreamed Diabetes</em> revolves around something profound:
+            making a difference in the lives of people with <em>Diabetes</em>. It's about gathering their data, running
+            it through ingenious algorithms, and crafting treatment plans that can genuinely change, even save, lives.
+            Not something everyone can claim in their job description.
         </>,
         <>
-            The work in <em>Dreamed Diabetes</em> is achieved in technologies I could dreamed of at the time: <em>Python</em>
-            and <em>React</em>, which thrilled me a lot. But, not only the technologies makes me happy - there's so much
-            more. Seeing how people live with diabetes and understanding that there's more than just inject themself
-            <em>Insulin</em> was shocking. I won't go deep but I can say that there's a whole new world that, unveiled
-            to me, something that doesn't teach you a lot in schools and that's a shame.
+            Working at <em>Dreamed Diabetes</em> introduced me to technologies I could only dream of at the time:
+            <em>Python</em> and <em>React</em>, which had me over the moon. But it's not just about the tech—it's a
+            revelation. Witnessing how individuals navigate life with diabetes, realizing there's more to managing it
+            than just insulin injections—mind-blowing. It's a world you don't learn about in school, and that's a
+            disservice.
         </>,
         <>
-            We talked about the technical stuff, let's talk a bit about the people - wow! It's been a while since I
-            found a place that keeps so many smart people in one place (well, they have to if they doing such a noble goal).
-            But besides them being smart I can say that they heart-warming, bear-care people with the feet on the ground.
-            I do believe I found a place that will forever stay in my heart.
+            Let's shift gears from the technical—it's the people here that shine. I haven't encountered such a pool of
+            brilliant minds in one place for a long time (well, they need to be for such a noble cause). Beyond their
+            intellect, they're warm, genuine souls with their feet firmly planted. I believe I've found a place that's
+            etched into my heart forever.
         </>
     ],
 }

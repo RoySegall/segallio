@@ -19,10 +19,10 @@ export type ChatItem = MessageItem | ActionsItem;
 
 export const messages = [
     'Hello, my name is Roy Segall',
-    "I'm a software developer from israel",
+    "I'm a software engineer from Israel",
     "I'm married to my lovely wife Noy and own two cats: Sam and freddy",
-    "I'm working in Tricentis israel as a full stack developer",
-    "I used to contribute to open source projects and gave session at meetups but I'm not doing it anymore as I'm focusing on my family and my work",
+    "I'm working in Tricentis Israel as a full stack developer",
+    "I love food and especially cooking",
 ];
 
 const workEmail = 'r.segall@tricentis.com';
@@ -36,6 +36,9 @@ const catchUp: Action = {
             await sleep(1.75);
             addItemHandler({type: 'message', message: "But if it's related to work you can send email to r.segall@tricentis.com"});
         }
+        await sleep(1.75);
+        addItemHandler({type: 'message', message: <>You can visit my LinkedIn profile <a href="https://www.linkedin.com/in/roy-segall-0b1b4b5a/">here</a></>});
+
     }
 };
 
@@ -47,7 +50,7 @@ export const actions: Action[] = [
             const lookingForJob = false;
 
             if (!lookingForJob) {
-                addItemHandler({type: 'message', message: "I'm not looking for a new job right now"});
+                addItemHandler({type: 'message', message: "I'm not looking for a new job at the moment"});
             } else {
                 addItemHandler({type: 'message', message: "Yes. you can look at the how to catch up"});
                 await sleep(2);
@@ -63,7 +66,7 @@ export const actions: Action[] = [
             await sleep(2);
             addItemHandler({type: 'message', message: "But I used to work with Drupal for a lot of years during my job at gizra"})
             await sleep(2);
-            addItemHandler({type: 'message', message: "I worked with Django in Dreamed and in my contribution in the hasadna"})
+            addItemHandler({type: 'message', message: "I worked with Django in Dreamed Diabeted and in my contribution in the hasadna"})
         }
     },
     {

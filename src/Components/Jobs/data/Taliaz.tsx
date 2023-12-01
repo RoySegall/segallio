@@ -13,63 +13,42 @@ export const taliaz: Job = {
     paragraphs: [
 
         <>
-            It true, I haven't been to a lot of companies over the years. I 'spent' 7 years at <em>gizra</em> while other
-            people
-            can work
-            for at least 3 companies. But on the other hand, working for a company for 7 straight years indicates
-            loyalty, it's a
-            bonus. But in my case, a lot of companies decided that my experience is not what they looking and skips to
-            the next
-            contestant.
+            Sure, I might not have hopped around various companies over the years—I dedicated a solid 7 years to
+            <em>gizra</em>. While some might see that as staying put for too long, I view it as loyalty, a feather in my
+            cap. Unfortunately, many companies felt my experience wasn't the right fit and swiftly moved on to the next
+            candidate.
         </>,
 
         <>
-            <em>Taliaz</em> is a different story. After being sick and tired for looking for a job a friend told me that
-            he knows
-            someone
-            that looks for a full-stack developer. I gave it a shot. The process was very quick and I felt that that
-            company is
-            different from the other companies I interviewed. It was a small startup that started the expansion: hiring
-            two people
-            and aims for being bigger.
+            <em>Taliaz</em>, however, is a different tale. Frustrated with job hunting, a friend mentioned a potential
+            opportunity for a full-stack developer. I took the chance. The process was swift, and this company felt
+            unlike any other I'd encountered. A small startup with grand aspirations—to grow and expand beyond its humble
+            beginnings by hiring new talent.
         </>,
 
         <>
-            It was exactly something I was looking for. Being at a position where you can make a real impact. No longer a
-            project
-            with a company that after 1-2 years you don't have any relationship and the hard work you gave is not
-            visible to your
-            eyes. If I can describe it, it's like saying goodbye from one of your children.
+            It was precisely what I'd been seeking—a role where my contributions mattered. No longer just another
+            project where your efforts vanish into thin air after a couple of years. It's akin to bidding adieu to one
+            of your own creations.
         </>,
 
         <>
-            At <em>Taliaz</em> I was given the honor of starting to re-write the product. Choosing the backend (Symfony in
-            my
-            case) while
-            the frontend will be chosen sometime in the future. In the beginning, I was looking for approval to do
-            stuff. My CTO
-            told me that I don't need it. Just build it. If it will not fit, we'll remove it. Then, something happens -
-            a switch
-            was turned on. From being used to wait for approval I needed to act fast and if something was bad, that's
-            OK, we'll fix
-            it and learn for the next time.
+            At <em>Taliaz</em>, I had the privilege of spearheading a product rewrite. I chose the backend
+            (Symfony in my case) while deferring the frontend decision for later. Initially seeking approval for every
+            move, my CTO flipped the script—just build it, and if it doesn't fit, we'll adjust. Suddenly, the gears
+            shifted. From waiting for the green light, I had to act swiftly. Mistakes were alright—we'd fix them and
+            learn for the next time.
         </>,
 
         <>
-            But, it turns that nothing good was last forever and in my case, shorter than I ever expected. After two
-            months, just
-            when I started to warm up I got the bad news - I'm fired. It's because they were out of money - the expected
-            funding has
-            not arrived.
+            But alas, good things sometimes end sooner than expected. Just as I was settling in after two months,
+            I received the dreaded news—I was let go. The reason? A lack of funding—the anticipated funds hadn't arrived.
         </>,
 
         <>
-            P.S - I forgot to tell you what's <em>Taliaz</em> purpose: they came up with an incredible solution - helping
-            people
-            with
-            depression to find the best matching medicine with fewer side effects. That job fits me well because I love
-            'doing good'
-            for other people.
+            P.S. - I forgot to mention <em>Taliaz</em>'s purpose: they've devised an incredible solution—helping
+            individuals with depression find the best-suited medication with minimal side effects. That mission
+            resonated with me—I thrive on making a positive impact for others.
         </>
     ],
 }
