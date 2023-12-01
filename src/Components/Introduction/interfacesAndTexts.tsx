@@ -36,12 +36,8 @@ const catchUp: Action = {
             await sleep(1.75);
             addItemHandler({type: 'message', message: "But if it's related to work you can send email to r.segall@tricentis.com"});
         }
-<<<<<<< HEAD:src/Components/Introduction/interfacesAndTexts.tsx
         await sleep(1.75);
-        addItemHandler({type: 'message', message: <>You can visit my LinkedIn profile <a href="https://www.linkedin.com/in/roy-segall-0b1b4b5a/">here</a></>});
-
-=======
->>>>>>> master:src/Components/Introduction/interfacesAndTexts.tsx
+        addItemHandler({type: 'message', message: <>You can visit my LinkedIn profile <a href="https://www.linkedin.com/in/roysegall/">here</a></>});
     }
 };
 
