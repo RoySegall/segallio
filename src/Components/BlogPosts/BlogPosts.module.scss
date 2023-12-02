@@ -5,6 +5,10 @@
   background: #825ee4;
   padding-left: 2.75em;
 
+  @media only screen and (max-width: 600px) {
+    padding-left: 1em;
+  }
+
   .blogs {
     width: 97%;
     display: flex;
@@ -15,6 +19,13 @@
       font-weight: 400;
       font-size: 3em;
       text-transform: uppercase;
+
+      @media only screen and (max-width: 600px) {
+        text-align: center;
+        margin: 0;
+        margin-top: .5em;
+        margin-bottom: .5em;
+      }
     }
 
     .blogsWrapper {
@@ -33,7 +44,7 @@
       @media only screen and (max-width: 600px) {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         overflow: scroll;
       }
 

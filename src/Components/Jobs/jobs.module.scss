@@ -1,13 +1,13 @@
 .jobsWrapper {
   margin-top: 20px;
   display: flex;
-  min-height: 97vh;
   width: 100vw;
   background: #2f84ff;
   flex-direction: column;
   padding-left: 3em;
 
   @media only screen and (max-width: 600px) {
+    padding-left: .5em;
     min-height: auto;
   }
 
@@ -23,16 +23,24 @@
     font-weight: 400;
     font-size: 3em;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+      margin: 0;
+      margin-top: .5em;
+      margin-bottom: .5em;
+    }
   }
 
   .timelineJobWrapper {
     display: flex;
     flex-direction: row;
     width: 98%;
-    height: 87vh;
+    height: 75vh;
 
     @media only screen and (max-width: 600px) {
       flex-direction: column;
+      height: 80vh;
     }
   }
 
@@ -53,8 +61,8 @@
     @media only screen and (max-width: 600px) {
       margin-left: 0;
       margin-right: 0;
-      width: 85vw;
-      height: 65vh;
+      width: 89vw;
+      height: 58vh;
     }
 
     img {
@@ -111,7 +119,7 @@
 
         @media only screen and (max-width: 600px) {
           overflow: scroll;
-          width: 92vw;
+          width: 97vw;
         }
 
         .cards {

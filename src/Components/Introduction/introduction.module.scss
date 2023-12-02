@@ -4,8 +4,16 @@
   min-height: 100vh;
   align-items: center;
 
+  @media only screen and (max-width: 600px) {
+    min-height: 85vh;
+  }
+
   &.collapsed {
-    min-height: 88vh;
+    min-height: 84vh;
+
+    @media only screen and (max-width: 600px) {
+      min-height: 70vh;
+    }
     transition: min-height 1s ease-in-out;
   }
 
