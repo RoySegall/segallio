@@ -1,7 +1,6 @@
 .jobsWrapper {
   margin-top: 20px;
   display: flex;
-  min-height: 97vh;
   width: 100vw;
   background: #2f84ff;
   flex-direction: column;
@@ -37,10 +36,11 @@
     display: flex;
     flex-direction: row;
     width: 98%;
-    height: 87vh;
+    height: 75vh;
 
     @media only screen and (max-width: 600px) {
       flex-direction: column;
+      height: 80vh;
     }
   }
 
@@ -62,7 +62,7 @@
       margin-left: 0;
       margin-right: 0;
       width: 89vw;
-      height: 65vh;
+      height: 58vh;
     }
 
     img {
