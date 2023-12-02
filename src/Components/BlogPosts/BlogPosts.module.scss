@@ -2,8 +2,9 @@
   display: flex;
   width: 100vw;
   min-height: fit-content;
-  background: #825ee4;
+  background: var(--azure);
   padding-left: 2.75em;
+  border-top: #aecfff solid 1px;
 
   @media only screen and (max-width: 600px) {
     padding-left: 1em;
@@ -59,7 +60,7 @@
       }
 
       .quote {
-        color: #2f84ff;
+        color: var(--purple);
         height: 1.5em;
         @media only screen and (max-width: 600px) {
           display: none;
@@ -97,7 +98,7 @@
           margin-right: auto;
 
           .date {
-            color: #2f84ff;
+            color: var(--purple);
           }
         }
 

@@ -2,7 +2,7 @@
   margin-top: 20px;
   display: flex;
   width: 100vw;
-  background: #2f84ff;
+  background: var(--purple);
   flex-direction: column;
   padding-left: 3em;
 
@@ -12,7 +12,7 @@
   }
 
   em {
-    color: #825ee4;
+    color: var(--azure);
     margin-left: .2em;
     margin-right: .2em;
     font-weight: 500;
@@ -40,7 +40,7 @@
 
     @media only screen and (max-width: 600px) {
       flex-direction: column;
-      height: 80vh;
+      height: 64vh;
     }
   }
 
@@ -54,15 +54,14 @@
 
     display: flex;
     flex-direction: column;
-    border: solid 2px #825ee4;
-    box-shadow: 0 20px 53px -30px white;
+    border: solid 2px var(--azure);
     margin-right: 1em;
 
     @media only screen and (max-width: 600px) {
       margin-left: 0;
       margin-right: 0;
       width: 89vw;
-      height: 58vh;
+      height: 45vh;
     }
 
     img {
@@ -168,7 +167,7 @@
               }
 
               &.active {
-                background: #825ee4;
+                background: var(--azure);
               }
             }
 
