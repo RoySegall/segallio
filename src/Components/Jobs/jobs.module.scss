@@ -8,6 +8,7 @@
   padding-left: 3em;
 
   @media only screen and (max-width: 600px) {
+    padding-left: .5em;
     min-height: auto;
   }
 
@@ -23,6 +24,13 @@
     font-weight: 400;
     font-size: 3em;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+      margin: 0;
+      margin-top: .5em;
+      margin-bottom: .5em;
+    }
   }
 
   .timelineJobWrapper {
@@ -53,7 +61,7 @@
     @media only screen and (max-width: 600px) {
       margin-left: 0;
       margin-right: 0;
-      width: 85vw;
+      width: 89vw;
       height: 65vh;
     }
 
@@ -111,7 +119,7 @@
 
         @media only screen and (max-width: 600px) {
           overflow: scroll;
-          width: 92vw;
+          width: 97vw;
         }
 
         .cards {
