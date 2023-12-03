@@ -5,8 +5,8 @@ import {BlogPosts} from "@/Components/BlogPosts";
 
 export default function Home() {
     return <div className={styles.home}>
-        <Introduction />
-        <Jobs />
+        {/*<Introduction />*/}
+        {/*<Jobs />*/}
         <BlogPosts />
     </div>;
 }

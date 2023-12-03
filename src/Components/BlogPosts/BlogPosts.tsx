@@ -32,8 +32,10 @@ export const BlogPosts = () => <div className={styles.blogsPostsWrapper}>
     <div className={`${styles.blogs} ${robotoMono.className}`} id="blogs">
         <h2>Blog posts</h2>
 
-        <div className={styles.blogsWrapper}>
-            {blogs.map((blog, index) => <BlogPost key={index} {...blog} />)}
+        <div className={styles.blogsScroller}>
+            <div className={styles.blogsWrapper}>
+                {blogs.map((blog, index) => <BlogPost key={index} {...blog} />)}
+            </div>
         </div>
     </div>
 </div>
