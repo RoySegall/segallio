@@ -30,11 +30,16 @@
     }
 
     .blogsScroller {
-      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      @media only screen and (max-width: 1000px) {
+        flex-direction: column-reverse;
+      }
     }
 
     .blogsWrapper {
       display: flex;
+      justify-content: space-between;
 
       @media only screen and (max-width: 900px) {
         display: flex;
@@ -81,9 +86,13 @@
         padding: 1em;
         display: flex;
         flex-direction: row;
-        min-width: 35vw;
-        margin-right: 2em;
+        min-width: 29vw;
+        margin-right: .5vw;
         margin-bottom: 2em;
+
+        &:first-child {
+          margin-left: 0;
+        }
 
         @media only screen and (max-width: 1000px) {
           min-width: 49%;
@@ -136,6 +145,42 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .pager {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: solid 1px var(--purple);
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+
+    .active {
+      color: var(--purple);
+      font-weight: 600;
+      font-size: 1.25em;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      padding-right: 1em;
+      padding-left: 1em;
+      border-right: solid 1px black;
+      font-weight: 300;
+      cursor: pointer;
+
+      &:last-child {
+        border-right: none;
       }
     }
   }
