@@ -38,9 +38,9 @@
     }
 
     .blogsWrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
 
       @media only screen and (max-width: 900px) {
         display: flex;
@@ -96,9 +96,9 @@
         }
 
         @media only screen and (max-width: 1000px) {
-          min-width: 49%;
+          width: 88%;
           margin-right: 0;
-          margin-bottom: 1em;
+          margin-bottom: .5em;
         }
 
         a {
