@@ -32,11 +32,11 @@ const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div cl
 </div>
 
 export const BlogPosts = () => {
-    const perPage = 3;
+    const perPage = 4;
     const [page, setPage] = useState(0);
     const blogsToShow = useMemo(() => {
-        const start = page * 3;
-        return blogs.slice(start, start + 3);
+        const start = page * perPage;
+        return blogs.slice(start, start + perPage);
     }, [page, blogs]);
 
     return <div className={`${styles.blogsPostsWrapper} ${robotoMono.className}`}>
