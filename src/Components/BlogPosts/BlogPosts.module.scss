@@ -3,7 +3,6 @@
   width: 100vw;
   min-height: fit-content;
   background: var(--azure);
-  padding-left: 2.75em;
   border-top: #aecfff solid 1px;
 
   @media only screen and (max-width: 600px) {
@@ -11,7 +10,7 @@
   }
 
   .blogs {
-    width: 97%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -90,7 +89,6 @@
         padding: 1em;
         display: flex;
         flex-direction: row;
-        margin-right: .5vw;
         margin-bottom: 2em;
 
         &:first-child {

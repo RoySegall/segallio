@@ -46,7 +46,7 @@ export const actions: Action[] = [
         emoji: "👨‍💻",
         text: "Are you looking for a job?",
         handler: async (addItemHandler) => {
-            const lookingForJob = false;
+            const lookingForJob = true;
 
             if (!lookingForJob) {
                 addItemHandler({type: 'message', message: "I'm not looking for a new job at the moment"});
