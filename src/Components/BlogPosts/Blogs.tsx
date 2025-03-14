@@ -10,6 +10,13 @@ export interface BlogPost {
 
 export const blogs: BlogPost[] = [
     {
+        url: "https://www.testim.io/blog/failure-is-the-valuable-currency/",
+        date: "January 07, 2025",
+        title: "Failure is a valuable currency",
+        source: "Testim IO blog",
+        paragraph: <>Failure tends to strike at the worst possible moment, making it much harder to embrace it. This has led me to wonder: why do we fear failure so much? For starters, it makes us look bad.</>
+    },
+    {
         url: "https://www.testim.io/blog/a-developers-take-on-qa/",
         date: "July 24, 2023",
         title: "A Developer’s Take on QA",

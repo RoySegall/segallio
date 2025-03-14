@@ -37,7 +37,7 @@ const catchUp: Action = {
             addItemHandler({type: 'message', message: "But if it's related to work you can send email to r.segall@tricentis.com"});
         }
         await sleep(1.75);
-        addItemHandler({type: 'message', message: <>You can visit my LinkedIn profile <a href="https://www.linkedin.com/in/roysegall/">here</a></>});
+        addItemHandler({type: 'message', message: <>You can visit my LinkedIn profile <a href="https://www.linkedin.com/in/roysegall/" target='_blank'>here</a></>});
     }
 };
 
@@ -46,7 +46,7 @@ export const actions: Action[] = [
         emoji: "👨‍💻",
         text: "Are you looking for a job?",
         handler: async (addItemHandler) => {
-            const lookingForJob = false;
+            const lookingForJob = true;
 
             if (!lookingForJob) {
                 addItemHandler({type: 'message', message: "I'm not looking for a new job at the moment"});
@@ -54,6 +54,8 @@ export const actions: Action[] = [
                 addItemHandler({type: 'message', message: "Yes. you can look at the how to catch up"});
                 await sleep(2);
                 addItemHandler({type: 'actions', actions: [catchUp]});
+                await sleep(1);
+                catchUp.handler(addItemHandler);
             }
         },
     },

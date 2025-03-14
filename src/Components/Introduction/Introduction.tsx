@@ -12,6 +12,7 @@ import {
     actions,
 } from "./interfacesAndTexts";
 import {Top} from "@/Components/Introduction/Top";
+import {ContentWrapper} from "@/Components/ContentWrapper";
 
 const Action: FC<Action & {addItemHandler: (item: ChatItem) => void}> = ({emoji, text, addItemHandler, handler, disabled }) => {
     const [show, setShow] = useState(false);
@@ -77,30 +78,34 @@ export const Introduction = () => {
     }, [messageRef.current?.scrollHeight]);
 
     return <div className={`${styles.introductionSection} ${robotoMono.className} ${collapsed && styles.collapsed}`}>
-        <div className={styles.introductionWrapper}>
-            <Top />
+        <ContentWrapper>
+            <div className={styles.introductionWrapper}>
+                <Top/>
 
-            <div className={`${styles.introduction} ${collapsed && styles.collapsed}`}>
-                <div className={styles.messages} ref={messageRef}>
-                    {items.map((item, key) => {
-                        if (item.type === 'message') {
-                            return <Message message={item.message!} key={key} />
-                        }
+                <div className={`${styles.introduction} ${collapsed && styles.collapsed}`}>
+                    <div className={styles.messages} ref={messageRef}>
+                        {items.map((item, key) => {
+                            if (item.type === 'message') {
+                                return <Message message={item.message!} key={key}/>
+                            }
 
-                        if (item.type === 'actions') {
-                            return <Actions actions={item.actions} key={key} addItemHandler={addItem} />
-                        }
-                    })}
+                            if (item.type === 'actions') {
+                                return <Actions actions={item.actions} key={key} addItemHandler={addItem}/>
+                            }
+                        })}
+                    </div>
+                </div>
+
+                <div className={styles.bottomActions}>
+                    <div className={styles.actionsWrapper}>
+                        {showActions && actions.map((action, index) => <div className={styles.actionWrapper}
+                                                                            key={index}>
+                            <Action {...action} addItemHandler={addItem}/>
+                        </div>)}
+                    </div>
                 </div>
             </div>
+        </ContentWrapper>
 
-            <div className={styles.bottomActions}>
-                <div className={styles.actionsWrapper}>
-                    {showActions && actions.map((action, index) => <div className={styles.actionWrapper} key={index}>
-                        <Action {...action} addItemHandler={addItem} />
-                    </div>)}
-                </div>
-            </div>
-        </div>
     </div>
 }
