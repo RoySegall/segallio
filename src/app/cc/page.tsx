@@ -1,6 +1,6 @@
-import styles from './cc.module.scss';
+import { redirect } from 'next/navigation';
+
+
 export default function CC() {
-    return <iframe className={styles.iframe} src="https://celebrity-crush-main-mxuzlo.laravel.cloud/"
-                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    />
+    return redirect('https://celebrity-crush-main-mxuzlo.laravel.cloud/');
 }
