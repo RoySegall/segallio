@@ -5,8 +5,9 @@ import {robotoMono} from "@/common/fonts";
 import {BlogPost, blogs} from "@/Components/BlogPosts/Blogs";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faQuoteLeft, faQuoteRight} from '@fortawesome/free-solid-svg-icons';
-import {useMemo, useState, type FC} from "react";
+import {useMemo, useState, type FC, Fragment} from "react";
 import {ContentWrapper} from "@/Components/ContentWrapper";
+import {PrivacyPolicy} from "@/Components/PrivacyPolicy";
 
 const BlogPost: FC<BlogPost> = ({url, source,title, paragraph, date}) => <div className={styles.blog}>
     <div className={styles.first}>
@@ -37,7 +38,7 @@ export const BlogPosts = () => {
     const blogsToShow = useMemo(() => {
         const start = page * perPage;
         return blogs.slice(start, start + perPage);
-    }, [page, blogs]);
+    }, [page]);
 
     return <div className={`${styles.blogsPostsWrapper} ${robotoMono.className}`}>
         <div className={styles.blogs} id="blogs">
@@ -50,15 +51,15 @@ export const BlogPosts = () => {
                     </div>
 
                     <ul className={styles.pager}>
-                        {Array.from({length: Math.ceil(blogs.length / perPage)}, (_, index) => <>
-                            <li key={index} className={index === page ? styles.active : ''} onClick={() => setPage(index)}>
+                        {Array.from({length: Math.ceil(blogs.length / perPage)}, (_, index) => <Fragment key={index}>
+                            <li className={index === page ? styles.active : ''} onClick={() => setPage(index)}>
                                 {index + 1}
                             </li>
-                        </>)}
+                        </Fragment>)}
                     </ul>
                 </div>
+                <PrivacyPolicy />
             </ContentWrapper>
-
         </div>
     </div>
 };

@@ -7,6 +7,14 @@ import Image from 'next/image';
 import {jobs as jobEntries} from './data';
 import {ContentWrapper} from "@/Components/ContentWrapper";
 
+const jobs = [
+    jobEntries.gizra,
+    jobEntries.realCommerce,
+    jobEntries.taliaz,
+    jobEntries.dreamed,
+    jobEntries.testim,
+];
+
 const Job: FC<{ image: string, name: string, paragraphs: ReactChild.JSX.Element[]}> = ({name, image, paragraphs}) => {
     const paragraphsRef = useRef<HTMLDivElement>(null);
 
@@ -26,16 +34,8 @@ const Job: FC<{ image: string, name: string, paragraphs: ReactChild.JSX.Element[
 }
 
 export const Jobs = () => {
-    const jobs = [
-        jobEntries.gizra,
-        jobEntries.realCommerce,
-        jobEntries.taliaz,
-        jobEntries.dreamed,
-        jobEntries.testim,
-    ];
-
     const [jobId, setJobId] = useState(jobEntries.gizra.id);
-    const selectedJob = useMemo(() => jobs.find(job => job.id === jobId) || jobEntries.testim, [jobs, jobId]);
+    const selectedJob = useMemo(() => jobs.find(job => job.id === jobId) || jobEntries.testim, [jobId]);
     return <div className={`${styles.jobsWrapper} ${robotoMono.className}`} id="jobs">
         <ContentWrapper>
             <h2>Jobs</h2>

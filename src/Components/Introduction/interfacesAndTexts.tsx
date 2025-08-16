@@ -25,7 +25,7 @@ export const messages = [
     "I love food and especially cooking",
 ];
 
-const workEmail = 'r.segall@tricentis.com';
+const workEmail = 'roy.segall@nsoft.co.il';
 
 const catchUp: Action = {
     emoji: "📲",

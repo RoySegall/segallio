@@ -46,7 +46,8 @@ export const Introduction = () => {
         }
 
         setItems(items => [...items, item])
-    }, [setItems, items]);
+    }, [setItems]);
+
     const [showActions, setShowActions] = useState(false);
     const messageRef = useRef<HTMLDivElement>(null);
     const scrollToBottom = useCallback(() => {
@@ -65,17 +66,17 @@ export const Introduction = () => {
             await sleep(.5);
             setCollapsed(true);
         })();
-    }, []);
+    }, [addItem]);
 
     useEffect(() => {
         scrollToBottom();
-    }, [items.length]);
+    }, [items.length, scrollToBottom]);
 
     useEffect(() => {
         sleep(1.25).then(() => {
             scrollToBottom();
         });
-    }, [messageRef.current?.scrollHeight]);
+    }, [messageRef.current?.scrollHeight, scrollToBottom]);
 
     return <div className={`${styles.introductionSection} ${robotoMono.className} ${collapsed && styles.collapsed}`}>
         <ContentWrapper>

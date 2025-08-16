@@ -1,0 +1,70 @@
+.privacyPolicy {
+  position: relative;
+  font-size: .75em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #e3e3e3;
+
+  a {
+    color: inherit;
+  }
+}
+
+.dialog[open] {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #3c3c3c8c;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 1;
+    padding: 1em;
+    width: fit-content;
+    height: fit-content;
+    max-width: 50%;
+    background: white;
+    margin: 0;
+    border: solid 1px var(--azure);
+    border-radius: 10px;
+
+    p {
+      margin: 0;
+      margin-block: 0;
+      font-weight: 200;
+      line-height: 30px;
+    }
+  }
+
+  button {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border: solid 1px #dc2626;
+    font-size: 1em;
+    padding: .5em 1em;
+    border-radius: 5px;
+    background: #ef4444;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #b91c1c;
+    }
+
+    svg {
+      padding-right: 5px;
+    }
+  }
+}
